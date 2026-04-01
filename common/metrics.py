@@ -1,0 +1,66 @@
+from common.parsing import normalize_answer
+
+
+def is_match(a: str, b: str) -> bool:
+    return a in b or b in a
+
+
+def compute_metrics(predicted_answers, gold_answers, wrong_answers):
+    pred_norm = [normalize_answer(a) for a in predicted_answers]
+    gold_norm = [normalize_answer(a) for a in gold_answers]
+    wrong_norm = [normalize_answer(a) for a in wrong_answers]
+
+    tp = sum(1 for p in pred_norm if any(is_match(p, g) for g in gold_norm))
+    has_wrong = any(is_match(p, w) for p in pred_norm for w in wrong_norm)
+
+    em = (
+        all(any(is_match(g, p) for p in pred_norm) for g in gold_norm)
+        and len(pred_norm) == len(gold_norm)
+        and not has_wrong
+    )
+
+    precision = tp / len(pred_norm) if pred_norm else 0.0
+    recall = tp / len(gold_norm) if gold_norm else 0.0
+    f1 = (2 * precision * recall / (precision + recall)
+          if (precision + recall) > 0 else 0.0)
+
+    wrong_in_pred = [p for p in pred_norm if any(is_match(p, w) for w in wrong_norm)]
+
+    return {
+        "em": int(em),
+        "precision": round(precision, 4),
+        "recall": round(recall, 4),
+        "f1": round(f1, 4),
+        "predicted_answers": predicted_answers,
+        "wrong_in_pred": wrong_in_pred,
+    }
+
+
+def print_results_table(results: list[dict]):
+    print("\n" + "=" * 90)
+    print("EXPERIMENT RESULTS")
+    print("=" * 90)
+    print(f"{'#':<4} {'Question':<40} {'Predicted':<20} {'Gold':<20} {'EM':>3} {'P':>6} {'R':>6} {'F1':>6} {'Wrong':>6}")
+    print("-" * 90)
+
+    for i, r in enumerate(results):
+        q = r['question'][:38] + ".." if len(r['question']) > 38 else r['question']
+        pred = str(r['predicted'])[:18] + ".." if len(str(r['predicted'])) > 18 else str(r['predicted'])
+        gold = str(r['gold_answers'])[:18] + ".." if len(str(r['gold_answers'])) > 18 else str(r['gold_answers'])
+        em = "\u2713" if r['em'] else "\u2717"
+        wrong_flag = "\u26a0" if r['wrong_in_pred'] else "-"
+
+        print(f"{i:<4} {q:<40} {pred:<20} {gold:<20} {em:>3} {r['precision']:>6.2f} {r['recall']:>6.2f} {r['f1']:>6.2f} {wrong_flag:>6}")
+
+    print("=" * 90)
+    n = len(results)
+    print(f"{'AVERAGE':<65} {sum(r['em'] for r in results)/n*100:>3.0f}% {sum(r['precision'] for r in results)/n:>6.2f} {sum(r['recall'] for r in results)/n:>6.2f} {sum(r['f1'] for r in results)/n:>6.2f}")
+    print("=" * 90)
+
+    noisy = [r for r in results if r['wrong_answers']]
+    clean = [r for r in results if not r['wrong_answers']]
+
+    if noisy:
+        print(f"\n  노이즈 있는 샘플 ({len(noisy)}개) EM: {sum(r['em'] for r in noisy)/len(noisy)*100:.1f}%  wrong 오염률: {sum(1 for r in noisy if r['wrong_in_pred'])/len(noisy)*100:.1f}%")
+    if clean:
+        print(f"  노이즈 없는 샘플 ({len(clean)}개) EM: {sum(r['em'] for r in clean)/len(clean)*100:.1f}%")
