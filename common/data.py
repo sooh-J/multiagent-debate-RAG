@@ -45,6 +45,8 @@ def load_ramdocs(n_samples: int = 20):
         _download_and_save()
 
     data = _load_from_local()
+    # document가 3개인 샘플만 필터링
+    data = [row for row in data if len(row["documents"]) == 3]
     samples = data[:n_samples]
 
     # 샘플 데이터 저장 (git 추적용)
