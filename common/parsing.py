@@ -38,13 +38,13 @@ def parse_answers(text: str) -> list[str]:
 
     quoted = re.findall(r'"([^"]+)"', raw)
     if quoted:
-        return [a.strip() for a in quoted]
+        return list(dict.fromkeys(a.strip() for a in quoted))
 
-    return [
+    return list(dict.fromkeys(
         a.strip().strip("'").strip()
         for a in raw.split(",")
         if a.strip().strip("'").strip()
-    ]
+    ))
 
 
 def parse_explanation(text: str) -> str:

@@ -2,7 +2,7 @@ from common.parsing import normalize_answer
 
 
 def is_match(a: str, b: str) -> bool:
-    return a in b or b in a
+    return a == b
 
 
 def strict_exact_match(pred_norm: list[str], gold_norm: list[str], wrong_norm: list[str]) -> int:
@@ -40,7 +40,7 @@ def compute_metrics(predicted_answers, gold_answers, wrong_answers):
     tp = sum(1 for p in pred_norm if any(is_match(p, g) for g in gold_norm))
     has_wrong = any(is_match(p, w) for p in pred_norm for w in wrong_norm)
 
-    em, _, _, _ = strict_exact_match(pred_norm, gold_norm, wrong_norm)
+    em, matched_gold, matched_wrong, matched_unknown = strict_exact_match(pred_norm, gold_norm, wrong_norm)
 
     precision = tp / len(pred_norm) if pred_norm else 0.0
     recall = tp / len(gold_norm) if gold_norm else 0.0
@@ -56,6 +56,9 @@ def compute_metrics(predicted_answers, gold_answers, wrong_answers):
         "f1": round(f1, 4),
         "predicted_answers": predicted_answers,
         "wrong_in_pred": wrong_in_pred,
+        "n_gold_hit": len(matched_gold),
+        "n_misinfo": len(matched_wrong),
+        "n_unknown": len(matched_unknown),
     }
 
 
@@ -63,22 +66,24 @@ def print_results_table(results: list[dict]):
     print("\n" + "=" * 90)
     print("EXPERIMENT RESULTS")
     print("=" * 90)
-    print(f"{'#':<4} {'Question':<40} {'Predicted':<20} {'Gold':<20} {'EM':>3} {'P':>6} {'R':>6} {'F1':>6} {'Wrong':>6}")
-    print("-" * 90)
+    header = f"{'#':<4} {'Question':<36} {'Predicted':<18} {'Gold':<18} {'EM':>3} {'Prec':>5} {'Rec':>5} {'F1':>5} {'#Gold':>8} {'#Misinfo':>8} {'#Unknown':>8}"
+    print(header)
+    print("-" * len(header))
 
     for i, r in enumerate(results):
-        q = r['question'][:38] + ".." if len(r['question']) > 38 else r['question']
-        pred = str(r['predicted'])[:18] + ".." if len(str(r['predicted'])) > 18 else str(r['predicted'])
-        gold = str(r['gold_answers'])[:18] + ".." if len(str(r['gold_answers'])) > 18 else str(r['gold_answers'])
-        em = "\u2713" if r['em'] else "\u2717"
-        wrong_flag = "\u26a0" if r['wrong_in_pred'] else "-"
+        q = r['question'][:34] + ".." if len(r['question']) > 34 else r['question']
+        pred = str(r['predicted'])[:16] + ".." if len(str(r['predicted'])) > 16 else str(r['predicted'])
+        gold = str(r['gold_answers'])[:16] + ".." if len(str(r['gold_answers'])) > 16 else str(r['gold_answers'])
+        em = "O" if r['em'] else "X"
+        n_gold = len(r['gold_answers'])
+        gold_hit = f"{r['n_gold_hit']}/{n_gold}"
 
-        print(f"{i:<4} {q:<40} {pred:<20} {gold:<20} {em:>3} {r['precision']:>6.2f} {r['recall']:>6.2f} {r['f1']:>6.2f} {wrong_flag:>6}")
+        print(f"{i:<4} {q:<36} {pred:<18} {gold:<18} {em:>3} {r['precision']:>5.2f} {r['recall']:>5.2f} {r['f1']:>5.2f} {gold_hit:>8} {r['n_misinfo']:>8} {r['n_unknown']:>8}")
 
-    print("=" * 90)
+    print("=" * len(header))
     n = len(results)
-    print(f"{'AVERAGE':<65} {sum(r['em'] for r in results)/n*100:>3.0f}% {sum(r['precision'] for r in results)/n:>6.2f} {sum(r['recall'] for r in results)/n:>6.2f} {sum(r['f1'] for r in results)/n:>6.2f}")
-    print("=" * 90)
+    print(f"{'AVERAGE':<76} {sum(r['em'] for r in results)/n*100:>3.0f}% {sum(r['precision'] for r in results)/n:>5.2f} {sum(r['recall'] for r in results)/n:>5.2f} {sum(r['f1'] for r in results)/n:>5.2f}")
+    print("=" * len(header))
 
     noisy = [r for r in results if r['wrong_answers']]
     clean = [r for r in results if not r['wrong_answers']]

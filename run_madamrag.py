@@ -12,6 +12,7 @@ import json
 from common.logging import Tee
 from common.data import load_ramdocs
 from common.metrics import compute_metrics, print_results_table
+from common.llm import print_usage_summary
 from pipelines.madamrag import madam_rag
 
 
@@ -69,23 +70,17 @@ def run_on_dataset(ds_sample) -> list[dict]:
 
 
 if __name__ == "__main__":
-    LOG_PATH = "results/madamrag_log.txt"
-
     import os
     os.makedirs("results", exist_ok=True)
 
-    tee = Tee(LOG_PATH)
+    tee = Tee(prefix="madamrag")
     sys.stdout = tee
 
     try:
-        ds_sample = load_ramdocs(n_samples=20)
-
-        # 단일 샘플 테스트
-        result = run_on_sample(ds_sample[0])
-        print(result)
-
-        # 전체 데이터셋 실행
+        ds_sample = load_ramdocs(n_samples=3)
         all_results = run_on_dataset(ds_sample)
+
+        print_usage_summary()
     finally:
         tee.close()
-        print(f"전체 로그가 '{LOG_PATH}'에 저장되었습니다.")
+        print(f"로그 저장: {tee.filepath}")
