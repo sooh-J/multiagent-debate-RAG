@@ -28,16 +28,20 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 │   ├── logging.py              # 로그 출력 (Tee)
 │   └── data.py                 # 데이터셋 로드/캐싱
 ├── prompts/                    # 방법론별 프롬프트
-│   └── madamrag.py             # MadamRAG 프롬프트
+│   ├── madamrag.py             # MadamRAG 프롬프트
+│   └── proposed_method.py      # Proposed Method 프롬프트
 ├── pipelines/                  # 방법론별 파이프라인
-│   └── madamrag.py             # MadamRAG 토론 파이프라인
+│   ├── madamrag.py             # MadamRAG 토론 파이프라인
+│   └── proposed_method.py      # Proposed Method 파이프라인
 ├── configs/                    # 방법론별 설정
-│   └── madamrag.py             # MAX_ROUNDS 등
+│   ├── madamrag.py             # MAX_ROUNDS 등
+│   └── proposed_method.py      # MAX_ROUNDS 등
 ├── data/
 │   ├── full/                   # 전체 데이터셋 (git 미추적)
 │   └── sample/                 # Toy experiment용 샘플 (git 추적)
 ├── results/                    # 실험 결과 저장
-├── run_madamrag.py             # 실행 진입점
+├── run_madamrag.py             # MadamRAG 실행
+├── run_proposed_method.py      # Proposed Method 실행
 └── original.py                 # 원본 단일 파일 (참고용)
 ```
 
@@ -60,6 +64,9 @@ python -m common.data
 
 # MadamRAG baseline 실행
 python run_madamrag.py
+
+# Proposed Method 실행
+python run_proposed_method.py
 ```
 
 ## 환경
