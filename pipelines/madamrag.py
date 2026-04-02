@@ -11,8 +11,8 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — multi_ag
 
 from common.llm import call_llm
 from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
-from methods.madamrag.prompts import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
-from methods.madamrag.config import MAX_ROUNDS
+from prompts.madamrag import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
+from configs.madamrag import MAX_ROUNDS
 
 
 def madam_rag(query: str, documents: list[str]) -> dict:

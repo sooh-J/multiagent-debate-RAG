@@ -27,11 +27,12 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 │   ├── metrics.py              # 평가 지표 (EM, F1 등)
 │   ├── logging.py              # 로그 출력 (Tee)
 │   └── data.py                 # 데이터셋 로드/캐싱
-├── methods/
-│   └── madamrag/               # Baseline 방법론
-│       ├── prompts.py          # 프롬프트 정의 (수정 시 여기만 변경)
-│       ├── pipeline.py         # 토론 파이프라인
-│       └── config.py           # MAX_ROUNDS 등 설정
+├── prompts/                    # 방법론별 프롬프트
+│   └── madamrag.py             # MadamRAG 프롬프트
+├── pipelines/                  # 방법론별 파이프라인
+│   └── madamrag.py             # MadamRAG 토론 파이프라인
+├── configs/                    # 방법론별 설정
+│   └── madamrag.py             # MAX_ROUNDS 등
 ├── data/
 │   ├── full/                   # 전체 데이터셋 (git 미추적)
 │   └── sample/                 # Toy experiment용 샘플 (git 추적)
@@ -42,9 +43,9 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 
 ### 새로운 방법론 추가 방법
 
-1. `methods/<method_name>/` 폴더 생성
-2. `prompts.py` — 프롬프트 정의
-3. `pipeline.py` — 파이프라인 구현 (`common/` 유틸 활용)
+1. `prompts/<method_name>.py` — 프롬프트 정의
+2. `pipelines/<method_name>.py` — 파이프라인 구현 (`common/` 유틸 활용)
+3. `configs/<method_name>.py` — 설정값
 4. `run_<method_name>.py` — 실행 스크립트 작성
 
 ## 실행

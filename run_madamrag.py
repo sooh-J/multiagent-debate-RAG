@@ -12,7 +12,7 @@ import json
 from common.logging import Tee
 from common.data import load_ramdocs
 from common.metrics import compute_metrics, print_results_table
-from methods.madamrag.pipeline import madam_rag
+from pipelines.madamrag import madam_rag
 
 
 def run_on_sample(sample: dict) -> dict:
