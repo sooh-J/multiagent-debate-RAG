@@ -3,9 +3,6 @@ MadamRAG 프롬프트 정의
 
 Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py
      — agent_response(), aggregate_responses() 내부 프롬프트
-
-수정 시 이 파일만 변경하면 됩니다.
-새로운 방법론은 prompts/<method_name>.py 에 별도 작성.
 """
 
 

@@ -77,7 +77,7 @@ if __name__ == "__main__":
     sys.stdout = tee
 
     try:
-        ds_sample = load_ramdocs(n_samples=3)
+        ds_sample = load_ramdocs(n_samples=20)
         all_results = run_on_dataset(ds_sample)
 
         print_usage_summary()
