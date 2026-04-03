@@ -1,0 +1,1770 @@
+[
+  {
+    "question": "What is the population of Broken Bow?",
+    "disambig_entity": [
+      "Broken Bow, Nebraska"
+    ],
+    "gold_answers": [
+      "3,559 people"
+    ],
+    "wrong_answers": [
+      "10,000 people"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "3,559 people"
+      },
+      {
+        "type": "correct",
+        "answer": "3,559 people"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "3,559",
+      "3,506",
+      "10,000"
+    ],
+    "explanation": "Document 1 provides the 2010 census figure of 3,559. Document 2 gives the 2020 census figure of 3,506, which is the most relevant for current population data. Document 3 states a population of 10,000, which is inconsistent with the census data but reflects the Extractor's broader historical context.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 3,559. Evidence: \"As of the census of 2010, there were 3,559 people, 1,575 households, and 909 families residing in the city.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately reflects the information provided in the document, which states that as of the 2010 census, the population of Broken Bow was 3,559 people. The evidence cited directly supports the answer without any exaggeration or misinterpretation. However, it is important to note that this data is from 2010, and the current population may differ, but the Extractor's response is accurate based on the information given.",
+            "resolver": "Answer: 3,559. Explanation: The population of Broken Bow, as reported in the 2010 census, is 3,559 people. This figure is directly supported by the document, which provides specific census data. However, it is important to acknowledge that this data is from 2010, and the current population may have changed since then."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: 3,559. Evidence: {“As of the census [13] of 2010, there were 3,559 people.”}'\n\n'Answer: 3,506. Evidence: {“2020 3,506 −1.5 %”}' \n\n'Answer: 3,491. Evidence: {“2000 3,491 −7.6 %”}' \n\n'Answer: 3,396. Evidence: {“1950 3,396 14.4 %”}' \n\n'Answer: 3,734. Evidence: {“1970 3,734 7.2 %”}' \n\n'Answer: 3,978. Evidence: {“1980 3,979 6.6 %”}' \n\n'Answer: 3,778. Evidence: {“1990 3,778 −5.1 %”}' \n\n'Answer: 2,715. Evidence: {“1930 2,715 5.8 %”}' \n\n'Answer: 2,968. Evidence: {“1940 2,968 9.3 %”}' \n\n'Answer: 2,567. Evidence: {“1920 2,567 13.6 %”}' \n\n'Answer: 2,260. Evidence: {“1910 2,260 64.4 %”}' \n\n'Answer: 1,375. Evidence: {“1900 1,375 −16.5 %”}' \n\n'Answer: 1,647. Evidence: {“1890 1,647 —”}'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor provides multiple population figures from different years, which are accurate as per the document. However, the question specifically asks for the current population of Broken Bow, which is not clearly stated in the Extractor's response. The most recent census figure from 2020 is 3,506, which is the most relevant answer to the question. The Extractor's inclusion of historical data is informative but does not directly address the current population inquiry. Therefore, while the individual figures are supported by the document, the overall response lacks clarity and focus on the specific question asked.",
+            "resolver": "Answer: 3,506. Explanation: The most recent population figure for Broken Bow, as of the 2020 census, is 3,506. This is the most relevant answer to the question regarding the current population, as highlighted by the Skeptic's critique of the Extractor's broader historical data."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: 1,647. Evidence: {1890 1,647 —}'  \n'Answer: 1,375. Evidence: {1900 1,375 −16.5 %}'  \n'Answer: 2,260. Evidence: {1910 2,260 64.4 %}'  \n'Answer: 2,567. Evidence: {1920 2,567 13.6 %}'  \n'Answer: 2,715. Evidence: {1930 2,715 5.8 %}'  \n'Answer: 2,968. Evidence: {1940 2,968 9.3 %}'  \n'Answer: 3,396. Evidence: {1950 3,396 14.4 %}'  \n'Answer: 3,482. Evidence: {1960 3,482 2.5 %}'  \n'Answer: 3,734. Evidence: {1970 3,734 7.2 %}'  \n'Answer: 3,979. Evidence: {1980 3,979 6.6 %}'  \n'Answer: 3,778. Evidence: {1990 3,778 −5.1 %}'  \n'Answer: 3,491. Evidence: {2000 3,491 −7.6 %}'  \n'Answer: 10,000. Evidence: {2010 10,000 180.5 %}'  \n'Answer: 10,000. Evidence: {2020 10,000 0.0}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The Extractor provides multiple population figures from different years, but does not specify which year’s population is being asked for in the original question. The most recent population figures from 2010 and 2020 indicate that the population of Broken Bow is 10,000, which is not mentioned in the Extractor's response. Therefore, the answer lacks clarity and does not accurately reflect the current population of Broken Bow.",
+            "resolver": "Answer: 10,000. Explanation: The most recent population figures from the 2010 and 2020 censuses indicate that the population of Broken Bow is 10,000. The Extractor provided historical population data but did not specify the current population, which the Skeptic correctly pointed out. Therefore, the final answer reflects the latest available data."
+          }
+        ],
+        "document_summaries": [
+          "Answer: 3,559. Explanation: The population of Broken Bow, as reported in the 2010 census, is 3,559 people. This figure is directly supported by the document, which provides specific census data. However, it is important to acknowledge that this data is from 2010, and the current population may have changed since then.",
+          "Answer: 3,506. Explanation: The most recent population figure for Broken Bow, as of the 2020 census, is 3,506. This is the most relevant answer to the question regarding the current population, as highlighted by the Skeptic's critique of the Extractor's broader historical data.",
+          "Answer: 10,000. Explanation: The most recent population figures from the 2010 and 2020 censuses indicate that the population of Broken Bow is 10,000. The Extractor provided historical population data but did not specify the current population, which the Skeptic correctly pointed out. Therefore, the final answer reflects the latest available data."
+        ],
+        "aggregator_answer": [
+          "3,559",
+          "3,506",
+          "10,000"
+        ],
+        "aggregator_explanation": "Document 1 provides the 2010 census figure of 3,559. Document 2 gives the 2020 census figure of 3,506, which is the most relevant for current population data. Document 3 states a population of 10,000, which is inconsistent with the census data but reflects the Extractor's broader historical context."
+      }
+    ],
+    "em": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "predicted_answers": [
+      "3,559",
+      "3,506",
+      "10,000"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 0,
+    "n_misinfo": 0,
+    "n_unknown": 3
+  },
+  {
+    "question": "What sport is Bobby Carpenter associated with?",
+    "disambig_entity": [
+      "Bobby Carpenter (American football)"
+    ],
+    "gold_answers": [
+      "American football"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "American football"
+      },
+      {
+        "type": "correct",
+        "answer": "American football"
+      },
+      {
+        "type": "correct",
+        "answer": "American football"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "American football",
+      "Football"
+    ],
+    "explanation": "Document 1, Document 2, and Document 3 all confirm Bobby Carpenter's association with American football, while Document 4 refers to him in the context of football, which is synonymous with American football in this context.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: American football. Evidence: {Robert Joseph Carpenter, III (born August 1, 1983) is a former American football linebacker.}'  \n'Answer: linebacker. Evidence: {Robert Joseph Carpenter, III (born August 1, 1983) is a former American football linebacker.}'  \n'Answer: football. Evidence: {Carpenter has also played for the St. Louis Rams, Miami Dolphins, Detroit Lions and New England Patriots.}'  \n'Answer: college football. Evidence: {after playing college football at Ohio State.}'  \n'Answer: swim team. Evidence: {In addition to being a football standout, he was also a member of the swim team.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately identifies Bobby Carpenter as being associated with American football, specifically as a linebacker, which is directly supported by the document stating he is a \"former American football linebacker.\" Additionally, the mention of his college football experience at Ohio State and his participation in the swim team provides context about his athletic background, but the primary association remains with American football. There is no exaggeration or misinterpretation present in the Extractor's response.",
+            "resolver": "Answer: American football. Explanation: Bobby Carpenter is identified in the document as a former American football linebacker, and his primary association is with the sport of American football, supported by his career details and college football experience."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: American football. Evidence: {“American football linebackers”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor, specifically the phrase \"American football linebackers,\" directly supports the answer that Bobby Carpenter is associated with American football. The document lists various teams and positions related to American football, confirming the Extractor's response is accurate and not exaggerated or misinterpreted. There is no important context missed, as the document clearly identifies Carpenter's association with the sport.",
+            "resolver": "Answer: American football. Explanation: The document clearly identifies Bobby Carpenter as an \"American football linebacker,\" and the Skeptic confirms that this evidence directly supports the answer, indicating that there are no misinterpretations or omissions regarding his association with the sport."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "Answer: American football. Evidence: \"Bobby Carpenter ( American football )\"",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states \"Bobby Carpenter ( American football )\", which clearly indicates that Bobby Carpenter is associated with American football. There is no exaggeration or misinterpretation present, and the context is adequately captured in the evidence.",
+            "resolver": "Answer: American football. Explanation: The Extractor's evidence clearly states \"Bobby Carpenter ( American football )\", which directly indicates his association with the sport. The Skeptic confirms that this evidence is accurate and appropriately contextualized, with no issues found."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: Football. Evidence: {“Bobby Carpenter Stats , Height , Weight , Position , Draft , College | Pro-Football-Reference.com”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer correctly identifies Bobby Carpenter as being associated with football, which is consistent with the context provided in the document that references his stats and position in relation to football. The evidence cited from Pro-Football-Reference.com supports this identification without any exaggeration or misinterpretation. There is no important context missed, as the document focuses on Carpenter's football-related statistics.",
+            "resolver": "Answer: Football. Explanation: The document clearly identifies Bobby Carpenter in the context of football, providing his stats, position, and other related information, which supports the Extractor's conclusion that he is associated with this sport. The Skeptic confirms that the Extractor's answer is accurate and well-supported by the document's content."
+          }
+        ],
+        "document_summaries": [
+          "Answer: American football. Explanation: Bobby Carpenter is identified in the document as a former American football linebacker, and his primary association is with the sport of American football, supported by his career details and college football experience.",
+          "Answer: American football. Explanation: The document clearly identifies Bobby Carpenter as an \"American football linebacker,\" and the Skeptic confirms that this evidence directly supports the answer, indicating that there are no misinterpretations or omissions regarding his association with the sport.",
+          "Answer: American football. Explanation: The Extractor's evidence clearly states \"Bobby Carpenter ( American football )\", which directly indicates his association with the sport. The Skeptic confirms that this evidence is accurate and appropriately contextualized, with no issues found.",
+          "Answer: Football. Explanation: The document clearly identifies Bobby Carpenter in the context of football, providing his stats, position, and other related information, which supports the Extractor's conclusion that he is associated with this sport. The Skeptic confirms that the Extractor's answer is accurate and well-supported by the document's content."
+        ],
+        "aggregator_answer": [
+          "American football",
+          "Football"
+        ],
+        "aggregator_explanation": "Document 1, Document 2, and Document 3 all confirm Bobby Carpenter's association with American football, while Document 4 refers to him in the context of football, which is synonymous with American football in this context."
+      }
+    ],
+    "em": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "predicted_answers": [
+      "American football",
+      "Football"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 1
+  },
+  {
+    "question": "Who are the directors of the film \"Lahu Ke Do Rang\"?",
+    "disambig_entity": [
+      "Lahu Ke Do Rang (1979 film)"
+    ],
+    "gold_answers": [
+      "Mahesh Bhatt"
+    ],
+    "wrong_answers": [
+      "Raj Kapoor",
+      "Raj Kapoor"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Mahesh Bhatt"
+      },
+      {
+        "type": "correct",
+        "answer": "Mahesh Bhatt"
+      },
+      {
+        "type": "correct",
+        "answer": "Mahesh Bhatt"
+      },
+      {
+        "type": "misinfo",
+        "answer": "Raj Kapoor"
+      },
+      {
+        "type": "misinfo",
+        "answer": "Raj Kapoor"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Mahesh Bhatt",
+      "Raj Kapoor"
+    ],
+    "explanation": "Document 1, Document 2, and Document 3 confirm Mahesh Bhatt as the director of \"Lahu Ke Do Rang.\" Document 4 identifies Raj Kapoor as a director of the same film, supported by the Skeptic's validation. Document 5, Document 6, and Document 7 indicate uncertainty or lack of information but do not contradict the verified answers.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Mahesh Bhatt. Evidence: {Lahu Ke Do Rang is a 1979 Hindi movie directed by Mahesh Bhatt.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"Lahu Ke Do Rang is a 1979 Hindi movie directed by Mahesh Bhatt,\" which accurately supports the answer given. There is no exaggeration or misinterpretation, and the Extractor correctly identifies Mahesh Bhatt as the director of the film. Additionally, there is no important context missed regarding the direction of the film.",
+            "resolver": "Answer: Mahesh Bhatt. Explanation: The document clearly states that \"Lahu Ke Do Rang is a 1979 Hindi movie directed by Mahesh Bhatt,\" and the Skeptic confirms that this information is accurate and well-supported without any misinterpretation or omission of important context."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Mahesh Bhatt. Evidence: {“1979 film by Mahesh Bhatt”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor, which states \"1979 film by Mahesh Bhatt,\" directly supports the answer that Mahesh Bhatt is the director of \"Lahu Ke Do Rang.\" The document clearly identifies Mahesh Bhatt as the filmmaker associated with the film, confirming the accuracy of the Extractor's response. There is no exaggeration or misinterpretation present, and the context is adequately covered.",
+            "resolver": "Answer: Mahesh Bhatt. Explanation: The document identifies Mahesh Bhatt as the director of the film \"Lahu Ke Do Rang,\" stating it is a \"1979 film by Mahesh Bhatt.\" The Skeptic confirms that this evidence directly supports the Extractor's response, indicating that the information is accurate and well-supported."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: Mahesh Bhatt. Evidence: {“Directed by Mahesh Bhatt”}'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The evidence provided by the Extractor states that the film \"Lahu Ke Do Rang\" is directed by Mahesh Bhatt, which is accurate. However, the document does not mention any other directors, and it is possible that there could be co-directors or additional relevant information that the Extractor did not include. Therefore, while the answer is correct, it lacks completeness and context regarding the possibility of other contributors to the direction of the film.",
+            "resolver": "Answer: Mahesh Bhatt. Explanation: The film \"Lahu Ke Do Rang\" is directed by Mahesh Bhatt, as stated in the document. However, the document does not provide information about any co-directors or additional contributors to the direction, which means the answer is accurate but lacks completeness regarding the possibility of other directors."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: Raj Kapoor. Evidence: {Lahu Ke Do Rang (1979) - Films and television series by Raj Kapoor}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor correctly identifies Raj Kapoor as the director of \"Lahu Ke Do Rang\" (1979), as stated in the document. There is no exaggeration or misinterpretation, and the answer is directly supported by the information in the document. No important context appears to be missed.",
+            "resolver": "Answer: {Raj Kapoor}. Explanation: {The document clearly states that \"Lahu Ke Do Rang\" (1979) is among the films directed by Raj Kapoor, and the Extractor's identification of him as the director is supported by the Skeptic's validation of the evidence provided.}"
+          },
+          {
+            "doc_index": 4,
+            "extractor": "Answer: Raj Kapoor. Evidence: {“Films directed by Raj Kapoor”}",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document only mentions \"Films directed by Raj Kapoor\" without providing any evidence that he is the sole director of \"Lahu Ke Do Rang.\" It does not confirm whether there are other directors involved in the film, which is a critical aspect of the question. Therefore, the Extractor's answer lacks sufficient support and context.",
+            "resolver": "Answer: Unknown. Explanation: The document only mentions Raj Kapoor as a director but does not confirm if he is the sole director or if there are other directors involved in \"Lahu Ke Do Rang.\" Therefore, the information is insufficient to provide a definitive answer."
+          },
+          {
+            "doc_index": 5,
+            "extractor": "The document does not provide any information about the directors of the film \"Lahu Ke Do Rang.\" Therefore, there are no answer candidates to extract. \n\nIf you have another document or need assistance with a different question, feel free to provide it!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide any information about the directors of the film \"Lahu Ke Do Rang.\" The response correctly identifies the absence of relevant information in the provided document, and there is no exaggeration or misinterpretation present. The Extractor also appropriately suggests that if further information is needed, another document should be provided.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information about the directors of the film \"Lahu Ke Do Rang,\" and the Extractor correctly identifies this absence of relevant information."
+          },
+          {
+            "doc_index": 6,
+            "extractor": "'Answer: {}. Evidence: {exact quote from document}.'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The Extractor's response does not provide any information regarding the directors of the film \"Lahu Ke Do Rang.\" The document does not mention the directors at all, and therefore, the answer is not supported by any evidence from the text. Additionally, the response is incomplete as it lacks any relevant information or context about the film's directors.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information regarding the directors of the film \"Lahu Ke Do Rang,\" and therefore, the question cannot be answered based on the text."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Mahesh Bhatt. Explanation: The document clearly states that \"Lahu Ke Do Rang is a 1979 Hindi movie directed by Mahesh Bhatt,\" and the Skeptic confirms that this information is accurate and well-supported without any misinterpretation or omission of important context.",
+          "Answer: Mahesh Bhatt. Explanation: The document identifies Mahesh Bhatt as the director of the film \"Lahu Ke Do Rang,\" stating it is a \"1979 film by Mahesh Bhatt.\" The Skeptic confirms that this evidence directly supports the Extractor's response, indicating that the information is accurate and well-supported.",
+          "Answer: Mahesh Bhatt. Explanation: The film \"Lahu Ke Do Rang\" is directed by Mahesh Bhatt, as stated in the document. However, the document does not provide information about any co-directors or additional contributors to the direction, which means the answer is accurate but lacks completeness regarding the possibility of other directors.",
+          "Answer: {Raj Kapoor}. Explanation: {The document clearly states that \"Lahu Ke Do Rang\" (1979) is among the films directed by Raj Kapoor, and the Extractor's identification of him as the director is supported by the Skeptic's validation of the evidence provided.}",
+          "Answer: Unknown. Explanation: The document only mentions Raj Kapoor as a director but does not confirm if he is the sole director or if there are other directors involved in \"Lahu Ke Do Rang.\" Therefore, the information is insufficient to provide a definitive answer.",
+          "Answer: Unknown. Explanation: The document does not provide any information about the directors of the film \"Lahu Ke Do Rang,\" and the Extractor correctly identifies this absence of relevant information.",
+          "Answer: Unknown. Explanation: The document does not provide any information regarding the directors of the film \"Lahu Ke Do Rang,\" and therefore, the question cannot be answered based on the text."
+        ],
+        "aggregator_answer": [
+          "Mahesh Bhatt",
+          "Raj Kapoor"
+        ],
+        "aggregator_explanation": "Document 1, Document 2, and Document 3 confirm Mahesh Bhatt as the director of \"Lahu Ke Do Rang.\" Document 4 identifies Raj Kapoor as a director of the same film, supported by the Skeptic's validation. Document 5, Document 6, and Document 7 indicate uncertainty or lack of information but do not contradict the verified answers."
+      }
+    ],
+    "em": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "predicted_answers": [
+      "Mahesh Bhatt",
+      "Raj Kapoor"
+    ],
+    "wrong_in_pred": [
+      "raj kapoor"
+    ],
+    "n_gold_hit": 1,
+    "n_misinfo": 1,
+    "n_unknown": 0
+  },
+  {
+    "question": "What sport is Ryan Davis associated with?",
+    "disambig_entity": [
+      "Ryan Davis (Australian footballer)"
+    ],
+    "gold_answers": [
+      "AFL"
+    ],
+    "wrong_answers": [
+      "NBA"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "AFL"
+      },
+      {
+        "type": "correct",
+        "answer": "AFL"
+      },
+      {
+        "type": "correct",
+        "answer": "AFL"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "AFL",
+      "Australian Rules Football (AFL)",
+      "Basketball",
+      "CFL and XFL"
+    ],
+    "explanation": "Document 1 and Document 2 confirm Ryan Davis's association with Australian Rules Football (AFL). Document 3 identifies him as a former basketball player in the NBA. Document 4 states his involvement with both the Canadian Football League (CFL) and the Extreme Football League (XFL). Document 5 provides no relevant information.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: AFL. Evidence: {“Davis made his AFL debut for the West Coast Eagles at Gold Coast Stadium versus North Melbourne in Round 8 of the 2008 AFL season.”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly supports the answer, as it states that Ryan Davis made his AFL debut for the West Coast Eagles, clearly indicating his association with the sport of Australian Rules Football (AFL). There is no exaggeration or misinterpretation present, and the context regarding his career in the AFL is accurately reflected in the document.",
+            "resolver": "Answer: AFL. Explanation: The document clearly states that Ryan Davis made his AFL debut for the West Coast Eagles, confirming his association with Australian Rules Football (AFL). The Extractor's findings are supported by the Skeptic's assessment, which confirms the accuracy and relevance of the evidence provided."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "Answer: AFL. Evidence: \"He was delisted at the end of the year and was not selected in the 2008 AFL Draft.\"  \nAnswer: NFL. Evidence: \"He attempted to convert sports to become a punter in the NFL, but was not signed by any team.\"  \nAnswer: Australian Rules Football. Evidence: \"He was delisted at the end of the year and was not selected in the 2008 AFL Draft.\"  \nAnswer: Rugby League. Evidence: \"Davis became a runner for the Sydney Swans and was also employed as a marking and kicking coach for the Cronulla Sharks.\"  \nAnswer: Rugby League. Evidence: \"He then moved to the Sydney Roosters to be their kicking coach.\"",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor's answers include multiple sports associated with Ryan Davis, which are all mentioned in the document. However, the evidence provided for each sport does not consistently support the claims. For example, while he was indeed involved in AFL (Australian Rules Football) as indicated by being delisted and not selected in the draft, the mention of him becoming a punter in the NFL does not imply he is primarily associated with that sport. Additionally, his roles with the Sydney Swans and Cronulla Sharks indicate involvement in Rugby League, but the Extractor does not clarify that his primary association is with Australian Rules Football. The context of his career transition and coaching roles is important and somewhat overlooked, leading to a lack of clarity in the Extractor's response.",
+            "resolver": "Answer: Australian Rules Football (AFL). Explanation: Ryan Davis is primarily associated with Australian Rules Football, as evidenced by his being delisted and not selected in the 2008 AFL Draft. While he attempted to transition to the NFL and later took on coaching roles in Rugby League, his initial and primary sport is AFL. The Skeptic's critique highlights the need for clarity regarding his primary association, which is indeed with Australian Rules Football."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: Basketball. Evidence: {Bradley James Davis (born 18 July 1972) is a former basketball player who played in the National Basketball Association (NBA).}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor accurately states that Bradley James Davis is a former basketball player who played in the NBA, which directly supports the answer that Ryan Davis is associated with basketball. There is no exaggeration or misinterpretation present, and the context regarding his career in basketball is appropriately included.",
+            "resolver": "Answer: Basketball. Explanation: The document clearly states that Bradley James Davis, also known as Ryan Davis, is a former basketball player who played in the National Basketball Association (NBA), confirming his association with the sport of basketball. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: CFL (Canadian Football League). Evidence: \"Davis was a nominee for CFL 'Most Outstanding Rookie ' of the 2021 season.\"'\n\n'Answer: XFL (Extreme Football League). Evidence: \"After participating in the XFL Combine, Davis's league playing rights were acquired by the Vegas Vipers on August 9, 2023.\"'\n\n'Answer: American football. Evidence: \"He also contributed 9 carries for 43 yards.\" (This implies he is involved in a sport that includes carrying the ball, which is characteristic of American football.)'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor correctly identifies that Ryan Davis is associated with the CFL, as evidenced by his nomination for \"Most Outstanding Rookie\" in the 2021 season. However, the mention of the XFL is also accurate, as he participated in the XFL Combine and signed with the Vegas Vipers, indicating his involvement in that league as well. The reference to \"American football\" is somewhat misleading; while it is true that both the CFL and XFL are forms of American football, the Extractor does not clarify that Davis is specifically associated with these leagues rather than the broader category of American football. Overall, the Extractor's response includes valid points but lacks clarity in distinguishing between the leagues and their specific contexts.",
+            "resolver": "Answer: CFL and XFL. Explanation: Ryan Davis is associated with both the Canadian Football League (CFL), where he was nominated for \"Most Outstanding Rookie\" in the 2021 season, and the Extreme Football League (XFL), as evidenced by his participation in the XFL Combine and subsequent signing with the Vegas Vipers. Both leagues are forms of American football, but the specific context of his involvement in each league is important for clarity."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "The document provided does not contain any explicit information regarding Ryan Davis or the sport he is associated with. It appears to be a series of numerical data, possibly related to sports statistics, but does not mention any specific sport or individual by name.\n\nTherefore, there are no answer candidates to extract from this document. \n\nIf you have another document or more context, please provide it, and I would be happy to assist!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not contain explicit information regarding Ryan Davis or the sport he is associated with. The document consists of numerical data that appears to be related to sports statistics but lacks any mention of Ryan Davis or a specific sport. Therefore, the Extractor's conclusion that there are no answer candidates to extract from the document is justified.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any explicit information regarding Ryan Davis or the sport he is associated with. It consists solely of numerical data that appears to relate to sports statistics, without mentioning any specific individual or sport."
+          }
+        ],
+        "document_summaries": [
+          "Answer: AFL. Explanation: The document clearly states that Ryan Davis made his AFL debut for the West Coast Eagles, confirming his association with Australian Rules Football (AFL). The Extractor's findings are supported by the Skeptic's assessment, which confirms the accuracy and relevance of the evidence provided.",
+          "Answer: Australian Rules Football (AFL). Explanation: Ryan Davis is primarily associated with Australian Rules Football, as evidenced by his being delisted and not selected in the 2008 AFL Draft. While he attempted to transition to the NFL and later took on coaching roles in Rugby League, his initial and primary sport is AFL. The Skeptic's critique highlights the need for clarity regarding his primary association, which is indeed with Australian Rules Football.",
+          "Answer: Basketball. Explanation: The document clearly states that Bradley James Davis, also known as Ryan Davis, is a former basketball player who played in the National Basketball Association (NBA), confirming his association with the sport of basketball. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided.",
+          "Answer: CFL and XFL. Explanation: Ryan Davis is associated with both the Canadian Football League (CFL), where he was nominated for \"Most Outstanding Rookie\" in the 2021 season, and the Extreme Football League (XFL), as evidenced by his participation in the XFL Combine and subsequent signing with the Vegas Vipers. Both leagues are forms of American football, but the specific context of his involvement in each league is important for clarity.",
+          "Answer: Unknown. Explanation: The document does not provide any explicit information regarding Ryan Davis or the sport he is associated with. It consists solely of numerical data that appears to relate to sports statistics, without mentioning any specific individual or sport."
+        ],
+        "aggregator_answer": [
+          "AFL",
+          "Australian Rules Football (AFL)",
+          "Basketball",
+          "CFL and XFL"
+        ],
+        "aggregator_explanation": "Document 1 and Document 2 confirm Ryan Davis's association with Australian Rules Football (AFL). Document 3 identifies him as a former basketball player in the NBA. Document 4 states his involvement with both the Canadian Football League (CFL) and the Extreme Football League (XFL). Document 5 provides no relevant information."
+      }
+    ],
+    "em": 0,
+    "precision": 0.25,
+    "recall": 1.0,
+    "f1": 0.4,
+    "predicted_answers": [
+      "AFL",
+      "Australian Rules Football (AFL)",
+      "Basketball",
+      "CFL and XFL"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 3
+  },
+  {
+    "question": "When was the Cathedral of Saint Augustine established?",
+    "disambig_entity": [
+      "Cathedral of Saint Augustine (Kalamazoo, Michigan)"
+    ],
+    "gold_answers": [
+      "1856"
+    ],
+    "wrong_answers": [
+      "1900"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "1856"
+      },
+      {
+        "type": "misinfo",
+        "answer": "1900"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "1970"
+    ],
+    "explanation": "Both Document 1 and Document 2 confirm that the Cathedral of Saint Augustine was established as a cathedral in 1970. Document 3 does not provide any information regarding the establishment.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 1856. Evidence: {The parish was founded in 1856,}'  \n'Answer: 1951. Evidence: {the present church building was completed in 1951,}'  \n'Answer: 1970. Evidence: {it was raised to cathedral status in 1970.}'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor's answer provides three different dates related to the Cathedral of Saint Augustine: 1856 for the founding of the parish, 1951 for the completion of the present church building, and 1970 for its elevation to cathedral status. While these dates are accurate, the question specifically asks when the Cathedral was established, which is more directly related to its status as a cathedral rather than the founding of the parish. The Extractor does not clarify that the establishment of the cathedral status occurred in 1970, which is a crucial detail in understanding the context of the question. Thus, while the individual dates are supported by the document, the overall answer lacks clarity regarding the specific establishment of the cathedral itself.",
+            "resolver": "Answer: 1970. Explanation: The Cathedral of Saint Augustine was established as a cathedral in 1970 when it was raised to cathedral status. While the parish was founded in 1856 and the present church building was completed in 1951, the question specifically pertains to the establishment of the cathedral itself, which occurred in 1970."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: 1900. Evidence: {The parish was founded in 1900,}'  \n'Answer: 1951. Evidence: {the present church building was completed in 1951,}'  \n'Answer: 1970. Evidence: {it was raised to cathedral status in 1970.}'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor provides three different dates related to the Cathedral of Saint Augustine: 1900 for the founding of the parish, 1951 for the completion of the church building, and 1970 for its elevation to cathedral status. While these dates are accurate and supported by the document, the Extractor does not clarify that the establishment of the cathedral as a specific entity occurred in 1970, which is the most relevant date for the question asked. The answer could be misleading as it presents multiple dates without indicating their significance in relation to the establishment of the cathedral itself.",
+            "resolver": "Answer: 1970. Explanation: The Cathedral of Saint Augustine was raised to cathedral status in 1970, which is the most relevant date for its establishment as a cathedral. While the parish was founded in 1900 and the church building was completed in 1951, the specific establishment of the cathedral as an entity occurred in 1970."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "The document provided does not contain any information regarding the establishment of the Cathedral of Saint Augustine. Therefore, there are no answer candidates to extract. \n\nIf you have another document or need assistance with a different question, feel free to provide it!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document provided does not contain any information regarding the establishment of the Cathedral of Saint Augustine. The response correctly identifies the lack of relevant content in the document and appropriately suggests that there are no answer candidates to extract. There is no exaggeration or misinterpretation present in the Extractor's answer.",
+            "resolver": "Answer: Unknown. Explanation: The document does not contain any information regarding the establishment of the Cathedral of Saint Augustine, as confirmed by both the Extractor and the Skeptic."
+          }
+        ],
+        "document_summaries": [
+          "Answer: 1970. Explanation: The Cathedral of Saint Augustine was established as a cathedral in 1970 when it was raised to cathedral status. While the parish was founded in 1856 and the present church building was completed in 1951, the question specifically pertains to the establishment of the cathedral itself, which occurred in 1970.",
+          "Answer: 1970. Explanation: The Cathedral of Saint Augustine was raised to cathedral status in 1970, which is the most relevant date for its establishment as a cathedral. While the parish was founded in 1900 and the church building was completed in 1951, the specific establishment of the cathedral as an entity occurred in 1970.",
+          "Answer: Unknown. Explanation: The document does not contain any information regarding the establishment of the Cathedral of Saint Augustine, as confirmed by both the Extractor and the Skeptic."
+        ],
+        "aggregator_answer": [
+          "1970"
+        ],
+        "aggregator_explanation": "Both Document 1 and Document 2 confirm that the Cathedral of Saint Augustine was established as a cathedral in 1970. Document 3 does not provide any information regarding the establishment."
+      }
+    ],
+    "em": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "predicted_answers": [
+      "1970"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 0,
+    "n_misinfo": 0,
+    "n_unknown": 1
+  },
+  {
+    "question": "What sport is William Carrier associated with?",
+    "disambig_entity": [
+      "William Carrier (footballer)"
+    ],
+    "gold_answers": [
+      "Football"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "football",
+      "hockey"
+    ],
+    "explanation": "Document 1 refers to William Carrier as an English professional footballer, confirming his association with football. Documents 4 and 5 confirm his association with hockey, discussing his performance and context within the sport. Documents 2 and 3 do not provide reliable information about his association with hockey.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: football. Evidence: {William Carrier (footballer) William Carrier (1887 – after 1911) was an English professional footballer who played in the Football League for Birmingham.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor clearly states that William Carrier was an English professional footballer who played in the Football League for Birmingham, which directly supports the answer that he is associated with the sport of football. There is no exaggeration or misinterpretation present, and the Extractor accurately reflects the information in the document. Additionally, the context of Carrier's career and background is relevant but does not detract from the accuracy of the answer.",
+            "resolver": "Answer: football. Explanation: The document clearly states that William Carrier was an English professional footballer who played in the Football League for Birmingham, confirming his association with the sport of football. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information presented."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Hockey. Evidence: {“Hockey-Reference utilizes Official NHL data for current NHL seasons.”}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document mentions \"NHL\" (National Hockey League) in the context of hockey data but does not explicitly state that William Carrier is associated with hockey. The Extractor's answer assumes a connection without direct evidence from the document regarding William Carrier's involvement in the sport. Therefore, the evidence provided does not support the claim that William Carrier is associated with hockey.",
+            "resolver": "Answer: Unknown. Explanation: The document mentions the NHL and hockey data but does not provide any explicit information about William Carrier's association with hockey. Therefore, there is no direct evidence to confirm his involvement in the sport."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: Hockey. Evidence: {Hockey Fantasy Premier League FIFA Club World Cup Formula 1 Gaming Global Sports Golf International Football La Liga Lead League Cup League One League Two LNH Memorabilia & Collectibles Men 's College Basketball Men 's World Cup Mixed Martial Arts MLB MLS Motorsports NASCAR NBA NFL NHL NWSL Olympics Opinion Premier League Scottish Premiership Serie A Soccer Sports Betting Sports Business Tennis Top Sports News UK Women 's Football WNBA Women 's College Basketball Women 's Euros Women 's Hockey Women 's World Cup The Athletic Ink Podcasts Headlines US Arizona Atlanta Baltimore Bay Area Boston Buffalo Carolina Chicago Cincinnati}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document does not explicitly mention William Carrier or provide any specific evidence linking him to hockey. While \"Hockey\" is listed among various sports, there is no direct connection made to William Carrier in the provided text. Therefore, the Extractor's assertion that the evidence supports the answer is inaccurate.",
+            "resolver": "Answer: Unknown. Explanation: The document does not explicitly mention William Carrier or provide any specific evidence linking him to hockey, despite the sport being listed among various others. Therefore, the connection cannot be confirmed based on the provided text."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: William Carrier is associated with hockey. Evidence: {“...according to head coach Rod Brind'Amour and will be re-evaluated Wednesday...”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer that William Carrier is associated with hockey is accurate, as the context of the document discusses a player (Carrier) in relation to a head coach and injury updates, which are typical elements of hockey reporting. The mention of a head coach (Rod Brind'Amour) and the nature of the injury also align with the context of professional hockey.",
+            "resolver": "Answer: William Carrier is associated with hockey. Explanation: The document discusses William Carrier in the context of injury updates and mentions a head coach, which are typical elements of hockey reporting. The Skeptic confirms that the Extractor's conclusion is accurate based on the context provided."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "'Answer: Hockey. Evidence: \"Carrier notched an assist and three hits in Tuesday 's 3-2 win over the Sharks.\" '",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor clearly indicates that William Carrier is involved in a hockey game, as it mentions his performance in a win over the Sharks, which is a reference to a hockey team (the San Jose Sharks). The context of assists, hits, and points further supports that he is a player in the sport of hockey.",
+            "resolver": "Answer: Hockey. Explanation: The document describes William Carrier's performance in a game, including assists and hits, and references the San Jose Sharks, a professional hockey team, confirming that he is associated with the sport of hockey."
+          }
+        ],
+        "document_summaries": [
+          "Answer: football. Explanation: The document clearly states that William Carrier was an English professional footballer who played in the Football League for Birmingham, confirming his association with the sport of football. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information presented.",
+          "Answer: Unknown. Explanation: The document mentions the NHL and hockey data but does not provide any explicit information about William Carrier's association with hockey. Therefore, there is no direct evidence to confirm his involvement in the sport.",
+          "Answer: Unknown. Explanation: The document does not explicitly mention William Carrier or provide any specific evidence linking him to hockey, despite the sport being listed among various others. Therefore, the connection cannot be confirmed based on the provided text.",
+          "Answer: William Carrier is associated with hockey. Explanation: The document discusses William Carrier in the context of injury updates and mentions a head coach, which are typical elements of hockey reporting. The Skeptic confirms that the Extractor's conclusion is accurate based on the context provided.",
+          "Answer: Hockey. Explanation: The document describes William Carrier's performance in a game, including assists and hits, and references the San Jose Sharks, a professional hockey team, confirming that he is associated with the sport of hockey."
+        ],
+        "aggregator_answer": [
+          "football",
+          "hockey"
+        ],
+        "aggregator_explanation": "Document 1 refers to William Carrier as an English professional footballer, confirming his association with football. Documents 4 and 5 confirm his association with hockey, discussing his performance and context within the sport. Documents 2 and 3 do not provide reliable information about his association with hockey."
+      }
+    ],
+    "em": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "predicted_answers": [
+      "football",
+      "hockey"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 1
+  },
+  {
+    "question": "When was the Dallas County Courthouse built?",
+    "disambig_entity": [
+      "Dallas County Courthouse (Iowa)"
+    ],
+    "gold_answers": [
+      "1902"
+    ],
+    "wrong_answers": [
+      "1885",
+      "1850"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "1902"
+      },
+      {
+        "type": "correct",
+        "answer": "1902"
+      },
+      {
+        "type": "correct",
+        "answer": "1902"
+      },
+      {
+        "type": "misinfo",
+        "answer": "1885"
+      },
+      {
+        "type": "misinfo",
+        "answer": "1850"
+      }
+    ],
+    "predicted": [
+      "1902",
+      "1885",
+      "July 10, 1850"
+    ],
+    "explanation": "Document 1 and Document 2 both confirm that the Dallas County Courthouse was built in 1902. Document 4 states that the courthouse was constructed in 1885. Document 5 specifies that the present courthouse was completed on July 10, 1850. Document 3's answer was deemed unreliable as it did not specify the exact year of construction.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 1902. Evidence: {The Dallas County Courthouse in Adel, Iowa, United States was built in 1902.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"The Dallas County Courthouse in Adel, Iowa, United States was built in 1902,\" which accurately supports the answer given. There is no exaggeration or misinterpretation, and the Extractor has correctly identified the year of construction as stated in the document. Additionally, the Extractor did not miss any important context relevant to the question about the construction date.",
+            "resolver": "Answer: 1902. Explanation: The Dallas County Courthouse in Adel, Iowa, was built in 1902, as directly stated in the document. The Extractor's findings are supported by the Skeptic's critique, confirming that the information is accurate and complete."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: 1902. Evidence: {Government buildings completed in 1902}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately states that the Dallas County Courthouse was built in 1902, which is directly supported by the evidence provided in the document that mentions \"Government buildings completed in 1902.\" There is no exaggeration or misinterpretation present, and the context is appropriately captured.",
+            "resolver": "Answer: 1902. Explanation: The Dallas County Courthouse was built in 1902, as confirmed by the document stating \"Government buildings completed in 1902,\" which the Extractor accurately referenced. The Skeptic's assessment supports this conclusion, indicating that the information is reliable and correctly interpreted."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: 1902. Evidence: \"On September 19, 1902, it was dedicated in front of a crowd of more than.\"'  \n'Answer: 1900. Evidence: \"The current courthouse was built with $ 85,000 in funding approved by county voters in 1900.\"'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor provides two different answers (1902 and 1900) based on the document. The first answer (1902) is supported by the statement about the dedication of the courthouse, while the second answer (1900) is based on the funding approval. However, the question specifically asks when the courthouse was built, which is not explicitly stated in the document. The construction likely occurred between the funding approval in 1900 and the dedication in 1902, but the exact year of completion is not provided. Therefore, while both answers have some basis in the text, neither fully answers the question regarding the exact year of construction.",
+            "resolver": "Answer: Unknown. Explanation: The document provides information about the funding approval in 1900 and the dedication of the courthouse in 1902, but it does not specify the exact year of construction. Therefore, the precise year when the Dallas County Courthouse was built cannot be determined from the available information."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: 1885. Evidence: \"The Dallas County Courthouse in Adel, Iowa, United States was constructed in 1885 and stands as a significant historical landmark.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately reflects the information provided in the document, which states that the Dallas County Courthouse in Adel, Iowa, was constructed in 1885. The evidence cited directly supports the answer without any exaggeration or misinterpretation. There is no important context missed, as the Extractor correctly identifies the construction year as a significant detail.",
+            "resolver": "Answer: 1885. Explanation: The Dallas County Courthouse in Adel, Iowa, was constructed in 1885, as stated in the document. The Extractor's findings are supported by the Skeptic's assessment, confirming that the information is accurate and complete without any misinterpretation."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "'Answer: July 10, 1850. Evidence: {The present courthouse of white Bedford stone was completed on July 10, 1850, by the contracting firm of Jones, Rowson and Son.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately reflects the information provided in the document, which states that the courthouse was completed on July 10, 1850. The evidence cited directly supports the answer without any exaggeration or misinterpretation. There is no important context missed, as the date of completion is clearly stated in the document.",
+            "resolver": "Answer: July 10, 1850. Explanation: The document clearly states that the present courthouse was completed on July 10, 1850, and the Extractor's findings are supported by the evidence provided. The Skeptic confirms that the answer is accurate and that no important context is missing."
+          }
+        ],
+        "document_summaries": [
+          "Answer: 1902. Explanation: The Dallas County Courthouse in Adel, Iowa, was built in 1902, as directly stated in the document. The Extractor's findings are supported by the Skeptic's critique, confirming that the information is accurate and complete.",
+          "Answer: 1902. Explanation: The Dallas County Courthouse was built in 1902, as confirmed by the document stating \"Government buildings completed in 1902,\" which the Extractor accurately referenced. The Skeptic's assessment supports this conclusion, indicating that the information is reliable and correctly interpreted.",
+          "Answer: Unknown. Explanation: The document provides information about the funding approval in 1900 and the dedication of the courthouse in 1902, but it does not specify the exact year of construction. Therefore, the precise year when the Dallas County Courthouse was built cannot be determined from the available information.",
+          "Answer: 1885. Explanation: The Dallas County Courthouse in Adel, Iowa, was constructed in 1885, as stated in the document. The Extractor's findings are supported by the Skeptic's assessment, confirming that the information is accurate and complete without any misinterpretation.",
+          "Answer: July 10, 1850. Explanation: The document clearly states that the present courthouse was completed on July 10, 1850, and the Extractor's findings are supported by the evidence provided. The Skeptic confirms that the answer is accurate and that no important context is missing."
+        ],
+        "aggregator_answer": [
+          "1902",
+          "1885",
+          "July 10, 1850"
+        ],
+        "aggregator_explanation": "Document 1 and Document 2 both confirm that the Dallas County Courthouse was built in 1902. Document 4 states that the courthouse was constructed in 1885. Document 5 specifies that the present courthouse was completed on July 10, 1850. Document 3's answer was deemed unreliable as it did not specify the exact year of construction."
+      }
+    ],
+    "em": 0,
+    "precision": 0.3333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "predicted_answers": [
+      "1902",
+      "1885",
+      "July 10, 1850"
+    ],
+    "wrong_in_pred": [
+      "1885"
+    ],
+    "n_gold_hit": 1,
+    "n_misinfo": 1,
+    "n_unknown": 1
+  },
+  {
+    "question": "What sport is Justin Thomas associated with?",
+    "disambig_entity": [
+      "Justin Thomas (American football)"
+    ],
+    "gold_answers": [
+      "American football"
+    ],
+    "wrong_answers": [
+      "Golf"
+    ],
+    "doc_meta": [
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "misinfo",
+        "answer": "Golf"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "golf",
+      "Golf"
+    ],
+    "explanation": "Document 2 states that Justin Thomas is known for his exceptional skills in golf and has won multiple tournaments. Document 3 also indicates that he is associated with golf, specifically mentioning his performance at the Valspar Championship. Document 1 does not provide a definitive answer regarding Justin Thomas's sport.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "Answer: {Justin Thomas is associated with football}. Evidence: {“He went on to start all 14 games including the Orange Bowl victory against Mississippi State led by Dak Prescott.”}",
+            "skeptic": "Verdict: Unsupported. Reasoning: The evidence provided by the Extractor does not support the claim that Justin Thomas is associated with football. The document discusses a player named Thomas who played in a football context, but it does not clarify that this Thomas is Justin Thomas, the professional golfer. Additionally, Justin Thomas is primarily known for his achievements in golf, not football. The Extractor's answer misinterprets the context and fails to provide accurate information about the correct sport associated with Justin Thomas.",
+            "resolver": "Answer: Unknown. Explanation: The document discusses a player named Thomas who is involved in football, but it does not clarify that this is Justin Thomas, the professional golfer. Therefore, it cannot be definitively stated that Justin Thomas is associated with football based on the provided information."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: golf. Evidence: \"However, outside of football, Thomas is also known for his exceptional skills in golf, where he has won multiple tournaments and is considered one of the top players in the world.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly supports the answer that Justin Thomas is associated with golf. The document explicitly states that Thomas is known for his exceptional skills in golf and has won multiple tournaments, confirming his association with the sport. There is no exaggeration or misinterpretation present, and the context regarding his football background does not detract from his identity as a golfer.",
+            "resolver": "Answer: golf. Explanation: The document clearly states that Justin Thomas is known for his exceptional skills in golf, where he has won multiple tournaments and is considered one of the top players in the world. The Skeptic confirms that the evidence supports this association without any exaggeration or misinterpretation."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: Golf. Evidence: {Justin Thomas fell apart on the final three holes at The Valspar Championship on Sunday, but he is still taking a lot of confidence from a s ...}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided in the document clearly indicates that Justin Thomas is associated with golf, as it mentions his performance at the Valspar Championship, which is a golf tournament. The Extractor's answer accurately reflects this association without exaggeration or misinterpretation. There is no important context missed, as the reference to the Valspar Championship directly ties Justin Thomas to the sport of golf.",
+            "resolver": "Answer: Golf. Explanation: The document clearly indicates that Justin Thomas is associated with golf, specifically mentioning his performance at the Valspar Championship, which is a golf tournament. The Extractor's answer is accurate and well-supported by the evidence provided."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Unknown. Explanation: The document discusses a player named Thomas who is involved in football, but it does not clarify that this is Justin Thomas, the professional golfer. Therefore, it cannot be definitively stated that Justin Thomas is associated with football based on the provided information.",
+          "Answer: golf. Explanation: The document clearly states that Justin Thomas is known for his exceptional skills in golf, where he has won multiple tournaments and is considered one of the top players in the world. The Skeptic confirms that the evidence supports this association without any exaggeration or misinterpretation.",
+          "Answer: Golf. Explanation: The document clearly indicates that Justin Thomas is associated with golf, specifically mentioning his performance at the Valspar Championship, which is a golf tournament. The Extractor's answer is accurate and well-supported by the evidence provided."
+        ],
+        "aggregator_answer": [
+          "golf",
+          "Golf"
+        ],
+        "aggregator_explanation": "Document 2 states that Justin Thomas is known for his exceptional skills in golf and has won multiple tournaments. Document 3 also indicates that he is associated with golf, specifically mentioning his performance at the Valspar Championship. Document 1 does not provide a definitive answer regarding Justin Thomas's sport."
+      }
+    ],
+    "em": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "predicted_answers": [
+      "golf",
+      "Golf"
+    ],
+    "wrong_in_pred": [
+      "golf",
+      "golf"
+    ],
+    "n_gold_hit": 0,
+    "n_misinfo": 1,
+    "n_unknown": 0
+  },
+  {
+    "question": "When was General Bryan born?",
+    "disambig_entity": [
+      "Blackshear M. Bryan"
+    ],
+    "gold_answers": [
+      "February 8, 1900"
+    ],
+    "wrong_answers": [
+      "July 15, 1905"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "February 8, 1900"
+      },
+      {
+        "type": "misinfo",
+        "answer": "July 15, 1905"
+      }
+    ],
+    "predicted": [
+      "February 8, 1900",
+      "July 15, 1905"
+    ],
+    "explanation": "Document 1 states that General Bryan was born on February 8, 1900, while Document 2 states he was born on July 15, 1905. Both answers are supported by their respective documents without discrepancies.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: February 8, 1900. Evidence: {“Bryan was born in Alexandria, Louisiana on February 8, 1900.”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"Bryan was born in Alexandria, Louisiana on February 8, 1900,\" which accurately supports the answer given. There is no exaggeration or misinterpretation present, and the Extractor has correctly identified the relevant information from the document. Additionally, the context regarding Bryan's military career and education, while interesting, does not affect the accuracy of the birth date provided.",
+            "resolver": "Answer: February 8, 1900. Explanation: The Extractor accurately identified that General Bryan was born in Alexandria, Louisiana on February 8, 1900, and the Skeptic confirmed that this information is directly supported by the evidence in the document without any misinterpretation."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: July 15, 1905. Evidence: \"Bryan was born in Alexandria, Louisiana on July 15, 1905.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"Bryan was born in Alexandria, Louisiana on July 15, 1905,\" which accurately supports the answer given. There is no exaggeration or misinterpretation present, and the Extractor has correctly identified the relevant information from the document. Additionally, the context regarding his military career and education, while informative, does not detract from the accuracy of the birth date provided.",
+            "resolver": "Answer: July 15, 1905. Explanation: The document clearly states that \"Bryan was born in Alexandria, Louisiana on July 15, 1905,\" which is directly supported by the Extractor's findings and validated by the Skeptic's critique. There are no discrepancies or misinterpretations in the information provided."
+          }
+        ],
+        "document_summaries": [
+          "Answer: February 8, 1900. Explanation: The Extractor accurately identified that General Bryan was born in Alexandria, Louisiana on February 8, 1900, and the Skeptic confirmed that this information is directly supported by the evidence in the document without any misinterpretation.",
+          "Answer: July 15, 1905. Explanation: The document clearly states that \"Bryan was born in Alexandria, Louisiana on July 15, 1905,\" which is directly supported by the Extractor's findings and validated by the Skeptic's critique. There are no discrepancies or misinterpretations in the information provided."
+        ],
+        "aggregator_answer": [
+          "February 8, 1900",
+          "July 15, 1905"
+        ],
+        "aggregator_explanation": "Document 1 states that General Bryan was born on February 8, 1900, while Document 2 states he was born on July 15, 1905. Both answers are supported by their respective documents without discrepancies."
+      }
+    ],
+    "em": 0,
+    "precision": 0.5,
+    "recall": 1.0,
+    "f1": 0.6667,
+    "predicted_answers": [
+      "February 8, 1900",
+      "July 15, 1905"
+    ],
+    "wrong_in_pred": [
+      "july 15 1905"
+    ],
+    "n_gold_hit": 1,
+    "n_misinfo": 1,
+    "n_unknown": 0
+  },
+  {
+    "question": "What is the population of Pilzno?",
+    "disambig_entity": [
+      "Gmina Pilzno"
+    ],
+    "gold_answers": [
+      "4,411"
+    ],
+    "wrong_answers": [
+      "10,000"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "4,411"
+      },
+      {
+        "type": "correct",
+        "answer": "4,411"
+      },
+      {
+        "type": "misinfo",
+        "answer": "10,000"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "4,411",
+      "17,289",
+      "10,000"
+    ],
+    "explanation": "Document 1 states the population of the town of Pilzno is 4,411. Document 2 provides the total population of Pilzno as 17,289. Document 3 mentions a population of 10,000 for the years 2025 through 2034. Document 4's answer is flagged as unknown since it does not provide specific information about Pilzno's population.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 4,411. Evidence: \"the population of Pilzno amounts to 4,411.\"'\n\n'Answer: 17,289. Evidence: \"as of 2006 its total population is 17,289.\"'\n\n'Answer: 12,878. Evidence: \"the population of the rural part of the gmina is 12,878.\"'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor correctly identifies three different population figures from the document: 4,411 for the town of Pilzno, 17,289 for the total population of Gmina Pilzno, and 12,878 for the rural part of the gmina. However, the Extractor does not clarify that these figures represent different populations (the town versus the entire gmina), which could lead to confusion. The context that these numbers pertain to different areas within the gmina is important for understanding the overall demographics.",
+            "resolver": "'Answer: 4,411. Explanation: The population of the town of Pilzno is 4,411, as stated in the document. It is important to note that this figure is distinct from the total population of the Gmina Pilzno, which is 17,289, and the rural population of 12,878. The Extractor's findings are accurate, but the context of these figures being for different areas within the gmina is crucial for clarity.'"
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: 17,289. Evidence: \"Population ( 2006 ) • Total 17,289.\"'\n\n'Answer: 4,411. Evidence: \"• Urban 4,411.\"'\n\n'Answer: 12,878. Evidence: \"• Rural 12,878.\"'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor's response accurately cites the total population of Pilzno as 17,289, which is supported by the document. However, the Extractor also provides separate figures for the urban (4,411) and rural (12,878) populations without clarifying that these figures are subsets of the total population. This could lead to confusion, as it may imply that these numbers represent the total population rather than parts of it. Additionally, the population data is from 2006, which is important context that the Extractor did not mention, as the current population may differ.",
+            "resolver": "Answer: 17,289. Explanation: The total population of Pilzno, as of 2006, is 17,289, which is supported by the document. While the Extractor also provided urban (4,411) and rural (12,878) population figures, these are subsets of the total and could lead to confusion if not clarified. It is important to note that this data is from 2006, and the current population may differ."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: 10,000. Evidence: {“2025 10,000 2,169 2,309 44 2026 10,000 2,164 2,304 — 2027 10,000 2,158 2,297 — 2028 10,000 2,151 2,290 — 2029 10,000 2,144 2,283 — 2030 10,000 2,136 2,275 46 2031 10,000 2,128 2,266 — 2032 10,000 2,119 2,257 — 2033 10,000 2,111 2,247 — 2034 10,000”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided in the document consistently states a population of 10,000 for the years 2025 through 2034, which directly supports the Extractor's answer. There is no exaggeration or misinterpretation present, and the answer accurately reflects the information given in the document. No important context appears to be missed, as the population figure is clearly stated multiple times.",
+            "resolver": "Answer: 10,000. Explanation: The document consistently states a population of 10,000 for the years 2025 through 2034, which is directly supported by the Extractor's findings. The Skeptic confirms that there are no misinterpretations or omissions in the data, reinforcing the reliability of the answer."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "The document does not provide specific information about the population of Pilzno. Therefore, there are no answer candidates to extract regarding the population of Pilzno.",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide specific information about the population of Pilzno. The data presented in the document appears to focus on broader population statistics and does not mention Pilzno specifically, thus supporting the Extractor's conclusion that there are no answer candidates regarding Pilzno's population.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide specific information about the population of Pilzno, focusing instead on broader population statistics without mentioning Pilzno directly."
+          }
+        ],
+        "document_summaries": [
+          "'Answer: 4,411. Explanation: The population of the town of Pilzno is 4,411, as stated in the document. It is important to note that this figure is distinct from the total population of the Gmina Pilzno, which is 17,289, and the rural population of 12,878. The Extractor's findings are accurate, but the context of these figures being for different areas within the gmina is crucial for clarity.'",
+          "Answer: 17,289. Explanation: The total population of Pilzno, as of 2006, is 17,289, which is supported by the document. While the Extractor also provided urban (4,411) and rural (12,878) population figures, these are subsets of the total and could lead to confusion if not clarified. It is important to note that this data is from 2006, and the current population may differ.",
+          "Answer: 10,000. Explanation: The document consistently states a population of 10,000 for the years 2025 through 2034, which is directly supported by the Extractor's findings. The Skeptic confirms that there are no misinterpretations or omissions in the data, reinforcing the reliability of the answer.",
+          "Answer: Unknown. Explanation: The document does not provide specific information about the population of Pilzno, focusing instead on broader population statistics without mentioning Pilzno directly."
+        ],
+        "aggregator_answer": [
+          "4,411",
+          "17,289",
+          "10,000"
+        ],
+        "aggregator_explanation": "Document 1 states the population of the town of Pilzno is 4,411. Document 2 provides the total population of Pilzno as 17,289. Document 3 mentions a population of 10,000 for the years 2025 through 2034. Document 4's answer is flagged as unknown since it does not provide specific information about Pilzno's population."
+      }
+    ],
+    "em": 0,
+    "precision": 0.3333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "predicted_answers": [
+      "4,411",
+      "17,289",
+      "10,000"
+    ],
+    "wrong_in_pred": [
+      "10000"
+    ],
+    "n_gold_hit": 1,
+    "n_misinfo": 1,
+    "n_unknown": 1
+  },
+  {
+    "question": "Who is the current Minister of Immigration?",
+    "disambig_entity": [
+      "Minister of Immigration, Refugees and Citizenship"
+    ],
+    "gold_answers": [
+      "Ahmed Hussen"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Ahmed Hussen"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [],
+    "explanation": "{All documents indicate uncertainty regarding the current Minister of Immigration, either due to lack of temporal context or absence of relevant information.}",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Ahmed Hussen. Evidence: {The current minister is Ahmed Hussen.}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document states that \"the current minister is Ahmed Hussen,\" but it does not provide a date or context to confirm that he is still the current minister at the time of the Extractor's response. Given that political positions can change, the Extractor's answer lacks the necessary context to verify its accuracy as of the current date.",
+            "resolver": "Answer: Unknown. Explanation: While the document states that \"the current minister is Ahmed Hussen,\" it does not provide a date or context to confirm that he is still the current minister. Given the potential for changes in political positions, the lack of temporal context means we cannot verify the accuracy of this information as of the current date."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "The document does not provide any information regarding the current Minister of Immigration. Therefore, there are no answer candidates to extract.",
+            "skeptic": "Verdict: Supported. Reasoning: The document does not contain any information about the current Minister of Immigration, as it focuses solely on committee interventions and bills sponsored by a member. The Extractor accurately states that there are no answer candidates to extract regarding the Minister of Immigration.",
+            "resolver": "Answer: Unknown. Explanation: The document does not contain any information regarding the current Minister of Immigration, as it focuses solely on committee interventions and bills sponsored by a member. Both the Extractor and the Skeptic agree on this point."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "The document does not provide any information regarding the current Minister of Immigration. Therefore, there are no answer candidates to extract.",
+            "skeptic": "Verdict: Supported. Reasoning: The document does not contain any information about the current Minister of Immigration, as it primarily discusses government services and provides links to other resources without mentioning specific individuals or positions. The Extractor accurately states that there are no answer candidates to extract regarding the Minister of Immigration.",
+            "resolver": "Answer: Unknown. Explanation: The document does not contain any information about the current Minister of Immigration, as it primarily discusses government services and provides links to other resources without mentioning specific individuals or positions."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Unknown. Explanation: While the document states that \"the current minister is Ahmed Hussen,\" it does not provide a date or context to confirm that he is still the current minister. Given the potential for changes in political positions, the lack of temporal context means we cannot verify the accuracy of this information as of the current date.",
+          "Answer: Unknown. Explanation: The document does not contain any information regarding the current Minister of Immigration, as it focuses solely on committee interventions and bills sponsored by a member. Both the Extractor and the Skeptic agree on this point.",
+          "Answer: Unknown. Explanation: The document does not contain any information about the current Minister of Immigration, as it primarily discusses government services and provides links to other resources without mentioning specific individuals or positions."
+        ],
+        "aggregator_answer": [],
+        "aggregator_explanation": "{All documents indicate uncertainty regarding the current Minister of Immigration, either due to lack of temporal context or absence of relevant information.}"
+      }
+    ],
+    "em": 0,
+    "precision": 0.0,
+    "recall": 0.0,
+    "f1": 0.0,
+    "predicted_answers": [],
+    "wrong_in_pred": [],
+    "n_gold_hit": 0,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "What is the length of the Moravica river?",
+    "disambig_entity": [
+      "Golijska Moravica"
+    ],
+    "gold_answers": [
+      "98 km"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "98 km"
+      },
+      {
+        "type": "correct",
+        "answer": "98 km"
+      },
+      {
+        "type": "correct",
+        "answer": "98 km"
+      }
+    ],
+    "predicted": [
+      "98 km"
+    ],
+    "explanation": "All three documents confirm the length of the Moravica river as 98 km, with consistent evidence and validation from the Skeptic regarding the accuracy of this information.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 98 km. Evidence: \"With a length of 98 km, it is the longer headstream of the Zapadna Morava...\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer of \"98 km\" is directly supported by the evidence provided in the document, which states, \"With a length of 98 km.\" There is no exaggeration or misinterpretation present, and the answer accurately reflects the information given in the document. Additionally, the context regarding the river's significance as a headstream of the Zapadna Morava is relevant but does not detract from the accuracy of the length stated.",
+            "resolver": "Answer: 98 km. Explanation: The length of the Moravica river is confirmed to be 98 km, as stated in the document. The Extractor's findings are supported by the evidence provided, and the Skeptic's critique validates the accuracy of this information without any misinterpretation."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "Answer: 98 km. Evidence: \"With a length of 98 km, it is the longer headstream of the West Morava...\"",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer of \"98 km\" is directly supported by the evidence provided in the document, which states, \"With a length of 98 km.\" There is no exaggeration or misinterpretation present, and the answer accurately reflects the information given in the document. Additionally, the context regarding the river's significance as a headstream of the West Morava is relevant but does not detract from the accuracy of the length stated.",
+            "resolver": "Answer: 98 km. Explanation: The length of the Moravica river is explicitly stated in the document as \"With a length of 98 km,\" and this information is accurately reflected in the Extractor's response. The Skeptic confirms that there are no issues with the interpretation, supporting the reliability of the answer."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: 98 km. Evidence: {Дуга је 98 km .}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer of \"98 km\" is directly supported by the evidence provided in the document, which states \"Дуга је 98 km.\" There is no exaggeration or misinterpretation present, and the answer accurately reflects the information given in the document. Additionally, the context regarding the river's location and characteristics does not affect the accuracy of the length stated.",
+            "resolver": "Answer: 98 km. Explanation: The length of the Moravica river is explicitly stated in the document as \"Дуга је 98 km,\" which translates to \"It is 98 km long.\" The Extractor's response is directly supported by this evidence, and the Skeptic confirms that there are no issues with the interpretation or accuracy of the information provided."
+          }
+        ],
+        "document_summaries": [
+          "Answer: 98 km. Explanation: The length of the Moravica river is confirmed to be 98 km, as stated in the document. The Extractor's findings are supported by the evidence provided, and the Skeptic's critique validates the accuracy of this information without any misinterpretation.",
+          "Answer: 98 km. Explanation: The length of the Moravica river is explicitly stated in the document as \"With a length of 98 km,\" and this information is accurately reflected in the Extractor's response. The Skeptic confirms that there are no issues with the interpretation, supporting the reliability of the answer.",
+          "Answer: 98 km. Explanation: The length of the Moravica river is explicitly stated in the document as \"Дуга је 98 km,\" which translates to \"It is 98 km long.\" The Extractor's response is directly supported by this evidence, and the Skeptic confirms that there are no issues with the interpretation or accuracy of the information provided."
+        ],
+        "aggregator_answer": [
+          "98 km"
+        ],
+        "aggregator_explanation": "All three documents confirm the length of the Moravica river as 98 km, with consistent evidence and validation from the Skeptic regarding the accuracy of this information."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "98 km"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "Who is the artist of the album \"VII\"?",
+    "disambig_entity": [
+      "VII (Blitzen Trapper album)"
+    ],
+    "gold_answers": [
+      "Blitzen Trapper"
+    ],
+    "wrong_answers": [
+      "The Beatles",
+      "The Beatles"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Blitzen Trapper"
+      },
+      {
+        "type": "correct",
+        "answer": "Blitzen Trapper"
+      },
+      {
+        "type": "correct",
+        "answer": "Blitzen Trapper"
+      },
+      {
+        "type": "misinfo",
+        "answer": "The Beatles"
+      },
+      {
+        "type": "misinfo",
+        "answer": "The Beatles"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Blitzen Trapper"
+    ],
+    "explanation": "Document 1 states that the album \"VII\" is credited to the band Blitzen Trapper. Document 3 also confirms that the album \"VII\" is associated with the artist Blitzen Trapper, while the other documents either do not provide a definitive answer or lack credible evidence regarding the artist.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Blitzen Trapper. Evidence: \"VII is the seventh studio album by American alternative country band Blitzen Trapper.\"'\n\n'Answer: Eric Earley. Evidence: \"and by lead singer and songwriter Eric Earley as 'hillbilly gangster'.\"'",
+            "skeptic": "Verdict: Partially Supported. Reasoning: The Extractor correctly identifies Blitzen Trapper as the artist of the album \"VII,\" which is supported by the document. However, the mention of Eric Earley as the artist is misleading; while he is the lead singer and songwriter, the album is credited to the band as a whole, Blitzen Trapper. The Extractor's response could imply that Earley is the sole artist, which is not accurate. Additionally, the Extractor does not clarify that \"VII\" is a band album, which is an important context.",
+            "resolver": "Answer: Blitzen Trapper. Explanation: The album \"VII\" is credited to the band Blitzen Trapper, as stated in the document. While Eric Earley is the lead singer and songwriter, the album is a collective work of the band, making Blitzen Trapper the correct answer to the question about the artist of the album."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Blitzen Trapper. Evidence: \"to date, Blitzen Trapper has appeared on the Daytrotter Sessions more than any other artist 'on the planet.'\" '",
+            "skeptic": "Verdict: Unsupported. Reasoning: The evidence provided by the Extractor does not directly support the claim that Blitzen Trapper is the artist of the album \"VII.\" The document mentions Blitzen Trapper's appearances on the Daytrotter Sessions but does not explicitly state that they are the artist of the album \"VII.\" Additionally, the document does not provide any information about the album's artist, making the Extractor's conclusion unsupported.",
+            "resolver": "Answer: Unknown. Explanation: The document does not explicitly state that Blitzen Trapper is the artist of the album \"VII,\" nor does it provide any information about the album's artist. The Extractor's conclusion is unsupported based on the content of the document."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: Blitzen Trapper. Evidence: \"Blitzen Trapper : VII.\" '",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly cites the document, which clearly states that the album \"VII\" is associated with the artist Blitzen Trapper. There is no exaggeration or misinterpretation present, and the answer accurately reflects the information in the document. No important context appears to be missed.",
+            "resolver": "Answer: Blitzen Trapper. Explanation: The document clearly states that the album \"VII\" is associated with the artist Blitzen Trapper, and the Extractor's findings are supported by the Skeptic's critique, which confirms the accuracy and completeness of the information provided."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: The Beatles. Evidence: \"VII was well received by critics. An enthusiastic review by Paste magazine calls the record 'The Beatles’ strongest album to date...'\"'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document does not explicitly state that \"VII\" is an album by The Beatles; it only mentions that a review refers to it as \"The Beatles’ strongest album to date.\" This implies that the album being discussed is associated with The Beatles, but it does not confirm that The Beatles are the actual artists of the album \"VII.\" The Extractor's response misinterprets the context by presenting it as a definitive answer without sufficient evidence from the document. Additionally, the document does not provide any information about the actual artist of the album \"VII.\"",
+            "resolver": "Answer: Unknown. Explanation: The document does not explicitly confirm that The Beatles are the artists of the album \"VII.\" It only mentions a review that refers to it as \"The Beatles’ strongest album to date,\" which implies a connection but does not provide definitive evidence of authorship."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "'Answer: The Beatles. Evidence: {The album \"VII\" by The Beatles is a unique blend of their classic sound with a modern twist, showcasing the band's versatility and creativity even after decades since their initial fame.}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document does not provide any credible evidence that \"VII\" is an album by The Beatles. The mention of The Beatles in the context of the album \"VII\" appears to be an unsupported assertion, as there is no widely recognized album titled \"VII\" by The Beatles. Additionally, the document does not contain any specific details or context that would validate the claim made by the Extractor.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide credible evidence that \"VII\" is an album by The Beatles, and the Skeptic's critique highlights the lack of support for this claim. There is no widely recognized album titled \"VII\" by The Beatles, making the assertion unsupported."
+          },
+          {
+            "doc_index": 5,
+            "extractor": "Answer: Eric Earley. Evidence: \"Songwriter Eric Earley explains, `` I get bored . I like to move things in a new direction ... I ’ m always writing, and if you ’ re always writing things are going to change .”",
+            "skeptic": "Verdict: Unsupported. Reasoning: The evidence provided by the Extractor mentions Eric Earley as a songwriter and discusses his approach to writing and stylistic changes, but it does not explicitly state that he is the artist of the album \"VII.\" The document does not provide clear information about the artist of the album, which means the Extractor's answer lacks direct support from the text.",
+            "resolver": "Answer: Unknown. Explanation: The document mentions Eric Earley as a songwriter and discusses his approach to writing, but it does not explicitly state that he is the artist of the album \"VII.\" Therefore, there is insufficient information to confirm the artist's identity."
+          },
+          {
+            "doc_index": 6,
+            "extractor": "'Answer: The band. Evidence: \"The band played four songs live in the studio: 'Faces of You,' 'Thirsty Man,' 'Valley of Death,' and 'Texaco'; all but the final are from VII.\"'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The Extractor's answer states that the artist of the album \"VII\" is \"the band,\" but the document does not specify the name of the band or artist associated with the album. The evidence provided only mentions that the songs played live are from \"VII,\" without identifying the artist. Therefore, the answer lacks the necessary information to be considered accurate.",
+            "resolver": "Answer: Unknown. Explanation: The document does not specify the name of the artist or band associated with the album \"VII,\" only mentioning that certain songs are from it. Therefore, the information needed to accurately answer the question is not provided."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Blitzen Trapper. Explanation: The album \"VII\" is credited to the band Blitzen Trapper, as stated in the document. While Eric Earley is the lead singer and songwriter, the album is a collective work of the band, making Blitzen Trapper the correct answer to the question about the artist of the album.",
+          "Answer: Unknown. Explanation: The document does not explicitly state that Blitzen Trapper is the artist of the album \"VII,\" nor does it provide any information about the album's artist. The Extractor's conclusion is unsupported based on the content of the document.",
+          "Answer: Blitzen Trapper. Explanation: The document clearly states that the album \"VII\" is associated with the artist Blitzen Trapper, and the Extractor's findings are supported by the Skeptic's critique, which confirms the accuracy and completeness of the information provided.",
+          "Answer: Unknown. Explanation: The document does not explicitly confirm that The Beatles are the artists of the album \"VII.\" It only mentions a review that refers to it as \"The Beatles’ strongest album to date,\" which implies a connection but does not provide definitive evidence of authorship.",
+          "Answer: Unknown. Explanation: The document does not provide credible evidence that \"VII\" is an album by The Beatles, and the Skeptic's critique highlights the lack of support for this claim. There is no widely recognized album titled \"VII\" by The Beatles, making the assertion unsupported.",
+          "Answer: Unknown. Explanation: The document mentions Eric Earley as a songwriter and discusses his approach to writing, but it does not explicitly state that he is the artist of the album \"VII.\" Therefore, there is insufficient information to confirm the artist's identity.",
+          "Answer: Unknown. Explanation: The document does not specify the name of the artist or band associated with the album \"VII,\" only mentioning that certain songs are from it. Therefore, the information needed to accurately answer the question is not provided."
+        ],
+        "aggregator_answer": [
+          "Blitzen Trapper"
+        ],
+        "aggregator_explanation": "Document 1 states that the album \"VII\" is credited to the band Blitzen Trapper. Document 3 also confirms that the album \"VII\" is associated with the artist Blitzen Trapper, while the other documents either do not provide a definitive answer or lack credible evidence regarding the artist."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "Blitzen Trapper"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "Who is the artist of the album \"A Kind of Hush\"?",
+    "disambig_entity": [
+      "A Kind of Hush (album)"
+    ],
+    "gold_answers": [
+      "Carpenters"
+    ],
+    "wrong_answers": [
+      "The Beatles"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Carpenters"
+      },
+      {
+        "type": "correct",
+        "answer": "Carpenters"
+      },
+      {
+        "type": "misinfo",
+        "answer": "The Beatles"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Carpenters",
+      "The Carpenters"
+    ],
+    "explanation": "Document 1 and Document 2 both correctly identify the artist of the album \"A Kind of Hush\" as the Carpenters. Document 3 confirms that the album is misattributed to The Beatles, reinforcing that the correct artist is The Carpenters. Document 4's answer is flagged as unknown due to lack of explicit information, but the other documents provide reliable answers.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Carpenters. Evidence: \"A Kind of Hush is the seventh studio album by American popular music duo Carpenters.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"A Kind of Hush is the seventh studio album by American popular music duo Carpenters,\" which clearly identifies the artist as the Carpenters. There is no exaggeration or misinterpretation in the answer, and the context regarding the album's release and the artist's challenges does not detract from the accuracy of the answer.",
+            "resolver": "Answer: Carpenters. Explanation: The document clearly states that \"A Kind of Hush is the seventh studio album by American popular music duo Carpenters,\" which directly identifies the artist as the Carpenters. The Skeptic confirms that the Extractor's interpretation is accurate and supported by the evidence provided."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Carpenters. Evidence: \"A Kind of Hush is the seventh studio album by the American music duo Carpenters.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly states that \"A Kind of Hush is the seventh studio album by the American music duo Carpenters,\" which clearly identifies the Carpenters as the artist of the album. There is no exaggeration or misinterpretation present, and the Extractor accurately reflects the information from the document. Additionally, no important context is missed, as the Extractor's response is concise and directly answers the question.",
+            "resolver": "Answer: Carpenters. Explanation: The document clearly states that \"A Kind of Hush is the seventh studio album by the American music duo Carpenters,\" confirming that the Carpenters are the artist of the album. The Extractor's response is accurate and supported by the evidence provided."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: The Beatles. Evidence: `` A Kind of Hush `` is an album by The Beatles.'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document incorrectly states that \"A Kind of Hush\" is an album by The Beatles, when in fact it is an album by The Carpenters. The Extractor's answer is based on this inaccurate information, leading to a false attribution of the album to The Beatles. Additionally, the document does not provide any context that supports the claim that The Beatles are the artists of the album.",
+            "resolver": "Answer: The Carpenters. Explanation: The document incorrectly attributes the album \"A Kind of Hush\" to The Beatles, while it is actually an album by The Carpenters. The Skeptic's critique highlights this error, confirming that the Extractor's answer is based on inaccurate information. Therefore, the correct artist of the album is The Carpenters."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "The document provided does not contain any information regarding the artist of the album \"A Kind of Hush.\" Therefore, there are no answer candidates to extract. \n\nIf you have a different document or more information, please provide it, and I can assist you further.",
+            "skeptic": "Verdict: Unsupported. Reasoning: The Extractor's response claims that the document does not contain any information regarding the artist of the album \"A Kind of Hush.\" However, the document is a Wikipedia entry, which typically includes details about the artist in the background section or other relevant parts. The Extractor's assertion that there are no answer candidates to extract is not accurate, as the artist's name is likely to be included in the full article, which the Extractor did not verify. Therefore, the answer lacks support from the document.",
+            "resolver": "Answer: Unknown. Explanation: The document does not explicitly provide the name of the artist for the album \"A Kind of Hush,\" and while the Skeptic suggests that such information is likely included in a typical Wikipedia entry, the Extractor's assessment indicates that the specific content needed to answer the question is not present in the provided excerpt. Therefore, without access to the full article, the answer remains unknown."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Carpenters. Explanation: The document clearly states that \"A Kind of Hush is the seventh studio album by American popular music duo Carpenters,\" which directly identifies the artist as the Carpenters. The Skeptic confirms that the Extractor's interpretation is accurate and supported by the evidence provided.",
+          "Answer: Carpenters. Explanation: The document clearly states that \"A Kind of Hush is the seventh studio album by the American music duo Carpenters,\" confirming that the Carpenters are the artist of the album. The Extractor's response is accurate and supported by the evidence provided.",
+          "Answer: The Carpenters. Explanation: The document incorrectly attributes the album \"A Kind of Hush\" to The Beatles, while it is actually an album by The Carpenters. The Skeptic's critique highlights this error, confirming that the Extractor's answer is based on inaccurate information. Therefore, the correct artist of the album is The Carpenters.",
+          "Answer: Unknown. Explanation: The document does not explicitly provide the name of the artist for the album \"A Kind of Hush,\" and while the Skeptic suggests that such information is likely included in a typical Wikipedia entry, the Extractor's assessment indicates that the specific content needed to answer the question is not present in the provided excerpt. Therefore, without access to the full article, the answer remains unknown."
+        ],
+        "aggregator_answer": [
+          "Carpenters",
+          "The Carpenters"
+        ],
+        "aggregator_explanation": "Document 1 and Document 2 both correctly identify the artist of the album \"A Kind of Hush\" as the Carpenters. Document 3 confirms that the album is misattributed to The Beatles, reinforcing that the correct artist is The Carpenters. Document 4's answer is flagged as unknown due to lack of explicit information, but the other documents provide reliable answers."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 2.0,
+    "f1": 1.3333,
+    "predicted_answers": [
+      "Carpenters",
+      "The Carpenters"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "Who is the artist of the album \"The Heat\"?",
+    "disambig_entity": [
+      "The Heat (Needtobreathe album)"
+    ],
+    "gold_answers": [
+      "Needtobreathe"
+    ],
+    "wrong_answers": [
+      "Coldplay"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Needtobreathe"
+      },
+      {
+        "type": "correct",
+        "answer": "Needtobreathe"
+      },
+      {
+        "type": "misinfo",
+        "answer": "Coldplay"
+      }
+    ],
+    "predicted": [
+      "Needtobreathe"
+    ],
+    "explanation": "Document 1 and Document 2 both confirm that \"The Heat\" is the second studio album by the American rock band Needtobreathe, validating that Needtobreathe is the artist of the album. Document 3 does not provide a reliable answer regarding the artist of \"The Heat.\"",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Needtobreathe. Evidence: {The Heat is the second studio album by American rock band Needtobreathe, released on August 28, 2007 under Atlantic/Word Records.}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor clearly states that \"The Heat\" is the second studio album by the American rock band Needtobreathe, which directly supports the answer that Needtobreathe is the artist of the album. There is no exaggeration or misinterpretation present, and the Extractor accurately reflects the information in the document. Additionally, the context regarding the album's release and its performance on charts is relevant but not necessary for answering the specific question about the artist.",
+            "resolver": "Answer: {Needtobreathe}. Explanation: {The document clearly states that \"The Heat\" is the second studio album by the American rock band Needtobreathe, confirming that Needtobreathe is the artist of the album. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided.}"
+          },
+          {
+            "doc_index": 1,
+            "extractor": "The document does not provide any information regarding the artist of the album \"The Heat.\" Therefore, there are no answer candidates to extract. \n\nIf you have another document or need assistance with a different question, feel free to provide it!",
+            "skeptic": "Verdict: Unsupported. Reasoning: The Extractor's response claims that the document does not provide any information regarding the artist of the album \"The Heat.\" However, the document explicitly mentions \"The Heat (Needtobreathe album),\" indicating that the artist is Needtobreathe. The Extractor missed this crucial context, leading to an incorrect conclusion.",
+            "resolver": "Answer: Needtobreathe. Explanation: The document refers to \"The Heat (Needtobreathe album),\" indicating that the artist of the album \"The Heat\" is Needtobreathe. The Extractor overlooked this key detail, which the Skeptic correctly identified."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "Answer: Coldplay. Evidence: {The document lists multiple tracks with \"Coldplay\" as the artist for each song, indicating that they are the artist of the album.}",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document does not explicitly state that the album \"The Heat\" is by Coldplay; it only lists tracks with Coldplay as the artist. Without confirmation that these tracks belong to the album \"The Heat,\" the Extractor's conclusion is not supported. Additionally, the document does not provide any context or information about the album itself, which is necessary to accurately attribute it to Coldplay.",
+            "resolver": "Answer: Unknown. Explanation: The document lists multiple tracks attributed to Coldplay, but it does not explicitly confirm that these tracks belong to the album \"The Heat.\" Without this confirmation, the Extractor's conclusion cannot be reliably supported."
+          }
+        ],
+        "document_summaries": [
+          "Answer: {Needtobreathe}. Explanation: {The document clearly states that \"The Heat\" is the second studio album by the American rock band Needtobreathe, confirming that Needtobreathe is the artist of the album. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided.}",
+          "Answer: Needtobreathe. Explanation: The document refers to \"The Heat (Needtobreathe album),\" indicating that the artist of the album \"The Heat\" is Needtobreathe. The Extractor overlooked this key detail, which the Skeptic correctly identified.",
+          "Answer: Unknown. Explanation: The document lists multiple tracks attributed to Coldplay, but it does not explicitly confirm that these tracks belong to the album \"The Heat.\" Without this confirmation, the Extractor's conclusion cannot be reliably supported."
+        ],
+        "aggregator_answer": [
+          "Needtobreathe"
+        ],
+        "aggregator_explanation": "Document 1 and Document 2 both confirm that \"The Heat\" is the second studio album by the American rock band Needtobreathe, validating that Needtobreathe is the artist of the album. Document 3 does not provide a reliable answer regarding the artist of \"The Heat.\""
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "Needtobreathe"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "What sport is Doak associated with?",
+    "disambig_entity": [
+      "Doak Campbell Stadium"
+    ],
+    "gold_answers": [
+      "Football"
+    ],
+    "wrong_answers": [
+      "Soccer",
+      "Chess"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "misinfo",
+        "answer": "Chess"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Football",
+      "American Football",
+      "soccer"
+    ],
+    "explanation": "Document 1 and Document 5 refer to Doak Campbell Stadium's association with football, while Document 2 specifies American Football. Document 3 indicates a connection to soccer. Document 4 and Document 6 do not provide reliable information about Doak's association with any sport.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Football. Evidence: \"Doak S. Campbell Stadium... is the home field of the Florida State Seminoles football team of the Atlantic Coast Conference (ACC).\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly supports the answer, as it clearly states that Doak S. Campbell Stadium is the home field of the Florida State Seminoles football team. There is no exaggeration or misinterpretation present, and the context regarding the stadium's association with football is accurately conveyed.",
+            "resolver": "Answer: Football. Explanation: Doak S. Campbell Stadium is explicitly identified as the home field of the Florida State Seminoles football team, confirming its association with the sport of football. The Extractor's findings are supported by the Skeptic's assessment, which validates the accuracy of the information provided."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: American Football. Evidence: {Doak Campbell Stadium | American Football Database | Fandom}'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer correctly identifies Doak Campbell Stadium as being associated with American Football, which is consistent with the context provided in the document. The mention of the stadium implies its use for American Football, thus supporting the Extractor's response. There is no exaggeration or misinterpretation present, and the relevant context is adequately captured.",
+            "resolver": "Answer: American Football. Explanation: The Extractor correctly identified Doak Campbell Stadium as being associated with American Football, which is supported by the context of the document. The Skeptic confirmed that the Extractor's response is accurate and consistent with the information provided."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: soccer. Evidence: {Doak Campbell Stadium’s transformation a bold move in college soccer’s new reality}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly references Doak Campbell Stadium's transformation in relation to college soccer, indicating that Doak is associated with soccer. The mention of the stadium's capacity and its relevance to college soccer supports the claim that Doak is linked to this sport. There is no exaggeration or misinterpretation present, and the context is adequately captured in the evidence.",
+            "resolver": "Answer: soccer. Explanation: The document indicates that Doak Campbell Stadium's transformation is specifically related to college soccer, confirming that Doak is associated with this sport. The Extractor's evidence is supported by the Skeptic's analysis, which confirms the accuracy and relevance of the information provided."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: chess. Evidence: \"Doak is widely recognized for his exceptional skills in chess, making him a celebrated figure in the chess community at Florida State University.\"'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document lists various sports and activities associated with Florida State University, including chess, but does not provide any specific information about an individual named Doak or his skills in chess. The Extractor's assertion that Doak is \"widely recognized for his exceptional skills in chess\" is not supported by the document, which lacks any mention of Doak or his accomplishments. Therefore, the answer is not substantiated by the provided evidence.",
+            "resolver": "Answer: Unknown. Explanation: The document lists various sports and activities at Florida State University, including chess, but does not provide any specific information about an individual named Doak or his skills in chess. Therefore, the claim that Doak is associated with chess is not substantiated by the provided evidence."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "'Answer: Football. Evidence: \"Doak Campbell Stadium has grown from a small facility into one of the famous football stadiums in the nation.\" '",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly relates to Doak Campbell Stadium, which is explicitly mentioned as a famous football stadium. The context of the document indicates that the stadium is associated with the sport of football, specifically in relation to the Florida State Seminoles, who play there. Therefore, the Extractor's answer is accurate and supported by the information in the document.",
+            "resolver": "Answer: Football. Explanation: The document discusses Doak Campbell Stadium, which is identified as a famous football stadium where the Florida State Seminoles play. The Extractor's findings are supported by the Skeptic's critique, confirming that the association with football is accurate and well-supported by the context provided."
+          },
+          {
+            "doc_index": 5,
+            "extractor": "The document provided does not contain any information about a sport associated with Doak. Therefore, there are no answer candidates to extract. \n\nIf you have another document or more context, please provide it, and I would be happy to assist!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not contain any information about a sport associated with Doak. The document focuses on betting and gambling content without mentioning any specific sports or individuals, thus supporting the Extractor's conclusion that there are no answer candidates to extract regarding Doak's association with a sport.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information regarding a sport associated with Doak, focusing instead on betting and gambling content without mentioning specific sports or individuals."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Football. Explanation: Doak S. Campbell Stadium is explicitly identified as the home field of the Florida State Seminoles football team, confirming its association with the sport of football. The Extractor's findings are supported by the Skeptic's assessment, which validates the accuracy of the information provided.",
+          "Answer: American Football. Explanation: The Extractor correctly identified Doak Campbell Stadium as being associated with American Football, which is supported by the context of the document. The Skeptic confirmed that the Extractor's response is accurate and consistent with the information provided.",
+          "Answer: soccer. Explanation: The document indicates that Doak Campbell Stadium's transformation is specifically related to college soccer, confirming that Doak is associated with this sport. The Extractor's evidence is supported by the Skeptic's analysis, which confirms the accuracy and relevance of the information provided.",
+          "Answer: Unknown. Explanation: The document lists various sports and activities at Florida State University, including chess, but does not provide any specific information about an individual named Doak or his skills in chess. Therefore, the claim that Doak is associated with chess is not substantiated by the provided evidence.",
+          "Answer: Football. Explanation: The document discusses Doak Campbell Stadium, which is identified as a famous football stadium where the Florida State Seminoles play. The Extractor's findings are supported by the Skeptic's critique, confirming that the association with football is accurate and well-supported by the context provided.",
+          "Answer: Unknown. Explanation: The document does not provide any information regarding a sport associated with Doak, focusing instead on betting and gambling content without mentioning specific sports or individuals."
+        ],
+        "aggregator_answer": [
+          "Football",
+          "American Football",
+          "soccer"
+        ],
+        "aggregator_explanation": "Document 1 and Document 5 refer to Doak Campbell Stadium's association with football, while Document 2 specifies American Football. Document 3 indicates a connection to soccer. Document 4 and Document 6 do not provide reliable information about Doak's association with any sport."
+      }
+    ],
+    "em": 0,
+    "precision": 0.3333,
+    "recall": 1.0,
+    "f1": 0.5,
+    "predicted_answers": [
+      "Football",
+      "American Football",
+      "soccer"
+    ],
+    "wrong_in_pred": [
+      "soccer"
+    ],
+    "n_gold_hit": 1,
+    "n_misinfo": 1,
+    "n_unknown": 1
+  },
+  {
+    "question": "What is the estimated population of Handa?",
+    "disambig_entity": [
+      "Handa, Aichi"
+    ],
+    "gold_answers": [
+      "117,088"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "117,088"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "117,088"
+    ],
+    "explanation": "Document 1 provides a specific estimated population of Handa as of May 2015, which is confirmed by the verification process. Document 2 does not provide a specific estimated population, leading to an unknown status.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: 117,088. Evidence: \"As of May 2015, the city had an estimated population of 117,088 and a population density of 2,470 persons per km².\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor's answer accurately reflects the information provided in the document, which states that as of May 2015, Handa had an estimated population of 117,088. The evidence cited directly supports the answer without any exaggeration or misinterpretation. There is no important context missed, as the Extractor correctly identifies the population figure from the document.",
+            "resolver": "Answer: 117,088. Explanation: The estimated population of Handa, as of May 2015, is 117,088, which is directly supported by the information provided in the document. The Extractor's findings and the Skeptic's critique confirm the accuracy and completeness of this figure."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "The document does not provide a specific estimated population for Handa. Therefore, there are no answer candidates to extract. \n\nIf you have another document or need assistance with a different question, feel free to provide it!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide a specific estimated population for Handa. The information presented in the document focuses on population density and area but does not mention the actual population figure, which aligns with the Extractor's conclusion. There is no exaggeration or misinterpretation, and the Extractor correctly identifies the lack of relevant data in the document.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide a specific estimated population for Handa, only mentioning its population density and total area. The Extractor correctly identified the absence of relevant data, which the Skeptic confirmed."
+          }
+        ],
+        "document_summaries": [
+          "Answer: 117,088. Explanation: The estimated population of Handa, as of May 2015, is 117,088, which is directly supported by the information provided in the document. The Extractor's findings and the Skeptic's critique confirm the accuracy and completeness of this figure.",
+          "Answer: Unknown. Explanation: The document does not provide a specific estimated population for Handa, only mentioning its population density and total area. The Extractor correctly identified the absence of relevant data, which the Skeptic confirmed."
+        ],
+        "aggregator_answer": [
+          "117,088"
+        ],
+        "aggregator_explanation": "Document 1 provides a specific estimated population of Handa as of May 2015, which is confirmed by the verification process. Document 2 does not provide a specific estimated population, leading to an unknown status."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "117,088"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "What is the medium of \"The Man Who Never Was\"?",
+    "disambig_entity": [
+      "The Man Who Never Was"
+    ],
+    "gold_answers": [
+      "Film"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Film"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "film"
+    ],
+    "explanation": "Document 1 clearly identifies \"The Man Who Never Was\" as a 1956 UK Second World War film, confirming that the medium is indeed film. Document 2 does not provide any information about the medium, leading to an unknown status.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: The Man Who Never Was is a 1956 UK Second World War film. Evidence: \"The Man Who Never Was is a 1956 UK Second World War film, produced by André Hakim, directed by Ronald Neame, that stars Clifton Webb, Gloria Grahame and Robert Flemyng.\"'\n\n'Answer: The medium is film. Evidence: \"The Man Who Never Was is a 1956 UK Second World War film...\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately identifies \"The Man Who Never Was\" as a 1956 UK Second World War film, which is directly supported by the document stating it is a film. The evidence provided clearly indicates that the medium is indeed film, as it describes the work as a film produced in 1956. There is no exaggeration or misinterpretation present, and the context regarding its basis on actual events and its participation in the Cannes Film Festival, while interesting, does not detract from the accuracy of the Extractor's answer.",
+            "resolver": "Answer: The medium is film. Explanation: The document clearly identifies \"The Man Who Never Was\" as a 1956 UK Second World War film, confirming that the medium is indeed film. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "The document does not provide any information about \"The Man Who Never Was.\" Therefore, there are no answer candidates to extract regarding the medium of \"The Man Who Never Was.\" \n\nIf you have another document or need assistance with a different question, feel free to provide it!",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide any information about \"The Man Who Never Was.\" The response correctly identifies the lack of relevant content in the document regarding the medium of the specified work, and it does not exaggerate or misinterpret the information presented. There is no important context missed, as the document does not mention \"The Man Who Never Was\" at all.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information about \"The Man Who Never Was,\" and therefore, it is not possible to determine its medium from the content available."
+          }
+        ],
+        "document_summaries": [
+          "Answer: The medium is film. Explanation: The document clearly identifies \"The Man Who Never Was\" as a 1956 UK Second World War film, confirming that the medium is indeed film. The Extractor's findings are supported by the Skeptic's critique, which validates the accuracy of the information provided.",
+          "Answer: Unknown. Explanation: The document does not provide any information about \"The Man Who Never Was,\" and therefore, it is not possible to determine its medium from the content available."
+        ],
+        "aggregator_answer": [
+          "film"
+        ],
+        "aggregator_explanation": "Document 1 clearly identifies \"The Man Who Never Was\" as a 1956 UK Second World War film, confirming that the medium is indeed film. Document 2 does not provide any information about the medium, leading to an unknown status."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "film"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "What sport is Ronald Powell associated with?",
+    "disambig_entity": [
+      "Ronald Powell"
+    ],
+    "gold_answers": [
+      "Football"
+    ],
+    "wrong_answers": [
+      "Chess"
+    ],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "correct",
+        "answer": "Football"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Football"
+    ],
+    "explanation": "All three documents confirm Ronald Powell's association with football, specifically through his participation with the Florida Gators football teams. Document 3's answer was flagged as unknown due to a lack of relevant information.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Football. Evidence: {“Powell accepted an athletic scholarship to attend the University of Florida in Gainesville, Florida, where he was a member of coach Urban Meyer and coach Will Muschamp's Florida Gators football teams from 2010 to 2013.”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor clearly indicates that Ronald Powell was a member of the Florida Gators football teams, which confirms that he is associated with the sport of football. There is no exaggeration or misinterpretation in the answer, and the context regarding his participation in college football is accurately represented.",
+            "resolver": "Answer: Football. Explanation: Ronald Powell is associated with the sport of football, as evidenced by his participation in the Florida Gators football teams during his time at the University of Florida from 2010 to 2013. The Extractor's findings and the Skeptic's critique both confirm the accuracy of this information."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Football. Evidence: \"We 're very saddened to learn about the passing of former Gators player Ronald Powell.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly supports the answer, as it mentions Ronald Powell as a \"former Gators player,\" indicating his association with football, specifically the University of Florida's football team. The context of his statistics and career also aligns with his involvement in the sport.",
+            "resolver": "Answer: Football. Explanation: Ronald Powell is identified as a \"former Gators player,\" which indicates his association with the University of Florida's football team. The statistics provided in the document, such as tackles and sacks, further confirm his involvement in the sport of football."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "'Answer: chess. Evidence: \"Ronald Powell, a renowned chess player, has been making waves in the world of competitive chess.\" '",
+            "skeptic": "Verdict: Unsupported. Reasoning: The document does not mention Ronald Powell as a chess player; instead, it lists various sports and topics without providing any specific information about him or his association with chess. The Extractor's answer is based on a misreading or fabrication, as there is no evidence in the document to support the claim that Ronald Powell is a renowned chess player.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any specific information about Ronald Powell or his association with chess, and the Extractor's claim is unsupported by the text."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "'Answer: Football. Evidence: {“In his sophomore year, he became a regular starter for the Gators, playing and starting in 12 games.”}'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor indicates that Ronald Powell played for the Gators, which is a reference to the University of Florida's football team. The mention of him starting games aligns with the context of football, confirming that the sport he is associated with is indeed football. There is no exaggeration or misinterpretation present, and the Extractor accurately identifies the sport based on the information in the document.",
+            "resolver": "Answer: Football. Explanation: Ronald Powell is associated with football, as indicated by his role as a regular starter for the Gators, which refers to the University of Florida's football team. The Extractor's evidence and the Skeptic's validation confirm that the context clearly relates to the sport of football."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Football. Explanation: Ronald Powell is associated with the sport of football, as evidenced by his participation in the Florida Gators football teams during his time at the University of Florida from 2010 to 2013. The Extractor's findings and the Skeptic's critique both confirm the accuracy of this information.",
+          "Answer: Football. Explanation: Ronald Powell is identified as a \"former Gators player,\" which indicates his association with the University of Florida's football team. The statistics provided in the document, such as tackles and sacks, further confirm his involvement in the sport of football.",
+          "Answer: Unknown. Explanation: The document does not provide any specific information about Ronald Powell or his association with chess, and the Extractor's claim is unsupported by the text.",
+          "Answer: Football. Explanation: Ronald Powell is associated with football, as indicated by his role as a regular starter for the Gators, which refers to the University of Florida's football team. The Extractor's evidence and the Skeptic's validation confirm that the context clearly relates to the sport of football."
+        ],
+        "aggregator_answer": [
+          "Football"
+        ],
+        "aggregator_explanation": "All three documents confirm Ronald Powell's association with football, specifically through his participation with the Florida Gators football teams. Document 3's answer was flagged as unknown due to a lack of relevant information."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "Football"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  },
+  {
+    "question": "Who won the 5th Soccer Bowl?",
+    "disambig_entity": [
+      "NASL Final 1973"
+    ],
+    "gold_answers": [
+      "Philadelphia Atoms"
+    ],
+    "wrong_answers": [],
+    "doc_meta": [
+      {
+        "type": "correct",
+        "answer": "Philadelphia Atoms"
+      },
+      {
+        "type": "correct",
+        "answer": "Philadelphia Atoms"
+      },
+      {
+        "type": "correct",
+        "answer": "Philadelphia Atoms"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "predicted": [
+      "Philadelphia Atoms"
+    ],
+    "explanation": "Document 1 states that the Philadelphia Atoms won the 5th Soccer Bowl by defeating the Dallas Tornado 2–0, and this information is confirmed by the Skeptic's critique. Documents 2, 3, 4, and 5 do not provide any valid answers regarding the winner of the 5th Soccer Bowl.",
+    "rounds_run": 1,
+    "round_history": [
+      {
+        "local_debates": [
+          {
+            "doc_index": 0,
+            "extractor": "'Answer: Philadelphia Atoms. Evidence: \"The Philadelphia Atoms won the match, 2–0, and were crowned the 1973 North American Soccer League champions.\"'\n\n'Answer: 1973 North American Soccer League champions. Evidence: \"The Philadelphia Atoms won the match, 2–0, and were crowned the 1973 North American Soccer League champions.\"'",
+            "skeptic": "Verdict: Supported. Reasoning: The evidence provided by the Extractor directly supports the answer, as it states that the Philadelphia Atoms won the match 2–0 and were crowned the 1973 North American Soccer League champions. The Extractor accurately identifies the winner of the match and the championship title, which corresponds to the question about the 5th Soccer Bowl. There is no exaggeration or misinterpretation present, and the context regarding the match and its significance is appropriately conveyed.",
+            "resolver": "Answer: Philadelphia Atoms. Explanation: The Philadelphia Atoms won the 5th Soccer Bowl, which was the 1973 North American Soccer League championship match, by defeating the Dallas Tornado 2–0, as stated in the document. The Extractor's findings are supported by the Skeptic's critique, confirming the accuracy of the information."
+          },
+          {
+            "doc_index": 1,
+            "extractor": "'Answer: Vancouver Whitecaps. Evidence: {“losing to Vancouver Whitecaps 1–2.”}'",
+            "skeptic": "Verdict: Unsupported. Reasoning: The evidence provided by the Extractor states that a team lost to the Vancouver Whitecaps 1–2, but it does not confirm that the Vancouver Whitecaps won the 5th Soccer Bowl. The document does not explicitly mention the 5th Soccer Bowl or provide any context that directly links the Vancouver Whitecaps to that specific championship victory. Therefore, the Extractor's answer lacks sufficient support from the document.",
+            "resolver": "Answer: Unknown. Explanation: The document mentions a team losing to the Vancouver Whitecaps 1–2, but it does not explicitly state that the Vancouver Whitecaps won the 5th Soccer Bowl or provide any context linking them to that specific championship victory. Therefore, the Extractor's answer lacks sufficient support from the document."
+          },
+          {
+            "doc_index": 2,
+            "extractor": "The document does not provide any specific information regarding the winner of the 5th Soccer Bowl. It lists various soccer teams but does not mention any specific events or outcomes related to the Soccer Bowl. Therefore, there are no answer candidates to extract from this document.",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide specific information regarding the winner of the 5th Soccer Bowl. It correctly identifies that the document lists various soccer teams without mentioning any events or outcomes related to the Soccer Bowl, thus confirming that there are no answer candidates to extract.",
+            "resolver": "Answer: Unknown. Explanation: The document lists various soccer teams but does not provide any specific information regarding the winner of the 5th Soccer Bowl, confirming that there are no answer candidates to extract."
+          },
+          {
+            "doc_index": 3,
+            "extractor": "The document does not provide information about the winner of the 5th Soccer Bowl. Therefore, there are no answer candidates to extract.",
+            "skeptic": "Verdict: Supported. Reasoning: The document does not mention the winner of the 5th Soccer Bowl, and the Extractor correctly identifies that there is no relevant information to extract regarding the winner. The answer is accurate and does not involve exaggeration or misinterpretation.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information regarding the winner of the 5th Soccer Bowl, and both the Extractor and Skeptic confirm that there are no relevant details available to answer the question."
+          },
+          {
+            "doc_index": 4,
+            "extractor": "The document does not provide any information regarding the winner of the 5th Soccer Bowl. Therefore, there are no answer candidates to extract.",
+            "skeptic": "Verdict: Supported. Reasoning: The Extractor accurately states that the document does not provide any information regarding the winner of the 5th Soccer Bowl. The content of the document focuses on historical information about the North American Soccer League and does not mention the Soccer Bowl or its winner, thus supporting the Extractor's conclusion that there are no answer candidates to extract.",
+            "resolver": "Answer: Unknown. Explanation: The document does not provide any information regarding the winner of the 5th Soccer Bowl, focusing instead on historical details about the North American Soccer League. Both the Extractor and the Skeptic agree that there are no answer candidates to extract from the document."
+          }
+        ],
+        "document_summaries": [
+          "Answer: Philadelphia Atoms. Explanation: The Philadelphia Atoms won the 5th Soccer Bowl, which was the 1973 North American Soccer League championship match, by defeating the Dallas Tornado 2–0, as stated in the document. The Extractor's findings are supported by the Skeptic's critique, confirming the accuracy of the information.",
+          "Answer: Unknown. Explanation: The document mentions a team losing to the Vancouver Whitecaps 1–2, but it does not explicitly state that the Vancouver Whitecaps won the 5th Soccer Bowl or provide any context linking them to that specific championship victory. Therefore, the Extractor's answer lacks sufficient support from the document.",
+          "Answer: Unknown. Explanation: The document lists various soccer teams but does not provide any specific information regarding the winner of the 5th Soccer Bowl, confirming that there are no answer candidates to extract.",
+          "Answer: Unknown. Explanation: The document does not provide any information regarding the winner of the 5th Soccer Bowl, and both the Extractor and Skeptic confirm that there are no relevant details available to answer the question.",
+          "Answer: Unknown. Explanation: The document does not provide any information regarding the winner of the 5th Soccer Bowl, focusing instead on historical details about the North American Soccer League. Both the Extractor and the Skeptic agree that there are no answer candidates to extract from the document."
+        ],
+        "aggregator_answer": [
+          "Philadelphia Atoms"
+        ],
+        "aggregator_explanation": "Document 1 states that the Philadelphia Atoms won the 5th Soccer Bowl by defeating the Dallas Tornado 2–0, and this information is confirmed by the Skeptic's critique. Documents 2, 3, 4, and 5 do not provide any valid answers regarding the winner of the 5th Soccer Bowl."
+      }
+    ],
+    "em": 1,
+    "precision": 1.0,
+    "recall": 1.0,
+    "f1": 1.0,
+    "predicted_answers": [
+      "Philadelphia Atoms"
+    ],
+    "wrong_in_pred": [],
+    "n_gold_hit": 1,
+    "n_misinfo": 0,
+    "n_unknown": 0
+  }
+]
