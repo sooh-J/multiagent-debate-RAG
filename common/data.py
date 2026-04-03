@@ -1,4 +1,5 @@
 import json
+import random
 from pathlib import Path
 from datasets import load_dataset
 
@@ -45,7 +46,8 @@ def load_ramdocs(n_samples: int = 20):
         _download_and_save()
 
     data = _load_from_local()
-    samples = data[:n_samples]
+    random.seed(42)
+    samples = random.sample(data, min(n_samples, len(data)))
 
     # 샘플 데이터 저장 (git 추적용)
     SAMPLE_DATA_DIR.mkdir(parents=True, exist_ok=True)
