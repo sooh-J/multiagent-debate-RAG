@@ -6,6 +6,8 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — call_llm
 """
 
 import os
+import time
+from concurrent.futures import ThreadPoolExecutor
 from dotenv import load_dotenv
 from openai import OpenAI
 
@@ -25,18 +27,33 @@ client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
 _usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0}
 
 
-def call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
-    response = client.chat.completions.create(
-        model=model,
-        messages=[{"role": "user", "content": prompt}],
-        temperature=temperature,
-    )
-    if response.usage:
-        _usage["input_tokens"] += response.usage.prompt_tokens
-        _usage["output_tokens"] += response.usage.completion_tokens
-        _usage["calls"] += 1
+MAX_RETRIES = 3
 
-    return response.choices[0].message.content.strip()
+def call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = client.chat.completions.create(
+                model=model,
+                messages=[{"role": "user", "content": prompt}],
+                temperature=temperature,
+            )
+            if response.usage:
+                _usage["input_tokens"] += response.usage.prompt_tokens
+                _usage["output_tokens"] += response.usage.completion_tokens
+                _usage["calls"] += 1
+
+            return response.choices[0].message.content.strip()
+        except Exception as e:
+            print(f"[LLM] Attempt {attempt}/{MAX_RETRIES} failed: {e}")
+            if attempt == MAX_RETRIES:
+                raise
+            time.sleep(2 ** attempt)
+
+
+def call_llm_batch(prompts: list[str], model: str = DEFAULT_MODEL, temperature: float = 0.0) -> list[str]:
+    """여러 프롬프트를 동시에 호출"""
+    with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
+        return list(executor.map(lambda p: call_llm(p, model, temperature), prompts))
 
 
 def get_usage_summary(model: str = DEFAULT_MODEL) -> dict:

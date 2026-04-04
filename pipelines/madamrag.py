@@ -9,7 +9,7 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — multi_ag
 - Aggregator가 매 라운드 후 요약 생성
 """
 
-from common.llm import call_llm
+from common.llm import call_llm, call_llm_batch
 from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
 from prompts.madamrag import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
 from configs.madamrag import MAX_ROUNDS
@@ -27,20 +27,20 @@ def madam_rag(query: str, documents: list[str]) -> dict:
         print(f"Round {round_num}")
         print('='*50)
 
-        # Step 1: 각 에이전트가 답변 생성
-        current_answers = []
+        # Step 1: 각 에이전트가 답변 생성 (병렬 호출)
+        prompts = []
         for i, doc in enumerate(documents):
             if round_num == 1:
-                prompt = agent_initial_prompt(query, doc)
+                prompts.append(agent_initial_prompt(query, doc))
             else:
                 history = "\n".join([
                     f"Agent {j+1}: {prev_agent_outputs[j]}"
                     for j in range(n_agents) if j != i
                 ])
-                prompt = agent_debate_prompt(query, doc, history)
+                prompts.append(agent_debate_prompt(query, doc, history))
 
-            answer = call_llm(prompt)
-            current_answers.append(answer)
+        current_answers = call_llm_batch(prompts)
+        for i, answer in enumerate(current_answers):
             print(f"\n[Agent {i+1}]\n{answer}")
 
         # Step 2: Early stopping 체크
