@@ -1,9 +1,9 @@
 """
-MadamRAG 실행 스크립트
+Single LLM 실행 스크립트
 
 Usage:
     conda activate nlp
-    python run_madamrag.py
+    python run_single_llm.py
 """
 
 import sys
@@ -13,7 +13,7 @@ from common.logging import Tee
 from data.ramdocs.download import load_ramdocs
 from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
-from pipelines.madamrag import madam_rag
+from pipelines.single_llm import single_llm
 
 
 def run_on_sample(sample: dict) -> dict:
@@ -21,7 +21,7 @@ def run_on_sample(sample: dict) -> dict:
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = madam_rag(query, doc_texts)
+    result = single_llm(query, doc_texts)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -61,7 +61,7 @@ def run_on_dataset(ds_sample) -> list[dict]:
 
     print_results_table(results)
 
-    output_path = "results/madamrag_results.json"
+    output_path = "results/single_llm_results.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n결과가 '{output_path}'에 저장되었습니다.")
@@ -73,7 +73,7 @@ if __name__ == "__main__":
     import os
     os.makedirs("results", exist_ok=True)
 
-    tee = Tee(prefix="madamrag")
+    tee = Tee(prefix="single_llm")
     sys.stdout = tee
 
     try:

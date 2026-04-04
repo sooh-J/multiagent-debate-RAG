@@ -2,7 +2,8 @@
 .env
 __pycache__/
 *.pyc
-data/full/
+data/*/full/
 logs/
+results/
 *.sh
 .DS_Store
