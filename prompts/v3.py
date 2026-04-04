@@ -16,7 +16,7 @@ V3와 V4 모두 이 프롬프트를 공유한다.
     - con_prompt           : 반대 에이전트 초기 프롬프트
     - mediator_prompt      : 중재자 초기 프롬프트 (Pro/Con 응답을 입력받음)
 
-  2단계 (Round 2+ 용) — 이전 라운드 Aggregator 요약을 추가로 참고:
+  2단계 (Round 2+ 용) — 이전 라운드 다른 문서의 Mediator 결과를 참고:
     - pro_debate_prompt    : 찬성 에이전트 토론 프롬프트
     - con_debate_prompt    : 반대 에이전트 토론 프롬프트
     - mediator_debate_prompt : 중재자 토론 프롬프트
@@ -37,21 +37,27 @@ Document: {document}
 
 Find and present the strongest evidence from this document that answers the question. Quote exact sentences as evidence. Even if the evidence is imperfect, make the best possible case that this document provides a valid answer.
 
+Important:
+- Your answer must be as SHORT and CONCISE as possible (e.g., a name, a number, a year, a short phrase). Do NOT write full sentences as the answer.
+- Use the exact key term or phrase from the document. Do not paraphrase or expand.
+- This document may refer to a DIFFERENT entity that shares the same name as the one in the question. If so, still extract the answer — it is valid.
+
 Please follow the format:
 'Answer: {{}}. Evidence: {{exact quote from document}}. Argument: {{why this evidence supports the answer}}.'"""
 
 
 def con_prompt(query: str, document: str) -> str:
-    return f"""You are a Con (opposing) agent. Your role is to argue that this document does NOT contain an accurate or reliable answer to the question.
+    return f"""You are a Con (opposing) agent. Your role is to critically examine whether this document actually answers the question reliably.
 
 Question: {query}
 Document: {document}
 
-Critically examine this document and argue why it fails to answer the question correctly. Look for:
-1. Insufficient or irrelevant evidence
-2. Misleading or outdated information
-3. Mismatches between the question and the document's content
-4. Potential misinformation or factual errors
+Focus your critique ONLY on these issues:
+1. Does the document actually discuss the entity asked about, or is it about something else entirely?
+2. Does the quoted evidence truly support the claimed answer, or is it a misreading?
+3. Is the answer based on actual content in the document, or is it inferred/fabricated?
+
+Do NOT criticize the document for being outdated or lacking recent data — your job is to evaluate whether the document's own content supports the answer, not whether the data is current.
 
 Please follow the format:
 'Verdict: {{Unreliable/Insufficient/Misleading/No Answer}}. Reasoning: {{specific issues found}}.'"""
@@ -71,10 +77,12 @@ Con agent's argument (claims the document does NOT reliably answer the question)
 
 Evaluate both arguments fairly:
 1. Is the Pro's evidence actually present in the document and does it support the answer?
-2. Are the Con's objections valid, or are they nitpicking?
-3. Based on the balance of arguments, what is the most reliable answer from this document?
+2. Are the Con's objections valid, or are they nitpicking? (Note: objections about data being "outdated" are NOT valid — focus on whether the evidence supports the answer.)
+3. This document may refer to a DIFFERENT entity that shares the same name. If the document clearly answers the question for its specific entity, that answer is VALID even if other documents give different answers.
 
-If the Con's objections are strong enough, answer 'Unknown'. Otherwise, provide the answer the Pro identified, adjusted for any valid concerns the Con raised.
+If the Con's objections are strong enough (e.g., the document does not actually contain an answer, or the evidence is fabricated), answer 'Unknown'. Otherwise, provide the answer the Pro identified.
+
+Important: Your answer must be SHORT and CONCISE (e.g., a name, number, year, short phrase). Copy the exact wording from the Pro's answer without paraphrasing.
 
 Please follow the format:
 'Answer: {{}}. Confidence: {{High/Medium/Low}}. Explanation: {{which arguments you accepted and why}}.'"""
@@ -82,44 +90,56 @@ Please follow the format:
 
 # ── Round 2+: 이전 라운드 요약을 반영하는 토론 프롬프트 ────────────────────────
 
-def pro_debate_prompt(query: str, document: str, prev_summary: str) -> str:
+def pro_debate_prompt(query: str, document: str, other_mediator_results: str) -> str:
     return f"""You are a Pro (supportive) agent. Your role is to argue that this document DOES contain an accurate answer to the question.
 
 Question: {query}
 Document: {document}
 
-Here is the aggregated summary from the previous round:
-{prev_summary}
+Here are the mediator judgments from other documents in the previous round:
+{other_mediator_results}
 
-Considering the previous round's conclusions, strengthen or revise your argument. If the previous summary raised concerns about this document, address them with stronger evidence. If the summary supports your position, reinforce it.
+Considering what other documents' mediators concluded, strengthen or revise your argument. If other mediators found different answers, explain why your document's answer is also valid. If other mediators raised concerns relevant to your document, address them.
+
+Important:
+- Your answer must be as SHORT and CONCISE as possible (e.g., a name, a number, a year, a short phrase). Do NOT write full sentences as the answer.
+- Use the exact key term or phrase from the document. Do not paraphrase or expand.
+- This document may refer to a DIFFERENT entity that shares the same name. Different answers from different documents can ALL be valid.
 
 Please follow the format:
 'Answer: {{}}. Evidence: {{exact quote from document}}. Argument: {{why this evidence supports the answer}}.'"""
 
 
-def con_debate_prompt(query: str, document: str, prev_summary: str) -> str:
-    return f"""You are a Con (opposing) agent. Your role is to argue that this document does NOT contain an accurate or reliable answer to the question.
+def con_debate_prompt(query: str, document: str, other_mediator_results: str) -> str:
+    return f"""You are a Con (opposing) agent. Your role is to critically examine whether this document actually answers the question reliably.
 
 Question: {query}
 Document: {document}
 
-Here is the aggregated summary from the previous round:
-{prev_summary}
+Here are the mediator judgments from other documents in the previous round:
+{other_mediator_results}
 
-Considering the previous round's conclusions, strengthen or revise your objections. If the previous summary accepted this document's answer, challenge the reasoning. If it rejected the answer, reinforce the concerns.
+Considering what other documents' mediators concluded, strengthen or revise your objections.
+
+Focus your critique ONLY on these issues:
+1. Does the document actually discuss the entity asked about, or is it about something else entirely?
+2. Does the quoted evidence truly support the claimed answer, or is it a misreading?
+3. Is the answer based on actual content in the document, or is it inferred/fabricated?
+
+Do NOT criticize the document for being outdated or lacking recent data.
 
 Please follow the format:
 'Verdict: {{Unreliable/Insufficient/Misleading/No Answer}}. Reasoning: {{specific issues found}}.'"""
 
 
-def mediator_debate_prompt(query: str, document: str, pro_response: str, con_response: str, prev_summary: str) -> str:
+def mediator_debate_prompt(query: str, document: str, pro_response: str, con_response: str, other_mediator_results: str) -> str:
     return f"""You are a Mediator agent. Your role is to judge the validity of the Pro and Con arguments, then determine the final answer from this document.
 
 Question: {query}
 Document: {document}
 
-Previous round's aggregated summary:
-{prev_summary}
+Mediator judgments from other documents in the previous round:
+{other_mediator_results}
 
 Pro agent's argument (this round):
 {pro_response}
@@ -127,10 +147,12 @@ Pro agent's argument (this round):
 Con agent's argument (this round):
 {con_response}
 
-Evaluate both arguments, taking into account the previous round's conclusions:
+Evaluate both arguments, taking into account what other documents' mediators concluded:
 1. Is the Pro's evidence actually present in the document and does it support the answer?
-2. Are the Con's objections valid, or are they nitpicking?
-3. Has either side addressed concerns from the previous round?
+2. Are the Con's objections valid, or are they nitpicking? (Objections about data being "outdated" are NOT valid.)
+3. This document may refer to a DIFFERENT entity that shares the same name. If the document clearly answers the question for its specific entity, that answer is VALID.
+
+Important: Your answer must be SHORT and CONCISE (e.g., a name, number, year, short phrase). Copy the exact wording from the Pro's answer without paraphrasing.
 
 Please follow the format:
 'Answer: {{}}. Confidence: {{High/Medium/Low}}. Explanation: {{which arguments you accepted and why}}.'"""
@@ -148,9 +170,10 @@ Each mediator has already evaluated Pro (supportive) and Con (opposing) argument
 
 Synthesize all mediator results into a final answer:
 - Trust High-confidence answers more than Low-confidence ones.
-- If multiple documents give different answers to an ambiguous question (e.g., different entities with the same name), include all valid answers.
-- Exclude answers where the mediator said 'Unknown' or gave Low confidence with weak reasoning.
+- CRITICAL: The question may be AMBIGUOUS — different documents may refer to DIFFERENT entities with the SAME name (e.g., different people, places, or things). Each entity's answer is independently valid. Include ALL distinct valid answers.
+- Only exclude answers where the mediator said 'Unknown' or gave Low confidence with weak reasoning.
 - Each answer must use the exact wording as it appears in the mediator results. Do not paraphrase, abbreviate, or expand.
+- Answers must be SHORT (e.g., a name, number, year, short phrase). If a mediator gave a long answer, extract only the key fact.
 
 Please follow the format: 'All Correct Answers: []. Explanation: {{}}.'
 

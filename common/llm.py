@@ -9,7 +9,7 @@ import os
 import time
 from concurrent.futures import ThreadPoolExecutor
 from dotenv import load_dotenv
-from openai import OpenAI
+from openai import OpenAI, AsyncOpenAI
 
 load_dotenv()
 
@@ -22,6 +22,7 @@ PRICING = {
 }
 
 client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+async_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
 
 # 토큰 사용량 누적
 _usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0}
@@ -54,6 +55,20 @@ def call_llm_batch(prompts: list[str], model: str = DEFAULT_MODEL, temperature: 
     """여러 프롬프트를 동시에 호출"""
     with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
         return list(executor.map(lambda p: call_llm(p, model, temperature), prompts))
+
+
+async def async_call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
+    response = await async_client.chat.completions.create(
+        model=model,
+        messages=[{"role": "user", "content": prompt}],
+        temperature=temperature,
+    )
+    if response.usage:
+        _usage["input_tokens"] += response.usage.prompt_tokens
+        _usage["output_tokens"] += response.usage.completion_tokens
+        _usage["calls"] += 1
+
+    return response.choices[0].message.content.strip()
 
 
 def get_usage_summary(model: str = DEFAULT_MODEL) -> dict:
