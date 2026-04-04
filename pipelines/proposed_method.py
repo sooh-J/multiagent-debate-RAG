@@ -1,95 +1,97 @@
 """
 Proposed Method 파이프라인
 
-MadamRAG 파이프라인을 기반으로 수정.
+2단계 구조:
+  1단계 — 문서 내부 토론 (Extractor → Skeptic → Resolver) per document
+  2단계 — 문서 간 집계 (Global Aggregator)
 """
 
 from common.llm import call_llm
-from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
-from prompts.proposed_method import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
-from configs.proposed_method import MAX_ROUNDS
+from common.parsing import parse_answers, parse_explanation
+from prompts.proposed_method import (
+    extractor_prompt,
+    skeptic_prompt,
+    resolver_prompt,
+    global_aggregator_prompt,
+)
+
+
+def local_debate(query: str, document: str, doc_index: int) -> dict:
+    """1단계: 단일 문서에 대한 내부 토론 (Extractor → Skeptic → Resolver)"""
+
+    print(f"\n  [Doc {doc_index+1} - Extractor]")
+    ext_response = call_llm(extractor_prompt(query, document))
+    print(f"  {ext_response}")
+
+    print(f"\n  [Doc {doc_index+1} - Skeptic]")
+    skp_response = call_llm(skeptic_prompt(query, document, ext_response))
+    print(f"  {skp_response}")
+
+    print(f"\n  [Doc {doc_index+1} - Resolver]")
+    res_response = call_llm(resolver_prompt(query, document, ext_response, skp_response))
+    print(f"  {res_response}")
+
+    return {
+        "doc_index": doc_index,
+        "extractor": ext_response,
+        "skeptic": skp_response,
+        "resolver": res_response,
+    }
 
 
 def proposed_method(query: str, documents: list[str]) -> dict:
-    n_agents = len(documents)
-    prev_agent_outputs = [""] * n_agents
-    prev_summary: list[str] = []
-    prev_explanation = ""
-    round_history = []
+    """
+    Args:
+        query:     사용자 질문
+        documents: 검색된 문서 리스트
 
-    for round_num in range(1, MAX_ROUNDS + 1):
-        print(f"\n{'='*50}")
-        print(f"Round {round_num}")
-        print('='*50)
+    Returns:
+        {
+          "final_answer":      list[str],
+          "final_explanation": str,
+          "rounds_run":        1,
+          "round_history":     list
+        }
+    """
 
-        # Step 1: 각 에이전트가 답변 생성
-        current_answers = []
-        for i, doc in enumerate(documents):
-            if round_num == 1:
-                prompt = agent_initial_prompt(query, doc)
-            else:
-                history = "\n".join([
-                    f"Agent {j+1}: {prev_agent_outputs[j]}"
-                    for j in range(n_agents) if j != i
-                ])
-                prompt = agent_debate_prompt(query, doc, history)
+    # ── 1단계: 문서별 내부 토론 ───────────────────────────────────────────────
+    print(f"\n{'='*50}")
+    print("Stage 1: Per-Document Local Debate")
+    print('='*50)
 
-            answer = call_llm(prompt)
-            current_answers.append(answer)
-            print(f"\n[Agent {i+1}]\n{answer}")
+    local_results = []
+    document_summaries = []
 
-        # Step 2: Early stopping 체크
-        if round_num > 1:
-            pred_normalized = [normalize_answer(extract_answer(a)) for a in current_answers]
-            prev_normalized = [normalize_answer(extract_answer(a)) for a in prev_agent_outputs]
+    for i, doc in enumerate(documents):
+        print(f"\n{'─'*40}")
+        print(f"Document {i+1}")
+        print('─'*40)
 
-            flag = True
-            for p, q in zip(pred_normalized, prev_normalized):
-                if p not in q and q not in p:
-                    flag = False
-                    break
+        result = local_debate(query, doc, i)
+        local_results.append(result)
+        document_summaries.append(result["resolver"])
 
-            if flag:
-                print(f"\n>> Early stopping at round {round_num} (all agents converged)")
-                round_history.append({
-                    "round": round_num,
-                    "agent_responses": current_answers,
-                    "aggregator_answer": prev_summary,
-                    "aggregator_explanation": prev_explanation,
-                    "early_stopped": True,
-                })
-                return {
-                    "final_answer": prev_summary,
-                    "final_explanation": prev_explanation,
-                    "rounds_run": round_num,
-                    "round_history": round_history,
-                }
+    # ── 2단계: 문서 간 집계 ───────────────────────────────────────────────────
+    print(f"\n{'='*50}")
+    print("Stage 2: Global Aggregation")
+    print('='*50)
 
-        # Step 3: Aggregator 요약
-        agg_prompt = aggregator_prompt(query, current_answers)
-        agg_output = call_llm(agg_prompt)
+    agg_prompt = global_aggregator_prompt(query, document_summaries)
+    agg_output = call_llm(agg_prompt)
 
-        agg_answer = parse_answers(agg_output)
-        agg_explanation = parse_explanation(agg_output)
+    final_answer = parse_answers(agg_output)
+    final_explanation = parse_explanation(agg_output)
 
-        print(f"\n[Aggregator]\nANSWER: {agg_answer}\nEXPLANATION: {agg_explanation}")
+    print(f"\n[Global Aggregator]\nANSWER: {final_answer}\nEXPLANATION: {final_explanation}")
 
-        round_history.append({
-            "round": round_num,
-            "agent_responses": current_answers,
-            "aggregator_answer": agg_answer,
-            "aggregator_explanation": agg_explanation,
-            "early_stopped": False,
-        })
-
-        prev_agent_outputs = current_answers
-        prev_summary = agg_answer
-        prev_explanation = agg_explanation
-
-    print(f"\n>> Reached max rounds (T={MAX_ROUNDS})")
     return {
-        "final_answer": prev_summary,
-        "final_explanation": prev_explanation,
-        "rounds_run": MAX_ROUNDS,
-        "round_history": round_history,
+        "final_answer": final_answer,
+        "final_explanation": final_explanation,
+        "rounds_run": 1,
+        "round_history": [{
+            "local_debates": local_results,
+            "document_summaries": document_summaries,
+            "aggregator_answer": final_answer,
+            "aggregator_explanation": final_explanation,
+        }],
     }
