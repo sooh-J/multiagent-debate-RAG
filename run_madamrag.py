@@ -10,7 +10,7 @@ import sys
 import json
 
 from common.logging import Tee
-from common.data import load_ramdocs
+from data.ramdocs.download import load_ramdocs
 from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
 from pipelines.madamrag import madam_rag
