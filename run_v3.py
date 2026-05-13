@@ -26,7 +26,6 @@ import sys
 import json
 
 from common.logging import Tee
-from common.data import load_ramdocs
 from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
 from pipelines.v3 import v3_method
@@ -93,7 +92,8 @@ if __name__ == "__main__":
     sys.stdout = tee
 
     try:
-        ds_sample = load_ramdocs(n_samples=20)
+        with open("data/ramdocs/sample/sample_100.json", "r", encoding="utf-8") as f:
+            ds_sample = json.load(f)
         all_results = run_on_dataset(ds_sample)
 
         print_usage_summary()

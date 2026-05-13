@@ -14,6 +14,9 @@ V3와의 차이:
   V4는 첫 라운드에서만 찬/반/중재자로 필터링한 뒤 MadamRAG 토론으로 넘어간다.
   → V3 대비 LLM 호출 수가 적고, 라운드 구조 변경의 효과를 ablation으로 비교 가능
 
+Async:
+  - 문서 간 / 에이전트 간 API 호출을 병렬로 실행하여 속도 향상
+
 실행 방법:
     conda activate nlp
     python run_v4.py
@@ -30,6 +33,7 @@ V3와의 차이:
 
 import sys
 import json
+import asyncio
 
 from common.logging import Tee
 from common.metrics import compute_metrics, print_results_table
@@ -37,12 +41,12 @@ from common.llm import print_usage_summary
 from pipelines.v4 import v4_method
 
 
-def run_on_sample(sample: dict) -> dict:
+async def run_on_sample(sample: dict) -> dict:
     query = sample["question"]
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = v4_method(query, doc_texts)
+    result = await v4_method(query, doc_texts)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -61,11 +65,11 @@ def run_on_sample(sample: dict) -> dict:
     }
 
 
-def run_on_dataset(ds_sample) -> list[dict]:
+async def run_on_dataset(ds_sample) -> list[dict]:
     results = []
     for i, sample in enumerate(ds_sample):
         print(f"\n[{i+1}/{len(ds_sample)}] Q: {sample['question']}")
-        out = run_on_sample(sample)
+        out = await run_on_sample(sample)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -90,7 +94,7 @@ def run_on_dataset(ds_sample) -> list[dict]:
     return results
 
 
-if __name__ == "__main__":
+async def main():
     import os
     os.makedirs("results", exist_ok=True)
 
@@ -98,11 +102,15 @@ if __name__ == "__main__":
     sys.stdout = tee
 
     try:
-        with open("data/sample/sample_100.json", "r", encoding="utf-8") as f:
+        with open("data/ramdocs/sample/sample_100.json", "r", encoding="utf-8") as f:
             ds_sample = json.load(f)
-        all_results = run_on_dataset(ds_sample)
+        all_results = await run_on_dataset(ds_sample)
 
         print_usage_summary()
     finally:
         tee.close()
         print(f"로그 저장: {tee.filepath}")
+
+
+if __name__ == "__main__":
+    asyncio.run(main())

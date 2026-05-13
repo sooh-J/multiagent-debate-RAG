@@ -41,9 +41,15 @@ V3 대비 차이점:
 MadamRAG 대비 차이점:
   - Round 1만 찬/반/중재자로 대체 → 초기 답변의 신뢰도 검증이 더 강력
   - Round 2+는 MadamRAG와 동일 (프롬프트, early stopping 로직 모두 재사용)
+
+Async:
+  - Round 1: 문서 간 병렬 + 문서 내 Pro/Con 병렬 (Mediator는 둘 다 끝난 뒤)
+  - Round 2+: 같은 라운드 내 에이전트 N개 병렬
 """
 
-from common.llm import call_llm
+import asyncio
+
+from common.llm import async_call_llm
 from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
 from prompts.v3 import (
     pro_prompt,
@@ -55,9 +61,26 @@ from prompts.madamrag import agent_debate_prompt, aggregator_prompt
 from configs.v3 import MAX_ROUNDS
 
 
-def v4_method(query: str, documents: list[str]) -> dict:
+async def doc_debate_round1(query: str, document: str, doc_index: int) -> dict:
+    """Round 1: 단일 문서에 대한 Pro/Con 병렬 → Mediator (로그는 반환 후 출력)"""
+
+    pro_resp, con_resp = await asyncio.gather(
+        async_call_llm(pro_prompt(query, document)),
+        async_call_llm(con_prompt(query, document)),
+    )
+    med_resp = await async_call_llm(mediator_prompt(query, document, pro_resp, con_resp))
+
+    return {
+        "doc_index": doc_index,
+        "pro": pro_resp,
+        "con": con_resp,
+        "mediator": med_resp,
+    }
+
+
+async def v4_method(query: str, documents: list[str]) -> dict:
     """
-    V4 메인 파이프라인
+    V4 메인 파이프라인 (async)
 
     Args:
         query:     사용자 질문
@@ -75,49 +98,35 @@ def v4_method(query: str, documents: list[str]) -> dict:
     round_history = []
 
     # ══════════════════════════════════════════════════════════════════════
-    # Round 1: 찬/반/중재자 구조
+    # Round 1: 찬/반/중재자 구조 — 문서 간 병렬
     # ══════════════════════════════════════════════════════════════════════
     print(f"\n{'='*50}")
-    print("Round 1 (Pro/Con/Mediator)")
+    print("Round 1 (Pro/Con/Mediator) — async")
     print('='*50)
 
-    debate_results = []
-    mediator_outputs = []
+    debate_results = await asyncio.gather(*[
+        doc_debate_round1(query, doc, i)
+        for i, doc in enumerate(documents)
+    ])
+    debate_results = list(debate_results)
+    mediator_outputs = [r["mediator"] for r in debate_results]
 
-    for i, doc in enumerate(documents):
+    # 로그 순서대로 출력
+    for r in debate_results:
+        idx = r["doc_index"]
         print(f"\n{'─'*40}")
-        print(f"Document {i+1}")
+        print(f"Document {idx+1}")
         print('─'*40)
-
-        # Pro (찬성)
-        print(f"\n  [Doc {i+1} - Pro]")
-        pro_resp = call_llm(pro_prompt(query, doc))
-        print(f"  {pro_resp}")
-
-        # Con (반대)
-        print(f"\n  [Doc {i+1} - Con]")
-        con_resp = call_llm(con_prompt(query, doc))
-        print(f"  {con_resp}")
-
-        # Mediator (중재자)
-        print(f"\n  [Doc {i+1} - Mediator]")
-        med_resp = call_llm(mediator_prompt(query, doc, pro_resp, con_resp))
-        print(f"  {med_resp}")
-
-        debate_results.append({
-            "doc_index": i,
-            "pro": pro_resp,
-            "con": con_resp,
-            "mediator": med_resp,
-        })
-        mediator_outputs.append(med_resp)
+        print(f"\n  [Doc {idx+1} - Pro] {r['pro']}")
+        print(f"\n  [Doc {idx+1} - Con] {r['con']}")
+        print(f"\n  [Doc {idx+1} - Mediator] {r['mediator']}")
 
     # Round 1 Aggregator
     print(f"\n{'─'*40}")
     print("Aggregator (Round 1)")
     print('─'*40)
 
-    agg_output = call_llm(aggregator_with_confidence_prompt(query, mediator_outputs))
+    agg_output = await async_call_llm(aggregator_with_confidence_prompt(query, mediator_outputs))
     agg_answer = parse_answers(agg_output)
     agg_explanation = parse_explanation(agg_output)
 
@@ -133,31 +142,36 @@ def v4_method(query: str, documents: list[str]) -> dict:
         "early_stopped": False,
     })
 
-    # 중재자 결과를 Round 2의 "이전 라운드 에이전트 답변"으로 사용
     prev_agent_outputs = mediator_outputs
     prev_answer = agg_answer
     prev_explanation = agg_explanation
 
     # ══════════════════════════════════════════════════════════════════════
-    # Round 2+: MadamRAG 방식 (문서 대변인 1명 + 타 에이전트 응답 참고)
+    # Round 2+: MadamRAG 방식 — 에이전트 간 병렬
     # ══════════════════════════════════════════════════════════════════════
     for round_num in range(2, MAX_ROUNDS + 1):
         print(f"\n{'='*50}")
-        print(f"Round {round_num} (MadamRAG-style)")
+        print(f"Round {round_num} (MadamRAG-style) — async")
         print('='*50)
 
-        # ── Step 1: 각 에이전트가 답변 생성 ──
-        current_answers = []
-        for i, doc in enumerate(documents):
+        # Step 1: 각 에이전트 병렬 호출
+        async def _agent_call(i: int, doc: str) -> str:
             history = "\n".join([
                 f"Agent {j+1}: {prev_agent_outputs[j]}"
                 for j in range(n_docs) if j != i
             ])
-            answer = call_llm(agent_debate_prompt(query, doc, history))
-            current_answers.append(answer)
+            return await async_call_llm(agent_debate_prompt(query, doc, history))
+
+        current_answers = await asyncio.gather(*[
+            _agent_call(i, doc) for i, doc in enumerate(documents)
+        ])
+        current_answers = list(current_answers)
+
+        # 로그 순서대로 출력
+        for i, answer in enumerate(current_answers):
             print(f"\n[Agent {i+1}]\n{answer}")
 
-        # ── Step 2: Early stopping ──
+        # Step 2: Early stopping
         curr_normalized = [normalize_answer(extract_answer(a)) for a in current_answers]
         prev_normalized = [normalize_answer(extract_answer(a)) for a in prev_agent_outputs]
 
@@ -184,8 +198,8 @@ def v4_method(query: str, documents: list[str]) -> dict:
                 "round_history": round_history,
             }
 
-        # ── Step 3: Aggregator (MadamRAG 방식) ──
-        agg_output = call_llm(aggregator_prompt(query, current_answers))
+        # Step 3: Aggregator
+        agg_output = await async_call_llm(aggregator_prompt(query, current_answers))
         agg_answer = parse_answers(agg_output)
         agg_explanation = parse_explanation(agg_output)
 
