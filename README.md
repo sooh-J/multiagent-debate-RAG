@@ -6,6 +6,7 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 
 | 방법론 | 설명 | 에이전트 구조 | 라운드 |
 |--------|------|---------------|--------|
+| **Single LLM** (Baseline) | 토론 없이 모든 문서를 한 프롬프트로 전달 | 단일 LLM | 1 |
 | **MadamRAG** (Baseline) | 문서 대변인 간 토론 | 문서당 Agent 1명 + Aggregator | 최대 3 (수렴 시 조기 종료) |
 | **Proposed Method (V2)** | 문서 내부 검증 후 집계 | Extractor → Skeptic → Resolver + Global Aggregator | 1 (토론 없이 1회) |
 | **V3** | 찬/반/중재자 매 라운드 반복 | Pro → Con → Mediator + Aggregator | 최대 3 (수렴 시 조기 종료) |
@@ -31,32 +32,37 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 
 ```
 ├── common/                     # 공통 유틸리티 (방법론 간 공유)
-│   ├── llm.py                  # OpenAI API 호출
+│   ├── llm.py                  # OpenAI API 호출 (retry, 병렬 batch 지원)
 │   ├── parsing.py              # 텍스트 정규화 및 파싱
 │   ├── metrics.py              # 평가 지표 (EM, F1 등)
-│   ├── logging.py              # 로그 출력 (Tee)
-│   └── data.py                 # 데이터셋 로드/캐싱
+│   └── logging.py              # 로그 출력 (Tee)
 ├── prompts/                    # 방법론별 프롬프트
 │   ├── madamrag.py             # MadamRAG 프롬프트
+│   ├── single_llm.py           # Single LLM 프롬프트
 │   ├── proposed_method.py      # Proposed Method (V2) 프롬프트 — Extractor/Skeptic/Resolver
-│   └── v3.py                   # V3/V4 공통 프롬프트 — Pro/Con/Mediator
+│   ├── v3.py                   # V3/V4 공통 프롬프트 — Pro/Con/Mediator
+│   └── llm_judge.py            # LLM-as-a-Judge 채점 프롬프트
 ├── pipelines/                  # 방법론별 파이프라인
-│   ├── madamrag.py             # MadamRAG 토론 파이프라인
+│   ├── madamrag.py             # MadamRAG 토론 파이프라인 (에이전트 병렬 호출)
+│   ├── single_llm.py           # Single LLM 파이프라인
 │   ├── proposed_method.py      # Proposed Method (V2) 파이프라인 — 문서 내부 토론 + 글로벌 집계
 │   ├── v3.py                   # V3 파이프라인 — 찬/반/중재자 매 라운드 반복
 │   └── v4.py                   # V4 파이프라인 — V3(Round 1) + MadamRAG(Round 2+)
 ├── configs/                    # 방법론별 설정
 │   ├── madamrag.py             # MAX_ROUNDS 등
+│   ├── single_llm.py           # Single LLM 설정
 │   ├── proposed_method.py      # Proposed Method 설정
 │   └── v3.py                   # V3/V4 공통 설정 (MAX_ROUNDS = 3)
 ├── data/
-│   ├── full/                   # 전체 데이터셋 (git 미추적)
-│   └── sample/                 # 실험용 샘플 (sample_3, sample_20, sample_100)
+│   ├── ramdocs/                # RAMDocs 데이터셋 (다운로드 + 샘플)
+│   └── faitheval/              # FaithEval 데이터셋 (다운로드 + 샘플)
 ├── results/                    # 실험 결과 저장
+├── run_single_llm.py           # Single LLM 실행
 ├── run_madamrag.py             # MadamRAG 실행
 ├── run_proposed_method.py      # Proposed Method (V2) 실행
 ├── run_v3.py                   # V3 실행
 ├── run_v4.py                   # V4 실행
+├── eval_llm_judge.py           # LLM-as-a-Judge 재채점
 └── original.py                 # 원본 단일 파일 (참고용)
 ```
 
@@ -69,25 +75,22 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 
 ## 실행
 
-> 현재는 20개 샘플로 toy experiment 진행 중.
-
 ```bash
 conda activate nlp
 
 # 데이터 다운로드 (최초 1회)
 python -m common.data
 
-# MadamRAG baseline 실행
-python run_madamrag.py
+# 파이프라인 실행 (100 samples)
+python run_single_llm.py         # Single LLM baseline
+python run_madamrag.py           # MadamRAG baseline
+python run_proposed_method.py    # Proposed Method (V2)
+python run_v3.py                 # V3
+python run_v4.py                 # V4
 
-# Proposed Method (V2) 실행
-python run_proposed_method.py
-
-# V3 실행 (찬/반/중재자 매 라운드)
-python run_v3.py
-
-# V4 실행 (V3 Round 1 + MadamRAG Round 2+)
-python run_v4.py
+# LLM-as-a-Judge 재채점
+python eval_llm_judge.py results/madamrag_results.json
+python eval_llm_judge.py results/single_llm_results.json
 ```
 
 ## 환경
