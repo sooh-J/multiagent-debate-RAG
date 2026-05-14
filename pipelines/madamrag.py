@@ -12,15 +12,24 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — multi_ag
 from common.llm import call_llm, call_llm_batch
 from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
 from prompts.madamrag import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
+from prompts.raguard import aggregator_prompt_raguard
 from configs.madamrag import MAX_ROUNDS
 
 
-def madam_rag(query: str, documents: list[str]) -> dict:
+def _aggregator_prompt_for(dataset: str):
+    """dataset 이름으로 적절한 aggregator prompt 함수 선택."""
+    if dataset.startswith("raguard"):
+        return aggregator_prompt_raguard
+    return aggregator_prompt
+
+
+def madam_rag(query: str, documents: list[str], dataset: str = "ramdocs") -> dict:
     n_agents = len(documents)
     prev_agent_outputs = [""] * n_agents
     prev_summary: list[str] = []
     prev_explanation = ""
     round_history = []
+    agg_prompt_fn = _aggregator_prompt_for(dataset)
 
     for round_num in range(1, MAX_ROUNDS + 1):
         print(f"\n{'='*50}")
@@ -71,7 +80,7 @@ def madam_rag(query: str, documents: list[str]) -> dict:
                 }
 
         # Step 3: Aggregator 요약
-        agg_prompt = aggregator_prompt(query, current_answers)
+        agg_prompt = agg_prompt_fn(query, current_answers)
         agg_output = call_llm(agg_prompt)
 
         agg_answer = parse_answers(agg_output)

@@ -74,12 +74,12 @@ DATASET_LOADERS = {
 CHECKPOINT_EVERY = 50
 
 
-async def run_on_sample(sample: dict) -> dict:
+async def run_on_sample(sample: dict, dataset: str) -> dict:
     query = sample["question"]
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = await v4_method(query, doc_texts)
+    result = await v4_method(query, doc_texts, dataset=dataset)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -98,7 +98,7 @@ async def run_on_sample(sample: dict) -> dict:
     }
 
 
-async def run_on_dataset(ds_sample, existing_results: list, output_path: str) -> list[dict]:
+async def run_on_dataset(ds_sample, existing_results: list, output_path: str, dataset: str) -> list[dict]:
     results = list(existing_results)
     start = len(results)
     total = len(ds_sample)
@@ -111,7 +111,7 @@ async def run_on_dataset(ds_sample, existing_results: list, output_path: str) ->
     for i in range(start, total):
         sample = ds_sample[i]
         print(f"\n[{i+1}/{total}] Q: {sample['question']}")
-        out = await run_on_sample(sample)
+        out = await run_on_sample(sample, dataset)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -171,7 +171,7 @@ async def main():
         if len(existing) >= len(ds_sample):
             print("이미 전체 완료 상태입니다. 종료.")
         else:
-            await run_on_dataset(ds_sample, existing, output_path)
+            await run_on_dataset(ds_sample, existing, output_path, args.dataset)
             print_usage_summary()
     finally:
         tee.close()

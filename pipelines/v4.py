@@ -58,7 +58,18 @@ from prompts.v3 import (
     aggregator_with_confidence_prompt,
 )
 from prompts.madamrag import agent_debate_prompt, aggregator_prompt
+from prompts.raguard import (
+    aggregator_prompt_raguard,
+    aggregator_with_confidence_prompt_raguard,
+)
 from configs.v3 import MAX_ROUNDS
+
+
+def _aggregator_prompts_for(dataset: str):
+    """dataset 이름으로 (round1_aggregator, round2plus_aggregator) 함수 쌍 선택."""
+    if dataset.startswith("raguard"):
+        return aggregator_with_confidence_prompt_raguard, aggregator_prompt_raguard
+    return aggregator_with_confidence_prompt, aggregator_prompt
 
 
 async def doc_debate_round1(query: str, document: str, doc_index: int) -> dict:
@@ -78,7 +89,7 @@ async def doc_debate_round1(query: str, document: str, doc_index: int) -> dict:
     }
 
 
-async def v4_method(query: str, documents: list[str]) -> dict:
+async def v4_method(query: str, documents: list[str], dataset: str = "ramdocs") -> dict:
     """
     V4 메인 파이프라인 (async)
 
@@ -96,6 +107,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
     """
     n_docs = len(documents)
     round_history = []
+    round1_agg_fn, round2plus_agg_fn = _aggregator_prompts_for(dataset)
 
     # ══════════════════════════════════════════════════════════════════════
     # Round 1: 찬/반/중재자 구조 — 문서 간 병렬
@@ -126,7 +138,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
     print("Aggregator (Round 1)")
     print('─'*40)
 
-    agg_output = await async_call_llm(aggregator_with_confidence_prompt(query, mediator_outputs))
+    agg_output = await async_call_llm(round1_agg_fn(query, mediator_outputs))
     agg_answer = parse_answers(agg_output)
     agg_explanation = parse_explanation(agg_output)
 
@@ -199,7 +211,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
             }
 
         # Step 3: Aggregator
-        agg_output = await async_call_llm(aggregator_prompt(query, current_answers))
+        agg_output = await async_call_llm(round2plus_agg_fn(query, current_answers))
         agg_answer = parse_answers(agg_output)
         agg_explanation = parse_explanation(agg_output)
 
