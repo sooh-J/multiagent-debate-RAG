@@ -3,17 +3,26 @@ MadamRAG 실행 스크립트
 
 Usage:
     conda activate nlp
-    python run_madamrag.py
+    python run_madamrag.py                                  # default: ramdocs, n=100
+    python run_madamrag.py --dataset raguard_balanced --n 20
 """
 
-import sys
+import argparse
 import json
+import sys
 
 from common.logging import Tee
-from data.ramdocs.download import load_ramdocs
-from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
+from common.metrics import compute_metrics, print_results_table
+from data.ramdocs.download import load_ramdocs
+from data.raguard.loader import load_raguard
 from pipelines.madamrag import madam_rag
+
+DATASET_LOADERS = {
+    "ramdocs":          lambda n: load_ramdocs(n_samples=n),
+    "raguard":          lambda n: load_raguard(n_samples=n, balanced=False),
+    "raguard_balanced": lambda n: load_raguard(n_samples=n, balanced=True),
+}
 
 
 def run_on_sample(sample: dict) -> dict:
@@ -40,7 +49,7 @@ def run_on_sample(sample: dict) -> dict:
     }
 
 
-def run_on_dataset(ds_sample) -> list[dict]:
+def run_on_dataset(ds_sample, output_path: str) -> list[dict]:
     results = []
     for i, sample in enumerate(ds_sample):
         print(f"\n[{i+1}/{len(ds_sample)}] Q: {sample['question']}")
@@ -61,7 +70,6 @@ def run_on_dataset(ds_sample) -> list[dict]:
 
     print_results_table(results)
 
-    output_path = "results/madamrag_results.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n결과가 '{output_path}'에 저장되었습니다.")
@@ -69,16 +77,25 @@ def run_on_dataset(ds_sample) -> list[dict]:
     return results
 
 
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--dataset", choices=list(DATASET_LOADERS), default="ramdocs")
+    p.add_argument("--n", type=int, default=100, help="평가 샘플 개수")
+    return p.parse_args()
+
+
 if __name__ == "__main__":
     import os
+    args = parse_args()
     os.makedirs("results", exist_ok=True)
 
-    tee = Tee(prefix="madamrag")
+    tee = Tee(prefix=f"madamrag_{args.dataset}")
     sys.stdout = tee
 
     try:
-        ds_sample = load_ramdocs(n_samples=100)
-        all_results = run_on_dataset(ds_sample)
+        ds_sample = DATASET_LOADERS[args.dataset](args.n)
+        output_path = f"results/madamrag_{args.dataset}_results.json"
+        all_results = run_on_dataset(ds_sample, output_path)
 
         print_usage_summary()
     finally:
