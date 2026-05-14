@@ -55,7 +55,8 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 │   └── v3.py                   # V3/V4 공통 설정 (MAX_ROUNDS = 3)
 ├── data/
 │   ├── ramdocs/                # RAMDocs 데이터셋 (다운로드 + 샘플)
-│   └── faitheval/              # FaithEval 데이터셋 (다운로드 + 샘플)
+│   ├── faitheval/              # FaithEval 데이터셋 (다운로드 + 샘플)
+│   └── raguard/                # RAGuard 데이터셋 (다운로드 + 샘플) — 스키마 통합 미정, data/raguard/README.md 참고
 ├── results/                    # 실험 결과 저장
 ├── run_single_llm.py           # Single LLM 실행
 ├── run_madamrag.py             # MadamRAG 실행
@@ -92,6 +93,21 @@ python run_v4.py                 # V4
 python eval_llm_judge.py results/madamrag_results.json
 python eval_llm_judge.py results/single_llm_results.json
 ```
+
+## 진행 상황
+
+### 데이터셋 확장
+
+- **RAGuard 추가** (`data/raguard/`)
+  - 출처: [UCSC-IRKM/RAGuard](https://huggingface.co/datasets/UCSC-IRKM/RAGuard) — 정치 발언 fact-checking
+  - 원본: claim 2,648 / document 16,331
+  - **전처리 완료** (RAMDocs 스키마로 통일):
+    - `raguard_preprocessed.json`: claim 711 / document 4,593 (verdict True 115 : False 596, unbalanced)
+    - `raguard_preprocessed_balanced.json`: claim 230 / document 1,495 (True 115 : False 115, stratified by original_verdict)
+  - 컬럼 정의·전처리 규칙 전체는 [data/raguard/README.md](data/raguard/README.md) 참고
+- **미해결 / 결정 필요**
+  - balanced(230) vs unbalanced full(711) 중 어느 쪽으로 평가할지. unbalanced로 가면 F1·balanced accuracy 필수.
+  - 본문 없는 doc 약 25%를 일단 폐기하고 있음. 필요 시 Reddit `.json` 크롤링으로 보강 가능.
 
 ## 환경
 

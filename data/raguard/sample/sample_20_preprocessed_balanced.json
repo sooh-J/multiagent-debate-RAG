@@ -1,0 +1,962 @@
+[
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"Says Donald Trump \"is going to go out and carpet bomb\" the Middle East.\"",
+    "documents": [
+      {
+        "text": "Question for Arab Americans : Will you still vote for Biden in the next elections?\n\nFor Arab Americans who identify with Palestinian cause, after Biden's support for Israeli mass murder in recent events, will you still vote for him? I often hear the argument that he is still the lesser evil, but is he really? Biden Supported the removal of millions of Palestinians from N.Gaza, supported the blockade, support the carpet bombing of Gaza, sent troops and aircraft carriers, sent Billions to facilitate the murder, opposed all ceasefires, including humanitarian ceasefires. All in all he gave Israel the carte blanche and the blessings to do as they as they please. What could a Republican president (Trump included) have done more for Israel that Biden hasn't already?\n\n&#x200B;\n\n&#x200B;\n\n&#x200B;\n\n&#x200B;",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why has the MOAB been only used once?\n\nThe single time it was used it killed close to a hundred ISIS militants which means it’s  pretty effective as a tool. In addition it’s also absolutely awe inspiring to witness because it’s the closest a conventional bomb will ever get to a nuke. \n\nWhen the US does punitive, show of force air strikes, why isn’t the MOAB used more often? The MOAB seems tailor made for air strikes in largely uncontested airspace’s when you’re trying to swing some dick. \n\nAlso I hope I’m not violating the 1 year rule. I understand this question seems tailored towards the recent airstrikes in the Middle East but I’m trying to get a general idea of using this specific ordinance in show of force operations.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "If Iran and Israel go to war what do other countries in the Middle East do?\n\nI know that countries like Saudi Arabia, the Emirates and Bahrain feel threatened by Iran and probably would find a situation where Iran wins over Israel threatening because Iran then would be in a better position to dominate them. But they also have populations that are sympathetic to the Palestinian cause and need to be seen as supportive of Palestinians. If Iran and Israel gets involved in a direct and large scale military struggle what would these and other countries do? Just stay out as much as they can? Join Iran and risk getting dominated by it afterwards? Or Help Israel fight Iran because the risk of getting dominated by Iran is greater than the risk of anger from their own population?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What if the US nuked Afghanistan in response to 9/11?\n\nInstead of causing war the US decides to nuke Afghanistan to attempt to get rid of Al-Qaeda members.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Sesh talk about politics\n\nWas just listening to newest episode of The Sesh and omg these people are so clueless. I can’t belive the words “Bush was funny not scary” came out of Kendall’s mouth. As someone who had family in Iraq in 2003 that felt so weird to hear.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "So, why is all this military aid going to Israel?\n\nI've heard it said plenty of times that if the aid gets cut off, then Israel will be left vulnerable to Iran's proxy militias, but why can't the governments supplying these weapons threaten to withhold it if they don't stop killing civilians? You would think that with regards to the UK and the USA, where the incumbents are losing votes in an election year, they would want to capitalise on this, so why isn't it happening? Why are these countries so stubborn in providing military aid to a country that is killing massive amounts of civilians?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Israel is simultaneously under attack by Hamas, Hezbollah and the Houthis, all of whom are Iran proxies.   At what point is it time to hit Iran?\n\nI know no one wants a war with Iran, but pretending that is not what is happening seems willfully blind.  If Iran funds, trains and arms all 3 groups, have they not already declared war on Israel and the west?   What should or could be done?",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"We have an increase in murder within our cities, the biggest in 45 years.\"\"",
+    "documents": [
+      {
+        "text": "The Homicide Rate in the USA has jumped 31.5% from 2014-2016, the largest two year increase since we started recording homicide rates. What do you think has caused this and what can we do to respond to this?\n\nSource for my claim: https://www.brennancenter.org/publication/crime-2016-preliminary-analysis\n\nWhat can our political system do to stop or slow this rapid increase? What laws do you think we can pass? What laws do you think are making this issue worse?\n\nEdit: http://imgur.com/a/fQwmy this a chart from the brennancenter showing the actual increases in the murder rate per americas largest cities. 17 out of the nations largest 20 cities saw increases.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "How Fox 45 is covering the large decrease in homicides\n\nAccording to Baltimore Witness (a non-profit you should remember in end-of-year giving), Baltimore City has so far seen 242 homicides this year compared wit 322 at the same time last year. This is nearly a 25% drop.\n\nGreat news, right?\n\nYou would think so. And because Fox 45 is so concerned about crime in the city, I was curious to see how they covered it. \n\nA quick search shows only three mentions:\n\n \"Who gets the credit? Analyzing the data behind Baltimore's progress at reducing homicides\" -- Spoiler alert: the credit goes to Ivan Bates, not Brandon Scott\n\n\" Baltimore sees decrease in homicides but surge in robberies and car thefts\"\n\n\" Despite decrease in homicides, Baltimore residents rally for more protection amid rising carjackings and vandalism\"\n\nAdmittedly, this list may not be exhaustive. But it seems in the Sinclair world, eighty fewer lives lost is not good news at all. It's almost as if they are feeding blood and violence to their viewers and running low on red meat is a bad thing.",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Change in murder rate relative to 2012 - us vs other major cities (original content)\n\nI knew we’d be #1, but I was surprised by how much.\n\nHow I did this:\n\n1) Identified the primary city of the 20 largest metro areas in the US\n2) Found city population from 2012-2023\n3) Found murder counts from 2012-2023 (Riverside murders could not be found for 2021-2023 so it is excluded). For 2023, also noted the date of the last update on the murder count\n4) Scaled 2023 from YTD to expected finish based on YTD\n5) Divided step 4 by step 2\n6) Divided each city’s annual step 5 by that city’s 2012 step 2\n\nWhy I did this:\n\nDC is on a bad trajectory, and I’m worried. If things don’t get better, I’m leaving.\n\nThe city has gotten more dangerous. I don’t care that it was worse in 1993. It should get better every year, not back to where it was.\n\nMurder is reliable as it’s always reported. It’s tracked year to year. And the murder rate accounts for population change. It’s (arguably) the best measurement for how safe a city is.\n\nWhy did you choose 2012?\n\nYes, 2012 is the minimum, so DC has a low base. So you may say why didn’t I choose 2013, after all that would be a decade. But that was the year of the Navy Yard mass murder (12 victims). For what it’s worth, I also did this analysis with 2013 as the base. If you keep the NY mass shooting in, we’re still #2 after Seattle, and if you look closely here that is wild because Seattle has a super low base in 2013. If you remove the NY mass murder, guess what, we’re still #1. Yay.\n\nWhat’s the solution? \n\nI don’t know, I’m not a criminologist. I will say it’s sad that no one has thought “hmm it used to be a lot more safe, what were we doing then we aren’t doing now?”. My wager is on 2 things: \n\n1) the USAO needs to prosecute. Not prosecuting 68% of cases is a scandal and should get people removed. If you have an illegal gun, you should go to jail. Also, DCAG needs to punish kids who have an illegal gun. Why is it that having a gun isn’t punished?\n\n2) police need to do their job. We need to pull cars over. If you have fake license plates, you need to be pulled over and arrested.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Why did crime rise so rapidly in the 1960s and 1970s in the USA?\n\n[violent crime rates exploded during the 1960s and 1970s](http://www.newgeography.com/files/cox-crime-3.png)\n\nIm in a criminology class and we are learning about how crime was very high in the 70s and 80s, but the teacher never really explains why it rose in the first place in the 60s and 70s. It wasn't just a moderate rise, it was a 400% rise in less than 20 years. \n\nThe teacher also explained why it was low in the 1950s, street drugs and street gangs were not very big then, and also cops were able to patrol poor neighborhoods more and with more authority, whereas by the 1970s cops mostly stayed out of poor neighborhoods such as harlem or the bronx. \n\nBut why did these changes occur? What happened?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Statistical Analysis of the Murder Rate of Night City\n\nHow violent is Night City, exactly?  How many people are murdered?\n\n**TL:DR at the bottom.  Bold text throughout for major points.**\n\n&#x200B;\n\n# Intro\n\nIf CD Projekt Red has tried to make anything clear, it's that Night City is an awful place.  If you're anything like me, your first question is, \"Yes, but *how* awful exactly?\"  Well, we can actually come up with some rough estimates now.  And boy oh boy, are these going to be rough estimates.  You have been warned.\n\nThis whole post rests on information from *The World of Cyberpunk 2077* (an excellent read, incidentally), the lore book they created, and a few snippets from gameplay we've seen.  I'll quote you the most important piece, which is from the lore book:\n\n\"*Over two hundred people die in confrontations with the police every month, and an unknown number die every day in gang skirmishes and unrecorded combat sweeps performed by private corporate forces.  For every ten criminals killed, one NCPD officer loses his life in the line of duty \\[. . .\\]*\"\n\nLet's unpack this. **(Warning: ballpark figures ahead!)**\n\n&#x200B;\n\n# The Night City Police\n\nStatistics vary, but the real world USA has approximately 1,200 deaths due to police actions every year.  This means that Night City, at 2,400 deaths, has *twice* the kill rate as the United States.  All of it.  *In a single city*.\n\nNight City probably has a population between 6-12 million, given lore sources and population growth over time.  **This means Night City's police killing ratio is roughly 60-120 times that of the United States**.\n\nThe civilian-to-cop death ratio is somewhat similar too: 20 people are killed by cops for every cop killed in Night City, as compared to 7.32/1 for real world USA.  This is important, because I believe this means Cyberpunk 2077 operates somewhat like our world: human behaviors appear pretty much the same, just upscaled tremendously.  For example, the cops pretty much act like cops.  They don't kill indiscriminately, and follow the law at least somewhat.  After all, Inspector Stints seemed pretty uneasy about killing Jackie and V in the Street Kid preview.\n\nThe United States has a murder rate of 5 per 100,000 over the past few years.  A 60-120 times increase means **Night City would have a murder rate of 300-600/100,000, or 0.3% - 0.6% of the population each year.**\n\nThis is my bare minimum murder rate for Night City.\n\n# The Gangs\n\nBut first we have to account for the gangs of Night City, which are far more powerful than in real life.  I could arbitrarily make up numbers of how much worse, but I think the best way is to simply upscale statistics from the real world.  Therefore, if the NCPD kills 60-120 times as many people as compared to real life, so does the general population.\n\n    (Note: the Night City police have a higher kill/death ratio, as stated above.  The NCPD kills 2.75 times more criminals for every cop they lose as compared to the real world.  You could make the argument that all the death rates down below should be divided by 2.75, as the police are more efficient in the Cyberpunk universe, and there is no evidence that gangs are equally as effective.  However, the lore says some gangs have corporate support and military grade cyberware.  All in all, I believe it is best to say everybody in Night City is really good at killing, and simply upscale by 60-120 times. \n\n&#x200B;\n\nI will first use Los Angeles as a baseline, to keep as many factors possible the same.  Los Angeles had an all time high murder rate of 34 per 100,000, meaning Cyberpunk is between \\~2,000-4,000/100,000.\n\nFortunately for us (and unfortunately for people who live there), we DO have a place where gangs are an extremely powerful presence: Mexico.  Tijuana, Mexico, has the highest murder rate in the world at 134/100,000.  This translates to \\~8,000-16,000/100,000 murder rate for Night City.\n\nConsidering all the data above, **Night City has a murder rate between \\~600-16,000/100,000 a year, depending what murder rate you use**.\n\n    Intermission\n\n**Let's stop a moment and talk about these numbers.**  From what I have calculated so far, this means about 0.6% to 16.0% of the population of Night City dies from violence each year - and this isn't even factoring in the corporations yet.  In comparison, Tijuana, the worst city on the planet for murder, loses 0.134% population each year.\n\nThis seems insane, but remember the background this takes place in: 1/3 of the US population-100 million people-died during the collapse of the Unites States in the 90's to 2000's.  The Fourth Corporate war broke the world and put most everything on hiatus for about 30 years.  There are laws in the New United States allowing you to *preemptively* kill someone if you *think* they are going to harm you.  Guns are beyond ubiquitous.  Everyone in this world lives with constant death around.\n\nThis is a violent, violent world, which has been reinforced by the gameplay.  You have Scavengers literally hunting people as a daily occurrence.  Corporations kill at will, and gangs slaughter people in the streets.  *You have an attack helicopter attacking a Pacifica building in broad daylight*.  All this makes these numbers realistic to me.  And remember-Night City is supposed to be the worst of the worst, an international hotspot for corporations, gangs, and everything bad in-between.\n\n    Back to the show\n\n# The Corporations\n\nLastly, we have the corporations, which, unfortunately, I have essentially zero data for.  The only mention in *The World of Cyberpunk 2077* is that any and all crimes on corporate property is completely out of hands of the police.\n\nSince I have almost no information to work with, I think the best assumption is that corporations kill as many people as the police and gangs do. Gameplay previews and lore put pretty even focus on both, so I think it's fair to say they are equals.\n\n# Final Verdict\n\n**Adding everything up, Night City has a murder rate between 1,200-32,000 per 100,000 a year.**  This is 1.2% to 32% of the population, or 144,000 to 1,920,000 deaths, depending on the population.\n\nThis is an enormous range of numbers, and while we can rule out the extreme high end - as no one would be left alive in Night City- it leaves us with a problem: Which stats are the best ones to use?\n\nNight City is located in the real world Morro Bay, which inspired Mike Pondsmith.  He also lives in California, so I feel it best to use California as a base.  This keeps as many factors the same as possible.  I also think using Los Angeles's worst murder rate is appropriate, seeing as Night City is also supposed to be the worst.  Finally, a population of 12 million seems the most reasonable, to account for fifty years of population growth and the megalopolis that Night City has become.\n\n**Therefore, my best guess is that Night City has a murder rate of approximately 2,000-6,000 per 100,000, or 2-6% of the population each year, a grand total of 240,000-720,000 deaths.  The average is 4%; 480,000 deaths.**\n\nPopulation would be stabilized by:\n\n1. Corporations constantly bringing new people in.\n2. Immigration to an international free zone and major world city.\n3. Decreased death due to diseases and other issues.\n4. Higher birth rates that are common in high poverty areas.\n\n&#x200B;\n\nAgain, this entire thesis is based on some very shaky assumptions.  You can widely change the numbers around, but this is what makes the most sense to me.  Take it with a grain of salt.  Or a pound.\n\nThanks for reading.\n\n&#x200B;\n\n# TL;DR\n\n**The bare minimum murder rate for Night City is 300-600 deaths per 100,000 people, or 0.3% - 0.6% of the population each year.**\n\n**My personal estimate is a murder rate between 2,000-6,000 per 100,000, or 2%-6% of the population each year, or 240,000-720,000 deaths.**",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Why isn't the major drop in homicide in Baltimore a bigger story?\n\n(Cross-posted here and on the Baltimore Sub.)\n\nast year, the number of homicides in Baltimore City dropped by 71, the largest numerical decrease on record. Using Baltimore Witnesses' numbers, this year the number of homicides is declining at an even faster pace. The number of homicides is already down by 60, year over year, and nonfatal shootings are down by 40%. There's a chance, admittedly an outside one, that homicide will have declined by half in two years.\n\nOutside of post-conflict countries, I can't think of a single example of a city where murder has declined this quickly. Not Cali, Colombia. Not New York under St. Rudy.\n\nI realize this is early, but this may be the biggest story on Baltimore in the past few decades. Yet, the media on it has been muted. I get why the right-wing media won't report on it as it causes them cognitive dissonance. (The knee-jerk reaction there besides not reporting on it is to call it fake.) But the so-called liberal media has been pretty silent on the issue.",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Why isn't the drop in homicide a bigger story?\n\nLast year, the number of homicides in Baltimore City dropped by 71, the largest numerical decrease on record. Using Baltimore Witnesses' numbers, this year the number of homicides is declining at an even faster pace. The number of homicides is already down by 60, year over year, and nonfatal shootings are down by 40%. There's a chance, admittedly an outside one, that homicide will have declined by half in two years.\n\nOutside of post-conflict countries, I can't think of a single example of a city where murder has declined this quickly. Not Cali, Colombia. Not New York under St. Rudy.\n\nI realize this is early, but this may be the biggest story on Baltimore in the past few decades. Yet, the media on it has been muted. I get why the right-wing media won't report on it as it causes them cognitive dissonance. (The knee-jerk reaction there besides not reporting on it is to call it fake.) But the so-called liberal media has been pretty silent on the issue.",
+        "type": "misinfo",
+        "answer": "False"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"You have to have congressional authority\" to close Guantanamo Bay prison.\"",
+    "documents": [
+      {
+        "text": "My friend told me that Pres Obama tried to close Guantanamo and have trials for the accused being held there but was blocked by congressional Republicans. How did this happen (if true)? Why couldn't he just order the Attorney General to file charges against them in Federal court?\n\nLack of respect for legitimate legal process was a reason I disapproved of Pres Bush's job as President. I can't vote for Obama if he's breaking that campaign promise. (I would vote for Jill Stein.)",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "ELI5: Why is it not considered fraudulent when a Presidential candidate indicates he will do a specific thing, but does the exact opposite after he is voted into office?\n\nWhy is this level of lying and deceit tolerated (seemingly) without consequences?\n*Edit* I wanted to thank all of you for the broad spectrum of responses. Of course this isn't an issue that can be answered in black and white, but your answers, thoughts, and opinions have helped me understand a lot of variables and issues that may cause a President to change their stance. Also, to clarify a lot of assumptions, this post is not about President Obama specifically, it pertains to our Presidents in general.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "How did communist countries such as the USSR justify to their people that they couldn't travel to capitalist countries?\n\nSo yeah, I'm just wondering how you could possibly justify this without it sounding like an excuse to keep everyone inside the country. Especially since Europeans and Americans could travel to the USSR with everyone in the country being aware of that.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"Only one president has ever cut Medicare for seniors in this country . . . Barack Obama.\"\"",
+    "documents": [
+      {
+        "text": "ELI5: What exactly is Obamacare and what did it change?\n\nI understand what medicare is and everything but I'm not sure what Obamacare changed.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What do you all think of Project 2025? I'm feeling scared about it and need some insight\n\nI've started reading into Project 2025 and the prospect of it scares me. Project 2025 is a policy plan from The Heritage Foundation, a major conservative think tank in DC. The plan outlines how a future conservative President can effectively override many democratic institutions and start turning the President into a totalitarian ruler. I've recently graduated with a PoliSci degree back in May, with most of my research was about democratic backsliding and totalitarianism, and I'm terrified at this prospect. They are currently running a campaign to gain around 50,000 conservative-aligned individuals to replace civil servants and immediately start writing anti-LGBT and other legislation after a conservative President has been elected.\n\n[https://www.project2025.org/](https://www.project2025.org/)\n\nIs there any real cause for alarm? This feels like a potential end to democracy in the US. Sorry if this isn't acceptable content for this sub.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why are conservatives in the U.S. against the Affordable Care Act?\n\nThe leading candidate for the Republican nomination and former president recently made this comment: \n\n> Trump posted on Truth Social, “The cost of Obamacare is out of control, plus, it’s not good Healthcare. I’m seriously looking at alternatives. We had a couple of Republican Senators who campaigned for 6 years against it, and then raised their hands not to terminate it. It was a low point for the Republican Party, but we should never give up!”\n\nNow that it’s been in place for 13+ years what is the alternative being proposed other than repealing it? \n\nWhy not run on improving upon the issues you have with it instead?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Kamala Harris Will Propose New Medicare Benefit To Cover Home Care Costs For Seniors\n\nTopline:  **Vice President Kamala Harris** will outline a new Medicare benefit proposal Tuesday aiming to **help families caring for seniors at home**, in the Democratic candidate’s latest policy pitch targeted at middle-aged voters grappling with the costs of caring for both their children and elderly parents.\n\n[https://www.forbes.com/sites/siladityaray/2024/10/08/harris-to-propose-new-medicare-benefit-to-cover-home-care-costs-for-seniors/](https://www.forbes.com/sites/siladityaray/2024/10/08/harris-to-propose-new-medicare-benefit-to-cover-home-care-costs-for-seniors/)",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Why doesn't health insurance cover hearing aids?\n\nI am 32 years old. I was born hard of hearing - not fully deaf but bad enough to require wearing 2 hearing aids my whole life. Every 3-4 years my hearing aids act up and I need a repair or a new pair. My current ones recently stopped working so I went to the audiologist today. A new pair of hearing aids at the quality required for my hearing loss is $8.5k!! To repair the ones I own costs $1k just to do the diagnosis, then add whatever the repairs cost. This would be the 3rd time repairing this pair of hearing aids, btw. Repair takes 1-2 weeks. I have a full time job and need hearing aids to do my job. Lucky me, they rent/loan hearing aids during the repair, which costs a fee (I'll find out how much tomorrow). I am so sick and tired of our health care system! You're telling me I have to pay $8k plus every 3-4 years just so I can hear and get by in my day to day life? Medi-Cal covers hearing aids, but I don't qualify for Medi-Cal. So if you're old and need hearing aids, you can get them covered by insurance (as you should be able to), but if you're born hard of hearing? Tough luck kiddo! If anyone has any suggestions on how to best tackle this I greatly appreciate your help.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "I am Congressman Alan Grayson, representing Florida’s 9th District. AMA\n\nHello,\n\nI’m Alan Grayson, and I represent Florida’s 9th Congressional District. Ask Me Anything.\n\nSome of you may know me from my [September 2009 speech on health care reform]( http://www.youtube.com/watch?v=-usmvYOPfco). I explained that the Republican health care plan amounted to, \"Don't get sick, and if you do get sick, die quickly.” What you may not know is that Aaron Swartz was an intern in my office, and someone whom I admired. I [spoke at his memorial](http://www.youtube.com/watch?v=Slmbmd69QHM), and am glad to have a chance to share thoughts with the community he co-founded.\n\nYesterday, President Obama released a budget that included the chained CPI, which cuts the cost-of-living adjustment for seniors on Social Security.  I have said this many times before, but I will say it again now: I will not support any cuts to Social Security, Medicare, or Medicaid benefits. Over the past month, more than two million of you have signed on to our [No Cuts petition](http://no-cuts.com?source=RedditIntro), saying the same thing. As of today, over 30 Members of Congress have co-signed our letter to President Obama pledging to vote against any cuts to Social Security, Medicare, and Medicaid benefits.\n\nRight now, I am stepping into a House Democratic Caucus meeting on chained CPI cuts. When I return at 4PM, I look forward to answering your questions.\n\n[Verification](https://www.facebook.com/photo.php?fbid=10151466185768138&set=a.451094083137.243483.6580173137&type=1)\n\nI just returned from my meeting. I will now begin answering your questions. \n\nUPDATE:  Well, we ALMOST answered all the questions -- a half-hour of \"overtime\" helped.  But now I need to go.   Thank you for giving me lots of things to think about.  I had a great time, here -- which means that I look forward to doing it again.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Why is the American right so against Obamacare?\n\nCanadian here who doesn't know too much about the health care debate in the US. I know Trump is  trying to implode Obamacare now, wishing that it did by itself, but I'm unsure why the right-wing in the US is generally against Obamacare. What are the key arguments against providing healthcare to millions of Americans? Are the premiums so skyrocket high that it's unwieldy? Any other arguments?  \nI would think that Trump's position wouldn't be favoured by the majority of Americans, considering the country is one of the few in the West that doesn't provide universal health care to its citizens.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"He admits he still doesn't know how to use a computer, can't send an e-mail.\"\"",
+    "documents": [
+      {
+        "text": "Reminder: the overwhelming majority of users very much are \"not computer people\" (computer literacy study)\n\nLike most of you, I can get cranky when I'm handling tickets where my users are ignorant. If you think that working in supercomputing where most of my users have PhDs—often in a field of computing—means that they can all follow basic instructions on computer use, think again.      \n\nWhen that happens I try to remember a 2016 study I found by OECD^[1](https://eric.ed.gov/?id=ED567018) on basic computer literacy throughout 33 (largely wealthy) countries. The study asked 16 to 65 year olds to perform computer-based tasks requiring varying levels of skill and graded them on completion.         \n\nHere's a summary of the tasks at different skill levels^[2](https://escholarship.org/uc/item/4b75m4tj):       \n\n- Level 1: Sort emails into pre-existing folders based on who can and who cannot attend a party.\n\n- Level 2: Locate relevant information in a spreadsheet and email it to the person who requested it.\n\n- Level 3: Schedule a new meeting in a meeting planner where availability conflicts exist, cancel conflicting meeting times, and email the relevant people to update them about it.\n\nSo how do you think folks did? It's probably worse than you imagined.     \n\n\n\nPercentage | Skill Level\n----------|-----------\n10% | Had no computer skills (not tested)\n5.4% | Failed basic skills test of using a mouse and scrolling through a webpage (not tested)\n9.6% | Opted out (not tested)\n14.2% | \"Below Level 1\"\n28.7% | Level 1\n25.7% | Level 2\n5.4% | Level 3\n\nThat's right, just 5.4% of users were able to complete a task that most of us wouldn't blink at on a Monday morning before we've had our coffee. And before you think users in the USA do much better, we're just barely above average ([figure](https://i.imgur.com/ZGtmAbT.png)).       \n\nJust remember, folks: we are probably among the top 1% of the top 1% of computer users. Our customers are likely not. Try to practice empathy and patience and try not to drink yourself to death on the weekends!",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Is GenZ really this bad with computers?\n\nThe extent to which GenZ kids do NOT know computers is mind-boggling. Here are some examples from a class I'm helping a professor with:\n\n1. I gave them two softwares to install on their personal computer in a pendrive. They didn't know what to do. I told them to copy and paste. They did it and sat there waiting, didn't know the term \"install\".\n\n2. While installing, I told them to keep clicking the 'Next' button until it finishes. After two clicks, they said, \"Next button became dark, won't click.\"\nYou probably guessed it. It was the \"Accept terms...\" dailog box.\n\n3. Told them to download something from a website. They didn't know how to. I showed. They opened desktop and said, \"It's not here. I don't know where it is.\" They did not know their own downloads folder.\n\nThey don't understand file structures. They don't understand folders. They don't understand where their own files are saved and how to access them. They don't understand file formats at all! Someone was confusing a txt file with a docx file. LaTeX is totally out of question. \n\nI don't understand this. I was born in 1999 and when I was in undergrad we did have some students who weren't good with computers, but they were nowhere close to being utterly clueless. \n\nI've heard that this is a common phenomenon, but how can this happen? When we were kids, I was always under the impression that with each passing generation, the tech-savvyness will obviously increase. But it's going in the opposite direction and it doesn't make any sense to me!",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "there should be a minimum computer literacy test when hiring new people.\n\nI utterly hate the fact that it has become IT's job to educate users on ***basic*** computer navigation. despite giving them a packet with all of the info thats needed to complete their on-boarding process i am time and again called over for some of the most basic shit.\n\njust recently i had to assist a new user because she has never touched a Microsoft windows computer before, she was always on Macs\n\ni literally searched up the job posting after i finished giving her a crash course on the Windows OS, the job specifically mentioned \"in an windows environment\".\n\nlike... what did you think that meant?!\n\na nice office with a lovely window view?\n\nwhy?... why hire this one out of the sea of applicants...\n\ni see her struggling and i can't even blame her... they set her up for failure..\n\nEDIT: rip my inbox, this blew up.. welp i guess the collective sentiments on this sub is despite the circumstances, there should be ***something*** that should be a hard check for hiring those who put lofty claims in their resume and the sentiment of not having to do a crash course on whatever software/environment you are using just so i can hold your hand through it despite your resume claiming \"expert knowledge\" of said software/environment.",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Is it justified to be angry about lack of tech knowledge for some users?\n\nI work in the MSP field as a level 1 tech, but I'm now leaving to go to a different role and the main reason is frustration with the technical knowledge of some of our clients and the lack of basic knowledge. It made my job tiring and extremely unpleasant, alongside angry customers lol.\n\nNow I'm not talking about users who have an issue but ones who can't seem to open a web page, type an email or have no idea what any technical terminology means such as a desktop, file explorer / folders and so on. In my mind for ages I was adamant that people should know this as basic skills anyone needs for any job such as knowing how to get dressed or speak to a colleague but apparently not.\n\nNow that I'm leaving I'm reflecting and thinking it's not their fault but maybe down to a lack of experience and training. But at the end of the day sysadmin workers have to adapt to numerous unknown technologies every day, alot of the time out of hours,  so is it fair to expect others to do the same",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "A teacher says a website that ends with \".org\" means the source is reliable. Is it rare this kind of lack of common sense?\n\nHi all,\n\nMy relative's daughter, who studies in a middle school in US, says \"a website that ends with \".org\" means the source is reliable\" because her teacher told her so. She believed it and see website ends with \".org\" as a reliable source.\n\nIf this is true, that teacher seriously lack common sense, and making this kind of claims to students is actually dangerous. The fact is, everyone can buy a \".org\" domain by less than 10 USD. \n\nMy question is: Is this teacher the exception in US education system? Should this teacher be sent to some improvement plans? \n\n&#x200B;",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Our responsibilities to patrons who need extra help using the internet\n\nMy library is in a low income neighborhood with a lot of elderly patrons. Many of our visitors do not have access to a computer at home, or any experience using them. When they ask for help, what they generally mean is that they want someone to sit with them and do everything for them. Our policy is that we will get them on the internet, maybe help them find a website, but after that they're on their own. Helping them with anything that involves access to their personal information is definitely not allowed.\n\nI get the reasons for that, and I agree with the policy — but I'm a soft touch, and a lot of our patrons (especially this last year) would not have been able to apply for jobs, unemployment, housing assistance, and other benefits without more \"hands on\" assistance. I still make them enter stuff like their social security number on their own (although most of them react like I'm asking them to touch a hot stove when it comes to typing), but I definitely get as close to the line as I can if that's the only way they'll be able to access the help they need.\n\nToday I had an elderly couple looking for \"help\" using the computer, but they were signing up for a predatory payday loan. Obviously, I can't (and don't) offer any financial advice (Or medical. I'm amazed at the number of people who think I can interpret their test results, or diagnose their condition), but as I guided them through the website, I did point out things like, \"This says they'll be charging you a 275% interest rate. That means they could be expecting back nearly three times what you borrow\", and \"This says they're going to withdraw your repayment from your bank account. Do you want them to have direct access to your bank account?\".  I didn't get the feeling either of them really understood what they were signing up for (although to be fair, I have spent the afternoon trying to find anything that directly states what they'll owe based on what little information the loan company provided, and haven't come up with a consistent answer). \n\nI would never try to impose my personal beliefs on patrons. You need to make an email address so you can sign up for the local megachurch's \"Do You Know what the Queers Are Doing to Our Soil?\" newsletter? Fuck those guys, but here's Gmail, Yahoo, AOL, and Outlook. Take your pick. But I also wouldn't answer a reference question with bad information. I feel like we have a responsibility to warn people away from probable scams, but as shitty as predatory lending is, it's still legal. They weren't asking for information about the company, or types of loans in general, which would give me a lot more leeway to bring up news articles, or Better Business Bureau complaints. They just wanted help navigating a website, so that's what I did.\n\nIn the end it felt like the only help I was providing was for a scummy company to take advantage of a poor elderly couple. It felt shitty. Have any of you dealt with this type of situation in your libraries? How do you handle requests for this level of assistance?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Has anyone lied about being proficient with excel for a job?\n\nI’m sure this is asked all the time, I have an interview and one of the requirements is excel proficiency. I didn’t put on my application/resume that I knew how to use it so I am shocked they called me back. Would it be a stretch to say I’ve used it once in an older job but haven’t touched it in about 10 years? It’s not a lie, but genuinely I don’t remember how to use it. I’d be working as an event scheduler and employee scheduler if that helps at all.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"American schools are \"more segregated than they were in the 1960s.\"\"",
+    "documents": [
+      {
+        "text": "During the age of segregation, where did non African American minorities (ie. Asian American, Native Americans, Hispanic, etc.) go to school?\n\nDid they go to the same school as blacks or were there asian only or Hispanic only schools? Kinda hard to find articles discussing this online I’ve found.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "California school districts found that white families move away as more Asian American families move in — and fear of academic competition may be a factor.  May 2024\n\nSource: Study finds segregation increasing in large districts — and school choice is a factor.\nBy Erica Meltzer | May 6, 2024\n\nhttps://www.the74million.org/article/fear-of-competition-research-shows-that-when-asian-students-move-in-white-families-move-out/\n\n———————\nAnother study from 2023 finds:\n\n“Our study, published online in June 2023, finds White parents strongly prefer schools with fewer Asian students and are willing to make significant trade-offs in school academic achievement levels to act on these preferences.”\n\n“In general, we find that anti-Asian bias is strong among White parents from all political, socioeconomic, and geographic backgrounds represented in our sample. Our substantive findings were consistent across survey waves, which include time periods before and after the start of the COVID pandemic.”\n\nSource: How does anti-asian bias contribute to school segregation in the united states?\nby Bonnie Siegler and Greer Mellon | September 26, 2023\n\n\n——————-\nWould appreciate upvote if you found this school segregation study useful, to shed more awareness for other Asians to view this topic.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "How can urban planners help solve the problem of de facto school segregation?\n\nIn his book * Dream Hoarders: How the American Upper Middle Class Is Leaving Everyone Else in the Dust, Why That Is a Problem, and What to Do About It*, Brookings Institution Senior Fellow Richard Reeves argues that the gap between the upper middle class - the top 20% of Americans by income -  and the rest of Americans is widening. \n\n> As Reeves shows, the growing separation between the upper middle class and everyone else can be seen in family structure, neighborhoods, attitudes, and lifestyle. Those at the top of the income ladder are becoming more effective at passing on their status to their children, reducing overall social mobility. The result is a fracturing of American society along class lines, not just an economic divide. Upper-middle-class children become upper-middle-class adults.\n\nhttps://www.brookings.edu/books/dream-hoarders/\n\nOne of the solutions that Reeves proposes is to pass zoning reform. Current zoning laws, he argues, prevent children from lower income households from being able to access good K-12 educational opportunities that would better prepare them for higher education (college) and better help them climb the social ladder.\n\n> Exclusionary zoning is a form of “opportunity hoarding” by the upper middle class, a market distortion restricting access to a scarce good (in this case, land), that restricts opportunities (such as good schools) to other children. Those upper middle class voters who oppose more mixed-use housing in their own neighborhoods are what I call “Dream Hoarders,” keeping elements of the American Dream for themselves at the expense of others.\n\nhttps://www.brookings.edu/articles/exclusionary-zoning-is-opportunity-hoarding-by-upper-middle-class/\n\nhttps://www.brookings.edu/articles/zoning-as-opportunity-hoarding/\n\nThis idea has been in social discourse for a while now: this Atlantic article titled “Schools are more segregated today than during the late 1960s” was published in 2012.\n\nhttps://www.theatlantic.com/national/archive/2012/06/schools-are-more-segregated-today-than-during-the-late-1960s/258348/\n\nWhat urban policy solutions can be implemented to remedy the problem of de facto school segregation, help children of low income families get better educational opportunities, and allow for more social mixing and integration of kids from diverse class and racial backgrounds?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Was the modern American homeschooling movement in part a reaction to desegregation of public schools?\n\nThe homeschooling movement seems to have started up in the early 1960s, and one of the core advocates, Rousas John Rushdoony, seems to have been pro-segregation, but the Wikipedia page, at least, only makes broader, general mentions of \"[combat[ing] the secular nature of the public school system in the United States](https://en.wikipedia.org/wiki/Homeschooling#History)\". So there seems to be a lot of circumstantial reasons to see a connection, but I was wondering if that is 'on the mark'?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "redditors who were alive during segregation, who did it apply to?\n\nI'm a black male and I'm curious of who else would've been consider \"colored\" back then and  would've faced the same segregation Blacks did in the sense of being sent to colored restrooms, restraints, etc.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why is the U.S education system so bad?\n\nI live in Australia and am blessed with a for the most part competent education system that is managed well by our government, it has some minor pitfalls but overall its completely serviceable. A trend I have noticed online through exposure to American content is that in contrast to here in Australia, the U.S seems to have an extremely poor education system, spanning not just in their first years of education, where children walk around in their pajamas, but going all the way to the top, with universities seemingly just being one massive Gomorrah. \n\nAs a result most of the Americans I interact with online are pretty stupid, in some cases not even really comprehending the basics of conversation, being more set on fulfilling their ego with a \"victory\" in whatever discussion I am having with them. Maybe American culture contributes to this but I'm not sure.\n\n  \nIt'd be interesting to hear anyone else perspective on this, am I just underestimating Americans? Have I only interacted with the bad crowd? \n\n&#x200B;",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"Right now, here in Texas, wind power is already cheaper than dirty fossil fuels.\"\"",
+    "documents": [
+      {
+        "text": "Is the \"base load\" argument against renewable actually even valid?\n\nso I will notice a small flaw with the 'base load' argument: with renewable, statistically, you always have some renewable available, assuming sufficient batteries for buffering.  There is never a day when there is zero sun and zero wind across a tens of thousands of square kilometer regional grid.  And since to make renewables work you have to build a lot of them (you obviously have to overbuild, good thing the equipment has gotten so cheap), statistically actually you will always have enough capacity even on a worst case day to meet 'base load'.\n\nYour problem with renewables is that they are not dispatchable.  on the worst case day, there is too much demand, too little generation, and you don't control the weather, and eventually your batteries will run flat.\n\nInconveniently this is also the same problem as nuclear and large high efficiency fossil fuel plants.  More of these does nothing to solve the problem at all because you cannot overbuild these *economically*, these types of generators are expensive.\n\nWith nuclear it is not economic to build extra capacity, so on a worst case day the nuclear plant will either be offline (unscheduled outages happen), or it just won't be enough, during a cold snap or heat wave.\n\nConclusion: the base load argument is false information spread by nuclear/ oil and gas shills.  Either way you need peaker plants, such as large banks of reciprocating natural gas generators.\n\nCorrect,  or is there an argument, supported by facts, that justifies the 'base load' argument as a reason to continue with legacy energy generation?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Explain to me as a high schooler why LCOE is not a great measure the cost of electricity generation.\n\nI am doing a document for a school project where I compare what energy source would have the best outcome (economically) in our country Spain.\n\nI regularly visit this subreddit and whenever the topic of cost comes up, I always see from comments that LCOE is not a great way of measuring the economics of an energy source, and consequently, nuclear power is seen as an expensive energy source, usually costing more than a 100 **€** /MWh, whereas renewables are significantly cheaper (except battery storage and wind offshore).\n\n&#x200B;",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Are Renewables Really Going Take Over? Texas has 30,000 wind turbines and they produce 8% of the grid power on a good day.\n\nI am an optimist but I'm also a realist. Don't get me wrong I like clean energy and I used to own an electric car. I just don't see how it's possible for renewables to take over. We have maxed out our hydroelectric potential. Wind might not be economically viable.  Solar panels are quite expensive and take a lot of dirty energy to produce. \n\nWe need to increase our nuclear generation and pray that nuclear fusion gets going.  \n\nThoughts?",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Is the \"base load\" argument against renewable actually even valid?\n\nso I will notice a small flaw with the 'base load' argument: with renewable, statistically, you always have some renewable available, assuming sufficient batteries for buffering.  There is never a day when there is zero sun and zero wind across a tens of thousands of square kilometer regional grid.  And since to make renewables work you have to build a lot of them (you obviously have to overbuild, good thing the equipment has gotten so cheap), statistically actually you will always have enough capacity even on a worst case day to meet 'base load'.\n\nYour problem with renewables is that they are not dispatchable.  on the worst case day, there is too much demand, too little generation, and you don't control the weather, and eventually your batteries will run flat.\n\nInconveniently this is also the same problem as nuclear and large high efficiency fossil fuel plants.  More of these does nothing to solve the problem at all because you cannot overbuild these *economically*, these types of generators are expensive.\n\nWith nuclear it is not economic to build extra capacity, so on a worst case day the nuclear plant will either be offline (unscheduled outages happen), or it just won't be enough, during a cold snap or heat wave.\n\nConclusion: the base load argument is false information spread by nuclear/ oil and gas shills.  Either way you need peaker plants, such as large banks of reciprocating natural gas generators.\n\nCorrect,  or is there an argument, supported by facts, that justifies the 'base load' argument as a reason to continue with legacy energy generation?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Explain to me as a high schooler why LCOE is not a great measure the cost of electricity generation.\n\nI am doing a document for a school project where I compare what energy source would have the best outcome (economically) in our country Spain.\n\nI regularly visit this subreddit and whenever the topic of cost comes up, I always see from comments that LCOE is not a great way of measuring the economics of an energy source, and consequently, nuclear power is seen as an expensive energy source, usually costing more than a 100 **€** /MWh, whereas renewables are significantly cheaper (except battery storage and wind offshore).\n\n&#x200B;",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Are Renewables Really Going Take Over? Texas has 30,000 wind turbines and they produce 8% of the grid power on a good day.\n\nI am an optimist but I'm also a realist. Don't get me wrong I like clean energy and I used to own an electric car. I just don't see how it's possible for renewables to take over. We have maxed out our hydroelectric potential. Wind might not be economically viable.  Solar panels are quite expensive and take a lot of dirty energy to produce. \n\nWe need to increase our nuclear generation and pray that nuclear fusion gets going.  \n\nThoughts?",
+        "type": "misinfo",
+        "answer": "False"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"Half of all personal bankruptcies in America \"are caused by medical bills.\"\"",
+    "documents": [
+      {
+        "text": "Is debt from medical bills really an issue in the US and if yes, how is it being handled?\n\nHonestly curious. I‘m in residency and come from a financially stable middle class family, yet a medical bill of e.g. a prolonged ICU stay would probably screw me over pretty badly if I had to pay all of it myself. So I image it would be catastrophic for any „poorer“ family. Luckily insurance is mandatory over here and if you can‘t pay your medical bills the state usually helps out. \n\nSo I’m wondering, is it really an issue in the US? How is it handled if you don’t have the resources to pay? What support do these people get? What about the elderly? \n\nThanks in advance for answering!",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "How are hospitals around the US all borderline going bankrupt, but constantly expanding/building?\n\nI don't work in the hospital industry but have many friends and family that do. I constantly hear about how the hospitals have no money, but are constantly expanding/upgrading their buildings/infrastructure.\n\nThey always seem to be struggling to pay their workers reasonable wages at the same time.\n\nI'm curious what's really going on, and how this system is somehow stitched together.\n\nThis isn't even including the fact that urgent cares are popping up like mad sometimes even under the same organization umbrella name.\n\nIs this some sort of venture capitalism where they are billing out all these massive costs/profits to then sell when the potatoes are hot and someone is left holding the bankruptcy bag?\n\nIs the government keeping the system afloat?\n\nMy philosophy is always follow the money. Clearly there is massive profit to be made in the medical industry but it seems like it's being run into the ground yet is still alive.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "CMV: a hybrid of government and private insurance would help solve the healthcare crisis in the US.\n\nDisclaimer: I do not work in the healthcare industry, finance, or insurance. My opinions are not based in anything but a lot of thinking and a knowing that something needs to be done. While I am generally libertarian in most of my views, I accept there is a basic cost to live in a modern civilization. Just like roads, military, fire/police services, protecting citizens from financial ruin for getting something basic like healthcare.\n\nStarting premise: I think we have evolved as a society enough to say access to healthcare should be a human right. In the US, it’s estimated that the number one reason for personal bankruptcies are due to medical debt and over half of Americans carry some level of medical debt, even those with insurance. Currently, there is an estimated medical debt of about $200,000,000,000. This does not include medical expenses paid for via credit cards and does not include the cost of medical care during the pandemic. It's not controversial to say medical debt is a significant problem in the US. \n\nAdditionally, medical debt has an impact on the overall economy. People with debt often delay purchases of everyday items like food, clothing, rent/mortgage, etc. It can even delay or prevent someone from buying larger purchases like a vehicle, house, student loans by directing funds from those items to pay off the medical bills or past due medical debt causing negative credit reports which would prevent loan approval. \n\nI’m not convinced a sudden move to universal healthcare will be a positive for the country as a whole. The effect of a sudden surge of people going to the doctor would cause a major bottleneck and would cause a collapse of the healthcare industry. Our hospitals, clinics, doctors, and nurses are already overworked and adding more patients would be too much to sustain. It would also have major negative impact on the financial institutions and insurance industries, which contributes to the overall economy, employment, and retirement investments. \n\nMy view is that a hybrid of government and private insurance would be a viable solution. This plan is structured that it could, over many years, slowly be shifted to universal healthcare. It provides a safety net and limits the chances of destroying your financial life if you had a major medical event. But, it would also make individuals responsible for their own healthcare costs and keep the majority of healthcare costs away from the government. \n\nHere are my thoughts:\n\n1.       The US government provides catastrophic health insurance to all citizens at no cost. Any balance above a certain threshold ($50,000?) would be covered by Medicare. The threshold could be slowly (over 20 years?) reduced, eventually phasing out private insurance. \n\n2.       Private insurance would then be used for the medical expenses below the threshold and be the responsibility of the individual/family. My assumption would be the cost of the insurance would be very affordable because there would be no exposure for the insurance company for large payouts, as the government kicks in at the threshold. Private insurance would not be mandatory, but the individual would still be responsible for whatever care they received. With additional people being able to afford the private insurance, costs would come down even further. \n\n3.       All medical expenses are 100% tax deductible, no limit, including premiums, medication, medical devices, etc. Does not include purely optional procedures like Botox injections and other cosmetic surgery, like it is now.\n\n4.       Guaranteed coverage, no preexisting condition exclusions and no special exclusions (plan covers all medically necessary procedures, including experimental and off label treatment). No more picking and choosing which treatment is covered and what is not. Lifetime maximums are no longer a thing due to government catastrophic coverage. \n\n5.       Health insurance is purchased the same as car insurance and national insurance companies can sell across state lines.  This increases competition and reduces cost. \n\n6.       Any private insurance plan is accepted everywhere and the “in/out of network” concept is no longer allowed. \n\n7.       Employer sponsored plans are still allowed, but not at special rates and the same insurance plan would cost the same as an individual plan. It would be tied to the person and travel with the employee, not stay with the employer.\n\n8.       States could create a department that would offer insurance to compete with private insurance which would keep rates competitive. This department must be self funding through premiums, but could be funded by the state if voters choose to. This insurance stays with the citizen only if they live in that state, but is valid for treatment out of state due to specialty care or emergencies. Tax exempt, nonprofits could also join the private insurance market to provide another alternative. \n\n9.       Not directly related, but I’d also like to see significant oversight to fight fraud and big penalties for insurance company misbehavior. \n\n10.   To help lessen the overburdened healthcare industry, government subsidies for medical school and nursing programs. The lack of healthcare professionals is a major cause at delaying care. \n\nAnyone with direct knowledge or experience to know if this is a feasible plan? Any feedback or criticism is welcome.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Is it worth moving to the USA for financial reasons?\n\nHi there, I am interested in moving to America because of their mythical big salaries (at least they are on top in the world), and while I know I would make a lot, I have a few questions.\n\n- I understand that the US healthcare system is designed for profit, more so than in any other country in the world. Does it put an unreasonably large strain on your wallet? What am I going to lose if I can't/don't want to pay a medical bill?\n\n- Prices of some essential stuff are through the roof in America, but are salaries big enough to cover all the costs of living, including high-quality food, living in a nice, safe neighborhood, and major money drains such as medical bills, education, childcare, etc. while still reasonably being able save and invest for retirement and afford a 25k/year hobby (flying) in a place like Los Angeles or Seattle when you work in a CS-related environment? I don't ever plan on having children, but there's always a possibility, so I want to be prepared just in case.\n\n- Is it worth paying off _all_ debt in America, including medical bills and student loans? Not that I'm going to study here, but I want to know just in case.\n\n- How hard is it to remain debt-free, or at least, don't have debt without extra (hidden) costs like interest? While usage of credit in my country is generally restricted only to buying property, I know that in America credit is going to be an everyday part of my life. It's important in order to rent or buy a place to live, to get lower interest rates, and so on.\n\n- Shit happen and no matter how careful you are, you can eventually get in a debt so high that you won't be able to ever pay it off in America. What if there comes a day when I'll have to file a bankruptcy? Do I lose everything (even overseas) that I have or do I got to keep some things? Would it affect my ability to ever retire?\n\nIs there something I have ever missed? If so, tell me what I should know.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "How do doctor bill related bankruptcies still occur in the USA despite the ACA and enhanced premium subsidies, and is healthcare still as expensive as people say it is?\n\nHi guys, I remember reading about the \"wild west\" insurance market before the ACA was introduced, and heard of many things still wrong with it. I also heard of problems such as the premium subsidy cliff after the ACA which was supposedly resolved in the **American Rescue Plan Act** and later **American Inflation Reduction Act** which extended these subsidies. But despite the regulations, subsidies and expansions introduced as well I am conflicted as to why people say the system is still so bad? Could you guys please explain the state of the American Healthcare system and problems still associated with it, despite the ACA, and amendments enacted by the Biden Administration? Thanks for responses.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "1.4 mil in debt\n\nA friend of mine is 1.4 million dollars in medical debt. They were in a life threatening (one) car accident and the person driving did not have insurance (she was the passenger). She doesn’t have health insurance and also did not have car insurance as she doesn’t have a car and doesn’t drive. How can she get out of debt or can she just avoid paying this forever?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why do people constantly say that European Healthcare is free?\n\nI hear the drum beat constantly about free healthcare in Europe, so I looked a bit into their largest country Germany (84m). Germans pay 7.3% on income up to 58,505 euro or up to 4,237 euro/yr max with an additional 1.3% (on average) supplemental premium, for a total ~4,800 euro/yr. The median German income is ~33,300 euro/yr. So the cost for the median German would be ~2,900 euro/yr.\n\nThe average national monthly health insurance cost for an American on an Affordable Care Act (ACA) plan without premium tax credits in 2024 is $477. This is ~$5,500/yr. Converted to Euro that's ~5,100 euro/yr.\n\nI understand this is over-simplifying a lot of things, prescription costs, co-pay, family plans, etc. I'm not even considering employer sponsored plans which could reduce the overall cost for an American.\n\nAm I thinking about this correctly? It seems that there is still a significant cost to all Germans through taxation. While overall it is potentially a lower cost, it is nowhere near free. Why is this constantly overlooked?\n\nEdit:  OK, clearly I should have laid out the entirety of my knowledge and understanding, otherwise people assume you're an idiot.  Here's the thing guys.  Costs are costs, regardless of how they're paid.  Germans pay a significant portion of their income as tax towards healthcare.  Americans pay a significant portion of their after-tax income towards healthcare.  Both pay a significant portion of their income towards healthcare.  That is my point.  I understand that my compensation from my employer includes their payments on my behalf toward healthcare premiums and deductibles.  That makes it as free as Germans paying theirs as a form of tax.  Costs are costs.  I am not making value judgements on the efficacy of care, that's not in the purview of the discipline.\n\nEdit 2:  I get it now.  Free as in speech, not free as in beer.  Drop the whole point-of-service argument, that has nothing to do with it being free.  The \"free\" in the description is not about cost.  The \"free\" is that it's open for everyone to access.  This is the answer that I was looking for.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "How is everybody in America not broke right now?\n\nI ain’t kiddin boys. Granted it’s only me, my wife doesn’t work. But the only debt I have at all is my mortgage, which is laughably low, and I make about 50 percent again on my states average salary. Yet I live paycheck to paycheck. Seems all I see is new cars, frivolous purchases, and house payments I know gotta be higher than snoop himself. \nYou guys need to stop leavin me out of whatever trick y’all got here. \nSeriously though, I couldn’t make a car payment if I wanted, it’s not even about necessities, it’s just possibility. I guess I’m just a wingnut cause I don’t see how y’all do it\n\nEdit: a lot of people are saying my wife should work. I didn’t mention I have kids, which I do. While this is partially a personal decision that she doesn’t, she also wouldn’t be able to get a job making more than childcare for my kids would cost. Her getting a job would cost me MORE money, not gain me any.\nAlso yeah I’d love more money myself, some more freedom to pay for things that come up without having to budget for little things. But my point is mainly that I see a lot of people buying things that are pretty dang expensive. I choose not to have debt, I realize that’s an option. I’m just saying that it’s unrealistic. I like in Oklahoma, median household income in 2022 was 63k. I make more than that myself. A new car averages 50k. And rent in my area averages about 1800/mo. One car payment on a 50k car is gunna be close to 650/mo. Plus insurance. Right there that’s 2400/mo and you haven’t bought anything else. According to median income in my state that leaves you with maybe a few hundred after taxes. Sure some people make more. But that’s median for the household, both spouses. That’s why I made this post. Add in even more for more expensive items and it quickly adds up",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"I won the majority of the Republican vote in both New Hampshire and South Carolina.\"\"",
+    "documents": [
+      {
+        "text": "If Nikki Haley wins the New Hampshire primary, how will it impact her national awareness and reputation?\n\nWhile she's polling strong in New Hampshire, Haley still seems to be seen as largely a background name for a majority of voters, with many barely aware of her at all. If she manages to pull off an upset victory against Trump in the New Hampshire primaries, beating her party's de-facto incumbent, how will this change?\n\nWill she become (at least briefly) a household name when talking about the election? Could it entice Republican voters who are interested - but feel like her campaign is a lost cause - to more openly support her in future primaries? Could you imagine her winning any other state's primaries? Do you think the news will start talking about her like she's a \"dark horse\" candidate, at least until it becomes clear she won't win?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Can Nikki Haley pull off an upset and defeat Trump?\n\nNikki Haley has seen a surge of momentum in polling. She is now ahead of DeSantis in Iowa polling (https://www.politico.com/news/magazine/2024/01/04/haley-desantis-trump-seth-masket-gop-survey-00133663) and is closing in on Trump in New Hampshire (https://www.nbcnews.com/politics/2024-election/trump-campaign-targets-haley-first-time-new-hampshire-airwaves-rcna132192).\n\nSouth Carolina she is still trailing far behind.\n\nDoes she have any chance of spending the primary and pulling ahead of Trump? What momentum would she need to do this?  Will Trump's legal troubles have any effect on her campaign?  Has there ever been a precedent where a candidate such as Trump is leading by so much in polls when primaries begin but eventually loses?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Trump wins New Hampshire GOP primary in blow to Haley\n\nFormer President Trump is projected to win the New Hampshire GOP primary, according to Decision Desk HQ, dealing a major blow to his rival Nikki Haley and putting him one step closer to securing his party’s nomination.\n\nHaley’s campaign, however, signaled before the New Hampshire primary that it would compete in South Carolina, with AdImpact noting on Monday that her campaign placed ad reservations in the Palmetto State that would run beginning on Thursday.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Trump lost Independents by 22 points in New Hampshire’s GOP primary. Does this signal difficulty for Trump with this group come November?\n\nTrump won the NH primary by about 11 points, which everyone expected, but if you take a look at the exit polls, you can see possible clues for how the general election will play out. Haley won Independents by 22 points, but Trump won Republicans by 49 points. Previously in 2016, Trump won NH Independents by 18. This is a massive collapse from 2016. Given that NH is more educated and white than the rest of the nation, does NH’s primary result foreshadow difficulty for Trump courting independents? Or should NH’s results not be looked into too much as it’s not a completely representative sample of the general electorate?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "What is the significance (if any) of Biden winning early primaries by a higher percentage than Trump?\n\nVote shares so far in the early primaries/caucuses:   \nIowa R: Trump 51%  \nNew Hampshire R: Trump 54%  \nNew Hampshire D: Biden 64% (all write-ins, given he wasn’t on the ballot)   \nSouth Carolina D: Biden 96%  \n\nBetter numbers for Biden than Trump. What is the significance of that, if any? Does this tell us anything about who’s looking stronger going into the 2024 general election?   \n\nOne could argue all of this is to be expected, because Biden is an incumbent. However, Trump is also, in some sense, an “incumbent” — even before the primaries he was already the clear “de facto” leader of the Republican party. Of course he’s not literally an incumbent, so is that all that’s going on here? Nothing else to see here, folks?   \n\nOne could also point to how in New Hampshire, many of the people who voted for Haley were centrist or left-leaning independent voters rather than Republicans. But South Carolina’s primaries are open primaries, and there weren’t any Republicans (or centrist or right-leaning independents) voting against Biden. Taken at face value, this suggests the anti-Trump vote is a much stronger voting bloc than the anti-Biden vote — which, if true, would not be a good sign for Trump.  \n\nOr finally, one could say, “Well yeah, clearly Biden is in better shape than Trump.” But Trump is consistently leading Biden in polls (not all polls, but most), making it a little difficult to be \\*too\\* sure that.   \n\nLong story short, not fully clear what to make of these results. What’s your take on it?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "I think I may have figured out the weird push for democrats to vote in the republican primary…\n\nI think there are a lot of people that are unaware of how the primary system works (I explained it to quite a few people when asking if they were voting in the primary-a surprising amount didn’t even realize there was a vote being held.); it is very confusing and different for each state. I think they are hoping that people will (inadvertently, but illegally) vote in both primaries, since we don’t have to declare which party we are affiliated with (so they could have some “voter fraud” to use) and then they would also have numbers to point to to bolster the lie of the “Silent Majority.”\n\nBoy, I hope I’m paranoid. \n\nTake care of yourselves, and each other. 💜💪🏻🦋\n\nEdited to add a sentence I forgot. 😬",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What do you think of starting the Presidential Primary in South Carolina as Opposed to starting in Iowa?\n\nThe DNC rules committee is gathering today in Washington and are expected to approve new rules putting South Carolina first, followed by New Hampshire, and Nevada.\n\n[Biden tells Dems he wants SC as 1st primary vote](https://apnews.com/article/biden-iowa-south-carolina-e738592ee088fa4ca5614ba501d63726?utm_source=homepage&utm_medium=TopNews&utm_campaign=position_04)",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Primary Voting in South Carolina\n\nI am a resident of South Carolina and so will be participating in the primary election in February. Typically in SC, there are Republican and Democratic primaries. In SC, you can vote in either primary regardless of affiliation but you can not vote in both. The Republican party has already elected Donald Trump as the winner of the South Carolina Republican primary. Does that mean that everyone will now only be voting in the Democratic primary in February, and won't that affect the Democratic nomination since those that would vote for DT in the general election will just vote or the Democratic candidate that they think is most beatable?\n\n&#x200B;\n\nI am new here and a relatively young voter. Sorry if anything if taboo in this sub or if I seem ignorant on anything.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why is New England so reliably blue?\n\nOn paper, it seems New England (ME, NH, VT, MA, CT, RI) should be the most republican region in the county: \n\n* It has a sizable rural population. Maine and Vermont are the two most rural states in the country. Boston is really the only major city in the entire region\n* It's extremely white. Maine, New Hampshire, and Vermont are all in the top 5 whitest states. Using the 2010 census [data](https://en.wikipedia.org/wiki/White_Americans), CT is the only New England state with a white population under 80%\n* Digging even deeper, the ethnic [map] (http://www.censusscope.org/us/print_map_ethnicity.html) of white New Englanders looks very similar to that of white southerners. Both are almost exclusively British/Irish. Yet, if you simply took every white person from Massachusetts and replaced them with a white person from Mississippi, Mass. would be the most republican state in the country. \n\nWhat are your theories on why New England is so reliable for democrats despite being fairly rural and overwhelmingly white?",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"Romney \"would turn Medicare into a voucher program.\"\"",
+    "documents": [
+      {
+        "text": "Why are conservatives in the U.S. against the Affordable Care Act?\n\nThe leading candidate for the Republican nomination and former president recently made this comment: \n\n> Trump posted on Truth Social, “The cost of Obamacare is out of control, plus, it’s not good Healthcare. I’m seriously looking at alternatives. We had a couple of Republican Senators who campaigned for 6 years against it, and then raised their hands not to terminate it. It was a low point for the Republican Party, but we should never give up!”\n\nNow that it’s been in place for 13+ years what is the alternative being proposed other than repealing it? \n\nWhy not run on improving upon the issues you have with it instead?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Fact-checking time! Obama's claims from the first debate (had to separate them because of a shorter character limit in self-posts versus comments)\n\nThanks for all that helped! Came in just under the character limit. \n\nI am only listing claims; I am doing no fact-checking in this comment. Even in just listing claims, I can't emphasize this enough: I will need your help. Thanks!\n\nFor those fact-checking, *please* source your responses as often as you can. \n\n**PRESIDENT OBAMA**\n\n1. America does best when the middle class does best\n\n2. Romney's tax plan calls for 2T in additinoal mil spending the military didn't ask for\n\n3. Romney's tax plans calls for 5trillion tax cut in addition to renewing the $2trillion Bush tax cuts (Romney's proposal calls for a 5 trillion dollar tax cut, on top of 2 trillion more by the military, he says he's going to pay for it by closing loopholes and deductions.)\n\n1. It is NOT POSSIBLE to pay for Romney's plan without increasing the tax burden on either the middle class or the upper class; loophole elimination won't pay for it\n\n1. oil and natural gas production are higher than they've been in years /u/immerc\n\n1. We cut taxes for middle class families by $3600\n\n1. When you add up loopholes and deductions that upper income people have, you don't pay for 5trillion in costs (When you close loopholes you don't come anywhere close to paying for Romney's plan /u/immerc) \n\n1. Only way to pay for Romney's policies is for increased burden on middle class \n\n1. Romney believes top 3% are small businesses\n\n1. I've cut taxes... (didn't get whole claim)\n\n1. Under my plan, 97% of small businesses would not see their tax rates go up. Under Governor Romney's definition, some millionaires and billionaires are small businesses, Donald Trump is a small business. /u/immerc\n\n1. Clinton created 23million jobs under the plan Obama is proposing. The approach that Romney is talking about is the same approach talked about in 2001-2002. It led to the crash. Bill Clinton tried the approach I'm talking about, and businesses did well. (help w/ /u/immerc)\n\n1. We went after Medical/medicare fraud, etc. Saved $50 billion in waste\n\n1. Made largest cut since Eisenhower\n\n1. Put forward $4 trillion? deficit reduction plan\n\n1. Plan asks for $1 in additional revenue in exchange for $X in cuts\n\n1. When I walked into the oval office, I had 2 trillion in debt waiting for me. 77 government programs, 18 government programs for government education, we have 50 billion in waste taken out of the system. /u/immerc\n\n1. Romney (somehow) causes 30% cut in ...something involving nursing homes\n\n1. Romney has ruled out revenue\n\n1. \"The oil industry gets $4 billion/year in corporate welfare. /u/lennybird /u/axon350\n\n1. \"You can take a tax deduction for moving a plant overseas.\"\n\n1.  30% cut in medicaid over time by shifting responsibilities to states. /u/immerc\n\n1. Medicare is the biggest driver of our deficits \n\n1. 716 billion dollars, we were able to save from medicaire, by no longer overpaying providers, lower prescriptions by an avg of $600. /u/immerc\n\n1. Romney would use \"premium support\" for medicaire, which is a voucher program. /u/immerc\n\n1. The voucher system would not keep up with healthcare inflation (and would cost the average senior $6k a year.\" /u/lennybird\n\n1. Every healthcare economist who looks at Romney's plan says that it will collapse. /u/FlyreFiend\n\n1. health care companies under Romney's plan will make billions /u/immerc\n\n1. Voucher system puts old people at mercy of the insurance companies \n\n1. If you repeal Obamacare, the primary beneficiary will be insurance companies. /u/axon350\n\n1. When you move to a voucher system, seniors are at the mercy of insurance companies, and they're stuck. This is the reason that AARP has said that Romney's plan would weaken Medicare.. AARP says Romney's plan will weaken medicare /u/immerc, /u/oldpplfreakmeout, /u/axon350 /u/lennybird\n\n1. every study has shown that medicaire has lower admin. costs than private programs /u/immerc\n\n1. Banks were making money hand over fist in order to make profits but knowing it made the system vulnerable\n\n1. We had the toughest reforms on wall street since the 1930s\n\n1. Romney has said in the past that he wants to replace Dodd-Frank\n\n1. We made sure that every single dime we loaned the banks was paid back with interest. /u/axon350\n\n1. The reason we have been in such an economic crisis was reckless behavior across the board, not just wall street. ... \"We stepped in, and had the toughest reforms on wall street since the 1930s\"... \"You (banks) have to have a living will so we know how you'll wind things down if you have a bad bet.\" In the past Romney has said he wants to repeal Dodd Frank. /u/immerc\n\n1. Obamacare isn't a government takeover, you keep your own doctor, insurance can't impose arbitrary lifetime limits, have to keep kid on your insurance until 26, also have to give rebates if spending more on administrative costs and profit than on care. If you have health insurance, Obamacare doesn't mean a gov't takeover, but says insurance companies can't impose arbitrary limits, have to let you keep your kid on your program till they're 26. You'll have to get rebates if your insurance company is spending more on admin costs and profits than care. \"The irony is, we've seen this work really well in Massachusetts, ... essentially the identical model.\" /u/ immerc\n\n1. Healthcare premiums in the last 2 years have gone up slower than anytime in the last 50 years\n\n1. Repealing Obamacare will result in 50mil people losing health insurance /u/oldpplfreakmeout\n\n1. We used the same advisors (as Romney) and they say it's the same plan. The board Romney talks about is a panel of experts (doctors, etc.) who look for ways to reduce costs in the system. Cleveland Clinic provides great care cheaper than average by procedural tweaks. The board identifies best practices and uses the uses the purchasing power of medicare to get good deals. Over the last 2 years, health care premiums have gone up slower than any time over the last 50 years. Repealing Obamacare means 50 million people will lose insurance. /u/immerc\n\n1. \"Board cannot make decisions on treatment given.\" (obamacare) /u/lennybird\n\n1. Romney can't detail how he'll replace Obamacare /u/oldpplfreakmeout\n\n1. Romney's healthcare plan was \"the largest\" expansion of private insurance (compared to?) /u/turmoil159\n\n1. Romney's plan already duplicates what's in the law and doesn't do more for pre-existing conditions. Says if you're out of work for 3 months an insurance company can't deny you for that period. /u/immerc\n\n1.  Race to the Top said that states would get more money if the instituted reforms, and 46 states made a significant difference. 46 states have \"made a real difference\" under reach to the top(?) Gov. Romney doesn't think we need more teachers. That will create jobs because companies want to locate where there's an educated workforce. /u/axon350, /u/immerc\n\n1. Romney doesn't think we need more teachers. /u/oldpplfreakmeout\n\n1. \"Ryan's budget looks to cut education budget by 20%.\" (\"when extrapolated.\") /u/lennybird, /u/axon350, /u/turmoil159\n\n1. Kept student loan interest rates low by cutting banks out of the loan process (himself) /u/turmoil159\n\n1. \"Romney said, 'you should borrow money from your parents in order to go to college.'\" /u/lennybird\n\n1. Republicans fought against (increased restrictions on Wall Street, I think?)\n\n1. [I have] signed three trade deals to help double exports to sell more american products throughout the world /u/oldpplfreakmeout\n\n1. Romney has not displayed willingness to say no to some of the more extreme parts of his own party. /u/immerc",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Why did Texas refuse to expand Medicaid? And what programs are available for disable individuals?\n\nI am a student and am writing a discussion post about this topic(specifically about Texas). I found a couple of answers, but I also want to know your opinion and what programs are available for disabled individuals, low-income people, or children. I know of CHIP is there anything else?\n\nWhat are their arguments against it ??",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Differences between \"Obamacare\" and \"Romneycare\"?\n\nI know many people draw similarities between the two healthcare plans and say that any differences are inconsequential. I was just curious as to what those small differences may be or if there are any big differences people are overlooking. \n\nAlso on a completely unrelated not I have not been paying much attention recently to the two candidates political promises so if you could send me some links as to where I can begin my research it would be greatly appreciated.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "I am Rob Zerban, Rep. Paul Ryan's congressional challenger. AMA 3\n\nHey reddit!\n\nMy name is [Rob Zerban](http://www.robzerban.com) and I am the congressional challenger to Rep. Paul Ryan in Wisconsin's 1st District this November.\n\nI did an [AMA late last year](http://www.reddit.com/r/IAmA/comments/nu501/i_am_rob_zerban_challenger_to_rep_paul_ryan_rwi/) and another in [June of this year](http://www.reddit.com/r/IAmA/comments/vsx69/i_am_rob_zerban_challenger_to_rep_paul_ryan_in/). \n\nThey were a lot of fun and since then redditors from all over the country have gotten involved with the campaign - I cannot thank you all enough!\n\nSince my last AMA a lot has happened: [I out raised Paul Ryan](http://www.politico.com/news/stories/1012/82049.html), [held him accountable at the Vice Presidential debate](http://www.youtube.com/playlist?list=PLiHYzUOix3PShdmZKGfDr9X9mVsz3vung), and [launched my TV Ads](http://www.washingtonpost.com/blogs/plum-line/post/hitting-paul-ryan-at-home/2012/10/05/298019c6-0efc-11e2-bb5e-492c0d30bff6_blog.html).\n\nI've been encouraged to come back and do another AMA, so here I am.\n\nI'll be back around 2pm CST to answer questions.\n\nIn the meantime please check out [my website](http://www.robzerban.com) or catch up with the campaign on [Facebook](http://www.facebook.com/robzerban) and [Twitter](https://twitter.com/robzerban).\nAsk away!\n\nUPDATE: Per a few requests, if you would like to donate to the campaign you can do so [here.](https://secure.actblue.com/contribute/page/homepage?refcode=AMA)\n\nUPDATE: Thank you all so much for your questions! I've enjoyed spending the last 2 hours answering them. I have a meeting and a house party that I have to get to, but if I find some time later this evening I may come back and answer a few more. Thank you again for supporting me and my campaign throughout the election.\n\nUPDATE: I found another hour, so I'll be answering a few more questions and comments from now until about 6:30pm CST.\n\nFINAL UPDATE: Thank you again, I have some events this evening that I have to get to. Thank you for the great questions and lively discussion!",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why do people think there is a ton of elderly subsidized housing?\n\nI keep reading about family members who are pissed that their family member didn’t buy a house and now they are poor and elderly and there’s still calling them lazy and saying oh I guess they don’t wanna go and get in the free subsidized housing\n\nWhere the F is free subsidized housing for the elderly?  The waitlists are huge.  There is no magical extra housing. There is barely there and you win the lottery if you get picked \n\nThis is why there are so many groups for car campers and those groups have heaps of elderly",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"Who can you thank for rising prices at the pump? O-ba-ma! O-ba-ma!\"\"",
+    "documents": [
+      {
+        "text": "Is President Biden to blame for high gas prices and for inflation or is it a problem throughout much of the world?\n\nIs the United States the only nation in the world that is suffering from these maladies right now? What are other countries paying for gas? What is the rate of inflation in other countries?  What are the root causes of these worldwide problems (Ukraine, Covid-19, supply chain?)?  Can we really blame President Biden if many other countries in the world are experiencing the same thing? Are these beyond his control? What more could President Biden do? What more could the Congress do?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Donald Trump and the Republicans claim Biden is to blame for inflation on goods and high housing prices. If you take their argument at face value, what's their proposed solution?\n\nDonald Trump and the GOP claim literally daily how bad inflation is, housing prices, rent, cost of good, food, etc. Inflation has flatlined post-COVID but prices rarely ever go down on most goods and services once they go up. Also, there is documented proof of price gouging and fixing by large corporate entities, such as food manufacturers, supermarket chains and holding companies that own large swaths of rental properties and buildings. \n\nWhat is the proposed solution to these problems by Trump, the GOP and how would they work? What would be done differently than what Biden is currently doing?\n\nhttps://cardinalpine.com/2024/02/12/biden-demands-grocery-stores-and-food-brands-end-price-gouging-and-shrinkflation/\nhttps://cardinalpine.com/2024/02/12/biden-demands-grocery-stores-and-food-brands-end-price-gouging-and-shrinkflation/",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "CMV: Biden is not responsible for the current inflation.\n\nInflation is typically caused by an increase in money supply. The money supply had an enormous spike in 2020. I believe that is related to PPP, but it obviously was not due to Biden because it was before he was elected. The inflation increased during his term because there is a lag between the creation of the money and its inflationary effects.\n\nAdditionally the Inflation reduction act was passed in Aug 2022, and inflation has seemed to have curbed since then. Some people say \"we still have inflation\" because prices have not dropped. That is misunderstanding inflation. It's like saying \"we're still going fast\" even though you took your foot of the gas pedal. Prices do not go down when inflation flattens, they stop increasing.\n\nI don't think it is Trump's fault, per se. It's likely we'd have a large spending bill in response to COVID no matter who was president.\n\nMy viewpoint is based on monetary supply data here:\n\n[https://fred.stlouisfed.org/series/M2NS](https://fred.stlouisfed.org/series/M2NS)",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Why do people blame the president for gasoline prices?\n\nYou frequently hear \"well, because so and so is in the office gas is so expensive!\" Sounds pretty dumb to me, what's behind it?\nP.s. I am located in the U.S.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Has Biden been bad for inflation?\n\nI’ve noticed that rightwing news and politicians want to put the blame on Biden for inflation and I want to set the record straight. Joe has done a very good job with the economy, and we now have the strongest post-covid recovery in the world. \n\nHow we got high inflation\n\nInflation was inevitable after covid, the world including the US closed down. People seem to want to rewrite history, but the country did close down while Trump was president. Due to this closing down, inflation was simply inevitable, and the stage was set for it before Biden was even elected. \n\nWho deals with inflation?\n\nWhile Joe is getting lots of blame, it’s really the Fed’s job to deal with inflation. And the Fed is lead by a Trump appointee. So, if you think the Fed has done a poor job with inflation, it’s Trump’s guy. \n\nTrump inflationary policies\n\nIf you think Trump would have done a better job with inflation, look at his record. He is the tariff guy, and tariffs are inflationary. They tax goods coming in which increases costs and prices. Trump was also a big spender, and deficits increased every single year including a huge bump from all his covid spending. Trumps policies were pro-inflation.\n\nUS now\n\nNow our inflation is hovering around 3%, which is one of the lowest in the world, we also have strong economic growth and low unemployment. We really couldn’t have gotten out of covid any better. \n\nNo Doubt",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "CMV: President Biden is not Responsible for Higher Gas Prices in the US\n\nI have seen the stickers on gas pumps everywhere. A picture of Biden pointing to the cost of gasoline with the caption \"I did that.\" Digging into conservative media, I tried to figure out which of Biden's policies have contributed to higher gas prices, and I have found most of the examples to be lacking. I will go through each of the most common arguments that I see.\n\n**1) Biden's climate agenda has reduced domestic oil output.**\n\nThis doesn't appear to be based in fact. Oil production plummeted in March 2020 due to drastically reduced demand due to COVID measures. It has been slowly rebuilding. Domestic oil production in the US is at its highest point post-pandemic, and is near its highest point ever. Source: [https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MCRFPUS2&f=M](https://www.eia.gov/dnav/pet/hist/LeafHandler.ashx?n=PET&s=MCRFPUS2&f=M)\n\n**2) Biden's foreign policy has reduced gas supply from foreign countries.**\n\nI agree that the war in Ukraine and the resultant economic sanctions have had some impact on oil prices, but the US only receives 3% of its oil from Russia. Yes, demand is higher in Europe because of the sanctions, but I believe that the higher gas prices coming out of the sanctions are a reasonable price to pay for not having to go to boots-on-the-ground war with Russia.\n\n**3) Biden cancelled the Keystone XL pipeline.**\n\nThe Keystone XL pipeline was designed to carry tar sands oil, which is not commonly used in gasoline production. It was also designed to carry that oil from Alberta, Canada to Texas, where it would be exported. Therefore, the impact on gas prices would have been minimal. Even assuming that it would have had a substantial impact on gasoline prices, it would have taken years for it to be built. Source: [https://www.forbes.com/sites/mikepatton/2022/03/09/the-real-reason-behind-surging-gas-prices/?sh=69199bc026de](https://www.forbes.com/sites/mikepatton/2022/03/09/the-real-reason-behind-surging-gas-prices/?sh=69199bc026de) ; [https://en.wikipedia.org/wiki/Keystone\\_Pipeline](https://en.wikipedia.org/wiki/Keystone_Pipeline)\n\n**4) Biden halted new oil wells on federal land.**\n\nThe EO from Biden that halted new oil wells merely stops those wells on federal land. Private companies with private land can still open wells. Moreover, it takes years for a newly-opened oil well to substantially change gas prices. Source: [https://www.investopedia.com/ask/answers/061115/how-long-does-it-take-oil-and-gas-producer-go-drilling-production.asp](https://www.investopedia.com/ask/answers/061115/how-long-does-it-take-oil-and-gas-producer-go-drilling-production.asp)\n\n**Conclusion**\n\nUltimately, I do not believe that there is a credible argument that Biden is responsible for higher gasoline prices. However, I am willing to have my opinion changed. Can somebody please provide me with some ideas as to what decisions Biden has made that has caused the price of gasoline to spike?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Why do people blame inflation on Biden when 0% rates and stimulus packages were introduced under Trump?\n\nHoping we can keep this conversation serious but yeah, title. \n\nI know the Trump stimulus was 600B in comparison to 1.9T & then I believe ~2T under Biden so do people blame it on the difference in amounts? I also remember an infrastructure bill passing under Biden for >1T after the green new deal got shot down and renamed but I’m asking seriously. I feel like they *both* contributed to inflation but only one gets the blame. \n\nCuriously awaiting your responses so I can fill the gaps — thank you!",
+        "type": "correct",
+        "answer": "False"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"Says the Central Park Five \"admitted their guilt.\"\"",
+    "documents": [
+      {
+        "text": "CMV: The Central Park Five, while not guilty of the crimes they were convicted of, almost certainly caused the Central Park Jogger to get raped and nearly killed, and should hardly be held up as totally innocent victims.\n\nI've seen that the Central Park jogger case has gotten a lot of new attention lately what with that Netflix series coming out, so I decided to research it myself. While it seems that the whole trial and investigation was kind of a clusterfuck, and that Matias Reyes was the main rapist of Trisha Maili, the general conclusion of the Armstrong Report - that the group of youths attacking her likely led to Reyes attacking, raping, and nearly killing her - seems plausible. It was a crazy, if tragic coincidence that Reyes, a serial rapist, took advantage of the fact that he was in the park at the same time a group of unruly kids were harassing and beating up random pedestrians. While this doesn't make the Central Park Five guilty of rape, it doesn't really make them doey-eyed innocents either. Their attack on Maili led to her getting raped and nearly getting murdered, making them accomplices at worst, and at best dumb kids that helped a rapist prey on an unsuspecting woman.\n\n&#x200B;\n\nWhile they were kids at the time, and two wrongs don't really make a right at this point, I just think that holding them up now as these completely innocent victims of a weird justice system and public opinion vendetta is inaccurate. The whole thing was mostly tragic on all sides, with the only real villain being Reyes.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "I am Raymond Santana, one of the Central Park 5. Ask Me Anything\n\nHi, my name is Raymond Santana.  I and four other teenagers were wrongly convicted of raping a jogger in New York’s Central Park in 1989.  The five of us, who have become known as the Central Park Five, didn't even know each other before we were arrested.  We just happened to be out in the park the night of this horrible crime.  I was incarcerated for six years and combined we spent more than 30 years in prison before we were exonerated in 2002.  DNA evidence recovered from the victim was matched to Matias Reyes, a convicted murder and rapist, who has since admitted committing the crime.  You can read more about the case here:  http://www.innocenceproject.org/Content/Raymond_Santana.php Even after the Manhattan District Attorney exonerated us and Reyes confessed, the New York City Police Department continues to say we are guilty.  But thanks to a documentary, The Central Park Five (http://www.ifcfilms.com/films/the-central-park-five), by Ken Burns, his daughter Sarah and David McMahon, the public has finally learned the truth.  AMA.  \n\nverified: https://twitter.com/innocence/status/393514881300692992\n\nI have to go now, but you guys had some great questions.  I thank you for them.  This has been an awesome experience, looking forward to talking to you guys sometime in the future.  You guys can also reach me on twitter @SantanaRaymond and that is also on Facebook and Instagram.  And please support the Innocence Project, they do great work.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Adnan's case does not resemble any other cases of false conviction (that I can think of)\n\nI don't think anyone can dispute that plenty of people are falsely convicted in America.\n\nHOWEVER, it doesn't seem that this case fits any of those templates.\n\nIt seems like the most frequent causes of false conviction are:\n\n- - - - - \n\nCause 1:  Eyewitness Misidentification\n\nIn this scenario, someone witnesses a crime and then points at someone (who they did not know prior to the murder) as the murderer.  Unfortunately, as we know eyewitness testimony is very unreliable.  An example of someone being falsely identified in this scenario is Brenton Butler which you can watch in the movie MURDER ON A SUNDAY MORNING.\n\nNow, while we obviously do have eyewitness testimony in this case (Jay and Jenn), this does not really apply because it is not a case where a stranger falsely accuses someone they don't know.  Yes, Jay obviously is lying about all sorts of things but this is definitely not a case of someone falsely picking someone out of a lineup and then the police do everything to convict the person in that identification.\n\n- - - - - \n\nCause 2: Just find any suspects and get a false confession out of them.\n\nIn this scenario, there is a crime, no one knows who did it, the police find some suspects that may have been near the crime scene and get them to falsely confess (and the police generally actually do believe they have the right perps and don't realize that their actions are getting the person to falsely confess).  The Central Park Five is a great example of this.  Once again, people that literally had nothing to do with the crime are scared by the police into confessing. \n\nOnce again, this does not apply in this case.  Obviously, Jay was involved in the crime in some form.  So, while his testimony very likely was molded by the police, this is not a case of a true \"false confession\" (and a false confession is also frequently against one's self although it may also implicate their \"partners\" as well).\n\n- - - - - \n\nCause 3:  There is no evidence against anyone else (or the evidence that is there is not tested properly or followed-up on) and so the only person that seems to have been there is convicted.\n\nIn this scenario, there just is no evidence (that has been found) against anyone else.  As a result, the person who is most likely or the person who happened to report the crime is the one convicted.\n\nThe Michael Morton case is precisely this where his wife was killed and they just decided to pin it against the husband because they really didn't have anyone else to pin it on.  Eventually, DNA evidence exonerated him.\n\nThat is not the case here.  The reason Adnan was convicted is because of Jay and the cell phones, not because they couldn't find anyone else to convict.\n\nAnother analogous situation to this would be the West Memphis Three where the police don't have any evidence against anyone else and just find some random \"weirdos\"/people who are lower-level criminals to pin the crime on.  In that case, the crime is pinned on people that just don't fit in anyways.  Once again, there is no real evidence against them at all but a story is made to fit the crime.\n\n- - - - - \n\nCause 4:  Lastly, there is the case where the real perpetrator of the crime falsely accuses someone else of doing it.\n\nNow, obviously, this is the closest to this case.  An example of this is the case of Randall Adams, depicted in the film THE THIN BLUE LINE.  In this case, the true perpetrator accuses a guy he was hanging out with earlier in the night of actually having committed the crime of shooting a police officer.\n\nHere's my take on this.  Certainly that is a possibility in this case.   BUT, as more facts become known about the case, it will become obvious that the case was one of false conviction.  For example, in the above case, the partner of the police office killed originally said there was only one person in the car (the true murderer).  Only later did she say there were two people in the car (the falsely accused person and the murderer).  And, there are many other examples in this case where things got changed later or earlier facts totally ignored.\n\nSo, while this definitely may have happened with Jay's testimony, to me, as we've learned more about this case, things just get murkier, not clearer.  And, Jay implicates himself in the crime (which in this scenario does not happen, because if the person is trying to get off, they are going to falsely accuse the other person, not implicate themselves).\n\n- - - - - \n\nIn virtually all of these cases of false conviction, as the facts come out, it really seems like it becomes more and more obvious that what happened was clearly a false conviction.  THAT IS NOT THE CASE HERE (in my opinion).  As we hear more, it just becomes more confusing and there is no more exonerating evidence that has been uncovered (for example, Asia's alibi for Adnan may disprove the state's case at the time, but doesn't disprove anybody's current assertions of how they think the murder went down).  I feel like the fact that the learning of more facts doesn't seem to exonerate Adnan at all does not make things look in his favor.\n\n- - - - - \n\nAll of this being said doesn't mean that Adnan should have been convicted BEYOND A REASONABLE DOUBT.  yes, there very likely is enough in the case that he should not have been convicted.  But, what I am saying is that unlike every other case that I have seen where there is ACTUAL INNOCENCE, Adnan's case does not seem analogous to any of them.  Does this exclude Adnan from being actually innocent?  No, but it just seems to make it more likely Adnan is not innocent.\n\nMy point is that everybody points to these other cases where a truly innocent person got convicted (and keeps posting about them on the board), but none of them seem particularly analogous at all.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "What is a case where someone falsely admitted guilt, and why did they do it?\n\nI’ve always been confused as to why people say they‘ve done something that would land them in prison, when in reality they hadn’t. I understand gang/mafia related things, but other than that, what do you know?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "CMV: A criminal confession should only be considered by a judge or jury if the accused is willing to affirm it in court\n\nThis is inspired by the Central Park Five case in which their confessions at the police department were used heavily against them in court in spite of them insisting on the stand that the confessions were coerced.    It is fine for the police to use a confession as the base of an arrest, but in order for it to be considered by a jury, the accused should have to affirm it on the stand.    In other words, you can't just use a confession as the primary means of conviction.   There needs to be corroborating evidence as the basis of prosecution unless the accused confesses on the stand.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "To all the people who still believe the 5 are guilty, I have one question:\n\nWhy did they never mention Matias Reyes, the one person whose DNA matched him to the crime, in their confessions? Or, in fact, ever?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Netflix casually just dropped one of their best limited series I've ever seen, \"When They See Us\" Based on the 1989 case of five teens who were wrongfully convicted of raping a woman in Central Park, NY.\n\nNetflix casually just dropped one of their best limited series I've ever seen. If you want to have a peaceful, stress-free, relaxing day...DO NOT WATCH THIS SHOW. The direction and cinematography is great and the PERFORMANCES..amazing. I highly recommend this. It's a heartbreaking hard watch, but a must-see. It's only four episodes long.\n\nhttps://www.youtube.com/watch?v=u3F9n_smGWY&t=2s",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "How biased was the show? Lets look at the real evidence.\n\n**First let me start by saying that I thought this show was absolutely amazing. The acting and story was simply phenomenal. I laughed, I cried, I cheered for The Five when they became heroes in the eyes of the public. I feel like this show is going to win a lot of awards and even more important.... its pushing the conversation that needs to be constantly looked at and addressed which is the unfairness in our justice system. So for that reason alone the show is a major success and I love it for that.**\n\n&#x200B;\n\nSo after watching the show I decided to look into the real people and the real story. Then i caught one single line on [Wikipedia](https://en.wikipedia.org/wiki/Central_Park_jogger_case) that simply made my heart sink.\n\n&#x200B;\n\n>\\~\\~\\~Additionally, **before the raped jogger was found**, one of the other boys the police had rounded up, sitting in the back of a police car, blurted that he \"didn't do the murder\" and named Antron McCray as the perpetrator. Kevin Richardson, who was sitting beside him, immediately agreed, saying \"Antron did it\".\\[39\\] Later, after Raymond Santana was interrogated about the rape and while he was being driven to another precinct, he on his own exclaimed: \"I had nothing to do with the rape. All I did was feel her tits.\"\\~\\~\\~\n\n&#x200B;\n\nKnowing that Wikipedia is not the most credible of sources I found the source of this quote was linked to [this article](https://www.thedailybeast.com/the-myth-of-the-central-park-five) which was written by a Harvard educated detective named [Edward Conlon](https://www.thedailybeast.com/author/edward-conlon). I don't know much about where he got his information about the event that suggests the kids making statements about the body before even the police knew about it. I'm going to continue to look for the source for this statement. But as this information is not credible as of this time i will not be using it in my assessment of the facts. \n\nAfter reading that article I found the [NYC repository](http://www.nyc-cpj.org/Home) for all the released information from the case. Everything from trial transcripts to crime-scene photos. Photos of the park in general taken on that day. All the arrest photos, and the confession videos. There is a TON of info to sift through.\n\nThe big thing here is based on the information in the documents it really seems like the show is being extremely biased to create heroes out of people who may not be heroes at all. There is a very real possibility that these kids were all just acting a fool and things escalated quickly one thing lead to another and a woman got raped. The biggest concern I found here was that [Kevin had a massive sperm stain](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Lab%20Requests%20and%20Results/NYCLD_008753_Diagram%20Re%20Analysis%20of%20Clothing%20of%20Kevin%20Richardson,%20by%20the%20NYPD%20Laboratory%20(undated).PDF) on the inside of his underwear. [Raymond had Sperm stains](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Lab%20Requests%20and%20Results/NYCLD_008775_Diagram%20Re%20Analysis%20of%20Clothing%20of%20Raymond%20Santana,%20Jr.,%20by%20the%20NYPD%20Laboratory%20(undated).PDF) in multiple places on his shirt.  Additionally [Antron](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Lab%20Requests%20and%20Results/NYCLD_008738_Diagram%20Re%20Analysis%20of%20Clothing%20of%20Antron%20McCray,%20by%20the%20NYPD%20Laboratory%20(undated).PDF) and [Yusef](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Lab%20Requests%20and%20Results/NYCLD_007437_Report%20Re%20Analysis%20of%20Clothing%20of%20Yusef%20Salaam,%20by%20the%20NYPD%20Laboratory%20(undated).PDF) Both had human blood on their clothes. Another important detail is that in an unrecorded statement Yusef implicated himself the most in the rape out of the 5 by stated that he had \"hit the female jogger over the head with a pipe\" which he was seen in multiple statements like that of [Steven Lopez (page 2)](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Statements/NYCLD_010487_Handwritten%20Statement%20of%20Steven%20Lopez,%20Written%20by%20Det.%20Humberto%20Arroyo%20(4-20-1989).PDF) who stated that Yusef was holding a knife and a pipe.\n\nThese are some serious things to leave out of the show. One of the things the show does a poor job of is depicting the time in which Kevin in particular was in the park. In the show its only like a minute but in reality it was a lot longer. And this is fine I know the show cant put a whole hour of a park scene on here but what this did was shorten the narrative for this park adventure. They show Kevin interested about this park thing and then go around the park and he is in the park all the way until the cops show up.\n\n&#x200B;\n\nTo be clear here...\n\n* group enters the park @ 20:40\n* First man assaulted @ 21:05\n* The 2 people on the tandem bike is at @ 21:06\n* The rape happens @ 21:10\n* second man bead unconscious @ 21:48\n* Kevin and Raymond picked up (With 3 others) by police @ 22:50\n\n[*link to timeline*](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Other%20Reports/NYCLD_007360_Chronology%20of%20Events%20on%20April%2019,%201989%20(undated)%20.PDF)\n\n&#x200B;\n\nThe show Made it seem like Kevin was so appalled by the event and decided to leave just as the police showed up. Which is not the case at all. This isn't even a matter of \"oh the police lied\" this is documented as time of arrests vs the actual calls made to the police station about the last man getting beat up who reported it an hour before Kevin was arrested.\n\nAfter pouring over a lot of the information for that night all I can really say for certain is that this show is very biased and makes these kids out to be heroes but the evidence doesn't really support that. At least for 4 of the boys. The only one that I feel is the least likely to be responsible is Korey Wise. His statement didn't add up the most. His [actual testimony](https://nyccpjstorage.blob.core.windows.net/original-investigation-and-prosecution/Pre-Trial%20and%20Trial%20Transcripts/NYCLD_006985_Transcript%20Re%20Testimony%20of%20Korey%20Wise%20from%20the%20Suppression%20Hearing%20(11-17-1989).PDF) was better in real life than in the show. It really calls into question the tactics of the NYPD.\n\n&#x200B;\n\nThe biggest thing that still keeps me guessing is that his video confession doesn't seem like he is just \"making stuff up\". He is giving out way too much detailed information in that video and even correcting the woman when she gives him a detail. Like when she says \"he pulled her pants off all the way?\" and Korey corrects her and says \"No to her knees\" Why would you go out of your way to correct someone on a made up detail that you supposedly know nothing about?\n\n&#x200B;\n\nThat being said I am in no way saying that Matias Reyes didn't commit the crime. He was obviously there his DNA was found in the vagina and on the sock found at the scene. My only concern here is that what if he lied about being alone to protect the others? If they were not beating up joggers why did they have blood on them? if they were not raping the girl why did 2 of them have semen on their clothes. (Inside your underwear... OK I guess chalk it up to sloppy masturbation) Would Raymond really walk around with semen stains in 3 different spots on the front of his sweatshirt while hanging out with his friends?\n\n&#x200B;\n\nAnyway... The show is great for what it is. It would honestly be a better story if it was fiction due to the amount of information that was left out to make it seem more consumable by the masses. I love that its getting people talking about the justice system. I definitely think that according to the law all 5 of these kids were wronged and not processed through the system right. I believe they did not get a fair trial and as such deserve every penny they got due to that fact. Im not trying to hate on the message the show is sending. I definitely believe the NYPD was at major fault here.\n\n&#x200B;\n\nHere is that link again for quick access [Central Park Jogger Evidence](http://www.nyc-cpj.org/Home)",
+        "type": "correct",
+        "answer": "False"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"They say the ocean will rise one-eighth of an inch over the next 200 to 300 years.\"\"",
+    "documents": [
+      {
+        "text": "ELI5: Why do people buy ocean-front property despite the projected rise in sea level?\n\nI am new to Reddit and am not posing this as a politically-leading question. \n\nI am just curious as to why people buy beachfront property when [sea levels are projected to rise up to 12\" in the next 30 years in addition to an increase in coastal flooding.](https://www.noaa.gov/news-release/us-coastline-to-see-up-to-foot-of-sea-level-rise-by-2050)\n\nIf everyone buying such properties were not concerned with climate change (or denied its existence) then it would make sense, but there are surely many property owners who fully understand the implication of owning property with such a questionable near and long-term future.\n\nI usually see this question posed as a means of denying climate change with the most prominent example being \"Why would President Obama buy property in Martha's Vineyard if he's so concerned with climate change? They must be lying to us!\" **This is not my intention.**\n\nMy goal is to actually understand the answer to such a question in a scientific and non-political forum. My sincerest apologies if I have posted this question in the wrong SubReddit.\n\n\\*A little background about me as the poster: I work in the renewable energy industry and consider myself to be scientifically inclined, albeit undereducated on this particular topic. I look forward to reading your responses!",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "What is the very worst case scenario in relation to the rise in water levels? Can Earth become an ocean planet?\n\nIs it at all possible that the earth can become an ocean planet? I've seen some rather extreme maps that show only a vast ocean with only narrow strips of land of both hemispheres but most maps seem to show only losing some coastal areas like London and NYC. \n\nSo, the simple question is, is there ANY scenario of the planet being taken by basically 90% ocean? Regardless of the likelihood, is there ANY scenario where humanity is forced to become a sea faring species?\n\nEdit: Thanks for the answers guys! Big help. I didn't expect so much answers and it seems to have sparked a good debate. I like a good debate so I enjoyed reading all your comments. I'm not too knowledgeable about science to contribute too much, but please rest assured I read your answers like a real lurker. I'll be sticking around to read any more potential answers but in the meantime thanks a bunch!",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Global Warming feels very underwhelming to me\n\nIn the games I've played so far, I have never felt like global warming is an especially relevant factor in the game.\n\nEven at maximum sea level rise, the amount of tiles that are lost is pretty minimal. And even this can easily be mitigated just by building flood barriers. The only other thing that global warming does is increase the rate of natural disasters, but this doesn't feel like it makes too much difference either.\n\nAs a whole, I've been quite disappointed by the implementation of global warming in GS. I feel like Firaxis were afraid by their own shadow when implementing it, and as a result made it ineffectual so as to not piss people off. I think they had a great opportunity to make the late-game more dynamic and interesting, but ended up just creating a mechanic that has great flavour but very limited effects on the actual game.\n\nHave other people had different experiences with global warming?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "🤔 Confused about global temperature increase & climate change\n\nI was recently at a local museum on west coast BC, Canada that had a board on glaciation on the region, Gabriola Island. There was a graph indicating 'The Earth has been getting progressively colder over the last 50 million years' showing the relative temperature fluctuations. There is a zoom in of the current interglacial period.\n\nImages: [https://imgur.com/a/ZAitJaw](https://imgur.com/a/ZAitJaw)\n\nCan someone who understands the science explain to me, within the context of the current climate change crisis, how our relative global temperature increase deviates from past glacial events?\n\nFor example, climate scientists say that a 1.5-3° average temp increase is catastrophic to global systems. But on this graph, it shows over the past 500,000 years fluctuations of +6°C to -3°C as normal. Our current period is totally in line with the last 4 periods.\n\nFurther, it shows global temperatures cooling (Global temperature variations over the past  50 million years) from a relative temperature  that was 14°C higher than current temperatures!\n\nSo how does the science work in all of this? Is this just a human crisis and not a planetary crisis, meaning it's catastrophic to humans if the temperature rises 3°? Like if the sea levels rise 200' its catastrophic to us but pretty normal for the planet?\n\nAs a lay person I don't understand.\n\nUPDATE\n\nAs others have pointed out, it's the current short term rate of temperature increase that is catastrophic to humans, not that the earth can't support a temperature increase. \n\n[https://earthobservatory.nasa.gov/features/GlobalWarming/page3.php](https://earthobservatory.nasa.gov/features/GlobalWarming/page3.php)",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Something about what we're always told about climate change doesn't make sense to me, can someone explain?\n\nI am legitimately asking, I don't wanna sound like a conspiracy nut or anything but like when climate change rolls around the ocean is supposedly gonna rise a whole 10 feet or higher within the next 20 years, but if any banks believed it that would mean you couldn't get a mortgage on a house anywhere in like London, Manhattan, would be covered in water constantly almost anywhere in Florida or Louisiana would be under the water right? Yet a few left leaning/ climate concerned politicians have even bought places in Florida, please explain this. thanks👍",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "By when should we expect rates of sea level rise to increase?\n\nI'm sure all of us have seen the projections. While right now rise is only on the order of mm per year,  the mean estimate is for something like 1m by end of century, which tells me that scientists are expecting the rate to increase significantly. So what I'm wondering is, by when do scientists expect this to happen? If it doesn't by a certain point, will estimates for mid-century and end-of-century rise be revised?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "How screwed is Florida in the medium term?\n\nI might end up living in Florida. I know in the long term, sea level rise will put a large fraction of Florida underwater, but I’m really concerned with what’s going to happen in the next 10-20 years.\n\nThe three big concerns I have are heat, sea level rise, and storms.\n\nI plan to live about 3 miles in from the coast, on somewhat higher ground (for Florida). Is sea level rise really going to be an issue that far in by 2040?\n\nHurricanes are obviously an issue, but if you are inland and not in a low area, most homes don’t actually see any flooding, just wind and rain, at least so far. What’s the worst a hurricane could do if you’re not on the coast?\n\nAnd finally, what’s the heat forecast looking like? I can tolerate mid to high 90s and humid for a few months (the current summer temps) but if we hit 100+ and humid regularly that’s a dealbreaker. How likely is that vs. extended summers with similar temperatures to current day?",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"In 2020, more people voted in America than ever in the history of America, in the middle of a once-in-a-century pandemic.\"\"",
+    "documents": [
+      {
+        "text": "Early Voting Turnout in Fairfax, VA (Biden+42) Soars on Day 1, Tripling the 2020 Figures\n\nFinal turnout total from Fairfax County, VA on Day 1 is 3907. The 2020 number is 1213. This is a Democratic stronghold as Biden’s margin here was +42 in 2020.\n\nBecause VA didn’t have non-excuse early voting in 2016, and 2020 was special because of the pandemic, there is no baseline for comparison. \n\nBut this seems still good news for Dems?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Voter Turnout Predictions and Questions??\n\nDo you think the voter turnout will really be huge this time around? I'm asking because the early voting turnout has already been huge, but I wonder if we are actually seeing more people vote or if it's just that the same people who always vote are voting earlier?\n\nFor example, people talked abut the historic turnout for the 18 primary. It's true that, for a primary, it was a huge turnout. But after you look at the data, you see that it was just that the same people who usually vote in the general elections also voted in the primary this time. So the turnout for the primary increased, but that doesn't mean there was a huge turnout of people who don't normally vote.\n\nWhat do you think? Is there already any data about this available?\n\n\\*\\*\\*UPDATED\\*\\*\\*\n\nI appreciate the responses to my post, but I see I did not ask my question clearly. I'm going to try again. **I'm asking how we know that the increase in early voting means that there will be more people voting in the election generally as opposed to roughly the same number of people voting just more doing so early/from home due to COVID.**",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Would A Trump Run in 2024 Drive Up Democratic Turnout?\n\nDespite taking place in a pandemic, the 2020 election saw record-breaking turnout among Democratic voters, which allowed Joe Biden to defeat Donald Trump. At least some of this turnout, it has been argued, was driven not by support for Biden himself but by dislike of Trump and what he had done. Here an important distinction must be made between the 2020 election and the 2016 one. In 2016, Trump's qualities as President were unknown, and Hillary Clinton-- herself a decidedly unpopular candidate-- was running against the *image* of him. Biden, on the other hand, was running against the *reality* of him. \n\nSo if it happens that Trump should decide to run for President again in 2024, would the specter of his Presidency be sufficient to serve as a motivator for Democratic turnout in the same way it did in 2020?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "What If the Pandemic didn’t Happen (2020 Presidential Election)?\n\nOkay it’s the 2020 presidential election. The Democratic primary is still going strong and Trump just beat his first impeachment anwe are unsure who will win. Meanwhile, the Covid 19virus has been in China but seems to be staying there. How does this change the way the election year happened? Does another Democrat end up  being the nominee? Does Trump win re-election? What about the Black Lives Matter Protests?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What strategies increased youth voter turnout in the 2020 election and how can we keep this momentum going?\n\n\\~55% cast a vote in the 2020 presidential election, compared to only \\~44% in 2016\n\nYoung people were also politically engaged in 2020. About 1 in 4 donated to a campaign (24%) or registered others to vote (23%), close to half (45%) tried to convince their peers to vote, and two thirds spoke with friends about the election and politics. \n\nSource: [https://circle.tufts.edu/latest-research/election-week-2020#youth-voter-turnout-increased-in-2020](https://circle.tufts.edu/latest-research/election-week-2020#youth-voter-turnout-increased-in-2020)",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "Do Democrats have a significant advantage this election due to mail-in voting?\n\nGenerally, based off of trends Dems have seen greater support along with greater turnout. Since mail-in ballots have been \"popularized\" this election I feel like we could see a significant jump (record shattering) in turnout compared to previous elections. \n\nIf this is true, Dems could likely see a huge boost (which would place current polling as an underestimate of Biden's strength) and could be able to take home larger, almost out of reach, states such as Texas, Georgia, Ohio, and Iowa as well as some sweet senate seats.\n\nThoughts?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Do you think Trump would have won if the pandemic never happened?\n\nA lot pundits pre-2020 talked about how the chance of an incumbent President losing an election with positive GDP growth is extremely rare and COVID essentially turned that around because in some sense it showed how Trump really [didn't care](https://www.mercurynews.com/trump-claims-doctors-get-more-money-for-covid-deaths) about people in dying in his country, potentially swinging crucial suburban support in key states. \n\nGiven that, do you think Joe Biden would have pulled it off if COVID never happened?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Was the 2020 election actually rigged? Should Trump have really won?\n\nI’m a Trump fan for the most part, but he keeps saying the election was rigged. Meanwhile, I’ve not seen any proof come out that this was the case. \n\nIs it just a lie that he’s repeating because it’s advantageous to do so, or is there some reliable evidence of widespread voter fraud? Is he afraid to admit he might be wrong?\n\nI am genuinely asking",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "CMV: The 2020 Election wasn't stolen\n\nI really don't understand why so many right-wingers do think the election was stolen, even with seemingly no evidence or facts anywhere to be found. I feel that I'm a moderate when it comes to politics, but this argument that it was stolen really doesn't make sense to me and I've fact checked many, many, many times (Chat GPT itself doesn't even try to paint it as a 2 sided story, with it just saying that the election wasn't stolen). Looking for people to either cmv or for someone to explain this to me, thanks.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"The birther movement was started by Hillary Clinton in 2008. She was all in!\"\"",
+    "documents": [
+      {
+        "text": "What if Trump never ran for President?\n\nSome have theorised when Obama joked about Trump back at the White House Correspondents Dinner in 2011, that was the moment Trump decided to run for President. For those who don't know, Trump peddled the conspiracy theory that Obama was born in Kenya, not the US, and Obama said at the Dinner that since his birth certificate was released, Trump could move onto other conspiracy theories.\n\nLet's imagine they're right. So in the 2011 White House Dinner, Obama doesn't make the Trump joke, and so Trump doesn't run, just continues sniping from the sidelines. Maybe he becomes a donor to the Republican Party and tries to influence it, but no longer has the need to \"get revenge\" or whatever. \n\nWhat are American politics like for the past 8 years up until now? Who wins the GOP nomination, and do they go on to win the Presidency? Is there more unity on COVID?\n\nIn addition, does this affect politics of other countries like those in Europe, perhaps delaying the rise of right-wing populist movements?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "How come there was so many conspiracy theories about Obama being Kenyan, but none about McCain being Panamanian?\n\nHe was technically born in Panama. Even though it was an area that the US controled, and both of his parents are American, it's interesting that no one ever made theories about him when Obama had plenty. Is it political and/or racial bias?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Was the “Birther movement” a valid inquiry by good faith Americans who were unsure of Obama’s citizenship, or was it just textbook racism by “conservatives” who hated Obama?\n\nSee question.\n\nFor those that **don’t remember** — the “Birther Movement” was a multi-year inquiry into the citizenship status of Barack Obama during his Presidency.\n\n**Donald Trump** rose to political fame promoting this “inquiry”.",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "Is there a smaller conservative birther movement for Vivek Ramaswamy akin to the Obama birther movement?\n\nI know there wouldn’t be as big of one, given that Obama was president. But like Vivek is gaining support. Is there a smaller birther movement for him?\n\nIf not, why not?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Did you question Obama's birth certificate?\n\nI was finishing up elementary school back in 08 so the \"drama\" around President Obama's was one of the first political things I can remember.\n\nJust seems ludicrous and a bit racist nowadays but I'm curious why?",
+        "type": "correct",
+        "answer": "False"
+      },
+      {
+        "text": "How did Barack Obama win in a landslide in 2008 and 2012 while George W. Bush, Donald J. Trump and Joe Biden narrowly won their elections?\n\nGeorge W Bush narrowly won in 2000 by 537 votes in Florida and 2004 by 80,000 votes in Ohio. Donald J Trump narrowly won in 2016 by 77,000 votes in the Rust-Belt. Joe Biden narrowly won in 2020 by 77,000 votes in Georgia, Arizona, Nevada and Wisconsin. How was Barack Obama able to win more decisively in 2008 and 2012?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "A conservative here described the Birther theory as a 'racist rumor' - what do you think?\n\nFor the avoidance of doubt, this is the claim that Barack Obama was born in Kenya.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "CMV: The Clintons had no reason to murder to any of the people they are alleged to have murdered, and if they did, the political damage of being caught would greatly outweigh any benefits\n\nA question was brought to me by an otherwise intelligent individual that has very serious reservations about Hillary Clinton. He pointed out to me that many conservatives think that the Clintons murdered/are murdering a bunch of people who stand in the way of their alleged power grab. Some people \"murdered\" in the past year include a low-level DNC staffer, a guy who wrote small-press Clinton conspiracy tomes, and a lawyer who brought charges against the DNC on behalf of Bernie Sanders supporters. A much more comprehensive list of now-dead people with varying degrees of connection to the Clintons can be seen here: http://www.whatreallyhappened.com/RANCHO/POLITICS/BODIES.php#axzz4JaQz8dHQ\n\nIn my friend's view, the sheer number of people surrounding the Clintons who have died prematurely or in otherwise unusual circumstances is very high, and that should automatically cause me concern and suspicion. I disagree, citing that 1) we can expect people on the Clintons' political level to have a wider array of people tangentially linked to them than a typical person, and therefore we could expect a high body count if we wanted to collect a list, 2) the unimportance and lack of immediate threat of the vast majority of these individuals (e.g. a former intern murdered at her job at an ice cream shop) simply do not warrant murder, and 3) if they did warrant murder, the political risk far, far outweighs any potential gain. Ironically, it seems to me that those who pose the greatest threats to the Clintons are also the ones that it would be most risky to murder... But to then settle for murdering all these relatively unimportant people with no actual power to destroy the Clintons makes no sense at all.\n\nI am completely willing to hear any argument, shred of evidence, or serious/reputable investigation (i.e. not blind, unfounded allegations and insinuation) that suggests the Clintons had anyone murdered, or that any of these people would be worth murdering given the political risk.\n\n\n_____\n\n> *Hello, users of CMV! This is a footnote from your moderators. We'd just like to remind you of a couple of things. Firstly, please remember to* ***[read through our rules](http://www.reddit.com/r/changemyview/wiki/rules)***. *If you see a comment that has broken one, it is more effective to report it than downvote it. Speaking of which,* ***[downvotes don't change views](http://www.reddit.com/r/changemyview/wiki/guidelines#wiki_upvoting.2Fdownvoting)****! If you are thinking about submitting a CMV yourself, please have a look through our* ***[popular topics wiki](http://www.reddit.com/r/changemyview/wiki/populartopics)*** *first. Any questions or concerns? Feel free to* ***[message us](http://www.reddit.com/message/compose?to=/r/changemyview)***. *Happy CMVing!*",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "False"
+    ],
+    "wrong_answers": [
+      "True"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"Let’s talk about the facts and where we are today. There are still nearly 2,600 children who are separated from their parents\" due to the Trump administration’s zero-tolerance policy.\"",
+    "documents": [
+      {
+        "text": "What happened to the \"kids in cages\" from the Trump administration?\n\nTo clarify I'm talking about the migrant children separated from their families at the US border. I'm afraid to ask because it's been quite a few years and I haven't really thought about them since Biden took office. I just kind of assumed the situation got resolved but I'm not sure.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "How does the current administration's policy of separating children differ, if at all, from previous one's, namely the Obama admin?\n\nI've been following the migrant children story for the last couple weeks, like others have been. \n\nThis [http://www.businessinsider.com/migrant-children-in-cages-2014-photos-explained-2018-5] article states that the previous administration only detained unaccompanied minors that crossed the border and that they were quickly rehomed as soon as they could be. \n\nI've seen several articles, similar to this one [https://www.nytimes.com/2018/06/16/us/politics/family-separation-trump.html] that address aide Stephen Miller's influence on the current policy.\n\nAre the processes here completely different or is there overlap for some of what is happening with these kids? I understand this is similar to an already posted question, but I am mostly interested on how, if at all, this is different than what the government has been practicing.\n\nedited: more accessible second source.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What's your \"counterargument\" to Obama built the cages?\n\nAs cliche and even \\*dumb\\* as this sounds, Republicans making this argument sound very bad-faith slimy to me. And of course, Trump was actually the one who *did* the deed of separating hundreds of children from their family and then being unable to unite them successfully.\n\nEDIT; Wow I'm getting a lot of responses. Lot to read. Thanks for all of them!",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "CMV: I don't see a problem with separating children from parents who came here illegally.\n\nI have friends and co-workers that have tried to tell me about it and how it's wrong and I guess I haven't heard a good point that made me change my view and I feel like an outcast.  My parents came to USA legally and they left my siblings and me back until they got settled here.  We were split up for 5 years. I was 1 years old and didn't know who my mom was until I was 6, my grandmother raised me.  My other siblings were at other relatives houses.  \n\n\nI guess I don't see the current issue as a big deal, the people that came here broke a law by not coming the legal way.  If you break law don't you get separated from family if you go to jail?  They took the risk of doing this to their family by breaking USA laws.\n\n\nEdit: You guys are a lot better than friends and co-workers in laying out different perspectives!  While my past and current experiences make me hard to change my views, I am seeing the other side much clearer and appreciated all responses. Thank you!",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "What's this thing about Trump Administration separating children from their parents i keep hearing about?\n\nI saw Ivanka Trump got slammed recently because of this and the UN is urging the Administration to halt it's policy.\n\nWhat's the policy about? And why does it separate the children from their parents?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What is up with the Harvard student getting hate for defending people trying to come to America for a better life?\n\n[This tweet](https://twitter.com/davidhogg111/status/1319460648431046658?s=21) caused Harvard to trend on Twitter because of people quoting it and making fun of him being from Harvard as if what he said is bad. What am I missing? Is this not just defending people coming for a better life? How is this considered wrong?\n\nhttps://twitter.com/stclairashley/status/1319630419390828544?s=21\n\nhttps://twitter.com/dailycaller/status/1319653230230556672?s=21\n\nI do not understand the hate he’s getting.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What are the differences in the Biden border policy and the Trump border policy?\n\nBiden has been [president for less than 8 weeks](https://en.wikipedia.org/wiki/Presidency_of_Joe_Biden). \n\nCNN, as well as various other news outlets, seem to reporting on a [\"growing crisis at the southern border\"](https://www.cnn.com/2021/03/16/politics/joe-biden-immigration-border/index.html)\n\n[Here is a story from NBC](https://www.nbcnews.com/politics/immigration/southwest-border-crossings-pace-highest-levels-20-years-biden-admin-n1261192)\n\n[Here is one from NPR](https://www.npr.org/2021/03/16/977853878/young-migrants-held-by-border-patrol-far-longer-than-allowed-document-shows)\n\nWhat is different, if anything, about the border policies of the two administrations so far?\n\nWhat changes, if any, has Biden made that are in contrast to any of the previous administration?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "If you support family separation policy for illegal migrants, what do you believe justifies it?\n\nPertinent article: https://www.azcentral.com/story/news/politics/immigration/2018/06/09/migrant-parents-being-deported-without-kids-immigration-border/683483002/\n\n---\n\nFamily separation is a policy not unique to Trump, but has seen a harsher eye under his administration. What could the justification be?\n\n*\"Sessions has made it clear that the separations are meant as a deterrent.*\n\n*'If people don't want to be separated from their children, they should not bring them with them,' he told conservative radio talk show host Hugh Hewitt on Tuesday. 'We've got to get this message out. You're not given immunity.'\"*\n\nThis may seem like beating a dead horse, but I want to examine the intent and reason to adopt this policy over alternative deterrent methods.\n\nDo you agree with Sessions' justification? Is deterrent the intent of the policy? Do you believe in other policies that could substitute family separation?",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"In his Time magazine interview, Donald Trump “said states have the right to monitor pregnant women to enforce these bans, and states have the right to punish pregnant women for seeking out abortion care.”\"",
+    "documents": [
+      {
+        "text": "In an interview with TIME Magazine, Donald Trump said he will \"let red [Republican] states monitor women's pregnancies and prosecute those who violate abortion bans\" if he wins in November. What are your thoughts on this? What do you think he means by it?\n\nLink to relevant snapshot of the article:\n\n* https://twitter.com/SawyerHackett/status/1785283469221748803\n\nLink to full article and interview:\n\n* https://time.com/6972021/donald-trump-2024-election-interview/\n\nAre we going to see state-to-state enforcement of these laws and women living in states run by Democrats will be safe? Or is he opening the door to national policy and things like prosecuting women if they get an abortion out-of-state while being registered to a state that has a ban in place?\n\nAnother interesting thing to consider is that Republican policies on abortion have so far typically avoided prosecuting women directly and focused on penalizing doctors instead. When Trump talks about those that violate abortion bans in general though, without stating doctors specifically, he could be opening the door to a sea change on the right where they move towards imprisoning the women themselves. This is something Trump has alluded to before, as far back as 2016 https://www.vox.com/2016/3/30/11333472/trump-abortions-punishment-women. What are your thoughts on that development and the impact it could have? Do you read that part of it this way?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "In an interview with TIME Magazine, Donald Trump said he will \"let red [Republican] states monitor women's pregnancies and prosecute those who violate abortion bans\". What are your thoughts on this? What do you think he means by it?\n\nLink to relevant snapshot of the article:\n\n* https://twitter.com/SawyerHackett/status/1785283469221748803\n\nLink to full article and interview:\n\n* https://time.com/6972021/donald-trump-2024-election-interview/\n\nDo you think we're going to see state-to-state enforcement of these laws and women living in states run by Democrats will be safe? Or is he opening the door to national policy and out-of-state prosecutions here? \n\nAnother interesting thing to consider is that Republican policies on abortion have so far typically avoided prosecuting women directly and focused on penalizing doctors instead. When Trump talks about those that violate abortion bans in general, without stating doctors specifically, he could be opening the door to a sea change on the right where they move towards imprisoning the women themselves. This is something Trump has alluded to before, as far back as 2016 https://www.vox.com/2016/3/30/11333472/trump-abortions-punishment-women. What are your thoughts on that development and the impact it could have? Do you read that part of it this way?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Donald Trump tells TIME Magazine he will \"let red states monitor women's pregnancies and prosecute those who violate abortion bans.\" What are your thoughts on this?\n\nLink to relevant snapshot of article:\n\n* https://twitter.com/SawyerHackett/status/1785283469221748803\n\nLink to full article:\n\n* https://time.com/6972021/donald-trump-2024-election-interview/\n\nRepublican policies on abortion have so far typically avoided prosecuting women directly and focused on penalizing doctors instead. We could be looking at a sea change, led by the leader of the Republican Party, where they move towards imprisoning women themselves.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "What’s your opinion of Trump’s authoritarian plans for his second term?\n\nI’m honestly surprised at the lack of attention and discussion of Trump’s shockingly authoritarian plans for his second term. I’m especially surprised in the wake of the recent [Time Magazine interview in which he outlined these plans in detail](https://time.com/6972021/donald-trump-2024-election-interview/).\n\nI’ve never seen anything like it. I can’t understand how this isn’t top of mind and a major concern among many Americans. The idea that people would be uninterested, fine with it or outright supportive and eager to see such plans implemented baffling.\n\nHere’s a brief rundown of just some of Trump’s second term plans:\n\n* Direct the Justice Department to do his personal bidding and order federal investigations and prosecutions of people and organizations as he sees fit and regardless of evidence and prosecutors’ wishes\n* Immediately invoke The Insurrection Act to curtail protests following his election and deploy the National Guard to police American cities as he sees fit\n* Deploy a national deportation force to eject 11 million people from the country -- utilizing migrant detention camps and the U.S. military at the border and inside the US \n* Staff his administration solely with those who believe -- or at least publicly claim to believe -- Trump’s lies about the 2020 election being stolen from him\n* Purge non-partisan career officials and subject-matter experts from the civil service system throughout government to install officials purely loyal to him and willing to enact his wishes regardless of ethics, standards or legality\n* Pardon government officials and others who break the law in service of his demands and agenda\n* Pardon every one of his supporters who attacked the Capitol on Jan. 6, including those who assaulted police and desecrated the Capitol itself -- along with the more than 800 who have already pleaded guilty or been convicted by a jury\n* Allow red states to monitor women’s pregnancies and prosecute those who violate abortion bans\n* Refuse to aid or support allies in Europe and Asia who come under attack if he unilaterally decides they have not paid enough into their own defense \n* Withhold legally appropriated funds by Congress by for any reason he sees fit\n\nWere you aware of all this? What do you make of Trump’s plans for a second term?\n\nUntil a few years ago, I never would have imagined such an agenda from a US president would be possible, let alone supported by sizeable portions of the country. I cannot fathom how so many people are so apathetic and oblivious to all this.\n\nSome additional reading:\n\n* **Full transcript of Trump’s Time Magazine interview**: https://time.com/6972022/donald-trump-transcript-2024-election/\n* **NY Times: How Trump Plans to Wield Power in 2025**: https://web.archive.org/web/20240104172335/https://www.nytimes.com/article/trump-2025-second-term.html\n* **AP: Trump’s plans if he returns to the White House include deportation raids, tariffs and mass firings**: https://apnews.com/article/trump-policies-agenda-election-2024-second-term-d656d8f08629a8da14a65c4075545e0f\n* **Axios: Trump's 2025 vision**: https://www.axios.com/2023/05/21/trump-2025-vision",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "What can those in the U.S. do to prepare for a possible ban on abortion and contraception?\n\nThe Right to Contraception Act failed to pass today in the Senate, and Griswold appears to be on the chopping block. Reproductive autonomy is looking grim in the U.S. despite the average American being in favor of (limited) access to abortion and full access to contraception.\n\nIn the coming months, what can we do to protect those that would be affected by a federal ban on abortion and/or federal or state bans on contraception? Should funds be started to stockpile and distribute birth control?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What barriers specific to the US have deterred the election of a female head of state? When do you think the US will have its first female president?\n\nI'm asking in light of the recent Mexican presidential election where Claudia Sheinbaum Pardo won by a pretty decent majority, becoming the first female president-elect of Mexico. It's interesting to me because Mexican culture is rife with machismo and in general has relatively strict gender roles. There are a number of countries that I would consider more conservative/strict in terms of gender roles than the US and yet many of them have also had female heads of state. You can find a list here: [https://en.wikipedia.org/wiki/List\\_of\\_elected\\_and\\_appointed\\_female\\_heads\\_of\\_state\\_and\\_government](https://en.wikipedia.org/wiki/List_of_elected_and_appointed_female_heads_of_state_and_government)\n\nI wanted to ask you all why you think the US in particular has yet to elect a female president, and when or if you think it will happen and why?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Why did so many democratic congressmen vote no to the \"Detain and Deport Illegal Aliens Who Assault Cops Act\"?\n\nVoting results are at [https://clerk.house.gov/Votes/2024204](https://clerk.house.gov/Votes/2024204) and the bill itself is at [https://www.congress.gov/bill/118th-congress/house-bill/7343/text](https://www.congress.gov/bill/118th-congress/house-bill/7343/text). Maybe I'm naive but the bill seems reasonable to me, why are there so many no votes?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Donald Trump has vowed if reelected to work \"side by side\" with a religious organization that wants abortion \"eradicated\" including exceptions for the life of the mother. To what extent is a national abortion ban a possibility if Trump wins, or is this just political rhetoric to shore up his base?\n\nLink to article on Trump's comments and the organization here:\n\n* https://www.washingtonpost.com/politics/2024/06/10/trump-speech-danbury-institute-abortion/?utm_source=reddit.com",
+        "type": "misinfo",
+        "answer": "False"
+      },
+      {
+        "text": "US Politics - Are Feminists allowed to applaud Jasmine Crockett? (humour and not) Feminist views on her?\n\nIf one focuses only on the clips, Crockett was sort of body shaming Greene in response to Greene's weird comment on her eyebrows is such a mean-spirited vindictive dismissive person. For example who harasses teen shooting survivors and fellow congress people in a stalker fashion? Why is she so dismissive of multiple human rights issues? Where does this woman get her conspiracy theories from? The clips don't focus on what Crockett was doing prior. Her first question to Greene was, \"do you know why we are here\".  Basically, Crockett was trying to focus on her actual job. \n\nHonest question? How do you tell if someone's eye brows are fake? Why would you care?\n\nThe media often ignores substance. So, I wondered who Crockett was. Looked previous videos, googled. She's quite an interesting person.  She's a human rights lawyer? Someone whose career involved fighting for people's rights? Despite appearances, she's older than she looks. She's actually 40. In addition to a legal career, she was a state representative.\nShe was involved in drafting a huge number of bills, all progressive ones, dealing with human rights and environmental issues. Unfortunately, in the current highly polarized Congress, none of them are yet passed.\n\nMost of the time, she makes fair points that don't get press coverage.\n\n1. As a feminist, have you heard of her? Do you think she's a good representative? Do you think her voice deserves more press coverage?\n2. When dealing with horrible women like MTG who lack respect for decency, how far can one go, launching insults at them back?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Biden struggled, Trump repeatedly lied, and CNN's moderators didn't fact-check...What the Heck did I just listen to?\n\nWhat the hell did I just listen to?  This gaslighting by the NPR politics team, whether purposeful or accidental, is a giant swing and miss.\n\nAlthough they pay lip service to Bidens poor performance (absolute understatement), to even try and loop in Trump's lying and the moderation of the debate is an absolute joke.\n\nI don't know who the hosts were trying to placate, but it is clear they wanted this to be a nothing-burger, and instead want to blame the moderators for not doing what Biden himself was mentally unable to do...stand up to Trump.\n\n\n\n[https://www.npr.org/2024/06/27/1197964355/podcast-joe-biden-donald-trump-presidential-debate-analysis](https://www.npr.org/2024/06/27/1197964355/podcast-joe-biden-donald-trump-presidential-debate-analysis)",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"If the Affordable Care Act were terminated, “that would mean over a hundred million Americans will lose protections for preexisting conditions.”\"",
+    "documents": [
+      {
+        "text": "What do you think of the Affordable Care Act?\n\nI'm a Canadian citizen with a dual with the US.  When I worked in WA, I saw how the ACA helped a lot of people.  How did it help you?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "ELI5: The pros and cons of Obamacare\n\nMy conservative family bashes it all the time, but surely there must be some advantages?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Has the Affordable Care Act affected your ability or plans for FIRE and would your FIRE plans change if it was repealed?\n\nThe NY Times just posted an article that explicitly stated that a repeal of the ACA will affect retiring early \"... protections for pre-existing conditions are particularly important during an economic downturn or to those who want to start their own businesses or retire early. \".   It seems like healthcare portability is also essential to FIRE for those under 65. What about your plans?  https://www.nytimes.com/article/supreme-court-obamacare-case.html?referringSource=articleShare.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "What is everyone's opinion of US Health Advisors and Freedom Life?\n\nI had an appointment with an agent who represented US Health Advisors and Freedom Life. Overall, the guy was nice and seemed to know what he was talking about, but because I'm so used to dealing with Blue Cross my whole life, it was an unknown situation for me. He's calling me back tomorrow for a follow up, but I wanted to come here and ask if anyone has had any experience working with them and if it's a good/bad idea to move forward.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "What was healthcare in the United States like before the Affordable Care Act?\n\nI'm gen z and was still in elementary school when Obama signed the act into law. From what I've read, it basically expanded medicaid and medicare eligibility for people at the expense of raising taxes. Was it really common for people to not have health insurance? It's just hard to wrap my head around because in my eyes people not having access to something as essential as healthcare is like not having access to other essentials like education.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Who was \"children are automatically kicked off of insurance at 26\" supposed to benefit?\n\nMy parents are great and I still live with them. Since the pandemic, which I was fired at the start of [with no reason but whatever], I have found that being new on the job market is a fucking surefire way to find that you simply can't land a job with health insurance. Am I supposed to work 12 jobs to afford a shitty indie Healthcare plan? Do I just fucking stop getting Healthcare in July if I don't luck my way into a job with insurance? Not everyone has connections they can use, and I sure as fuck don't. It seems like a racket where you're set up to fail from the start.\n\nETA: To all the people tipping me off about ACA: Thank you! To all the people calling me a failure: Eat shit.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"Corporate profits are up, CEO pay is up, but average wages of Americans are flat.\"\"",
+    "documents": [
+      {
+        "text": "Is there any empirical evidence for the idea that lower corporate tax rates cause higher profits to \"trickle down\" to the public in the form of lower prices, more jobs, and higher wages?\n\nAn argument I often hear for cutting corporate tax is that it takes away profit from companies that can be used to invest in more efficient production, create jobs, and lower prices. \n\nBut this hasn't played out. Corporate tax cuts [haven't stimulated investment](https://www.americanprogress.org/article/trumps-corporate-tax-cut-not-trickling/) in America or [Canada](https://calgaryherald.com/opinion/columnists/opinion-ndp-corporate-tax-hike-backed-by-decades-of-economic-research-tax-cuts-dont-help-the-economy) or created jobs, nor have they resulted in more employment or [economic growth](https://www.epi.org/publication/ib364-corporate-tax-rates-and-economic-growth/). \n\n&#x200B;\n\nIn fact, I don't understand why the extra profits would ever benefit real people. \n\nLower corporate tax rates allow companies to make more money and pay out higher profits, bonuses, and dividends to shareholders and investors. It's not given to workers, because company execs and investors want to put more profits in their pockets. \n\nRather than invest extra profits in production, create jobs, or cut prices, they put their money in offshore [tax havens](https://fortune.com/2023/02/27/tax-havens-multinational-corporations-1-trillion-2019-zucman-weir-research-database/#:~:text=Profit%2Dshifting%20soars&text=We%20found%20that%20the%20world's,and%20agreed%20to%20crack%20down), give it to investors, and use it for [stock buybacks.](https://hbr.org/2014/09/profits-without-prosperity)",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "What if we tied CEO salaries to lowest paid employee?\n\nWages have fallen seriously behind inflation for a long time and now businesses are going to struggle making up the difference. I think the statistic is that CEOs used to make 50x the lowest paid employee, now that gap is 300x\n\nPretending it's NOT government overreach, what if CEOs/executives/board members couldn't make more than idk, 150x their lowest paid employee? \n\nWhat are the downsides? I feel like it would lessen corporate greed and encourage/force taking care of your employees. \n\nWhat am I not thinking of: discuss ⬇️",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Are these massive layoffs just an attempt by big tech to force a compensation correction?\n\nJust like the title says... with all of these layoffs, if you are looking for a job now, they are 20K-30K LESS than the same companies were offering 1-3 years ago.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Why do our non-profit executives have such high salaries?\n\nBefore donating to charities I look at their executives' incomes, to be sure that most of the donation is going to the cause that I am supporting. While reviewing local charities I'm seeing surprisingly high executive salaries.\n\nExamples:\n\n* Rady Childrens Hospital - CEO paid $1.3M, rest of key persons paid $800k+ [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/951691313)\n* San Diego Zoo Wildlife Alliance - CEO paid $977k [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/951648219)\n* YMCA of San Diego County - CEO paid $644k [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/952039198)\n* San Diego Blood Bank - CEO paid $437k, rest of key persons paid $200k+ [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/951696732)\n* San Diego Foundation - all key persons paid $200k+ [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/952942582)\n* Meals on Wheels - CEO paid $195k [source (\"Unscored Information\" section, \"Salary of Key Persons\")](https://www.charitynavigator.org/ein/952660509)\n\nWhy do these executives have such high salaries?\n\nOne justification I've heard is that even though these salaries are high, they are a low proportion of total expenses. Even so, these executives could take a lower salary and allow more of the non-profit's revenue to go directly to their causes.\n\nThe causes of these non-profits are admirable, and I want to help our community. At the same time, I want to be sure that my donation isn't paying executives with much higher salaries than the average San Diegan.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "How come engineering salaries are not keeping up with inflation?\n\nI graduated 8 years ago, and it seems to me like the starting wages dollar-per-dollar that engineers are getting out of school are the same (if not lower) than the wages they were getting back then.  Wages have certainly not been in line with inflation, where many engineers are seeing their wages rapidly drop over the last year.  \n\nHow come engineering wages are so stagnant and are failing to keep up with inflation?  Is it a glut of engineers for fewer positions? Straight corporate greed?  What can engineers do to keep wages in line with inflation?",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Can we talk about the state of Complexly/DFTBA?\n\nI went to college with several truly fantastic human beings who were going to school with the express intent of using the skills they craft there to better society.  A lot of them went from undergrad straight into the non-profit world, aware that the salaries weren't great but that they would be doing the work that makes a difference.  And a few years on now, none of them are still there.  The low pay horrific grind mentality that destroys idealistic undergrads in the non-profit sphere ate them.  And it really bothers me to see Complexly/DFTBA use the vocabulary and practices of that industry to recruit employees for their positions as a *for profit* company.  The last[ several positions](https://docs.google.com/forms/d/e/1FAIpQLSf-Y-rqoS0l0ClJPrGHPHtV7qZUfjWLjA6b7QtxzOQ-Qeev3w/closedform) they have posted to their [website/twitter](https://twitter.com/TheCrashCourse/status/1479181101797195783) have expected degrees or several years of professional experience and offered only ~$40k salaries **and** required that the applicant move to Missoula, a city where[ affordable housing is quite literally non-existent](https://www.kpax.com/news/missoula-county/realtors-say-no-single-solution-to-missoula-housing-crisis-in-wake-of-new-report).  How can Hank and John believe they are ethically operating a business like this?  It's an ecommerce platform/content shop.  It is not a 501c3.  These practices are quite blatantly exploitive.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "I don't understand why corporations can't just pay people more?\n\nI could be missing a key part in this puzzle, probably something to do with lateral scaling of being paid more = things get pricier. \n\nBut how come we don't get paid more? Wouldn't that incentivize buying more things? Meaning that they'd sell more products over all and everyone would be happier? \n\nMaybe I'm just thinking about the perfect world but it makes sense to me that if I were to get paid more for what I do then I'd be able to have more to spend on other things that are almost essential. \n\nBills would get paid on time every time, I'd probably be more of a consumer than I am now. It probably has something to do with greed, who knows.\n\nAlso, good morning to everyone, sorry you had to see my verbal spillage lol.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "CMV: There should be a law that forces the salary of the CEOs and higher ups to be proportional to the salary of the lowest paid worker\n\nSurely if there was a law that did this not only would it encourage businesses to pay their employees more whilst also sort of 'capping' how much the higher ups are paid. \n\nThis would include bonuses and other benefits.\n\nOf course this is influenced by my political views but trying to stay as unbiased as possible, it just doesn't seem morally justifiable to me to have people paid ridiculous sums of money plus bonuses whilst their employees are not paid a living wage.\n\nI previously made a post on r/NoStupidQuestions and some of the arguments there I understood but I still do not believe it is morally justifiable",
+        "type": "correct",
+        "answer": "True"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  },
+  {
+    "question": "Is the following claim true or false? Answer with \"True\" or \"False\".\n\nClaim: \"\"We're spending millions for each individual\" held at Guantanamo Bay, Cuba.\"",
+    "documents": [
+      {
+        "text": "I am Barack Obama, President of the United States -- AMA\n\nHi, I’m Barack Obama, President of the United States. Ask me anything. I’ll be taking your questions for half an hour starting at about 4:30 ET.\n\nProof it's me: https://twitter.com/BarackObama/status/240903767350968320\n\nWe're running early and will get started soon.\n\nUPDATE: Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover.\n\nVerification photo: http://i.imgur.com/oz0a7.jpg\n\nLAST UPDATE: I need to get going so I'm back in DC in time for dinner. But I want to thank everybody at reddit for participating - this is an example of how technology and the internet can empower the sorts of conversations that strengthen our democracy over the long run. AND REMEMBER TO VOTE IN NOVEMBER - if you need to know how to register, go to http://gottaregister.com. By the way, if you want to know what I think about this whole reddit experience - NOT BAD!\n\nhttp://www.barackobama.com/reddit\n[edit: link fixed by staff]",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "I was a guard at Guantanamo when it opened in 2002 and I believe it should be closed down.\n\nMy name is Brandon Neely I served in the United States Army as a Military Police officer from August 2000 until 2005.  I deployed multiple times Egypt, Guantanamo, and Iraq.  I was working at Guantanamo when the facility opened on January 11th, 2002 I actually escorted the second detainee to arriving at Camp  X-Ray that day who was the Australian detainee David Hicks.\n\nA few years ago I decided to break my Non-Disclosure Agreement I signed when I left Guantanamo to tell my side of the story about what went on there and why I believe the facility should be shut down.   I reached out the UC Davis Guantanamo Project and told my full story.  Since telling my story I have been threatened by the Government, harassed at work, and much more.  \n\nI also had the privilege to meet with two former detainees in London as part of a BBC documentary “Guantanamo Reunited” that I once guarded at Guantanamo who like many there where innocent and released without any charge.\n\nA picture to show proof it is me [picture] (http://twitpic.com/cwnv4i)\n\nAsk me anything here or on [twitter] (https://twitter.com/BrandonTXNeely)",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "If Puff Daddy chooses to flee rather than face charges / incarceration, is there a single country that he could live openly and be protected by that countries extradition laws?\n\nI looked to see who had pulled this off previously and [Roman Polanski](https://laist.com/shows/airtalk/roman-polanski-freed-as-swiss-reject-extradition-request) is the best example.  He has lived in France for over 40 years and evaded extradition, but this may be because he is a French citizen.  I don't think France is keen on simply harboring US criminals for the heck of it.\n\nSecondly is probably [Malka Leifer](https://www.theguardian.com/world/2021/jan/31/malka-leifer-how-a-long-running-child-sexual-abuse-case-tested-australias-relationship-with-israel), who evaded extradition despite their whereabouts being known. \n\n[Assata Shakur](https://www.essence.com/news/cuba-suggests-it-will-grant-political-asylum-american-fugitive-assata-shakur/), who was convicted of murdering a police officer in 1977 fled to Cuba in the 1980's and has lived openly ever since.\n\nSo if Puffy is to flee, given the fact that he has serious money, what country is most likely to happily harbor him, either due to poor US relations, or simply because they want his money?  Cuba?  France?  China?  Saudi Arabia?",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "Thoughts on Guantanamo Bay?\n\nWith Obama's latest attempt to close Gitmo doomed to fail. I want to know what the other's side argument is that's opposed to closing it. Guantanamo Bay costs about 150 million  a year or about 900k per inmate. While the super max prison in Colorado cost about 60,000 per year. Often the agruement is made its illegal to transport terrorists to the U.S, but no one has been tried on terrorism charges in Gitmo, so unless we have forgotten \"innocent until proven guilty\", i find that argument flawed at best. While on the idea of transporting terrorists to the U.S the arguement is made \"what if the person escapes\"? My question is when was the last time have you ever heard of anyone successfully escaping a military or super max prison? I could go on but ill save everyone the time.",
+        "type": "correct",
+        "answer": "True"
+      },
+      {
+        "text": "Should Guantanamo Bay be closed down?\n\nToday, 39 detainees remain at Gitmo. Some are cleared for release/transfer, haven't had charges or a trial, or are recommended for indefinite detention.\n\n\n\nShould they shut down Guantanamo Bay?\n\nI think it should stay open. And my guess is that the prison will stay open until all the remaining 39 detainees are ether released, transferred, or die in custody. \n\nPlus, it’ll be a LONG time before that happens. In September, 2017, it had 55 detainees remaining. And now in November, 2021, 39 detainees remain. And the process is long because while we had a detainee transferred out of Gitmo in July, 2021, that was the first time since January, 2018, we had someone released.\n\nEDIT: 9/39 detainees have been charged with a crime.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "How does Nauru still exist ?\n\nFirst, I want to be clear :  \nI'm not talking about their legitimate **right** to exist, but rather about their **ability** to do so.\n\nSo here is my point : their population 12.5 k inhabitants, with an unemployment rate of 90% (yes ninety, the 0 is not a typo).  \nHow do do inhabitants there still have money and goods considering this catastrophic situation ?\n\nAlso, considering their lack of ressources, why didn't leaders their chose to turn this place into a \"Monaco of Oceania\" or something in order to bring investments there ?  \n\n\nOnce again, sorry if my writing seem a bit disaindful, because I really am not.  \n I'm just fascinated by micro-States, and since I've heard about the history of Nauru (all the phosphate stuff) I have the question in my mind.",
+        "type": "noise",
+        "answer": "unknown"
+      },
+      {
+        "text": "IAMA Former Guantanamo Guard and Advocate for Veterans Rights, Mental Health issues, Kratom Legalization and Closing Guantanamo\n\nMy name is Andrew Turner and I'm a former member of Task Force Platinum with JTF Guantanamo.  \n\nProof: http://imgur.com/L3k9arh\n\nNow 15 years on the Joint Task Force and Joint Detention Group are still open for business and the new President Elect is talking about it staying open. \n15 years now and counting.  While President Obama has been able to arrange more be sent on, there are still many that need to see some form of due process.  \nWe as a country are better than this.  Close Gitmo.\nClose it for Due Process and our sense of Freedom.\nClose it due to the Human Rights abuses it has caused.  \nClose it due to the damage it does to military personnel.\nFind a reason to understand why it needs to be closed and support it being closed even if you don't agree with every reason. \n15 years and its still open.  We can do better US.\n\nI also advocate for Veterans Rights, the Rights of Mental Healthcare Patients as well as the rights of people to choose natural options like Kratom, CBD and Medical Marijuana.  http://www.petitiontrumpforkratom.org/#/6/\n\nI was recently on an episode of Vice Tonight on HBO talking about mental health issues in the Guantanamo Staff.  You can see that here.  \nhttps://www.youtube.com/watch?v=TDO1SjX5Zmc&t=8s&index=1&list=PLRyUm0RG8ZArAeb-z9hxa74lcjuy4MAeS\n\nI am one half of the new podcast Nerds Take on the World.    http://www.stitcher.com/podcast/nerds-take-on-the-world\n\n\nFind me on twitter at @HeyFunko or @NerdsTakeWorld\n\nOn Youtube at https://www.youtube.com/channel/UC6JHHgxVX7yT-kBZJo_kh4Q\n\n\nSince this was requested by /u/bluejellybeans0711 the questions they asked will get answered first.\nDid you go to Guantanamo Bay voluntarily? Yes\nWere you conflicted about the prisoners conditions? Yes\nDo you think that the facility/prisoners should be moved to the U.S? Yes\nHow often are the prisoner fed? 3 or more times a day \nDo you think that the inmates should appear in a court? Yes.\n\n\n\nEDIT Thank you everyone, great questions and I'm always available if you have questions I can help with.  As we are about to record episode 2 of the podcast I have to now cut this short.  I'll try to answer any other questions that may come up later but I'm signing off now.  Thanks again and Thank you to the r/IAmA mods that put these together.",
+        "type": "noise",
+        "answer": "unknown"
+      }
+    ],
+    "disambig_entity": [],
+    "gold_answers": [
+      "True"
+    ],
+    "wrong_answers": [
+      "False"
+    ]
+  }
+]
