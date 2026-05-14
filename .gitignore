@@ -3,6 +3,7 @@
 __pycache__/
 *.pyc
 data/*/full/
+data/*/raw/
 logs/
 results/
 ppt/

@@ -1,0 +1,1090 @@
+[
+  {
+    "claim_id": "2620",
+    "claim": "“We have a higher deficit with China now than we did before.”",
+    "verdict": "False",
+    "original_verdict": "mostly-false",
+    "document_ids": "[16118, 16119, 16120, 16121]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "16118",
+        "Title": "China's debt-to-GDP ratio climbs to record 287.8% in 2023",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2620",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "16119",
+        "Title": "If GDP PPP is more accurate than nominal GDP, doesn't that mean that China has a larger economy than the US?",
+        "Full Text": "Long time lurker here, forgive me if I make some formatting mistakes in this post.\n\nAs the title states, GDP PPP is a more accurate measure of the size of an economy than nominal GDP, which would mean that China has a larger economy than the United States, according to the IMF. However, I'm questioning myself because even though China's GDP PPP is larger, people still refer to the US as the largest economy in the world. I understand that the US might have more influence in the global economy, but measured in true size, wouldn't China have a larger economy overall?\n\nAny answer is appreciated, thank you!\n\nSource: [https://en.wikipedia.org/wiki/List\\_of\\_countries\\_by\\_GDP\\_(PPP)](https://en.wikipedia.org/wiki/List_of_countries_by_GDP_(PPP)) (\"The first set of data on the left columns of the table includes estimates for the year 2023 made for each economy of the 196 economies (189 U.N. member states and 7 areas of Aruba, Hong Kong, Kosovo, Macau, Palestine, Puerto Rico, and Taiwan) covered by the International Monetary Fund (IMF)'s International Financial Statistics (IFS) database. The data is in millions of international dollars and was calculated and published by the IMF in October 2023.\")",
+        "Claim ID": "2620",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskEconomics/comments/18r2fkv/if_gdp_ppp_is_more_accurate_than_nominal_gdp/"
+      },
+      {
+        "Document ID": "16120",
+        "Title": "China-US Debt",
+        "Full Text": "Hi, I've been thinking about the amount of US bonds the Chinese government and various institutions in their country hold. If the relationship between the two countries becomes more and more antagonistic, and the fact that Sun Tzu is ...Chinese, wouldn't that debt holding be a hidden weapon for China and its BRICS allies to dump US bonds at the wrong time for US? \n\nUS cannot lower interest rates too much, simply because their bonds won't make sense for lenders and they'd have to monetize all the difference, which would further fuel inflation. \n\nWe have military spending that cannot stop, propping up Ukraine and strengthening around China, so a budget deficit is highly unlikely to slow down. If the Chinese dump their bonds, they hold around 17% of total us debt? That would flood the market, lower the bond price, the dollar will collapse and dangerously high inflation might cripple US to the point, where they won't be able to sustain their power stance internationally. Can the Chinese win without fighting? I'm honestly just thinking out loud and super curious how people think about this. Thank you for your time.",
+        "Claim ID": "2620",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/geopolitics/comments/152y65c/chinaus_debt/"
+      },
+      {
+        "Document ID": "16121",
+        "Title": "How is the US both able to maintain such a huge trade deficit, trade imbalance and finance it without any reprocussions?",
+        "Full Text": "The US economy doesn't seem to obey the same laws of macro economics. US debt to GDP is rougly 120% compared to the eurozone at 94% or China at 82%. Similar levels of debt to GDP were seen in Europe during the sovereign debt crisis. That sparked off austerity and attempts to modify the trade deficits by encouraging exports and reducing the cost of labour or increasing productivity.\n\nObviously the huge trade deficit is financed by US debt that they can large forgoe the imediate impacts of loss of exports. Normal countries eventually have a balance of payments crisis but since the dollar is the reserve currency and is propped up by exchange back into dollars it see's its debt get gobbled up by its own external trade surplus partners (Saudi Arabia, China).  I think most people are aware of that.\n\nWhat does this mean for the future? The US trade isnt some permanent geographic fixture it largely seems to have become facto since 1976. That isnt that long ago. However with the current level of debt can the US keep indefinitely financing its debts? Especially if bonds start to rise in interest rates?\n\nI dont understand how they are able to simultaneously maintain such a huge level of debt and such a high trade deficit.  The deficit by percentage of GDP is - 6.8 %. The general consensus is to run at a slight deficit its pretty staggering they can infinitely spend money with no apparent consequences\n\n[https://www.statista.com/statistics/217428/us-budget-balance-and-forecast-as-a-percentage-of-the-gdp/](https://www.statista.com/statistics/217428/us-budget-balance-and-forecast-as-a-percentage-of-the-gdp/)\n\nCompare that to Greece:\n\n[https://countryeconomy.com/deficit/greece](https://countryeconomy.com/deficit/greece)\n\nI am obviously not comparing US to Greece, only that both can enjoy similar levels of debt to GDP deficits and one has huge consequences for the nation and other other adds trillions of dollars in value via the big IT coorporations and suffer no ill effects besides some higher costs for debt refinancing.\n\nIt is really all down to the dollar being the king currency? What would be the future implications? It seems at 120+% and higher interest rates looking to stay it isnt like they can rely on free money ? Could there be a return to austerity or cutting back?",
+        "Claim ID": "2620",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskEconomics/comments/17p0jx4/how_is_the_us_both_able_to_maintain_such_a_huge/"
+      }
+    ]
+  },
+  {
+    "claim_id": "457",
+    "claim": "\"In every single country, she had a majority of the vote -- or more of those who'd already made up their minds.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[2798, 2799, 2800, 2801]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "2798",
+        "Title": "As an American, how much does my vote actually matter?",
+        "Full Text": "With the electoral college and millions of other people voting, does my vote even matter? I get that it matter metaphorically as a symbol for democracy in this country but I struggle to think that my vote matters.",
+        "Claim ID": "457",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/TooAfraidToAsk/comments/1asjmcw/as_an_american_how_much_does_my_vote_actually/"
+      },
+      {
+        "Document ID": "2799",
+        "Title": "[OC] US Electoral College Results if electors were chosen proportionally to votes, instead of winner takes all (2000 - 2020)",
+        "Full Text": "[Link Post]",
+        "Claim ID": "457",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/gallery/kwzxkc"
+      },
+      {
+        "Document ID": "2800",
+        "Title": "Eurovision 2024 Detailed Results: Voting & Points",
+        "Full Text": "[Link Post]",
+        "Claim ID": "457",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "2801",
+        "Title": "Would splitting electoral college votes by district more closely resemble a popular vote?",
+        "Full Text": "Two states, Maine and Nebraska, award electoral votes by district, allowing candidates to split the votes in those states. All the other states are a winner take all situation, awarding all electoral votes to the majority vote getter statewide. \nHow would awarding electoral college votes by district in every state have changed the last two elections, if at all?",
+        "Claim ID": "457",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/PoliticalDiscussion/comments/1c00vac/would_splitting_electoral_college_votes_by/"
+      }
+    ]
+  },
+  {
+    "claim_id": "103",
+    "claim": "\"At the beginning of the last decade ... America had a budget surplus of over $200 billion. By the time I took office, we had a one-year deficit of over $1 trillion and projected deficits of $8 trillion over the next decade.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[643, 644, 645, 646, 647, 648, 649]",
+    "document_labels": "['unrelated', 'unrelated', 'misleading', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "643",
+        "Title": "The U.S. National Debt is Rising by $1 trillion About Every 100 Days",
+        "Full Text": "[Link Post]",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "644",
+        "Title": "Should SpaceX be worth $200B?",
+        "Full Text": "After seeing some news about Elon having more of his net worth in SpaceX than Tesla it really got me thinking how SpaceX could justify its valuation.  I understand it’s private and a lot of numbers are hidden but just taking a step back I wonder if it makes sense.  Or is it really just demand to buy these inflated share prices from employees because of FOMO?  \n\nFrom what I’ve gathered, a year ago SpaceX had a valuation of $150B, then $180B end of last year, and finally $200B coming end of this month.  Like I understand there is good money for Starlink and launching payloads but how can that already justify a 12 digit valuation?  I remember a quote about 1 starship being built everyday and it boggles the mind but really how much cargo will needed to be lifted to LEO and how big can the TAM be for space travelled and remote internet?  \n\nAnyways I’m still super excited about the progress and would just like to get thoughts of those who have been looking at this longer than I have - and would welcome any thoughts from current investors.  In fact what would you be expecting the value to be 5 years out, and even 10 years out?  And if Starlink spins out what percentage of the market cap would you assume that to be?",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/SpaceXLounge/comments/1dckwhf/should_spacex_be_worth_200b/"
+      },
+      {
+        "Document ID": "645",
+        "Title": "200 Billion ",
+        "Full Text": "I'm doing a rewatch and herd the funniest thing. Jed ( can we do this Angela.) Angela ( yes sir.) Jed ( without the deficit topping $200 Billion?)  \n\nI realize that was a long time ago but compared to today's deficit what would that be? Correct me if I'm wrong aren't we in the trillions now. How long ago did we have a surplus cause at some point in my life I thought I heard something about a surplus. ",
+        "Claim ID": "103",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/thewestwing/comments/1e5ukds/200_billion/"
+      },
+      {
+        "Document ID": "646",
+        "Title": "I don't care if it's 200 Billion...",
+        "Full Text": "[Link Post]",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/gallery/1bg2cyw"
+      },
+      {
+        "Document ID": "647",
+        "Title": "Hacked AWS Account is facing $200,000+ in charges after support ticket",
+        "Full Text": "After about a month of going back and forth with AWS support for my account, I am now being told I am liable for most of the total amount of the original bill of $213,000.  I've been in contact with AWS support for 4 weeks, and now they are refusing to answer my questions about the situation and continue replying with a copy / pasted message saying \"they've done everything they can\".\n\nNeedless to say, I'm living through one of the worst months of my life.  This bill is basically a life ending amount of money, and I'm not sure what to do at this point.  Initial messages from AWS were fairly encouraging basically saying this type of thing can happen from time to time, and I have no need to worry.  A similar story came out of my initial chat with a support representative at AWS.\n\nI'm looking for any direction for other people who have gone through a similar incident, or any one else I might be able to contact since AWS support seems like it isn't willing to help anymore.\n\n**9/14/2022 EDIT:**\n\nAfter getting some help from people reaching out in this thread, I was able to get my account revisited by the Executive Customer Relations team again at AWS.  They seemed pretty responsive and thorough looking over my invoice.\n\nAfter messaging with them back and forth for about a week or so, my entire invoice was waived!  I really appreciate anyone who was able to reach out and increase visibility on this issue to get AWS to take another look at the obviously unauthorized charges on my account.\n\nI just deleted my AWS account today after having my invoice waived and confirmed with support that it is finally safe to do so.\n\n**Moving Forward**  \nIt would be really nice to see Amazon make a change to AWS security to greatly reduce the frequency of problems like this from occurring.  I'm certainly no expert, but it seems like there is something that should be done.  These problems are fairly common from what I've observed over the past month or so, just usually not reaching 6 figures like mine did.\n\nSomeone in the thread made a suggestion to require MFA to be setup when creating a new account.  Would something like this or something with else similarly low friction be possible to increase the amount of security these very dangerous accounts can have?",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/aws/comments/x03vay/hacked_aws_account_is_facing_200000_in_charges/"
+      },
+      {
+        "Document ID": "648",
+        "Title": "Americans owe $1 trillion in credit card debt",
+        "Full Text": "[Link Post]",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "649",
+        "Title": "The Cost of Ace Combat 7",
+        "Full Text": "Soooo… on another post I’d wondered how much money got sank during Mission 11, the glorious Fleet Destruction.  I was considering going through that mission and trying to tally it all up, when I suddenly had a thought.  What about the rest of the war?  How much money does Trigger personally send up in flames?  This is what I created.  I find math fun, because apparently I was conceived on Opposite Day.  Unit costs are included next to each item.\n\nDisclaimers: Many of these have an unknown value due to either unlisted costs or being fantasy designs, so I tried to assign appropriate pricetags.  Also, this was just during one playthrough, and it wasn’t always a 100% clearing of the board.  Individual results may vary.  Also, I didn’t even bother with Mission 8’s refinery; I just lumped everything into one charge.  AA guns mounted on platforms or ships aren’t included here.  Also, keep in mind, this is ***just*** the hardware seen.  This doesn’t bring into account cargo, fuel, munitions, or wasted missiles.\n\n***AIR***\n\n\\--A-10: 10  (\\~$45 million)\t\t\t\t\tT: $450M\n\n\\--AC-130U: 1 ($210 million)\t\t\t\tT: $210M\n\n\\--ADFX-10: 1  (Unknown. est. $200 million)\tT: $200M\n\n\\--ADF-11F: 2  (Unknown, est. $500 million)\tT: $1B\n\n\\--AH-64D: 92  ($33 million)\t\t\t\t\tT: $3.036B\n\n\\--AV-8B: 28  ($24 million)\t\t\t\t\tT: $672M\n\n\\--B-52: 3  (\\~$58 million)\t\t\t\t\tT: $174M\n\n\\--C-17: 3   ($218 million)\t\t\t\t\tT: $654M\n\n\\--CH-47: 11  ($38.5 million)\t\t\t\t\tT: $423.5M\n\n\\--F2A: 7   ($127 million)\t\t\t\t\tT: $889M\n\n\\--F-14D: 14  ($38 million)\t\t\t\t\tT: $532M\n\n\\--F-15C: 7   ($30 million)\t\t\t\t\tT: $210M\n\n\\--F-15E: 1   ($31 million)\t\t\t\t\tT: $31M\n\n\\--F-15J: 10   ($30 million)\t\t\t\t\tT: $300M\n\n\\--F-16C: 18  ($19 million)\t\t\t\t\tT: $342M\n\n\\--F/A-18F: 30  ($29 million)\t\t\t\t\tT: $870M\n\n\\--F-22: 4   ($150 million)\t\t\t\t\tT: $600M\n\n\\--YF-23: 4  (Unknown, est. $150 million)\t\tT: $600M\n\n\\--F-35C: 7   ($107 million)\t\t\t\t\tT: $749M\n\n\\--F-4E: 4   ($19 million)\t\t\t\t\t        T: $76M\n\n\\--F-117: 1  ($111 million)\t\t\t\t\tT: $111M\n\n\\--Gripen E: 13  (\\~$45 million)\t\t\t\tT: $585M\n\n\\--IL-76: 2   (Unknown, est. $50 million)\t\tT: $100M\n\n\\--MiG-21: 34  ($10 million)\t\t\t\t\tT: $340M\n\n\\--MiG-29: 16  ($22 million)\t\t\t\t\tT: $352M\n\n\\--MiG-31: 9  (Unknown, est. $30 million)\t\tT: $270M\n\n\\--Mirage 2000: 14 (Unknown, est. $25 million) T: $350M\n\n\\--MQ-99: 76  (EADS Barracuda, Unknown cost, est. $10 million) T: $760M\n\n\\--MQ-101: 138  (Northrop Grumman X-47B, Unknown unit cost, est. $20 million)\n\nT: $2.76B\n\n\\--Rafale: 13  ($79 million)\t\t\t\t\tT: $1.027B\n\n\\--Su-30: 6   ($37.5 million)\t\t\t\t\tT: $225M\n\n\\--Su-33: 22   (Unknown, est. $35 million)\t\tT: $770M\n\n\\--Su-34: 7   ($36 million)\t\t\t\t\tT: $252M\n\n\\--Su-35: 30   (Est. $50 million)\t\t\t\tT: $1.5B\n\n\\--Su-37: 4   (Unknown, est. $40 million)\t\tT: $160M\n\n\\--Su-47: 2   (Unknown, est. $50 million)\t\tT: $100M\n\n\\--Su-57: 4   ($50 million)\t\t\t\t\tT: $200M\n\n\\--Supply Ship: 2 (Unknown, est. $200 million) T: $400M\n\n\\--Tu-95: 29  (Uncertain, awkward to calculate, est. $20 million) T: $580M\n\n\\--Tu-160: 14  (Unknown, estimate based on B-1 Lancer of $400 million) T: $5.6B\n\n\\--Typhoon: 8  (\\~$102 million)\t\t\t\t   T: $816M\n\n\\--Weapon UAV: 4 (Unknown, est. $10 million)   T: $40M\n\n\\--X-02S: 1  (Unknown, est. $250 million)\t\t   T: $250M\n\n**AIR TOTAL:** $28.866 Billion USD\n\n***Ground***\n\n\\--AA Gun: 199  (est. $1 million)\t\t\t\t   T: $199M\n\n\\--AD Tank: 15  \t(2K22 Tunguska?, no data, est. $4 million) T: $60M\n\n\\--APC: 60   \t(BMP-3, unit cost fluctuating, est. $2 million) T: $120M\n\n\\--Bridge: 2\t\t\t(est. $500 million)\t   T: $1B\n\n\\--Container Box/Truck: 17\t(est. $2 million)\t   T: $34M\n\n\\--Control Tower: 2\t(\\~$2 million)\t\t\t   T: $4M\n\n\\--Gas Tank: 12\t\t(est. $1 million)\t\t   T: $12M\n\n\\--Howitzer: 5\t\t(2S19 Msta, \\~$3 million)\t   T: $15M\n\n\\--Oil Tank: 6\t\t(est. $1 million)\t\t\t    T: $6M\n\n\\--Radar Facility: 14\t(est. $20 million)\t\t    T: $280M\n\n\\--Radar Vehicle: 12\t(est. $15 million)\t\t     T: $180M\n\n\\--Rocket Truck: 13\t(est. $3 million)\t             T: $39M\n\n\\--SAM: 78\t\t\t(est. $2 million)\t\t     T: $156M\n\n\\--SPC: 3\t\t\t\t(?)\n\n\\--Searchlight: 10\t\t(Negligible)\n\n\\--Tank: 61   \t(T-90, $4.5 million)\t\t\t      T: $274.5M\n\n\\--Tanker Truck: 22 \t(est. $200K)\t\t\t       T: $4.4M\n\n\\--Truck: 15\t\t\t(est. $200K)\t\t\t       T: $3M\n\n\\--Warehouse: 25\t\t(Depends on contents, est. $1 million) T: $25M\n\n\\--Watchtower: 8\t\t(est. $250K)\t\t\t        T: $2M\n\n\\--XSAM: 15\t\t\t(est. $3 million)\t\t\tT: $45M\n\n**GROUND TOTAL:** $2.458 Billion USD\n\n***Sea***\n\n\\--Aegis: 4   (*Admiral Gorshkov,* est. $1.8 billion, based on the cost of *Arleigh Burkes*\\-class) T: $7.2B\n\n\\--Battlecruiser: 3 (*Kirov*\\-class, cost unknown, est. $2 billion) T: $6B\n\n\\--Carrier: 1   (*Admiral Kuznetzov*, cost unknown, est. $4 billion) T: $4B\n\n\\--Cruiser: 6   (*Slava*, est. $1 billion, based on cost of *Ticonderoga*\\-class) T: $6B\n\n\\--Destroyer: 16  (*Sovremmeny?*, cost unknown, est. $500 million) T: $8B\n\n\\--Frigate: 19  (*Admiral Gorgorovich,* est. $150 million, using data from a few different classes) T: $2.85B\n\n\\--Gunboat: 16\t(est. $30 million) T: $480M\n\n\\--Missileboat: 5\t(est. $50 million) T: $250M\n\n\\--Tanker: 8   (\\~$43 million, not factoring in oil lost) T: $344M\n\n**SEA TOTAL:** $27.924 Billion USD\n\n***Other***\n\n\\--MASSIVE Oil facility: Based on a cursory internet search, the facility was likely worth $5-15 Billion dollars, ignoring the oil within.  Based on that and the defenses, I’m going to peg that at the high end: ($15 billion)\n\n\\--The Refueling Platforms: An offshore oil rig is on average $650 million, but these seem to be more storage than drilling.  There’s no good way to calculate this, but between all the facilities and defenses, I’ll tentatively call it: ($5 billion)\n\n\\--2x Arsenal Birds: While a ***hugel***y expensive piece of kit probably worth something around $10-30 billion USD a pop, there’s one thing to remember: Erusea didn’t build them.  So Erusea only lost munitions and drones.\n\n\\--8x IRBM’s: The only IRBM I could find a price tag for is the Indian *Agni-III*, so we’ll use its pricetag of $5 million, so in total $40 million.\n\n\\--Aegis Ashore: I don’t even know.  I’m just going to call that thing $1 billion due to Aegis-related equipment.\n\n***GRAND TOTAL:*** **$80,288,000,000 USD**, or eighty billion, two-hundred eighty-eight million US dollars.\n\nI think it’s safe to say that Trigger is a one-man economic crisis.\n\n&#x200B;\n\nP.S.: Sorry about the formatting.  Translating this from Word to Reddit didn't go so hot.\n\nEdit 1: Formatting, because it was even worse than I thought.\n\nEdit 2: Corrected ship identifications.\n\nEdit 3: Holy cow, gold?!  Dang, I can't thank you enough.",
+        "Claim ID": "103",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/acecombat/comments/av4xum/the_cost_of_ace_combat_7/"
+      }
+    ]
+  },
+  {
+    "claim_id": "1127",
+    "claim": "\"We spend a staggering amount of money on health care — over $2-trillion and almost twice as much as any other country per person.\"",
+    "verdict": "True",
+    "original_verdict": "half-true",
+    "document_ids": "[6960, 6961, 6962, 6963, 6964]",
+    "document_labels": "['supporting', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "6960",
+        "Title": "Medicare for All Is Even Better Than You Thought: Previous estimates suggested that Medicare for All would save $2 trillion. But it's even better: a new study finds that the bill would save $5.1 trillion — while providing universal, comprehensive coverage.",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1127",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "6961",
+        "Title": "How do Scandinavian countries manage to spend so much on welfare, pensions, healthcare, etc., yet still manage to keep Debt-to-GDP ratios quite low? ",
+        "Full Text": "One thing that I've wondered about is the following. Scandinavian countries are known for their high welfare spending. Everything form unemployment protections, to pension programs, and healthcare coverage is heavily subsidized or entirely covered by taxpayer money. With the rising aging population, these systems are expected to get worse, and in some cases have already gotten worse. \n\nYet, despite all of this Norway, Denmark, and Sweden manage to keep their Debt-to-GDP ratio below 50%, and manage to balance budgets. Compared to the UK, US, Japan, etc. who proportionally spend less as a percentage of GDP on healthcare, pensions, and welfare schemes, they still seem to outperform them when it comes to keeping debt low. \n\nHow do they achieve this? ",
+        "Claim ID": "1127",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskEconomics/comments/1cf8d4f/how_do_scandinavian_countries_manage_to_spend_so/"
+      },
+      {
+        "Document ID": "6962",
+        "Title": "[Self] I did basic math calculations just to see how much would be needed. ",
+        "Full Text": "[deleted]",
+        "Claim ID": "1127",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "6963",
+        "Title": "The US spends roughly 1 trillion on welfare - but why is US welfare and standard of living still so bad?",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1127",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/socialism/comments/1craf1n/the_us_spends_roughly_1_trillion_on_welfare_but/"
+      },
+      {
+        "Document ID": "6964",
+        "Title": "Mercatus Study Finds Medicare for All Saves $2 Trillion in 10 Years",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1127",
+        "Document Label": "unrelated",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "1004",
+    "claim": "\"Throughout, we have kept Congress fully informed of our efforts\" to create a legal framework on counterterrorism.",
+    "verdict": "False",
+    "original_verdict": "false",
+    "document_ids": "[6169, 6170, 6171, 6172, 6173, 6174, 6175, 6176, 6177, 6178]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'supporting', 'unrelated', 'unrelated', 'unrelated', 'supporting', 'unrelated', 'supporting']",
+    "documents": [
+      {
+        "Document ID": "6169",
+        "Title": "If federal law always supersedes state law then why is weed legal in half of the States? ",
+        "Full Text": "\nWeed is illegal federally. \n-\nUsing this as an analogy what if the State of NJ passed a law to allow citizens to purchase RPG’s? But it’s illegal federally. \n\nEdit 1: \n\nOk i get illegal weed usage isn’t being enforced federally but if someone challenges these laws they would be overturned at the state level, right?",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/legaladviceofftopic/comments/1fa0xfk/if_federal_law_always_supersedes_state_law_then/"
+      },
+      {
+        "Document ID": "6170",
+        "Title": "Do you regret studying IR or not? I personally feel scammed by the IR degree seeing the reality of job market",
+        "Full Text": "I don't know if it's only me, but finding internships and low entry level roles in IR are just IMPOSSIBLE ahahahah (I'm living in France)\n\nI feel like anyone who is specialized in one sector could work in NGOs or  for the government as a policy advisor or something like that, but I feel like IR degree is wayyyy too general (at least to employers' eyes), and job market being just so harsh..\n\nWell, there is EU but it is not as easy as I have thought. I guess that is the reason why IR graduates first work in companies to then later join NGOs?\n\nWhat are your thoughts on IR degree? Are you proud or do you regret studying IR?\n\n\\*\\* I am also a future graduate next year so not trying to criticize IR degree or anything :)",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IRstudies/comments/1e10tfc/do_you_regret_studying_ir_or_not_i_personally/"
+      },
+      {
+        "Document ID": "6171",
+        "Title": "Why do the individuals that are pro-Palestine not condemn the actions of Hamas?",
+        "Full Text": "&#x200B;\n\nLet me clarify that I consider myself neutral in this current affair and having looked at what has happened over the decades I think collectively it should be fairly easy to agree on the following as of late.\n\n1. Israel has not been operating under international law for quite some time\n2. Hamas's actions on the 7th were terrible\n3. Israel's treatment of the issue over the decades and current response has been awful.\n\nHowever, in the western world the first question any reporter or journalist asks a pro-Palestine is whether they condemn what happened on October 7th.\n\nAlmost all of the responses reject the notion of the question and answer loosely on the lines of 'all loss of human life is tragic.'\n\nSome recent examples:\n\n[https://www.youtube.com/watch?v=j8TGW10jkCM&t=85s](https://www.youtube.com/watch?v=j8TGW10jkCM&t=85s)\n\n[https://www.youtube.com/watch?v=KEUElq-T5TI&t=629s](https://www.youtube.com/watch?v=KEUElq-T5TI&t=629s)\n\n[https://www.youtube.com/watch?v=qy\\_QxWU8IOk&t=719s](https://www.youtube.com/watch?v=qy_QxWU8IOk&t=719s)\n\nLogically I can't see why these people can't condemn the actions on the 7th and then go on to say all of the valid points of occupation and what not after. Instead almost every interview is the same in the sense that the BBC/Sky will just ask the same question, clarify it, confirm it, repeat it and we very rarely go in to anything else of substance.\n\nConversely, people who are pro-Israel are not asked whether they condemn what they have done to the Palestinians in the past or the degree in which the manner they occupy is just or legal. They may ask about international law but they certainly don't push the fact Israel has been non-compliant.\n\nSo my question is why is it that people who are pro-Palestine find it difficult to condemn Hamas and vice versa why is the western media and the pro-Israelis not condemning the loss of civilian life amongst the Palestinians?\n\nWhy can't we agree that both are bad?\n\n**Disclaimer: I didn't title this 'why don't pro-israelis not condemn the actions of their PM against plaestinians simply because october 7th is the latest news where there are loads of interviews flying about but equally would love to hear why israelis don't criticise their own as Israel is clearly the occupying force - why are they ok with how their government treats fellow human beings? Shouldn't they understand what it's like to be singled out and targeted more than anyone?**\n\n&#x200B;",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/geopolitics/comments/17g1lsx/why_do_the_individuals_that_are_propalestine_not/"
+      },
+      {
+        "Document ID": "6172",
+        "Title": "Did the Saudis actually fund and help the attackers involved in 9/11? If so, was their reasoning?",
+        "Full Text": "I see this theory espoused a lot on Reddit but I struggle to find anything when I search on the internet. Moreover, the reason for *why* it would happen is bewildering… assuming that the saudis didn’t fear a retribution from America, wouldn’t the idea that they’re going to attack something which would damage them as well stop them? Not quite sure.",
+        "Claim ID": "1004",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/AskHistorians/comments/12ujpzs/did_the_saudis_actually_fund_and_help_the/"
+      },
+      {
+        "Document ID": "6173",
+        "Title": "What International Conflicts or Events Should Anyone Interested in IR Have a Good Understanding Of?",
+        "Full Text": "I'm wondering if there is an existing post or list with some of the wars, conflicts, events, relationships, and tensions that anyone interested in IR would ideally have for a well-rounded understanding of international affairs more broadly.",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IRstudies/comments/sp3fwv/what_international_conflicts_or_events_should/"
+      },
+      {
+        "Document ID": "6174",
+        "Title": "Cmv: The majority of people supporting Palestine in the west don't know what they are really supporting.",
+        "Full Text": "[deleted]",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "6175",
+        "Title": "Do not drone in Vegas!",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://v.redd.it/1p6hlujfyc1c1"
+      },
+      {
+        "Document ID": "6176",
+        "Title": "Has the C.I.A. Done More Harm Than Good? In the agency’s seventy-five years of existence, a lack of accountability has sustained dysfunction, ineptitude, and lawlessness.",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1004",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "6177",
+        "Title": "[E3 2021] Ubisoft Forward Conference",
+        "Full Text": "#Livestreams\n\n[Ubisoft on YouTube](https://www.youtube.com/watch?v=ydOv_hunhjE)\n\n[Ubisoft on Twitch](https://www.twitch.tv/ubisoft)\n\n[**LIVE THREAD UPDATES**](https://www.reddit.com/live/174vh32gyuna5?)\n\n**Join us on the [/r/Games Discord](https://discord.gg/zRPaXTn)!**\n\nShow is over but we'll be updating this megathread with links to trailers and discussion threads!\n\n#Game Trailers and Announcements\n\n[Watch Dogs: Legion - Bloodline Announce Trailer](https://www.youtube.com/watch?v=c0nhtYy-A90)\n\n[Rainbow Six Extraction: Cinematic Reveal Trailer](https://www.youtube.com/watch?v=oFzsANuSbdw)\n\n[Rocksmith+ Announce Trailer](https://www.youtube.com/watch?v=1mNf_H2qHsA)\n\n[Rocksmith+ Studio Interview](https://www.youtube.com/watch?v=AWsGqnuSne4)\n\n[Riders Republic Official Deep Dive Trailer](https://www.youtube.com/watch?v=9Uu6Ca2EcN4)\n\n[Rainbow Six Siege: North Star Story Trailer](https://www.youtube.com/watch?v=njfw9e26PQA)\n\n[Tom Clancy’s Ghost Recon Breakpoint: 20th Anniversary Trailer](https://www.youtube.com/watch?v=EU61soBf7zI)\n\n[Just Dance 2022: Todrick Hall Announce Trailer](https://www.youtube.com/watch?v=z1pd-Tc2-wA)\n\n[Assassin's Creed Valhalla: Upcoming Content Recap](https://www.youtube.com/watch?v=BvpiRKasDKY)\n\n[Far Cry 6: Meet the Villain: Antón Cinematic](https://www.youtube.com/watch?v=tNKNr4qIaRc)\n\n[Far Cry 6: Season Pass Trailer | Become The Villain](https://www.youtube.com/watch?v=jApILgm0wiE)\n\n[Mario + Rabbids Sparks of Hope](https://www.youtube.com/watch?v=krnZL-E-LXA)\n\n#Discussion Threads and Other News\n\n[Rainbow Six Extraction](https://redd.it/nydzxb)  \n\n[Rocksmith+](https://redd.it/nye5vx)\n\n[Riders Republic](https://redd.it/nye99j)\n\n[Rainbow Six Siege: North Star](https://redd.it/nyehhh)\n\n[Just Dance 2022](https://redd.it/nyek38)\n\n[Far Cry 6: Meet the Villain](https://redd.it/nyerjv)\n\n[Far Cry 6 Season Pass](https://redd.it/nyesxk)\n\n[Mario + Rabbids: Sparks of Hope](https://redd.it/nyexxi)\n\n[Avatar: Frontiers of Pandora](https://redd.it/nyf644)\n\n\n**If you want to post a game discussion thread, please [follow our formatting requirements for E3](https://www.reddit.com/r/Games/comments/nsikf7/e3_2021_plans_for_e3_2021_in_rgames_volunteer/).**",
+        "Claim ID": "1004",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/Games/comments/nyc5lv/e3_2021_ubisoft_forward_conference/"
+      },
+      {
+        "Document ID": "6178",
+        "Title": "Outrageous Contempt of Congress",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1004",
+        "Document Label": "supporting",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "915",
+    "claim": "\"The number of new businesses started per year has dropped by 100,000 during this president’s term.\"",
+    "verdict": "True",
+    "original_verdict": "half-true",
+    "document_ids": "[5588, 5589, 5590, 5591]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "5588",
+        "Title": "I own a successful drop shipping business that just made 100k in sales last month and expecting 650k total for 2016. Ask me almost anything!",
+        "Full Text": "[deleted]",
+        "Claim ID": "915",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "5589",
+        "Title": "What business would you start if you had 100k?",
+        "Full Text": "I have time and 100k. I’ve always done reselling for a side income and sometimes it has surpassed my main income.\n\nHowever, it’s inconsistent and I feel like it may not be something that you can grow into an actual business, so I’m looking for ideas. Thanks",
+        "Claim ID": "915",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/smallbusiness/comments/181j1i3/what_business_would_you_start_if_you_had_100k/"
+      },
+      {
+        "Document ID": "5590",
+        "Title": "In 2015 El Salvador had an homicide rate of 103 per 100,000 habitants. Today that is down to 7.8 per 100,000 but president Nayib Bukele did it by limiting constitutional rights. Would you support such an approach in your country if it was facing such a level of violence (see more below)?",
+        "Full Text": "According to [this guy](https://twitter.com/feguz77/status/1622780483892396037), among the measures implemented by Bukele was that the police could arrest anyone they want for 15 days if they think he/she is suspicious.   Thousands have been arrested that way, and about a hundred have died in prison.",
+        "Claim ID": "915",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/asklatinamerica/comments/10wfeg0/in_2015_el_salvador_had_an_homicide_rate_of_103/"
+      },
+      {
+        "Document ID": "5591",
+        "Title": "I’m thinking of buying a Range Rover but this chart is a concern to me. Do you owner think it’s overblown?",
+        "Full Text": "[Link Post]",
+        "Claim ID": "915",
+        "Document Label": "unrelated",
+        "Link": "https://i.redd.it/desvf6ay62j91.jpg"
+      }
+    ]
+  },
+  {
+    "claim_id": "572",
+    "claim": "\"More than 3 million young adults ... have gained insurance under (the Affordable Care Act) by staying on their family’s plan.\"",
+    "verdict": "True",
+    "original_verdict": "half-true",
+    "document_ids": "[3458, 3459, 3460, 3461]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "3458",
+        "Title": "Americans, how much are you paying for private healthcare insurance every month?",
+        "Full Text": "*Edit: So many comments, so little time 😄 Thank you to everyone who has commented, I'm reading them all now. I've learned so much too, thank you!*\n\nI discussed this with my husband. My guess was €50, my husband's guess was €500 (on average, of course) a month. So, could you settle this for us? 😄",
+        "Claim ID": "572",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/NoStupidQuestions/comments/16gn5el/americans_how_much_are_you_paying_for_private/"
+      },
+      {
+        "Document ID": "3459",
+        "Title": "In New York state, is every single healthcare plan 700 $ dollars a month? Is there seriously nothing lower ?",
+        "Full Text": "I work for myself with no employees, so my only network is what is available on the marketplace .gov.\n\nCurrently within my network (location) the cheapeast is health first . bronze metal that includes medical and dental $650\n\n&#x200B;\n\nthen as it stealidly moves into silver it gets to 780-850 range which is ambetter from fidelis care\n\n&#x200B;\n\nWhen I hear friends talk about getting good health insurance from their 9-5 jobs, I never hear any of those health providers. I often hear aetna, blue cross shields, united, metlife, guardian, kaiser..\n\nBut I can't get access to them until I run a company with employees or I work for a company.\n\nWhat is the advantage of some of these insurance company vs what I get from the marketplace? I imagine it is because they get special vip treatment? also a larger network that accepts them?\n\nIn case of an emerency I don't want to pay 850 to be taken to the ER and still have to wait in a life/death situation because I am limited by the hopsitals that would take what the gov. site offers.\n\n&#x200B;\n\nI'm in my 30s M, (still quite young)\n\nOther than doing any risky adventures, I may still be subjected to paying something just because I haven't met the deductible.\n\n&#x200B;\n\nmost procedures that are comestic like mole removal, or plastic surgery will not be cover, so why even get the insurance to benefit from\n\nI currently pay \\~ 800-1000 , 2 visits per year at my general dentist. that includes a yearly x-ray, which is expensive, so i was hoping insurance will cut that down more ",
+        "Claim ID": "572",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/personalfiNonece/comments/18cdg60/in_new_york_state_is_every_single_healthcare_plan/"
+      },
+      {
+        "Document ID": "3460",
+        "Title": "ELI5: Why people don't like the Affordable Care Act",
+        "Full Text": "I just enrolled my family and while it's a bit more expensive than our current coverage, I don't have to worry about preexisting conditions and additional coverage for maternity for my wife. $520 per month with $3k deductible and $6500 max out of pocket. Nothing to bitch about, IMO\n\n-EDIT: Thanks for all the comments.  It's really helpful to hear others opinions as I'm isolated and only hear by family bitch about various aspects.",
+        "Claim ID": "572",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/explainlikeimfive/comments/1spsh2/eli5_why_people_dont_like_the_affordable_care_act/"
+      },
+      {
+        "Document ID": "3461",
+        "Title": "I’m young and dumb. Why is health insurance necessary if it seems they won’t help pay anything?",
+        "Full Text": "So, I’m currently 20, living in Missouri, and I’m on my parents’ insurance. According to my mom, her insurance covers herself and my brother(17) and I, while my dad’s insurance covers himself(they are married but apparently the 4 of us on one plan is too expensive). My mom is complaining that insurance is $15,000 a year, but every time we have any sort of problem, they basically refuse to pay anything. For example, I went to the doctor’s about serious migraines, and they suggested getting an MRI, and made an appointment with a hospital. My dad and I got there, and the woman/receptionist-ish person that usually collects copays was saying that the fee was unusually high and that she was wondering if there was some sort of issue with our insurance or something, because the amount she was supposed to collect was upwards of $2,000. We left without the MRI, I called the financial office and left a voicemail and they never called back. Then, my mom contacted our insurance, and basically, they said they won’t pay anything until it costs at least some amount (more than the MRI) and after it costs that much -I think past $3,500 or something- it would be, like, “whatever they deem necessary”. If it’s any info at all, we have Blue Cross Blue Shield insurance, but I don’t have more specifics than what she’s said basically. I also don’t know all their financial info, but I know they make less than 6 figures a year. \n\nI really don’t understand that. Why is she paying them all this money if they won’t pay for anything? If she didn’t have to pay them $15,000 every year, she could easily afford the MRI and any other medical issues we have. We are for the most part healthy but obviously the odd thing happens every now and then. Can she just, like… not pay for the plan? Why isn’t that an option? I hear that some services might cost more if you’re uninsured, but given what I’m seeing here, I don’t understand. ",
+        "Claim ID": "572",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/HealthInsurance/comments/1dzitfj/im_young_and_dumb_why_is_health_insurance/"
+      }
+    ]
+  },
+  {
+    "claim_id": "420",
+    "claim": "\"If you're a … wealthy CEO or a … hedge fund manager in America right now, your taxes are … lower than they've been since the 1950s.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[2568, 2569, 2570, 2571, 2572, 2573]",
+    "document_labels": "['unrelated', 'misleading', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "2568",
+        "Title": "What do people who own houses in the Hamptons do for a living? ",
+        "Full Text": "I’m a young male pursuing a finance degree from the South. Just got super curious and fixated on the Hamptons/Nantucket houses and was just curious if anybody knows how these people accumulated such wealth. I know a lot of the houses have probably been in the families for centuries, but figured I would ask.",
+        "Claim ID": "420",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/Rich/comments/1dajstn/what_do_people_who_own_houses_in_the_hamptons_do/"
+      },
+      {
+        "Document ID": "2569",
+        "Title": "Is there any empirical evidence for the idea that lower corporate tax rates cause higher profits to \"trickle down\" to the public in the form of lower prices, more jobs, and higher wages?",
+        "Full Text": "An argument I often hear for cutting corporate tax is that it takes away profit from companies that can be used to invest in more efficient production, create jobs, and lower prices. \n\nBut this hasn't played out. Corporate tax cuts [haven't stimulated investment](https://www.americanprogress.org/article/trumps-corporate-tax-cut-not-trickling/) in America or [Canada](https://calgaryherald.com/opinion/columnists/opinion-ndp-corporate-tax-hike-backed-by-decades-of-economic-research-tax-cuts-dont-help-the-economy) or created jobs, nor have they resulted in more employment or [economic growth](https://www.epi.org/publication/ib364-corporate-tax-rates-and-economic-growth/). \n\n&#x200B;\n\nIn fact, I don't understand why the extra profits would ever benefit real people. \n\nLower corporate tax rates allow companies to make more money and pay out higher profits, bonuses, and dividends to shareholders and investors. It's not given to workers, because company execs and investors want to put more profits in their pockets. \n\nRather than invest extra profits in production, create jobs, or cut prices, they put their money in offshore [tax havens](https://fortune.com/2023/02/27/tax-havens-multinational-corporations-1-trillion-2019-zucman-weir-research-database/#:~:text=Profit%2Dshifting%20soars&text=We%20found%20that%20the%20world's,and%20agreed%20to%20crack%20down), give it to investors, and use it for [stock buybacks.](https://hbr.org/2014/09/profits-without-prosperity)",
+        "Claim ID": "420",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/AskEconomics/comments/170gyee/is_there_any_empirical_evidence_for_the_idea_that/"
+      },
+      {
+        "Document ID": "2570",
+        "Title": "Serious question; where does the money come from?",
+        "Full Text": "Hi all! \n\nI see a couple type of posts in here every day;\n\n1) Why is Marin so expensive, seriously how can anyone live here?\n\n2) We're moving to Marin / looking for [profession]. The money isn't a problem.\n\nFor reference: I'm closer to #1 than #2. we make it work by working hard and spending carefully. I'm not saying people with money aren't entitled to benefits from it, and I'm not saying that it shouldn't be a little easier to live here.\n\nBut I wonder where all the people buying multimillion-dollar two bedroom homes get the money to afford things like that. Traditional well-regarded careers don't seem to cut it. I've had a heck of a time getting skilled services (ie doctors) because *they* say they can't afford to live here. \n\nDoes everyone have a 2m+ a year job? If so: What kind is it? If not, how are y'all affording it?",
+        "Claim ID": "420",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/Marin/comments/17uhx32/serious_question_where_does_the_money_come_from/"
+      },
+      {
+        "Document ID": "2571",
+        "Title": "Just Horrible",
+        "Full Text": "I am a 40 year customer with fidelity. Retirement investing is quite a bit more complicated than using etf’s to set and forget in 30,s-40s-50s. The combination of being unsatisfied with my returns with an independent advisor and being contacted by fidelity for a wealth planning meeting I decided to meet with fidelity and possibly move my entire portfolio to them. The first meeting the contact was nice enough and compiled info for a VP to call. The VP was clueless and I ended the call abruptly. I was contacted again and assured the new VP would be able to steer me on the right path.\n\nI met with the original contact, a VP and someone on Zoom. I said I was interested in tax strategies in retirement, preservation of wealth, cash flow in retirement, reducing risk, growth, legacy, etc. The big red flag was their knowledge of Social Security claiming strategies. My wife started claiming at her FRA $1300 monthly. I am deferring til 70 in 2 years and my benefit at FRA is $3800. They were all adamant my wife would not qualify for top off spousal benefits as she already claimed. The VP claimed he was working for Fidelity for 18 years and has helped 2000 people retire. I’ts only $600 more extra per month but hey, it adds up. Right then and there Fidelity lost all credibility.  So everything else they said regarding cash flow and portfolio advice was skewed. They were all also very wrong about the tax treatment of Roth conversion earnings and the 5 year rule.\n\nThe SS office was right around the corner so I stopped in. The SS lady confirmed the advice the Fidelity “advisor” was offering was wrong and my wife could indeed claim and then top off when I claimed at 70 but had nothing clear in writing in any of its publications. I wound up on Fidelity’s claiming strategy calculator that confirmed also they were wrong.\n\nThe SS lady was and should be eye opening to everyone. She said so called wealth management professionals;some with pretty big firms come in all the time and are shown they are wrong. At least those are the ones that seek the correct info. Look how many are advised wrong by just this one “Financial Consultant”. Just criminal, just horrible.\n\nAfter 40 years I will move everything out of Fidelity to……Schwab, Vanguard, Edelman…..who knows.\nI would manage myself with a Vanguard or Schwab but want a contact I trust my wife can use if I pre-decease.\n\nSorry for the long rant. Nobody cares about your financial well being more than you.",
+        "Claim ID": "420",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/fidelityinvestments/comments/1an26rv/just_horrible/"
+      },
+      {
+        "Document ID": "2572",
+        "Title": "Why do people always advocate index funds instead of property?",
+        "Full Text": "As far as I can tell, many of the so called 'boomers' that are wealthy are wealthy as a result of equity in the various property they own.\n\nApart from 2008 it seems that Brexit and the pandemic has done very little to suggest property prices aren't going to do the same thing they haven't done for half a century.\n\nThe usual argument against buying a BTL is the cost of maintaining a property, the hassle, work and tax etc. However, as soon as we have a conversation about buying property in the UK the first thing people do is complain about the price and how easy the previous generation had it.\n\nSo why aren't we advocating on this sub-reddit the idea that investing in property has and is likely going to be super ideal in the long term alongside investing in passive index funds and the sort (diversified portfolio).\n\nAll of the people I know from my parents generation that are wealthy are wealthy because of properties. Very few of them had high incomes/stocks.",
+        "Claim ID": "420",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/UKPersonalFiNonece/comments/12kik93/why_do_people_always_advocate_index_funds_instead/"
+      },
+      {
+        "Document ID": "2573",
+        "Title": "AFR: How to turn a six-figure salary into lifelong wealth",
+        "Full Text": "# How to turn a six-figure salary into lifelong wealth\n\nHigh earner, but not rich yet? Here’s how to rework your financial future to become a high net worth individual.\n\n  \nhttps://www.afr.com/wealth/personal-finance/how-to-turn-a-six-figure-salary-into-lifelong-wealth-20240605-p5jjcg?",
+        "Claim ID": "420",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AusHENRY/comments/1dvjfjh/afr_how_to_turn_a_sixfigure_salary_into_lifelong/"
+      }
+    ]
+  },
+  {
+    "claim_id": "2234",
+    "claim": "The Charleston, S.C., shooter \"should have never been given a gun, but the universal background check was not fast enough.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[13542, 13543, 13544, 13545, 13546]",
+    "document_labels": "['misleading', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "13542",
+        "Title": "Universal Background Checks Won't Stop Mass Shootings",
+        "Full Text": "More than most gun subs there seems to be a fair amount of support here for the policy of \"Universal Background Checks\".  \n\nWhile I can appreciate people wanting to do something to address the senseless violence of mass shootings, I think it's misguided to expect this to have any impact whatsoever on this particular problem. \n\nThe problem is that restricting private transfers accomplishes nothing when nearly every mass shooter acquired their gun through a licensed dealer and passed a background check.  The few that didn't pass their firearms through legal retail channels, mostly stole their guns from family members.  In fact I'm not aware of a single mass shooting carried out with a firearm purchased through an (otherwise legal) unlicensed private transfer.\n\nThis seems to be the go-to policy response to these events, but it just doesn't hold up to scrutiny. Just \"doing something\" doesn't make good policy.\n\nSo I personally ran through the major mass shootings of 2019 and 2018 to ascertain how the shooters obtained their weapons.  **I have not found a single instance where a mass shooter used the so-called \"private sales loophole\" to avoid a background check.**\n\n### Event: Dayton Bar Shooting\n\nDate: August 4, 2019\n\nDeaths: 9\n\nAttacker: Connor Betts\n\nGun Acquisition: **TBD, Initial reports indicate no criminal history**\n\nSources: https://www.daytondailynews.com/news/local/bellbrook-police-conduct-investigation-home/74z9iRBtYqBqxOQ6kSsdzL/\n\n\n### Event: El Paso Walmart\n\nDate: August 3, 2019\n\nDeaths: 22\n\nAttacker: Patrick Crusius\n\nGun Acquisition: **TBD**\n\n### Event: Gilroy Garlic Festival\n\nDate: July 28, 2019\n\nDeaths: 3\n\nAttacker: Santino Legan\n\nGun Acquisition: **Passed background check**\n\nSources: https://www.sfchronicle.com/crime/article/Source-Gilroy-Garlic-Festival-shooter-s-rifle-14201639.php\n\n### Event: Virginia Beach Shooting\n\nDate: May 31 2019\n\nDeaths: 12\n\nAttacker: DeWayne Antonio Craddock\n\nGun Acquisition: **Passed background check**\n\nSources: https://abcnews.go.com/US/suspected-virginia-beach-gunman-resigned-personal-reasons-massacre/story?id=63449625\n\n### Event: Aurora Illinois Shooting\n\nDate: February 15, 2019\n\nDeaths: 5\n\nAttacker: Gary Montez Martin\n\nGun Acquisition: **Issued Illinois FOID card after background check failed to turn up prior conviction**\n\nSources: https://en.wikipedia.org/wiki/Aurora,_Illinois_shooting\n\n### Event: Parkland Florida\n\nDate: February 14, 2018\n\nDeaths: 17\n\nAttacker: Nikolas Cruz\n\nGun Acquisition: **Passed background check**\n\nSources: https://en.wikipedia.org/wiki/Stoneman_Douglas_High_School_shooting\n\n### Event: Thousand Oaks Shooting \n\nDate: November 7, 2018\n\nDeaths: 12\n\nAttacker: Ian David Long\n\nGun Acquisition: **No serious criminal history, gun legally purchased.**\n\nSources: https://abcnews.go.com/US/thousand-oaks-mass-shooter-legally-purchased-45-caliber/story?id=59054278\n\n### Event: Pittsburgh synagogue shooting\n\nDate: October 27, 2018\n\nDeaths: 11\n\nAttacker: Robert Bowers\n\nGun Acquisition: **Passed background checks**\n\nSources: https://abcnews.go.com/US/pittsburgh-synagogue-shooting-suspect-discharged-hospital-set-make/story?id=58825389\n\n### Event: Santa Fe High School shooting\n\nDate: May 18, 2018\n\nDeaths: 10\n\nAttacker: Dimitrios Pagourtzis\n\nGun Acquisition: **Minor, stole guns legally owned by parents**\n\nSources: https://en.wikipedia.org/wiki/Santa_Fe_High_School_shooting\n\n### Event: Capital Gazette shooting\n\nDate: June 28, 2018\n\nDeaths: 5\n\nAttacker: Jarrod Warren Ramos\n\nGun Acquisition: **Passed background check**\n\nSources: https://thinkprogress.org/ramos-legally-obtained-gun-c0b79a09b0e8/\n\n### Event: Sutherland Springs Church Shooting\n\nDate: November 5, 2017\n\nDeaths: 25\n\nAttacker: Devin Patrick Kelley\n\nGun Acquisition: **Passed background check, because domestic violence conviction from the US Air Force was not reported**\n\nSources: https://en.wikipedia.org/wiki/Sutherland_Springs_church_shooting\n\n....\n\nThis follows on a similar effort I performed about a year ago and [posted to this sub](https://www.reddit.com/r/liberalgunowners/comments/742db8/mass_shootings_are_a_bad_way_to_understand_gun/dnv1nyl/), but that isn't as neatly formatted as above\n\n\n>As an exercise I decided to run down the list of [top ten deadliest mass shooting in the US](http://www.marketwatch.com/story/these-are-the-10-deadliest-mass-shootings-in-us-history-2017-10-02).\n>\n>* The Vegas shooter had no criminal history, he passed the background check.  \n>\n>* The Pulse nightclub shooter had no criminal history, he passed the background check.  \n>\n>* The Virginia Tech shooter passed the background check, though it later turned out there was an involuntary mental health commitment that never made it into the appropriate databases.  This lead to bipartisan and NRA-supported reforms via the [NICS Improvements Amendments Act of 2007](https://en.wikipedia.org/wiki/NICS_Improvement_Amendments_Act_of_2007).\n>\n>* The Sandy Hook shooter had no criminal history and would have had no problem passing a background check, but he just killed his mother in her sleep and took her guns.\n>\n>* I'm going to skip #5 through #8 since they all predate the 1993 Brady law which instituted the modern background check system.\n>\n>* The (male) San Bernadino shooter had no criminal history, and passed the background check to purchase two of the pistols used in the attack.  Even though he could have just purchased them himself, two of the rifles used in the attack were purchased by an acquaintance and illegally transferred to them because California already mandates universal background checks. \n>\n>* The Ford Hood shooter had no criminal history, and was active duty military. He passed the background check.\n>\n>This pattern also holds if you look into prominent mass shootings that fell outside of the \"top 10\":  \n>\n>The Aurora theater shooter bought his weapons at retail, passing the background check.  The shooter in Tucson who attacked Gabby Giffords passed a background check.  The Washington Navy Yard shooter passed the background check (and had a DOD security clearance).  The Isla Vista shooter passed the background check.  The Birmingham immigration center shooter passed the background check.\n>\n>The Charleston Church Shooter passed the background check, because the examiner failed to find a drug possession charge which technically should have disqualified him.  Though I think many of us would argue that simple possession shouldn't even be a crime in the first place.",
+        "Claim ID": "2234",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/liberalgunowners/comments/cmi6ij/universal_background_checks_wont_stop_mass/"
+      },
+      {
+        "Document ID": "13543",
+        "Title": "Do you believe background checks should be required fire firearms purchases?",
+        "Full Text": "If so, how extensive/in depth?\n\nFor clarification, I know we have extensive background checks in place already. Just want to know your guys opinions on what you think would be best.\n\nEdit: Seeing the conversations in this thread has changed some of my opinions regarding this topic. For reference, I supported background checks for mental health and criminals but, as many of you pointed out, that does next to nothing. Some people also mentioned that we should keep violent criminals out of society until they’ve shown they can be reintegrated as a law abiding citizen. ",
+        "Claim ID": "2234",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/brandonherrara/comments/1dkf6gw/do_you_believe_background_checks_should_be/"
+      },
+      {
+        "Document ID": "13544",
+        "Title": "Thoughts on UBC?",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2234",
+        "Document Label": "unrelated",
+        "Link": "https://i.redd.it/54ozmcvvkzma1.jpg"
+      },
+      {
+        "Document ID": "13545",
+        "Title": "Gun owners of reddit, what means of reducing gun violence do you support?",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2234",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskReddit/comments/9xvrg5/gun_owners_of_reddit_what_means_of_reducing_gun/"
+      },
+      {
+        "Document ID": "13546",
+        "Title": "What gun laws are or aren’t reasonable?",
+        "Full Text": "I want to preface this by saying I am not a gun owner, I was NRA certified to fire a handgun but never owned a gun. I don’t care to be around them, and I am a liberal who typically supports various forms of gun control. \n\nSo why am I here? I want to hear the perspective of you all and better understand how gun owners feel about gun control, what constitutes it, and what (if any) laws are appropriate. I forget to be open minded at times so I am here to learn not to argue or debate.",
+        "Claim ID": "2234",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/VAGuns/comments/r48ont/what_gun_laws_are_or_arent_reasonable/"
+      }
+    ]
+  },
+  {
+    "claim_id": "357",
+    "claim": "\"I supported (the surge), I argued for it. I'm the only one on this stage that did.\"",
+    "verdict": "False",
+    "original_verdict": "false",
+    "document_ids": "[2192, 2193, 2194, 2195]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "2192",
+        "Title": "I am Barack Obama, President of the United States -- AMA",
+        "Full Text": "Hi, I’m Barack Obama, President of the United States. Ask me anything. I’ll be taking your questions for half an hour starting at about 4:30 ET.\n\nProof it's me: https://twitter.com/BarackObama/status/240903767350968320\n\nWe're running early and will get started soon.\n\nUPDATE: Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover.\n\nVerification photo: http://i.imgur.com/oz0a7.jpg\n\nLAST UPDATE: I need to get going so I'm back in DC in time for dinner. But I want to thank everybody at reddit for participating - this is an example of how technology and the internet can empower the sorts of conversations that strengthen our democracy over the long run. AND REMEMBER TO VOTE IN NOVEMBER - if you need to know how to register, go to http://gottaregister.com. By the way, if you want to know what I think about this whole reddit experience - NOT BAD!\n\nhttp://www.barackobama.com/reddit\n[edit: link fixed by staff]",
+        "Claim ID": "357",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IAmA/comments/z1c9z/i_am_barack_obama_president_of_the_united_states/"
+      },
+      {
+        "Document ID": "2193",
+        "Title": "100% Honest Take on Google Gemini",
+        "Full Text": "It's a broken, inaccurate LLM chatbot that requires you to have it replaced Google Assistant. Google released this about 6 months premature. And you know what they say about a premature release. \n\nIt leaves Google embarrassed, the app left broken in useless, and the installer unsatisfied and now searching elsewhere for an app that will meet their needs. And in the meantime, they'll just have to take care of things themselves.\n\nI think by the end of 2024, we could potentially see a well functioning and useful app that works as both a proper and intelligent LLM chatbot and a fully integrated assistant with all of Google Assistant's functionality restored. But, considering Google's recent track record over the past few weeks, I'm not sure how comfortable I'd be taking that bit. I think it's just as likely that Google will allow its recent history to repeat and the very moment Gemini starts looking like it has promised and potential,  and once Google's loyal consumer base eagerly installs it on every Android device they have, Google will shut down all future development and instead hand out promises of improvement piecemeal.\n\nI personally leave that if Google doesn't change their bait and switch software promises, greedy advertisement force feeding, and truly epic proportions of inability to understand or empathize with their consumer base, we might be seeing the first death throws of one of the largest companies to ever exist in human history. \n\nYeah yeah, I know that sounds paranoid and granulously prophetic, but look at how history played out when Google was young, intelligent and eager as they stepped up to the plate against Yahoo. Yahoo thought they were too big to fall, and it never surprises me when I meet someone from the Gen z persuasion that either hasn't heard of Yahoo or believes they were actually the top dogs before Google came sniffing around.\n\nI'm not claiming Google's going to disappear, but when you get so big that you spend several years unable to understand your own company's financial mortality and believe it's too big and too immune to ever be threatened by the changing financial landscape. History repeats, and it's been pretty entertaining (though frustrating) to see Google tuck its tail, quiver and fear, and rush to get such an embarrassing product out to the market because someone else beat them to the punch in such a threatening and highly successful way. \n\nI'm not sure if Open AI has actually began to be a profitable company yet, but I love seeing a company with more talent, creativity and intelligence than money come out on top.",
+        "Claim ID": "357",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/google/comments/1axn2gi/100_honest_take_on_google_gemini/"
+      },
+      {
+        "Document ID": "2194",
+        "Title": "What does Christopher Eccleston mean when he says he didn't like the politics of season 1?",
+        "Full Text": "I'm not even sure what he could be referring too.",
+        "Claim ID": "357",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/gallifrey/comments/18iwtp0/what_does_christopher_eccleston_mean_when_he_says/"
+      },
+      {
+        "Document ID": "2195",
+        "Title": "Why are so many people in the US military against conscription when it works fine for so many other countries?",
+        "Full Text": "The Nordics have it, Poland has it, Switzerland has it, Israel has it, SK has it. Singapore has it. They're all doing fine militarily, so why do so many in the armed forces see it as a bad idea?",
+        "Claim ID": "357",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/WarCollege/comments/1921yur/why_are_so_many_people_in_the_us_military_against/"
+      }
+    ]
+  },
+  {
+    "claim_id": "2419",
+    "claim": "When Terry McAuliffe was governor, “Unemployment went down in every single county, including rural Virginia by nearly 50%.",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[14702, 14703, 14704, 14705]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "14702",
+        "Title": "With the new Fox poll showing a tie, apparently Virginia is in play",
+        "Full Text": "To me this is the most shocking poll so far this cycle…as that tweet shows, some other pollsters also show a close race, but I don’t trust them as much as a good Fox poll.\n\nI’m torn between thinking there has to be something fundamentally broken in polling, or just that Biden really is that unpopular.",
+        "Claim ID": "2419",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "14703",
+        "Title": "Noem's Dirty Laundry List",
+        "Full Text": "It occurs to me that perhaps, if people saw them all listed in one place, more people would understand just why re-electing Her Orangeness is detrimental to the state of South Dakota and why We the People need to work towards finding a viable candidate to go up against her.\n\nI know this will evolve/devolve however it does, but I'm looking to list legitimately irritating/disturbing things she has done since taking office. Feel free to include links to better inform those who may have missed something.",
+        "Claim ID": "2419",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/SouthDakota/comments/px5e22/noems_dirty_laundry_list/"
+      },
+      {
+        "Document ID": "14704",
+        "Title": "What factors are trending Georgia towards the left ?",
+        "Full Text": "538 just put Georgia in the blue part of their projection snake for the presidential race. \n\n>With the addition of a [new Quinnipiac University poll](https://poll.qu.edu/georgia/release-detail?ReleaseID=3679) showing him 7 percentage points ahead there — more about that poll in a moment — Biden’s chances in Georgia rose from 46 percent to 51 percent.  \n>  \n>In 2016, Trump won Georgia by only 5 points in an election where he lost the popular vote by 2 points nationally\n\nWhat is causing this otherwise \"Bible Belt\" conservative state to trend blue ? Is this just anti-Trump sentiment or is this part of the broader trend seen in other Southern states like Texas ?\n\n[Source](https://fivethirtyeight.com/features/will-georgia-turn-blue/)",
+        "Claim ID": "2419",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/PoliticalDiscussion/comments/jbi167/what_factors_are_trending_georgia_towards_the_left/"
+      },
+      {
+        "Document ID": "14705",
+        "Title": "Gov.-elect Glenn Youngkin announces he will pull Virginia out of Regional Greenhouse Gas Initiative",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2419",
+        "Document Label": "unrelated",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "1729",
+    "claim": "Says \"Elizabeth Warren lied when she says I want to abolish the Federal Minimum Wage.\"",
+    "verdict": "False",
+    "original_verdict": "mostly-false",
+    "document_ids": "[10585, 10586, 10587, 10588, 10589]",
+    "document_labels": "['supporting', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "10585",
+        "Title": "Elizabeth Warren, noted champion of minimum wage, pays her own interns $0/hr",
+        "Full Text": "[Link Post]",
+        "Claim ID": "1729",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "10586",
+        "Title": "This sub's very own Betsy article discussion on $10,000 forgiveness",
+        "Full Text": "[https://www.marketwatch.com/story/id-love-to-be-married-now-i-would-love-to-be-a-dad-by-now-id-love-to-have-a-home-by-now-the-winners-and-losers-in-bidens-plan-to-cancel-10-000-in-student-loan-debt-11654266954?mod=home-page](https://www.marketwatch.com/story/id-love-to-be-married-now-i-would-love-to-be-a-dad-by-now-id-love-to-have-a-home-by-now-the-winners-and-losers-in-bidens-plan-to-cancel-10-000-in-student-loan-debt-11654266954?mod=home-page)",
+        "Claim ID": "1729",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/StudentLoans/comments/v45ex7/this_subs_very_own_betsy_article_discussion_on/"
+      },
+      {
+        "Document ID": "10587",
+        "Title": "CMV: Canceling student loan debt is not a progressive priority. Warren, AOC, Sanders, etc shouldn't be championing it.",
+        "Full Text": "Hey peeps. I'm a progressive voter who supported Ilhan Omar and Elizabeth Warren (I'm in MN). I have a masters degree and about $20K in student loan debt. However I don't understand why canceling student loan debt is a progressive policy that is being championed by the likes of Warren, Bernie, AOC, and others. Change my view that this is a policy that won't address underlying issues with student debt but it will further divide class lines.\n\nI understand that total student loan debt (>$1.5 trillion) has now surpassed total credit card debt (<$1trillion) to become the second largest form of debt in America (after mortgages). I acknowledge that's a concern. This has been driven by increases in the costs of higher education, increased/eliminated caps on borrowing for students and parents, the rise in for-profit colleges, the increasing number of people attaining college and especially graduate school, and more.\n\nHowever, only about 1 in 8 Americans has student loan debt and the average amount is about $32K. While I understand that some people drop out of college and get the debt without the benefit, that is not emblematic of people who have student loan debt in general...an individuals who graduate college tend to make significantly more than those who don't (\\~$75K/year vs $45K/year). Additionally there are income-based repayment plans for student loans that are an option which tie your repayment to your discretionary income and forgive anything you have left after a set number of years. Why should we cancel, on average, $30K in student loan debt for citizens who make, on average $30K more per year than non-college graduates?\n\nSo, again, why is canceling student loan debt seen as a progressive policy being championed by the likes of Warren and Bernie and AOC, etc?\n\nSomeone change my view that it would be more progressive and effective strategy to:\n\n1. Address underlying issues causing the increase in student loan debt. Simply canceling student loan debt simply resets our debt back towards zero but then it will start accumulating all over again. Congress needs to address how we got in this situation.\n2. Give every American a big ol' check. If someone wants to spend their big bailout on paying off a bunch of student loan debt, that's their prerogative. And if I want to spend it paying down credit card debt first, that's my choice based on my biggest need. And if a low income family wants to use it to buy a car to have reliable transportation to a better job, that's their opportunity to get ahead.\n\nIf we could lift every American out of poverty and provide universal healthcare and check a whole lot of other boxes then I'd be all for moving down the list to eventually forgiving student loans...but I don't understand or support why it's an issue that is getting so much attention now.\n\nForgiving student loans will disproportionately help middle and upper class Americans while providing no benefit to our most impoverished and marginalized citizens, and it will do nothing to address the systemic issues that created the debt in the first place. Change my view.",
+        "Claim ID": "1729",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/changemyview/comments/lmpmwb/cmv_canceling_student_loan_debt_is_not_a/"
+      },
+      {
+        "Document ID": "10588",
+        "Title": "What are long term solutions to to the student loan/tuition inflation crisis?",
+        "Full Text": "What are policies that could be made that address the issue of student loans and college attendance cost? I see a lot of post talking about making loans generally more attractive to borrowers through methods such as reducing rates, forgiveness, etc. But don't see how that doesn't just raise people's debt tolerance and by extention college attendance cost. What are things we can do to structurally lower the cost of attendance and more generally the amount that the average person goes into debt to pursue their degrees? Would there be tradeoffs to availability and to what degree would that be worth it?\n\nWould love to hear your thoughts and feel free to push back on the premises I laid out here if you think they're incorrect.",
+        "Claim ID": "1729",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/StudentLoans/comments/143yisy/what_are_long_term_solutions_to_to_the_student/"
+      },
+      {
+        "Document ID": "10589",
+        "Title": "Kamala Harris wants to prevent raising grocery prices, how does a government in a free-market prevent corporate ’price-gouging’ without other serious ramifications?",
+        "Full Text": "[https://www.nytimes.com/2024/08/15/business/economy/kamala-harris-inflation-price-gouging.html](https://www.nytimes.com/2024/08/15/business/economy/kamala-harris-inflation-price-gouging.html)\n\nHow would something like this be enforced by legislation?\n\nIs there precedent like this in US history? Are there other parts of the world where legislation like this has succeeded in lowering prices without unintended consequences?",
+        "Claim ID": "1729",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/NeutralPolitics/comments/1et9gs3/kamala_harris_wants_to_prevent_raising_grocery/"
+      }
+    ]
+  },
+  {
+    "claim_id": "131",
+    "claim": "\"Buffalo protester shoved by Police could be an ANTIFA provocateur. 75 year old Martin Gugino was pushed away after appearing to scan police communications in order to black out the equipment ... Was aiming scanner. Could be a set up?\"",
+    "verdict": "False",
+    "original_verdict": "false",
+    "document_ids": "[808, 809, 810, 811, 812, 813, 814]",
+    "document_labels": "['supporting', 'supporting', 'supporting', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "808",
+        "Title": "75-year-old protester pushed by Buffalo police files lawsuit against city, mayor and officers",
+        "Full Text": "[Link Post]",
+        "Claim ID": "131",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "809",
+        "Title": "Buffalo, N.Y., police officers cleared of wrongdoing after shoving elderly man to ground at protest",
+        "Full Text": "[Link Post]",
+        "Claim ID": "131",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "810",
+        "Title": "Trump Spreads Baseless Conspiracy Theory That Video of Buffalo Cops Pushing Elderly Man Was Antifa ‘Set Up’",
+        "Full Text": "[Link Post]",
+        "Claim ID": "131",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "811",
+        "Title": "Why do so many conservatives overlook January 6th? ",
+        "Full Text": "This is something I can’t bring myself to understand. Yes, BLM was wrong, any kind of violence is wrong. But why are conservatives willing to overlook an obviously violent event just because it’s not politically convenient? ",
+        "Claim ID": "131",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskConservatives/comments/1b366a6/why_do_so_many_conservatives_overlook_january_6th/"
+      },
+      {
+        "Document ID": "812",
+        "Title": "Seattle Protests Resource Megathread",
+        "Full Text": "Hello /r/Seattle, I hope you're all staying safe and healthy! \n\nThis thread is temporarily replacing the weekly stickied events thread, and will serve as a single source of information about the current protests. We won't be forcing all posts to this thread (except for links to Facebook livestreams, which aren't typically allowed on reddit for privacy reasons), but this should at least reduce the repeated requests for the same information. Please add any resources or current protest information you want to share in the comments below.\n\n\n**Livestream Resources:**\n\n* [Woke Twitch: US protest live multistream](https://www.twitch.tv/woke)\n\n* [Model_2 Twitch: Seattle protest live multistream](https://www.twitch.tv/model_2)\n\n* [fieldcharge Twitch: Seattle protest live multistream](https://www.twitch.tv/fieldcharge)\n\n* [Google Docs compilation of livestreams and videos](https://docs.google.com/spreadsheets/u/9/d/e/2PACX-1vRwy_RmqgnDQiYnzJDpvQA3t_q1XgJB42L1PrzDj9yLhhoSf899fH51fSnIaWwNNX1qELmyH9I2qQhc/pubhtml)\n\n* [Map of current or recent protest livestreams](https://evolvegis.com/Protests/Protests.html)\n\n\n**General Resources:**\n\n* [BLM Seattle King County Statement on Protests during COVID](http://blacklivesseattle.org/blm06032020statement/) (they have not organized any of them)\n\n* How to stay safe during a tear gas attack [tiktok](https://vm.tiktok.com/E52qng/) | [Youtube](https://www.youtube.com/watch?v=37rjkr2pHz0)\n\n* [General compilation of live streams and protest times](https://www.blmseattle.com)\n\n* [Protest advice from a Hong Kong protester](https://www.reddit.com/r/Seattle/comments/gw8lwb/some_protest_advice_from_a_hong_kong_protester/)\n\n* [What to wear/bring to a protest](https://www.reddit.com/r/Seattle/comments/gwbd08/seattle_protests_resource_megathread/fsviisl/)\n\n* [Article: How to protest during a pandemic and still keep everyone safe](https://theconversation.com/how-to-protest-during-a-pandemic-and-still-keep-everyone-safe-from-coronavirus-6-questions-answered-139978)\n\n* [Article: EFF: Surveillance Self-Defense while Attending a Protest](https://ssd.eff.org/en/module/attending-protest)\n\n\n**Where to donate:**\n\n* [NW Community Bail Fund](https://www.nwcombailfund.org/)\n\n* [BLM Seattle Bail Fund](https://blacklivesseattle.org/bail-fund/)\n\n* [George Floyd Memorial Fund](https://www.gofundme.com/f/georgefloyd)\n\n* [Additional donation links](https://blacklivesmatters.carrd.co/#donate)\n\n* [Seattle Protest Aid google doc](https://docs.google.com/spreadsheets/u/0/d/1dg2S1EGUvCZlOOIbvrFeFaaM7A-fKKXrFXFI0jLTi-A/htmlview#gid-1036460639)\n\n\n**Voting Information:**\n\n* [Register to vote](https://www.kingcounty.gov/depts/elections/how-to-vote/register-to-vote.aspx)\n\n* [Information on policies that would help reduce police violence](https://8cantwait.org/)\n\n\n**Resources on how to be a better Ally:**\n\n* [BLM Resources](https://blacklivesmatter.com/resources/)\n\n* [TED Article: How you can be an ally in the fight for racial justice](https://ideas.ted.com/how-you-can-be-an-ally-in-the-fight-for-racial-justice/)\n\n* [Article: Ally Resources For Supporters Of Black Lives Matter](https://www.swaay.com/ally-resources-black-lives-matter)\n\n* [Article: Before you check in on your black friend, read this](https://www.refinery29.com/en-us/2020/06/9848854/check-in-black-friends-colleagues-what-to-say)\n\n\n**Restrooms:**\n\n* [Google Map](https://www.google.com/maps/d/u/0/viewer?mid=16FWsmAj1t7biby7V75NIYTan6WPeGdhw&ll=47.61534717396556%2C-122.32077378405988&z=17)\n\n* Portapotty’s; 11th & Olive\n\n* Vermillion; 1508 11th Ave\n\n* Annex Theater; 1100 E. Pike St\n\n* Bang; 723 E. Pike St\n\n* Rudy’s; 614 E. Pine St",
+        "Claim ID": "131",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/Seattle/comments/gwbd08/seattle_protests_resource_megathread/"
+      },
+      {
+        "Document ID": "813",
+        "Title": "Good ol' Artur P and Co charged under Public Health Act for this weekend's Anti-Mask Protest",
+        "Full Text": "[Link Post]",
+        "Claim ID": "131",
+        "Document Label": "unrelated",
+        "Link": "https://i.redd.it/c7235cb6lu261.jpg"
+      },
+      {
+        "Document ID": "814",
+        "Title": "Portland man under suspicion in mass shooting fixated on city’s protests, homeless problem, neighbors and family say",
+        "Full Text": "[Link Post]",
+        "Claim ID": "131",
+        "Document Label": "unrelated",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "123",
+    "claim": "\"Big oil's filling John McCain's campaign with $2-million in contributions.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[760, 761, 762, 763]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "760",
+        "Title": "CMV: The United States doesn't have a lobbying problem, it has a corrupt Congress problem",
+        "Full Text": "If congressmen/woman didn't take bribes and campaign donations, lobbying would do absolutely nothing. There seems to be a lot of dissonance around the idea. People always say \"we need to get lobbying out of the government, get big pharma out of the Capitol building\" when in reality it should be \" stop electing people who will sell their soul for a nickel. \n\nIt's the same logic around foreign campaign influence, I don't care if every nation on earth tries to sway the USA presidential election. What matters is that we should be ABLE to stop any attempt from being effective.\n\nEDIT: I apologise for not elaborating more, I wrote this on a whim and left things fairly vague. Thank you all for answering, I awarded a delta to an answer that simply met the wording of my post, rather than my full beliefs.\n\nI agree with many of you, that the voter responsibility issue and the corrupt politician issues aren't mutually exclusive. The law needs to be amended, but the people capable of doing so will never do it",
+        "Claim ID": "123",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/changemyview/comments/gm3t6n/cmv_the_united_states_doesnt_have_a_lobbying/"
+      },
+      {
+        "Document ID": "761",
+        "Title": "I am Solomon Kahn, Harvard Fellow, visualizer of who gives money to US federal politicians. Ask me where your politician raises money from, and I'll make a screencast showing you!AMA!",
+        "Full Text": "**My short bio:**\nI'm Solomon Kahn, former fellow at the Harvard University Safra Center For Ethics, and I've built a super powerful tool to explore who gives money to federal politicians. At my day job I run the data team at Paperless Post.\n\nI'm currently running a kickstarter for the tool so I can help journalists use it. You can find the kickstarter here: http://kck.st/1DG57W4. The tool will be free, open source, and open to the public, launching in a few months.\n\nBring me your Senators and Congresspeople, and  I'll make a screencast about who they raise money from!\n\n**My Proof:**\nhttps://twitter.com/solomonkahn/status/604405164452286464 \nhttp://ethics.harvard.edu/people/solomon-kahn \nhttp://kck.st/1DG57W4 \nhttp://lessig.tumblr.com/post/118952457737/solomon-kahns-really-cool-politic-code\n\n**Edit:** Wow, so happy this is blowing up! I'm going to stay and continue to do videos for a while. To me, the most exciting thing about this project is that when this launches, people on reddit can go through the politicians themselves, and submit all the interesting things they find to be put on the politicians's page, and sent directly to journalists.  The fact this is becoming popular gives me so much hope that I'll achieve my crazy dream for this project, that we can do complete campaign finance research on every single politician. If you want more details on this, check out the kickstarter video: http://kck.st/1DG57W4\n\n**Edit 2** I can't do anymore screencasts tonight, but since there seems to be so much interest, I'll do a part 2 in two weeks on Sunday June 14th. There are tons of politicians I didn't get to, including Obama vs. Romney and a bunch of the other presidential races, so hopefully we can cover that next time.",
+        "Claim ID": "123",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IAmA/comments/37z476/i_am_solomon_kahn_harvard_fellow_visualizer_of/"
+      },
+      {
+        "Document ID": "762",
+        "Title": "How Did Fighting Climate Change Become a Partisan Issue? Twenty years ago, Senator John McCain tried to spearhead an effort. What has happened to Republicans since then?",
+        "Full Text": "[Link Post]",
+        "Claim ID": "123",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "763",
+        "Title": "Am I the only one who has noticed a lot of corporations adopting policies that are increasingly putting consumers at a disadvantage? ",
+        "Full Text": "I’m becoming more and more convinced that no less than 90% of our government is on one payroll or another. This current political arena has been (in my opinion) the most ineffective group of politicians that I’ve ever saw. The only time there is any actual policy being implemented is when their office or their seat is being challenged. Any other time it’s just inflammatory rhetoric and sowing division to keep us all divided and easier to control. \n",
+        "Claim ID": "123",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/millenials/comments/1cr21dw/am_i_the_only_one_who_has_noticed_a_lot_of/"
+      }
+    ]
+  },
+  {
+    "claim_id": "384",
+    "claim": "\"I've always said it's (offshore drilling) up to the states and I still say that.\"",
+    "verdict": "True",
+    "original_verdict": "mostly-true",
+    "document_ids": "[2353, 2354, 2355, 2356]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "2353",
+        "Title": "All Oil States",
+        "Full Text": "Here is an overview of all states in Vic 3 where there can be oil.\n\nWestern Europe:\n- Friesland\n- Elbe\n- Hannover\n\nEastern Europe:\n- Perm\n- West Galicia\n- Wallachia\n\nNorth Africa:\n- Lybian Desert\n\nNorth America:\n- Kansas\n- Oklahoma\n- Pennsylvania\n- Ontario\n- Alberta\n- Texas\n- California\n- Rio Grande\n\nSouth America:\n- Zulia\n- Santa Cruz\n- La Paz\n\nMiddle East:\n- Abu Dhabi\n- Mosul\n- Basra\n- Fars\n\nCentral Asia:\n- Kuban\n- Azerbaijan\n- Samara\n- Tartaria\n- Uralsk\n\nEast Asia:\n- Shanxi\n- Chubu\n\nIndonesia:\n- East Borneo\n- East Java\n\nSiberia:\n- Nenetsia",
+        "Claim ID": "384",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/victoria3/comments/yiatg8/all_oil_states/"
+      },
+      {
+        "Document ID": "2354",
+        "Title": "Britain has an absurb amount of OIL that is ahistorical",
+        "Full Text": "[Link Post]",
+        "Claim ID": "384",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/gallery/omnitc"
+      },
+      {
+        "Document ID": "2355",
+        "Title": "Oil rig jobs with no experience?",
+        "Full Text": "Hey everyone, I have no experience to put on a resume of anything about manual labor but I worked construction years ago and redid and work on my 4 rentals. I'm 34 but no experience and I'm starting an electrical class but not for 7 months. \n\nAnyway, I need a job like now to tide me over and also I think this is hard work that would let people know I'm not a b****. How do i get an entry level job? Preferably west or east TX. I live in San Antonio but will travel. Cheers",
+        "Claim ID": "384",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/oilandgasworkers/comments/stwn16/oil_rig_jobs_with_no_experience/"
+      },
+      {
+        "Document ID": "2356",
+        "Title": "The Trump Administration Wants Offshore Drilling In Florida. The Majority Of Floridians Oppose It",
+        "Full Text": "[Link Post]",
+        "Claim ID": "384",
+        "Document Label": "unrelated",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "896",
+    "claim": "\"The homicide rate in Baltimore is significantly higher than El Salvador, Honduras, Guatemala. ...  I believe it’s higher than Afghanistan.\"",
+    "verdict": "True",
+    "original_verdict": "half-true",
+    "document_ids": "[5466, 5467, 5468, 5469]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "5466",
+        "Title": "Are there any countries you would recommend avoiding as a solo female traveler in her mid-20s?",
+        "Full Text": "If you could provide your specific reasons why, that would be helpful.",
+        "Claim ID": "896",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/TravelHacks/comments/14klwhg/are_there_any_countries_you_would_recommend/"
+      },
+      {
+        "Document ID": "5467",
+        "Title": "We rank worse than all of Colombia",
+        "Full Text": "[Link Post]",
+        "Claim ID": "896",
+        "Document Label": "unrelated",
+        "Link": "https://i.redd.it/8aao6y601i5c1.jpeg"
+      },
+      {
+        "Document ID": "5468",
+        "Title": "42 of the world’s 50 deadliest cities are in one region (Latin America 🇲🇽🇧🇷)",
+        "Full Text": "[Link Post]",
+        "Claim ID": "896",
+        "Document Label": "unrelated",
+        "Link": "https://i.redd.it/qkujm9ebkhkd1.jpeg"
+      },
+      {
+        "Document ID": "5469",
+        "Title": "18 year-old midfielder Sergio Mejia murdered in Honduras",
+        "Full Text": "[Link Post]",
+        "Claim ID": "896",
+        "Document Label": "unrelated",
+        "Link": ""
+      }
+    ]
+  },
+  {
+    "claim_id": "953",
+    "claim": "\"The weak illegal immigration policies of the Obama Admin. allowed bad MS 13 gangs to form in cities across U.S. We are removing them fast!\"",
+    "verdict": "False",
+    "original_verdict": "false",
+    "document_ids": "[5853, 5854, 5855, 5856, 5857, 5858, 5859, 5860, 5861]",
+    "document_labels": "['unrelated', 'unrelated', 'supporting', 'supporting', 'supporting', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "5853",
+        "Title": "Hey there. I’m Jacob Soboroff, a correspondent for NBC News and MSNBC. I just spent a week on the US-Mexico border reporting on migrant families. AMA!",
+        "Full Text": "Hey there, Reddit. I’ve covered many topics in my reporting for NBC News and MSNBC, including the 2016 election, the opioid crisis and everything in between. I spent the past two weeks covering the border crisis and the separations of migrant families at the US-Mexico border, including going inside the [country’s largest immigration processing center](https://www.nbcnews.com/news/us-news/mcallen-texas-immigration-processing-center-largest-u-s-n884126) and taking a months-long look at the realities on the ground for [Dateline’s “The Dividing Line.”](https://www.nbc.com/dateline/video/the-dividing-line/3749130) AMA!\n\nAnd yes, [it's really me](https://twitter.com/jacobsoboroff/status/1011674978729672704).\n\n**UPDATE:** Thanks everyone. Signing off. This was really fun. And we will keep on this story. I am grateful to be one small part of the large NBC News and MSNBC team on this story. As of right now, there are still 2,047 kids separated from their parents. And the military was just asked to build new detention centers for 12,000 people. This story is not over. Keep in touch:\n\n* [My Twitter](http://twitter.com/jacobsoboroff)\n* [My Facebook](http://facebook.com/jsoboroff)\n* [My Instagram](http://instagram.com/jacobsoboroff)",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IAmA/comments/8ul0sf/hey_there_im_jacob_soboroff_a_correspondent_for/"
+      },
+      {
+        "Document ID": "5854",
+        "Title": "I am Barack Obama, President of the United States -- AMA",
+        "Full Text": "Hi, I’m Barack Obama, President of the United States. Ask me anything. I’ll be taking your questions for half an hour starting at about 4:30 ET.\n\nProof it's me: https://twitter.com/BarackObama/status/240903767350968320\n\nWe're running early and will get started soon.\n\nUPDATE: Hey everybody - this is barack. Just finished a great rally in Charlottesville, and am looking forward to your questions. At the top, I do want to say that our thoughts and prayers are with folks who are dealing with Hurricane Isaac in the Gulf, and to let them know that we are going to be coordinating with state and local officials to make sure that we give families everything they need to recover.\n\nVerification photo: http://i.imgur.com/oz0a7.jpg\n\nLAST UPDATE: I need to get going so I'm back in DC in time for dinner. But I want to thank everybody at reddit for participating - this is an example of how technology and the internet can empower the sorts of conversations that strengthen our democracy over the long run. AND REMEMBER TO VOTE IN NOVEMBER - if you need to know how to register, go to http://gottaregister.com. By the way, if you want to know what I think about this whole reddit experience - NOT BAD!\n\nhttp://www.barackobama.com/reddit\n[edit: link fixed by staff]",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/IAmA/comments/z1c9z/i_am_barack_obama_president_of_the_united_states/"
+      },
+      {
+        "Document ID": "5855",
+        "Title": "Boston based ICE deportation officers arrested four alleged child rapists",
+        "Full Text": "Boston based ICE deportation officers arrested four alleged child rapists & a violent MS-13 gang member in a single morning. ICE says their detainer requests on all of these illegal aliens weren’t honored by local jurisdictions.\n\nhttps://twitter.com/BillMelugin\\_/status/1773723637750608228?ref\\_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1773723637750608228%7Ctwgr%5Ee5dcfbffe62993f4347932032fda34c5b1bea80f%7Ctwcon%5Es1\\_&ref\\_url=https%3A%2F%2Fthepostmillennial.com%2Fboston-ice-agents-arrest-4-illegal-immigrants-accused-of-child-sex-abuse-1-ms-13-gang-member-report ",
+        "Claim ID": "953",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/boston/comments/1br18ku/boston_based_ice_deportation_officers_arrested/"
+      },
+      {
+        "Document ID": "5856",
+        "Title": "Christians against immigration in the US",
+        "Full Text": "You know what really grinds my gears? How can you be a Christian and be against immigration ? 1st, Jesus was born in Bethlehem but lived in Egypt until estimated 12 years old. Jesus was an immigrant. 2nd God calls us to help those that cannot help themselves - widows, orphans and immigrants. I understand it is easy to get swept up in political opinions; but let’s refocus on what matters most - LOVE. Stop calling yourselves Christian in the same breathe you’re against helping people who can’t help themselves, because you’re making all of us Christians look bad! And Jesus, I’m sorry if this could have been said better; please teach me how to speak to people with more love and tolerance, I’m struggling with this one. Please stop painting over Christianity with personalized renditions of closeted bigotry. It causes non believers to scoff and walk away in disgust. Who would want to be part of that? That’s not what it’s about. Now stop it.",
+        "Claim ID": "953",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/Christianity/comments/mbvvby/christians_against_immigration_in_the_us/"
+      },
+      {
+        "Document ID": "5857",
+        "Title": "Greg Abbott is doing the right thing about the barriers at the border, and more border states should implement his policy",
+        "Full Text": "In light of recent statistics, Governor Greg Abbott’s decision to implement barriers along Texas’s southern border is not only justified but an urgent necessity. The numbers speak volumes about the current situation. In Fiscal Year (FY) 2023, U.S. Customs and Border Protection (CBP) recorded over 2.4 million encounters at the Southwest border and more than 3.2 million encounters nationwide . This figure represents an alarming increase over previous years, with the total encounters in FY 2023 marking a 16 percent increase over FY 2022 and a 63 percent increase over FY 2021 .\n\nOne of the most concerning aspects is the apprehension of 169 individuals on the terrorist watchlist attempting to enter the U.S. illegally . This highlights a significant national security risk, reinforcing the need for stringent border controls. Moreover, in FY 2023, CBP arrested over 35,000 aliens with criminal convictions or outstanding warrants, including 598 known gang members, of which 178 were MS-13 members .\n\nThe Congressional Budget Office reported that in FY 2023, there were 3.3 million people who entered the U.S. illegally, were released into the country via parole, or overstayed their permission to remain . These statistics underline the scale of the challenge faced by border states like Texas. Governor Abbott’s actions, in this context, are not just a response to federal inaction but a necessary measure to safeguard the citizens of Texas.\n\nConsidering the scale and nature of illegal entries, and the associated risks, it’s evident that more southern border states should consider adopting measures similar to those implemented by Texas. The safety and security of U.S. citizens should remain a paramount concern, and proactive border management is a critical component of this objective. Governor Abbott’s approach, backed by these startling statistics, underscores the dire need for effective border control and the protection of our national security.",
+        "Claim ID": "953",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/TrueUnpopularOpinion/comments/19ewro5/greg_abbott_is_doing_the_right_thing_about_the/"
+      },
+      {
+        "Document ID": "5858",
+        "Title": "How an Ohio Town Landed in the Middle of the Immigration Debate | Jobs attracted thousands of Haitians to Springfield, and employers were ecstatic. But then an immigrant driver was involved in a fatal school bus crash. And JD Vance entered the fray.",
+        "Full Text": "[Link Post]",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "5859",
+        "Title": "Explain like I'm 5: What did Harris do that was so wrong?",
+        "Full Text": "A lot of people speak about Kamala Harris as if it's a given that she's a terrible politician, and that it's just baked in that people don't like her. This is a genuine question to help me catch up because I haven't been on Harris-watch much over the years. I remember her absolutely kicking ass in the Senate and loved watching her in those high stakes hearings, I obviously know her campaign didn't go well in 2019 and she made a classic mistake of trying to be everything to everyone instead of being herself, but a failed presidential bid doesn't seem to explain the disdain from super online people and certain pundits. \n\nWhat have I missed over the years? Has she offended people or made a bunch of costly gaffes that I somehow missed? I feel like the clips I've seen, over the past couple weeks especially, offer such a clear and obvious upgrade from Biden's lack of energy and diminished ability to communicate that people would absolutely sprint to her if she became the nominee. With the infrastructure and funding of being The Democratic Nominee behind her, I'd imagine most campaign shortcomings that were in her way in 2019 would be mitigated. And most importantly, I imagine she would feel free to campaign as that kickass prosecutor who can clearly make a case FOR our policies and AGAINST the radical MAGA freaks. \n\nSo without this turning into an oppo research situation, what is it that turned so many people off to her over the years? And do you think it's possible for her to change that perception? Personally I live in a purple area and I don't think I know anyone in real life who feels strongly one way or another about her, so I believe if she gets the nod, with the backing of the party and an energetic campaign, she could rally the Dems and have a much better chance at persuading 50/50 voters and non-voters than Biden. Unless I'm completely missing something.",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/neoliberal/comments/1e07156/explain_like_im_5_what_did_harris_do_that_was_so/"
+      },
+      {
+        "Document ID": "5860",
+        "Title": "Calls for NYC to resume cooperation with ICE after attack on NYPD officers by group in Times Square",
+        "Full Text": "[Link Post]",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "5861",
+        "Title": "What do you think of Mayor Bowser's comments regarding migrants from TX & AZ?",
+        "Full Text": "As we all know, the States of TX & AZ have been busing migrants to DC, as the migrant crisis hits US border states.  Recently, DC's Mayor appeared on CBS News Sunday claiming that the influx of migrants is filling up the area homeless shelters.  She also stated that she believes that migrants are being tricked into going to Washington, DC, and the migrants are not arriving at their final destination.  What are your thoughts on this?\n\nI have a couple:\n\n1.  It reinforces that our entire immigration does, in fact, need overhauling.\n2. It feels a little \"not in my backyard.\" \n\n&#x200B;\n\n[https://www.cbsnews.com/video/mayor-muriel-bowser-says-migrants-along-the-border-are-being-tricked-onto-buses-to-d-c/](https://www.cbsnews.com/video/mayor-muriel-bowser-says-migrants-along-the-border-are-being-tricked-onto-buses-to-d-c/)",
+        "Claim ID": "953",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskALiberal/comments/w22t8w/what_do_you_think_of_mayor_bowsers_comments/"
+      }
+    ]
+  },
+  {
+    "claim_id": "2070",
+    "claim": "Says his administration has made \"progress\" on border enforcement by \"putting more boots on the southern border than at any time in our history and reducing illegal crossings to their lowest levels in 40 years.\"",
+    "verdict": "True",
+    "original_verdict": "half-true",
+    "document_ids": "[12535, 12536, 12537, 12538, 12539, 12540, 12541, 12542, 12543, 12544]",
+    "document_labels": "['unrelated', 'unrelated', 'misleading', 'unrelated', 'unrelated', 'misleading', 'unrelated', 'unrelated', 'unrelated', 'misleading']",
+    "documents": [
+      {
+        "Document ID": "12535",
+        "Title": "How did immigration in so many western countries become such a mess?",
+        "Full Text": "I used to be all for immigration to my country. Led to me meeting a lot of really cool people with all sorts of different backgrounds but I keep seeing in pretty much every western nation- France, UK, Canada, US, etc. us citizens hate our current immigration policies. (myself included) How did things go so wrong for so many countries at approximately the same time?",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/immigration/comments/1ds3ky0/how_did_immigration_in_so_many_western_countries/"
+      },
+      {
+        "Document ID": "12536",
+        "Title": "Until when will the european immigration crisis exist?",
+        "Full Text": "It won't endure forever, what can we expect to be the end? Even if Europe start closing borders it will not end, maybe reduce\n\nDo you think it will remain staticly? Will it get worse to the point Europe becomes authoritarian enough to deal with the crisis? Or maybe they just find a peaceful intelligent solution that puts a smile in everyone's faces?\n\ndisclaimer: I'm not giving an opinion, I'm just asking for the curiosity of predictions of how and when the outcome of this crisis will happen",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/geopolitics/comments/1dvs1qr/until_when_will_the_european_immigration_crisis/"
+      },
+      {
+        "Document ID": "12537",
+        "Title": "What do Biden’s supporters think of the border “crisis”?",
+        "Full Text": "I constantly hear my conservative parents talking about the “border crisis” that’s on Fox News. Saying illegal immigration at the border is at an all time high and Fentanyl is pouring in through Mexico. It’s probably one of their biggest issues with Biden, and they don’t understand at all why anyone would support Biden without being outright malicious. They don’t understand the purpose of Biden’s actions beyond him being evil or incompetent. They bring this up to me (A pretty liberal person in general) all the time, and I don’t really know what to say to them. I’ve tried looking at some articles but the best points I’ve found are:\n\nConservatives don’t ask why these people are migrating, and don’t understand the global scale of this migration.\n\nConservatives think these people get more benefits than they do such as welfare\n\nBut not too much more. So what do US liberals think about this issue?",
+        "Claim ID": "2070",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/PoliticalDebate/comments/18jkr06/what_do_bidens_supporters_think_of_the_border/"
+      },
+      {
+        "Document ID": "12538",
+        "Title": "Those that have been denied Global Entry, can you share why?",
+        "Full Text": "Thought it might be helpful if those that have been denied could share why they were denied, what steps they took next, and if they were eventually approved.",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/GlobalEntry/comments/12970g8/those_that_have_been_denied_global_entry_can_you/"
+      },
+      {
+        "Document ID": "12539",
+        "Title": "Need help understanding Left-leaning position on illegal immigration",
+        "Full Text": "I am a conservative...probably more libertarian than republican.  I truly struggle with what I believe is the political position that says deporting immigrants who illegally entered this county is a terrible thing.  \n\nI’d appreciate it if the ultra right wing pot-stirrers would keep their snark tapped down, and that some sensible Dems who believe in this position would engage me in a sensible discussion.  \n\nNo name calling.  \nNo race baiting.  \nNo false moral equivalency from either side. \n\nHonestly want some intelligent discourse.  \n\nToo much to ask?  Let’s get it on!",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/Ask_Politics/comments/ckup0c/need_help_understanding_leftleaning_position_on/"
+      },
+      {
+        "Document ID": "12540",
+        "Title": "How bad is the border, truly? ",
+        "Full Text": "I don’t deny illegal immigration is a problem but I only hear about this during election cycles. From my memory, Biden continued most of Trump era policies like “remain in Mexico” or title 42 during the pandemic era. \n\nBiden has high amounts of deportation numbers compared to Trump and Obama. \n\nOptics aside about Biden using the term illegal or not. What else can the Democrats really do about immigration? \n\nThe real focus should be on construction companies, farmers, other blue collar work and restaurants who hire illegal labor. Target these sectors and watch illegal immigration PLUMMET. ",
+        "Claim ID": "2070",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/AskALiberal/comments/1bc396d/how_bad_is_the_border_truly/"
+      },
+      {
+        "Document ID": "12541",
+        "Title": "Why the world is shifting towards right-wing control?",
+        "Full Text": "Hey everyone! I’ve been noticing the political landscape globally for the past week, and it seems like there is a growing trend toward right-wing politicians. \n\nFor example, Argentina, Netherlands, Finland, Israel, Sweden and many more. This isn’t limited to one region but appears to be worldwide phenomenon. \n\nWhat might be causing that shift?",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/geopolitics/comments/182t5ir/why_the_world_is_shifting_towards_rightwing/"
+      },
+      {
+        "Document ID": "12542",
+        "Title": "Why are Republicans seemingly always concerned about the border?",
+        "Full Text": "Republican politicians at all levels seem to be extremely concerned about border security. \n\nThey’ve held a trifecta 3 times in recent history. Twice under Bush and once under Trump. \n\nHave they actually implemented robust border security policies in that time? \n\nIf no, why not? Are there any concrete plans they wish to implement?\n\nIf yes, how has the Democratic Party managed to reverse these policies?",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/PoliticalDiscussion/comments/18cqv67/why_are_republicans_seemingly_always_concerned/"
+      },
+      {
+        "Document ID": "12543",
+        "Title": "If Trump is reelected, how does this affect immigrants that are in the system?",
+        "Full Text": "I worry because we are still in process. We are waiting on our I130 with no defined future date. We cannot get permanent residency until thos is approved. Can Trump have people who are successfully paroled by a spouse and issued a work permit deport them while waiting on a decision?",
+        "Claim ID": "2070",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/USCIS/comments/1995dve/if_trump_is_reelected_how_does_this_affect/"
+      },
+      {
+        "Document ID": "12544",
+        "Title": "Is illegal immigration a legitimate problem in the US?",
+        "Full Text": "And by that I mean, is this somehow more of an issue now, than it was in the recent past, and are there real economic consequences? \n\nThis is a major political issue with conservative media. They are pushing the narrative that the country is on the verge of being overrun and that all of the tax dollars are being eaten up. \"National security crisis.\"\n\nI thought I read that net-immigration from Mexico was recently negative - that people have started leaving the US to go back to Mexico. I also recall a stat that illegal immigrants comprise less than 7% of the workforce. I imagine that's in very specific, niche areas. At those levels, it doesn't even seem economically significant, let alone a \"crisis.\" \n\nGiven our aging population, wouldn't increased immigration potentially be a good thing to replenish the workforce? Is there a legitimate, economic argument beyond political scare tactics, xenophobia and racism?",
+        "Claim ID": "2070",
+        "Document Label": "misleading",
+        "Link": "https://www.reddit.com/r/AskEconomics/comments/1af8702/is_illegal_immigration_a_legitimate_problem_in/"
+      }
+    ]
+  },
+  {
+    "claim_id": "2466",
+    "claim": "“Florida sort of had a mandate because they were giving the vaccine, they were demanding everybody take the vaccine.”",
+    "verdict": "False",
+    "original_verdict": "pants-on-fire",
+    "document_ids": "[15022, 15023, 15024, 15025, 15026, 15027, 15028]",
+    "document_labels": "['supporting', 'supporting', 'supporting', 'unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "15022",
+        "Title": "Florida Universities CANNOT mandate COVID vaccines",
+        "Full Text": "I’ve seen a lot of posts recently talking about switching to online classes, and a lot of comments mention “Why doesn’t UF just mandate the COVID vaccine?” \n\nSB 2006 was signed into law back in May, and there is a special clause in the bill specifically banning universities from requiring proof of COVID vaccine:\n\n“(3) An educational institution as defined in s. 768.38 may not require students or residents to provide any documentation certifying COVID-19 vaccination or post-infection recovery for attendance or enrollment, or to gain access to, entry upon, or service from such educational institution in this state. This subsection does not otherwise restrict educational institutions\nfrom instituting screening protocols consistent with authoritative or controlling government-issued guidance to protect public health.”\n\nLink to full bill: https://www.flsenate.gov/Session/Bill/2021/2006/BillText/er/PDF\n\nSo that’s why UF has not required it. It has nothing to do with FDA approval or UF being ‘scared’ to, they legally cannot. Unless the bill is overturned in court.\n\nRegardless of your opinion, this is the law.",
+        "Claim ID": "2466",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/ufl/comments/p3nrh3/florida_universities_cannot_mandate_covid_vaccines/"
+      },
+      {
+        "Document ID": "15023",
+        "Title": "CEO 2021 now requiring proof of FULL vaccination or negative test for entry, plus a mask mandate. Jebailey says the new rules are a direct result of Riptide's success.",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2466",
+        "Document Label": "supporting",
+        "Link": ""
+      },
+      {
+        "Document ID": "15024",
+        "Title": "WTH? Are vaccines required or not?",
+        "Full Text": "I was just checking the price on my cruise and this message popped up.  Pretty sure it hasn’t been there before.  My sailing is the 5 night over Christmas going to Coco Cay and Cozumel.  Are they just assuming The Bahamas won’t extend their mandate and, therefore, RCCL won’t?\n\n&#x200B;\n\nVACCINE ADVISORY\n\nWe strongly encourage all guests age 12 and older to be fully vaccinated against COVID-19 at time of sailing. Guests who are fully vaccinated may choose to provide proof of vaccination in order to be exempt from certain health protocols and associated fees, including additional COVID-19 testing and travel insurance requirements. All protocols are subject to change as public health situations and government requirements evolve.",
+        "Claim ID": "2466",
+        "Document Label": "supporting",
+        "Link": "https://www.reddit.com/r/royalcaribbean/comments/pyi658/wth_are_vaccines_required_or_not/"
+      },
+      {
+        "Document ID": "15025",
+        "Title": "CVS updating Vaccine Mandate to include all employees regardless of department",
+        "Full Text": "Haven't seen a post here on it yet, but CVS issued a statement yesterday stating they will be requiring all employees in the company regardless of department or remote work status to be fully vaccinated by 3/31/2022. During a conference call we were told it is possible to apply for a Reasonable Accommodation, and if one is granted, the employee must wear an N95 mask at all times and test in-store minimum twice weekly.\n\nI know this sub is usually pretty negative, but I'm glad they're doing it, and I hope others follow suit.",
+        "Claim ID": "2466",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/CVS/comments/r78gmp/cvs_updating_vaccine_mandate_to_include_all/"
+      },
+      {
+        "Document ID": "15026",
+        "Title": "Attorney General opinion – Virginia state universities cannot mandate the COVID-19 vaccine as a condition for enrollment or in-person attendance",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2466",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "15027",
+        "Title": "COVID-19 vaccine requirement to end for 40,000 state of Oregon employees, governor’s office says",
+        "Full Text": "[Link Post]",
+        "Claim ID": "2466",
+        "Document Label": "unrelated",
+        "Link": ""
+      },
+      {
+        "Document ID": "15028",
+        "Title": "Vaccine Mandates at Other Firms?",
+        "Full Text": "I work for one of the large global ENR ranked firms. We just recently rolled out our vaccine mandate, which essentially requires all employees be vaccinated or else you cannot enter any offices and must exclusively work from home.\n\nCurious what other firms out there are doing. Are you required to get be vaccinated?",
+        "Claim ID": "2466",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/civilengineering/comments/r9fisc/vaccine_mandates_at_other_firms/"
+      }
+    ]
+  },
+  {
+    "claim_id": "109",
+    "claim": "\"Back when they did NATO, there was no such thing as terrorism.\"",
+    "verdict": "False",
+    "original_verdict": "mostly-false",
+    "document_ids": "[670, 671, 672, 673]",
+    "document_labels": "['unrelated', 'unrelated', 'unrelated', 'unrelated']",
+    "documents": [
+      {
+        "Document ID": "670",
+        "Title": "What's with the leftist hate of NATO?",
+        "Full Text": "I understand that the individual militiaries within NATO have done some unsavory things, but why do a lot of leftists fundamentally oppose the existence of NATO?  I understand why Marxist-Leninist would oppose it because it was a check on ML regimes, but other more progressive leftists also tend to oppose NATO.  I feel this is kinda silly because it's a self-defense pact that has prevented war more than it has caused it.  Not that I don't have problems with its implementation, but I think overall it has had a net positive impact.  So what's with the leftist hate of it?",
+        "Claim ID": "109",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/SocialDemocracy/comments/v6ecgs/whats_with_the_leftist_hate_of_nato/"
+      },
+      {
+        "Document ID": "671",
+        "Title": "CMV: The USA and NATO shouldn't be helping in Ukraine, and Putin, though an overall terrible person, has in many ways been pushed to start the war in Ukraine.",
+        "Full Text": "The US, and NATO in general, have not played particularly fair in regards to Russia. I am only stating the facts I am aware of, as best I know them -- I would love to learn more that makes me rationalize the US/NATO's position. \r  \n\r  \nFor starters -- a large majority of individuals in Crimea (almost 75%) want to be part of Russia. A majority of those in the Donbas want to be Russian as well. This is not true of Western Ukraine -- who pretty much unilaterally wants to remain a sovereign nation (about 95% i think). Russia taking claim to these areas, which largely would prefer to be under Russian control, doesn't seem like an issue we should be involved in.\r  \n\r  \nAfter the dissolve of the USSR, there was largely an expectation that Russia and the west could productively exist, and that the west would be more proactive in opening their arms to Russia. The West hasn't been particularly interested in this thus far, and far as I can tell, hasn't operated in particularly good faith.\r  \n\r  \nNATO always agreed they would not move further East towards Russia. Nato has reneged on that promise several times. In 1999 Nato added Czechia, Poland and Hungary. In 2004, NATO added Bulgaria, Estonia, Latvia, Lithuania, Romania, Slovakia and Slovenia. In 2009, NATO added Albania and Croatia. In 2017 they added Montenegro, in 2020 NATO added Macedonia, and in 2023 NATO added Finland and Norway.\r  \n\r  \nRussia has a legitimate reason to be weary of the democracies of the West. After all -- Hitler came to power legally under a Democratic Constitution. The cold war also went on for 44 years, and didn't end until 1991. Russia has a reason to be skeptical of the west.\r  \n\r  \nNATO has developed and deployed a massive missile arsenal surrounding the western and southwestern border of Russia. Though the proposed reasoning for developing said missile system was to defend against Iran, a basic map of the locations of said missiles makes this statement questionable. Furthermore, Russia initially requested to be part of the development of said missile defense system, and NATO rejected them.\r  \n\r  \nThe US is already facing an absolutely insurmountable national debt. We have many crises we are facing at home. The debt we accrued fighting wars that weren't ours to fight in the middle east still hasn't been paid. We have had 20 years to see how the \"war on terror,\" turned out. The resulting loss of life, the expense, and the absolutely abysmal withdrawal. Why are we getting involved in another conflict?\r  \n\r  \nThe current regime in Ukraine was largely influenced by the west. The US sunk nearly $5 billion into democracy education in Ukraine between 1991 and 2014. When the Ukrainian government was overthrown there in 2014, it was a move that was largely supported, and even funded, by the West. This new government was far less Russia friendly than the government of the past. Russia, somewhat rightfully, saw this as further action by the west to alienate them.\r  \n\r  \nWhy have we spent $75 billion protecting another countries borders when we fail to protect our own? A wall at the southern border would cost +/- $20 billion. We have spent almost 4 times that in Ukraine already. FWIW, I am firmly pro immigration. But I am pro legal immigration. Far too many criminals are being let in unvetted, and the southern border is allowing massive amounts of fentanyl into the country.\r  \n\r  \nI'm sure there is situation is far more nuanced that what I've outlined above. And furthermore, I am well aware that Putin is a terrible human. From murdering his political opponents, to his treatment of marginalized groups, Putin is nobody I am trying to shower with praise in any way shape or form. That being said, I do think Russia has been somewhat provoked to take the steps they have. Furthermore, I am not in favor of sending American dollars, and certainly not in favor of sending american boys/men, to die on the front lines of Ukraine. And finally -- Putin's approval rating in Russia is nearly 80% -- meaning his people must generally support the direction he's taken their country. \r  \n\r  \nOnce again -- I am no supporter of the regime in Russia -- it is essentially a dictatorship at this point. Politically, I am about as libertarian as it gets. But as far as I can tell -- the US and Nato have in may ways been throwing shit at Russia since the USSR dissolved. ",
+        "Claim ID": "109",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/changemyview/comments/1aq9o47/cmv_the_usa_and_nato_shouldnt_be_helping_in/"
+      },
+      {
+        "Document ID": "672",
+        "Title": "Russia claims the US agreed to not expand NATO further east after the fall of the Soviet Union. According to the New York Times Daily podcast, the US says they never made this agreement. What really happened?",
+        "Full Text": "I've heard for years that the US agreed to not expand NATO eastward after the Soviet Union broke apart from former government/military folks, such as Lawrence Wilkerson. Today, I heard on NYT's The Daily, the US claims they never made such an agreement. So what really happened?",
+        "Claim ID": "109",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/AskHistorians/comments/s2l569/russia_claims_the_us_agreed_to_not_expand_nato/"
+      },
+      {
+        "Document ID": "673",
+        "Title": "I still don't understand the logic of \"NATO is harmless, that's why russia shouldn't be afraid of NATO\"",
+        "Full Text": "I have never understood the logic of why many people say that ukraine joining NATO shouldn't cause russia any concern. Many say that it's a strictly defensive organisation, even though time and time again, there has been many instances where NATO was \"defending\" themselves (Yugoslavia, Afghanistan, Libya). I say, those examples are clearly proof that NATO isn't just a defensive organisation, and that Putin's worries against Ukraine joining NATO, is infact, justified. This of course doesn't mean that Putin's murder of civilians is justified, just that the US shouldn't have disregarded Russia's complaints against the expansion of NATO.",
+        "Claim ID": "109",
+        "Document Label": "unrelated",
+        "Link": "https://www.reddit.com/r/geopolitics/comments/1az3kwc/i_still_dont_understand_the_logic_of_nato_is/"
+      }
+    ]
+  }
+]
