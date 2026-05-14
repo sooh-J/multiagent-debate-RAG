@@ -17,7 +17,7 @@ V3와의 차이:
 Async:
   - 문서 간 / 에이전트 간 API 호출을 병렬로 실행하여 속도 향상
 
-데이터셋: RAMDocs 전체 500개 (data/full/test.json)
+데이터셋: RAMDocs 전체 500개 (data/ramdocs/full.json)
 기존 결과 파일이 있으면 그 다음 샘플부터 이어서 실행 (resume 내장).
 50개마다 중간 저장.
 
@@ -46,7 +46,7 @@ from common.llm import print_usage_summary
 from pipelines.v4 import v4_method
 
 
-DATA_PATH = "data/full/test.json"
+DATA_PATH = "data/ramdocs/full.json"
 OUTPUT_PATH = "results/v4_full_results.json"
 CHECKPOINT_EVERY = 50
 
