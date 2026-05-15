@@ -1,6 +1,9 @@
 """
 MadamRAG 실행 스크립트
 
+기존 결과 파일이 있으면 그 다음 샘플부터 이어서 실행 (resume 내장).
+50개마다 중간 저장.
+
 Usage:
     conda activate nlp
     python run_madamrag.py                                  # default: ramdocs 전체 500개
@@ -15,6 +18,7 @@ Usage:
 
 import argparse
 import json
+import os
 import sys
 
 from common.logging import Tee
@@ -23,6 +27,7 @@ from common.metrics import compute_metrics, print_results_table
 from data.ramdocs.download import load_ramdocs
 from data.raguard.loader import load_raguard
 from pipelines.madamrag import madam_rag
+
 
 def _load_ramdocs(n: int | None):
     """n=None 이면 full.json (전체 500개), 아니면 sample 사용."""
@@ -37,6 +42,8 @@ DATASET_LOADERS = {
     "raguard":          lambda n: load_raguard(n_samples=n, balanced=False),
     "raguard_balanced": lambda n: load_raguard(n_samples=n, balanced=True),
 }
+
+CHECKPOINT_EVERY = 50
 
 
 def run_on_sample(sample: dict, dataset: str) -> dict:
@@ -63,15 +70,29 @@ def run_on_sample(sample: dict, dataset: str) -> dict:
     }
 
 
-def run_on_dataset(ds_sample, output_path: str, dataset: str) -> list[dict]:
-    results = []
-    for i, sample in enumerate(ds_sample):
-        print(f"\n[{i+1}/{len(ds_sample)}] Q: {sample['question']}")
+def run_on_dataset(ds_sample, existing_results, output_path, dataset: str) -> list[dict]:
+    results = list(existing_results)
+    start = len(results)
+    total = len(ds_sample)
+
+    if start > 0:
+        print(f"이어서 실행: {start}개 완료, {total - start}개 남음")
+    else:
+        print(f"처음부터 실행: 총 {total}개")
+
+    for i in range(start, total):
+        sample = ds_sample[i]
+        print(f"\n[{i+1}/{total}] Q: {sample['question']}")
         out = run_on_sample(sample, dataset)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
         results.append(out)
+
+        if (i + 1) % CHECKPOINT_EVERY == 0:
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(results, f, ensure_ascii=False, indent=2)
+            print(f"  [중간 저장] {i+1}개 결과 → {output_path}")
 
     n = len(results)
     print("\n" + "=" * 50)
@@ -100,7 +121,6 @@ def parse_args():
 
 
 if __name__ == "__main__":
-    import os
     args = parse_args()
     os.makedirs("results", exist_ok=True)
 
@@ -110,10 +130,21 @@ if __name__ == "__main__":
 
     try:
         ds_sample = DATASET_LOADERS[args.dataset](args.n)
-        output_path = f"results/madamrag_{args.dataset}_{suffix}_results.json"
-        all_results = run_on_dataset(ds_sample, output_path, args.dataset)
+        print(f"{args.dataset} 데이터 로드: {len(ds_sample)}개")
 
-        print_usage_summary()
+        output_path = f"results/madamrag_{args.dataset}_{suffix}_results.json"
+        if os.path.exists(output_path):
+            with open(output_path, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+            print(f"기존 결과 로드: {len(existing)}개")
+        else:
+            existing = []
+
+        if len(existing) >= len(ds_sample):
+            print("이미 전체 완료 상태입니다. 종료.")
+        else:
+            run_on_dataset(ds_sample, existing, output_path, args.dataset)
+            print_usage_summary()
     finally:
         tee.close()
         print(f"로그 저장: {tee.filepath}")

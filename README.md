@@ -109,6 +109,29 @@ python eval_llm_judge.py results/single_llm_results.json
   - balanced(230) vs unbalanced full(711) 중 어느 쪽으로 평가할지. unbalanced로 가면 F1·balanced accuracy 필수.
   - 본문 없는 doc 약 25%를 일단 폐기하고 있음. 필요 시 Reddit `.json` 크롤링으로 보강 가능.
 
+### 평가 샘플 확장: 100개 → 500개 (RAMDocs 전체)
+
+- 기존 평가는 `sample_100.json` (RAMDocs test split 500개 중 random 100개) 기준이었음
+- n=100, EM≈0.3 기준 95% 신뢰구간 ±9%p는 메서드 간 비교용으로 너무 noisy → 전체 500개로 측정 시 ±4%p 수준
+- 입력 파일을 `data/ramdocs/full.json` (전체 500개)로 통일하고 `run_v4.py` / `run_madamrag.py`에 다음 로직 내장:
+  - 50개마다 중간 저장 (checkpoint)
+  - 출력 파일이 존재하면 그 다음 샘플부터 이어서 실행 (resume)
+- 완료된 PR
+  - [#7](https://github.com/sooh-J/multiagent-debate-RAG/pull/7) — V4 500개 (merged)
+  - [#8](https://github.com/sooh-J/multiagent-debate-RAG/pull/8) — MadamRAG 500개
+
+#### V4 vs MadamRAG 비교 (둘 다 500개, 같은 RAMDocs test split)
+
+| Method | EM | Precision | Recall | F1 |
+|---|---:|---:|---:|---:|
+| MadamRAG (baseline) | 27.00% | 0.6582 | 0.6433 | 0.6240 |
+| **V4 (proposed)** | **29.20%** | 0.6701 | 0.6783 | **0.6464** |
+| Δ (V4 − baseline) | +2.20%p | +0.0119 | +0.0350 | +0.0224 |
+
+- **미해결 / 후속 작업**
+  - V3 / proposed_method / single_llm 등 나머지 baseline도 동일 500개로 재평가 필요
+  - MadamRAG run 도중 OpenAI API socket-level hang 1회 발생 (sample 154에서 2시간 stall). 근본 해결 위해 `common/llm.py`의 OpenAI 클라이언트에 `timeout` 파라미터 추가 PR 필요
+
 ## 환경
 
 ```bash
