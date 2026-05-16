@@ -39,12 +39,12 @@ DATASET_LOADERS = {
 }
 
 
-def run_on_sample(sample: dict) -> dict:
+def run_on_sample(sample: dict, dataset: str) -> dict:
     query = sample["question"]
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = single_llm(query, doc_texts)
+    result = single_llm(query, doc_texts, dataset=dataset)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -63,11 +63,11 @@ def run_on_sample(sample: dict) -> dict:
     }
 
 
-def run_on_dataset(ds_sample, output_path: str) -> list[dict]:
+def run_on_dataset(ds_sample, output_path: str, dataset: str) -> list[dict]:
     results = []
     for i, sample in enumerate(ds_sample):
         print(f"\n[{i+1}/{len(ds_sample)}] Q: {sample['question']}")
-        out = run_on_sample(sample)
+        out = run_on_sample(sample, dataset)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -111,7 +111,7 @@ if __name__ == "__main__":
     try:
         ds_sample = DATASET_LOADERS[args.dataset](args.n)
         output_path = f"results/single_llm_{args.dataset}_{suffix}_results.json"
-        all_results = run_on_dataset(ds_sample, output_path)
+        all_results = run_on_dataset(ds_sample, output_path, args.dataset)
 
         print_usage_summary()
     finally:
