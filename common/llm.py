@@ -3,6 +3,17 @@ LLM 호출 유틸리티
 
 Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — call_llm()
 원본은 HuggingFace transformers pipeline 사용, 여기서는 OpenAI API로 대체.
+
+Provider 전환 (환경변수):
+  LLM_PROVIDER=openai (기본) → OpenAI API
+  LLM_PROVIDER=qwen          → 로컬 vLLM 서버 (OpenAI-compatible)
+    LLM_BASE_URL=http://localhost:8000/v1 (기본)
+    LLM_MODEL=Qwen/Qwen2.5-7B-Instruct (기본)
+    LLM_MODEL은 vLLM 서버에 떠있는 모델 ID와 정확히 일치해야 함.
+    다른 모델을 띄웠다면 LLM_MODEL 환경변수로 명시할 것.
+
+vLLM 실행 예:
+  vllm serve Qwen/Qwen2.5-7B-Instruct --port 8000 --max-model-len 8192
 """
 
 import os
@@ -13,16 +24,29 @@ from openai import OpenAI, AsyncOpenAI
 
 load_dotenv()
 
-DEFAULT_MODEL = "gpt-4o-mini"
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").lower()
 
-# gpt-4o-mini 가격 (USD per 1M tokens, 2025.05 기준)
+if LLM_PROVIDER == "qwen":
+    DEFAULT_MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen2.5-7B-Instruct")
+    _base_url = os.environ.get("LLM_BASE_URL", "http://localhost:8000/v1")
+    _api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
+    client = OpenAI(base_url=_base_url, api_key=_api_key)
+    async_client = AsyncOpenAI(base_url=_base_url, api_key=_api_key)
+    # Qwen3 thinking 모드 OFF (4o-mini 동급 비교 목적)
+    _EXTRA_BODY = {"chat_template_kwargs": {"enable_thinking": False}}
+else:
+    DEFAULT_MODEL = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+    async_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
+    _EXTRA_BODY = {}
+
+# 가격 (USD per 1M tokens). 로컬 모델은 0.
 PRICING = {
     "gpt-4o-mini": {"input": 0.15, "output": 0.60},
     "gpt-4o": {"input": 2.50, "output": 10.00},
+    "Qwen/Qwen3-8B": {"input": 0.0, "output": 0.0},
+    "Qwen/Qwen2.5-7B-Instruct": {"input": 0.0, "output": 0.0},
 }
-
-client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
-async_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
 
 # 토큰 사용량 누적
 _usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0}
@@ -37,6 +61,7 @@ def call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) 
                 model=model,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
+                extra_body=_EXTRA_BODY,
             )
             if response.usage:
                 _usage["input_tokens"] += response.usage.prompt_tokens
@@ -62,6 +87,7 @@ async def async_call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: f
         model=model,
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature,
+        extra_body=_EXTRA_BODY,
     )
     if response.usage:
         _usage["input_tokens"] += response.usage.prompt_tokens
@@ -73,7 +99,7 @@ async def async_call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: f
 
 def get_usage_summary(model: str = DEFAULT_MODEL) -> dict:
     """현재까지 누적된 토큰 사용량과 예상 비용 반환"""
-    prices = PRICING.get(model, PRICING["gpt-4o-mini"])
+    prices = PRICING.get(model, {"input": 0.0, "output": 0.0})
     input_cost = _usage["input_tokens"] / 1_000_000 * prices["input"]
     output_cost = _usage["output_tokens"] / 1_000_000 * prices["output"]
     total_cost = input_cost + output_cost

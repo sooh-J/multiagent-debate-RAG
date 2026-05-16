@@ -47,7 +47,7 @@ from pipelines.v4 import v4_method
 
 
 DATA_PATH = "data/ramdocs/full.json"
-OUTPUT_PATH = "results/v4_full_results.json"
+OUTPUT_PATH = "results/v4_qwen_full_results.json" if os.environ.get("LLM_PROVIDER", "").lower() == "qwen" else "results/v4_full_results.json"
 CHECKPOINT_EVERY = 50
 
 
