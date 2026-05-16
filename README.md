@@ -138,6 +138,42 @@ python eval_llm_judge.py results/single_llm_results.json
   2. **doc-only 제약 명시** — `"Use ONLY the information explicitly stated in the document(s). Do NOT rely on your prior knowledge."` 모든 단계에 삽입. 모델이 정치 fact-checking을 internal knowledge로 답하는 것을 차단해서 공정한 비교 보장.
   3. Pro/Con/Mediator: 문서에 직접적 evidence가 없으면 `"No supporting evidence found"` / `Unknown`/`Low confidence`로 답하도록 강제. noise 문서에서 억지 의견을 만들지 않게 해서 multi-agent의 false bias 완화.
 
+#### 평가 결과 (raguard_balanced, 230개 전체, gpt-4o-mini)
+
+| Method | EM | Balanced Acc | True acc | False acc | Unknown 답변 |
+|---|---:|---:|---:|---:|---:|
+| **single_llm** | **73.9%** | **73.9%** | 58.3% | 89.6% | 0 |
+| MadamRAG (baseline) | 65.7% | 65.7% | 47.8% | 83.5% | 17 |
+| **V4 (proposed)** | 64.3% | 64.3% | 34.8% | 93.9% | 2 |
+
+**Key findings:**
+
+- **single_llm이 multi-agent baseline 모두를 능가** (+8.2%p vs MadamRAG, +9.6%p vs V4). doc-only 제약을 모든 method에 적용했음에도 격차 유지 → multi-agent debate가 RAGuard 같은 binary fact-check 형 task에는 fundamental하게 잘 맞지 않음.
+- **V4 < MadamRAG (-1.4%p)**. 우리 proposed method가 baseline에 뒤짐.
+- **V4의 극단적 false bias**:
+  - True 정답을 34.8%만 식별 — "항상 False" baseline(50%)보다 낮음
+  - False 정답은 93.9%로 가장 높음
+  - 모든 답을 False로 미는 경향이 V4 > MadamRAG > single_llm 순으로 강함
+
+**원인 추정**: V4의 Pro/Con 구조가 noise/misleading 문서에서도 양쪽 논거를 강제로 만들어내고, Mediator가 그 결과를 더 강하게 부정 쪽으로 결론 → Aggregator 입력 자체가 False 편향. RAGuard는 동명이인 disambig가 없고 정답이 단일 binary라, V4의 다중 entity 답변 통합 능력이 발휘되지 않음.
+
+#### Ablation: GPT-4o-mini contamination 검증
+
+문서 없이 claim만 입력했을 때:
+
+| Setup | EM | True acc | False acc |
+|---|---:|---:|---:|
+| **no-doc (claim only)** | **78.3%** | 82.6% | 73.9% |
+| single_llm (doc-given) | 73.9% | 58.3% | 89.6% |
+
+→ **doc 없이 답한 게 doc 줘서 답한 것보다 4.4%p 높음**. Explanation에 "This statement is attributed to President Biden...", "Various analyses from the Tax Policy Center..." 같은 학습된 사실 인용 다수 → GPT-4o-mini가 RAGuard claim을 internal knowledge로 답함 (**PolitiFact contamination 의심**).
+
+→ 본 평가의 multi-agent < single_llm 격차는 task 부적합보다 **single_llm의 internal knowledge 누출**에 기인한 부분이 큼. 공정한 평가 위해 open-source 모델(LLAMA) 재평가가 필요 (별도 브랜치 `feature/llama-eval`).
+
+**추후 검증 방향**:
+- LLAMA 등 open-source 작은 모델에서 격차 재측정
+- V4 구조 보강 (noise filtering 단계 / confidence weighted voting 등)
+
 - 기존 평가는 `sample_100.json` (RAMDocs test split 500개 중 random 100개) 기준이었음
 - n=100, EM≈0.3 기준 95% 신뢰구간 ±9%p는 메서드 간 비교용으로 너무 noisy → 전체 500개로 측정 시 ±4%p 수준
 - 입력 파일을 `data/ramdocs/full.json` (전체 500개)로 통일하고 `run_v4.py` / `run_madamrag.py`에 다음 로직 내장:
