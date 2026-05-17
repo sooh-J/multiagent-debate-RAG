@@ -17,46 +17,72 @@ V3와의 차이:
 Async:
   - 문서 간 / 에이전트 간 API 호출을 병렬로 실행하여 속도 향상
 
-데이터셋: RAMDocs 전체 500개 (data/ramdocs/full.json)
+데이터셋 (--dataset):
+  - ramdocs           : --n 생략 시 data/ramdocs/full.json (500개 전체)
+  - raguard           : --n 생략 시 raguard_preprocessed.json (711개 전체)
+  - raguard_balanced  : --n 생략 시 raguard_preprocessed_balanced.json (230개 전체)
+
 기존 결과 파일이 있으면 그 다음 샘플부터 이어서 실행 (resume 내장).
 50개마다 중간 저장.
 
 실행 방법:
     conda activate nlp
-    python run_v4.py
+    python run_v4.py                                  # default: ramdocs 전체 500개
+    python run_v4.py --n 20                           # ramdocs 처음 20개
+    python run_v4.py --dataset raguard_balanced       # raguard_balanced 전체 230개
+    python run_v4.py --dataset raguard_balanced --n 20
 
-출력:
+출력 (suffix = "full" if --n 생략 else f"n{N}"):
   - 콘솔: 각 샘플별 예측 결과 및 메트릭 (EM, Precision, Recall, F1)
-  - 로그: logs/v4_YYYYMMDD_HHMM.log
-  - 결과: results/v4_full_results.json
+  - 로그: logs/v4_<dataset>_<suffix>_YYYYMMDD_HHMM.log
+  - 결과: results/v4_<dataset>_<suffix>_results.json
+  예: results/v4_ramdocs_full_results.json, results/v4_raguard_balanced_n20_results.json
 
 파이프라인 코드: pipelines/v4.py
 프롬프트 정의:  prompts/v3.py (V3와 공유), prompts/madamrag.py (Round 2+)
 설정:          configs/v3.py (V3와 공유)
 """
 
+import argparse
+import asyncio
+import json
 import os
 import sys
-import json
-import asyncio
 
 from common.logging import Tee
-from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
+from common.metrics import compute_metrics, print_results_table
+from data.ramdocs.download import load_ramdocs
+from data.raguard.loader import load_raguard
 from pipelines.v4 import v4_method
 
 
 DATA_PATH = "data/ramdocs/full.json"
 OUTPUT_PATH = "results/v4_qwen_full_results.json" if os.environ.get("LLM_PROVIDER", "").lower() == "qwen" else "results/v4_full_results.json"
+
+def _load_ramdocs(n: int | None):
+    """n=None 이면 full.json (전체 500개), 아니면 sample 사용."""
+    if n is None:
+        with open("data/ramdocs/full.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    return load_ramdocs(n_samples=n)
+
+
+DATASET_LOADERS = {
+    "ramdocs":          lambda n: _load_ramdocs(n),
+    "raguard":          lambda n: load_raguard(n_samples=n, balanced=False),
+    "raguard_balanced": lambda n: load_raguard(n_samples=n, balanced=True),
+}
+
 CHECKPOINT_EVERY = 50
 
 
-async def run_on_sample(sample: dict) -> dict:
+async def run_on_sample(sample: dict, dataset: str) -> dict:
     query = sample["question"]
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = await v4_method(query, doc_texts)
+    result = await v4_method(query, doc_texts, dataset=dataset)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -75,7 +101,7 @@ async def run_on_sample(sample: dict) -> dict:
     }
 
 
-async def run_on_dataset(ds_sample, existing_results, output_path) -> list[dict]:
+async def run_on_dataset(ds_sample, existing_results: list, output_path: str, dataset: str) -> list[dict]:
     results = list(existing_results)
     start = len(results)
     total = len(ds_sample)
@@ -88,7 +114,7 @@ async def run_on_dataset(ds_sample, existing_results, output_path) -> list[dict]
     for i in range(start, total):
         sample = ds_sample[i]
         print(f"\n[{i+1}/{total}] Q: {sample['question']}")
-        out = await run_on_sample(sample)
+        out = await run_on_sample(sample, dataset)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -117,19 +143,29 @@ async def run_on_dataset(ds_sample, existing_results, output_path) -> list[dict]
     return results
 
 
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--dataset", choices=list(DATASET_LOADERS), default="ramdocs")
+    p.add_argument("--n", type=int, default=None,
+                   help="평가 샘플 개수 (생략 시 데이터셋 전체)")
+    return p.parse_args()
+
+
 async def main():
+    args = parse_args()
     os.makedirs("results", exist_ok=True)
 
-    tee = Tee(prefix="v4")
+    suffix = "full" if args.n is None else f"n{args.n}"
+    tee = Tee(prefix=f"v4_{args.dataset}_{suffix}")
     sys.stdout = tee
 
     try:
-        with open(DATA_PATH, "r", encoding="utf-8") as f:
-            ds_sample = json.load(f)
-        print(f"RAMDocs 전체 데이터 로드: {len(ds_sample)}개")
+        ds_sample = DATASET_LOADERS[args.dataset](args.n)
+        print(f"{args.dataset} 데이터 로드: {len(ds_sample)}개")
 
-        if os.path.exists(OUTPUT_PATH):
-            with open(OUTPUT_PATH, "r", encoding="utf-8") as f:
+        output_path = f"results/v4_{args.dataset}_{suffix}_results.json"
+        if os.path.exists(output_path):
+            with open(output_path, "r", encoding="utf-8") as f:
                 existing = json.load(f)
             print(f"기존 결과 로드: {len(existing)}개")
         else:
@@ -138,7 +174,7 @@ async def main():
         if len(existing) >= len(ds_sample):
             print("이미 전체 완료 상태입니다. 종료.")
         else:
-            await run_on_dataset(ds_sample, existing, OUTPUT_PATH)
+            await run_on_dataset(ds_sample, existing, output_path, args.dataset)
             print_usage_summary()
     finally:
         tee.close()

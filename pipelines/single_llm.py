@@ -7,10 +7,17 @@ Single LLM 파이프라인
 from common.llm import call_llm
 from common.parsing import parse_answers, parse_explanation
 from prompts.single_llm import single_llm_prompt
+from prompts.raguard import single_llm_prompt_raguard
 
 
-def single_llm(query: str, documents: list[str]) -> dict:
-    prompt = single_llm_prompt(query, documents)
+def _prompt_for(dataset: str):
+    if dataset.startswith("raguard"):
+        return single_llm_prompt_raguard
+    return single_llm_prompt
+
+
+def single_llm(query: str, documents: list[str], dataset: str = "ramdocs") -> dict:
+    prompt = _prompt_for(dataset)(query, documents)
     output = call_llm(prompt)
 
     answers = parse_answers(output)

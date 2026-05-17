@@ -12,15 +12,32 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — multi_ag
 from common.llm import call_llm, call_llm_batch
 from common.parsing import normalize_answer, extract_answer, parse_answers, parse_explanation
 from prompts.madamrag import agent_initial_prompt, agent_debate_prompt, aggregator_prompt
+from prompts.raguard import (
+    aggregator_prompt_raguard,
+    agent_initial_prompt_raguard,
+    agent_debate_prompt_raguard,
+)
 from configs.madamrag import MAX_ROUNDS
 
 
-def madam_rag(query: str, documents: list[str]) -> dict:
+def _prompts_for(dataset: str):
+    """dataset 이름으로 (initial, debate, aggregator) 프롬프트 함수 셋 선택."""
+    if dataset.startswith("raguard"):
+        return (
+            agent_initial_prompt_raguard,
+            agent_debate_prompt_raguard,
+            aggregator_prompt_raguard,
+        )
+    return agent_initial_prompt, agent_debate_prompt, aggregator_prompt
+
+
+def madam_rag(query: str, documents: list[str], dataset: str = "ramdocs") -> dict:
     n_agents = len(documents)
     prev_agent_outputs = [""] * n_agents
     prev_summary: list[str] = []
     prev_explanation = ""
     round_history = []
+    initial_fn, debate_fn, agg_prompt_fn = _prompts_for(dataset)
 
     for round_num in range(1, MAX_ROUNDS + 1):
         print(f"\n{'='*50}")
@@ -31,13 +48,13 @@ def madam_rag(query: str, documents: list[str]) -> dict:
         prompts = []
         for i, doc in enumerate(documents):
             if round_num == 1:
-                prompts.append(agent_initial_prompt(query, doc))
+                prompts.append(initial_fn(query, doc))
             else:
                 history = "\n".join([
                     f"Agent {j+1}: {prev_agent_outputs[j]}"
                     for j in range(n_agents) if j != i
                 ])
-                prompts.append(agent_debate_prompt(query, doc, history))
+                prompts.append(debate_fn(query, doc, history))
 
         current_answers = call_llm_batch(prompts)
         for i, answer in enumerate(current_answers):
@@ -71,7 +88,7 @@ def madam_rag(query: str, documents: list[str]) -> dict:
                 }
 
         # Step 3: Aggregator 요약
-        agg_prompt = aggregator_prompt(query, current_answers)
+        agg_prompt = agg_prompt_fn(query, current_answers)
         agg_output = call_llm(agg_prompt)
 
         agg_answer = parse_answers(agg_output)
