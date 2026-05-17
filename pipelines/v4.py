@@ -58,17 +58,50 @@ from prompts.v3 import (
     aggregator_with_confidence_prompt,
 )
 from prompts.madamrag import agent_debate_prompt, aggregator_prompt
+from prompts.raguard import (
+    aggregator_prompt_raguard,
+    aggregator_with_confidence_prompt_raguard,
+    pro_prompt_raguard,
+    con_prompt_raguard,
+    mediator_prompt_raguard,
+    agent_debate_prompt_raguard,
+)
 from configs.v3 import MAX_ROUNDS
 
 
-async def doc_debate_round1(query: str, document: str, doc_index: int) -> dict:
+def _prompts_for(dataset: str):
+    """
+    dataset 이름으로 사용할 프롬프트 함수 묶음 반환.
+    Returns: (pro_fn, con_fn, mediator_fn, round1_agg_fn, agent_debate_fn, round2plus_agg_fn)
+    """
+    if dataset.startswith("raguard"):
+        return (
+            pro_prompt_raguard,
+            con_prompt_raguard,
+            mediator_prompt_raguard,
+            aggregator_with_confidence_prompt_raguard,
+            agent_debate_prompt_raguard,
+            aggregator_prompt_raguard,
+        )
+    return (
+        pro_prompt,
+        con_prompt,
+        mediator_prompt,
+        aggregator_with_confidence_prompt,
+        agent_debate_prompt,
+        aggregator_prompt,
+    )
+
+
+async def doc_debate_round1(query: str, document: str, doc_index: int,
+                            pro_fn, con_fn, mediator_fn) -> dict:
     """Round 1: 단일 문서에 대한 Pro/Con 병렬 → Mediator (로그는 반환 후 출력)"""
 
     pro_resp, con_resp = await asyncio.gather(
-        async_call_llm(pro_prompt(query, document)),
-        async_call_llm(con_prompt(query, document)),
+        async_call_llm(pro_fn(query, document)),
+        async_call_llm(con_fn(query, document)),
     )
-    med_resp = await async_call_llm(mediator_prompt(query, document, pro_resp, con_resp))
+    med_resp = await async_call_llm(mediator_fn(query, document, pro_resp, con_resp))
 
     return {
         "doc_index": doc_index,
@@ -78,7 +111,7 @@ async def doc_debate_round1(query: str, document: str, doc_index: int) -> dict:
     }
 
 
-async def v4_method(query: str, documents: list[str]) -> dict:
+async def v4_method(query: str, documents: list[str], dataset: str = "ramdocs") -> dict:
     """
     V4 메인 파이프라인 (async)
 
@@ -96,6 +129,8 @@ async def v4_method(query: str, documents: list[str]) -> dict:
     """
     n_docs = len(documents)
     round_history = []
+    (pro_fn, con_fn, mediator_fn,
+     round1_agg_fn, agent_debate_fn, round2plus_agg_fn) = _prompts_for(dataset)
 
     # ══════════════════════════════════════════════════════════════════════
     # Round 1: 찬/반/중재자 구조 — 문서 간 병렬
@@ -105,7 +140,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
     print('='*50)
 
     debate_results = await asyncio.gather(*[
-        doc_debate_round1(query, doc, i)
+        doc_debate_round1(query, doc, i, pro_fn, con_fn, mediator_fn)
         for i, doc in enumerate(documents)
     ])
     debate_results = list(debate_results)
@@ -126,7 +161,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
     print("Aggregator (Round 1)")
     print('─'*40)
 
-    agg_output = await async_call_llm(aggregator_with_confidence_prompt(query, mediator_outputs))
+    agg_output = await async_call_llm(round1_agg_fn(query, mediator_outputs))
     agg_answer = parse_answers(agg_output)
     agg_explanation = parse_explanation(agg_output)
 
@@ -160,7 +195,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
                 f"Agent {j+1}: {prev_agent_outputs[j]}"
                 for j in range(n_docs) if j != i
             ])
-            return await async_call_llm(agent_debate_prompt(query, doc, history))
+            return await async_call_llm(agent_debate_fn(query, doc, history))
 
         current_answers = await asyncio.gather(*[
             _agent_call(i, doc) for i, doc in enumerate(documents)
@@ -199,7 +234,7 @@ async def v4_method(query: str, documents: list[str]) -> dict:
             }
 
         # Step 3: Aggregator
-        agg_output = await async_call_llm(aggregator_prompt(query, current_answers))
+        agg_output = await async_call_llm(round2plus_agg_fn(query, current_answers))
         agg_answer = parse_answers(agg_output)
         agg_explanation = parse_explanation(agg_output)
 

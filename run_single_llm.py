@@ -3,25 +3,48 @@ Single LLM 실행 스크립트
 
 Usage:
     conda activate nlp
-    python run_single_llm.py
+    python run_single_llm.py                                  # default: ramdocs 전체 500개
+    python run_single_llm.py --n 20                           # ramdocs 처음 20개
+    python run_single_llm.py --dataset raguard_balanced       # raguard_balanced 전체
+    python run_single_llm.py --dataset raguard_balanced --n 20
+
+출력 (suffix = "full" if --n 생략 else f"n{N}"):
+    results/single_llm_<dataset>_<suffix>_results.json
+    logs/single_llm_<dataset>_<suffix>_YYYYMMDD_HHMM.log
 """
 
-import sys
+import argparse
 import json
+import sys
 
 from common.logging import Tee
-from data.ramdocs.download import load_ramdocs
-from common.metrics import compute_metrics, print_results_table
 from common.llm import print_usage_summary
+from common.metrics import compute_metrics, print_results_table
+from data.ramdocs.download import load_ramdocs
+from data.raguard.loader import load_raguard
 from pipelines.single_llm import single_llm
 
+def _load_ramdocs(n: int | None):
+    """n=None 이면 full.json (전체 500개), 아니면 sample 사용."""
+    if n is None:
+        with open("data/ramdocs/full.json", "r", encoding="utf-8") as f:
+            return json.load(f)
+    return load_ramdocs(n_samples=n)
 
-def run_on_sample(sample: dict) -> dict:
+
+DATASET_LOADERS = {
+    "ramdocs":          lambda n: _load_ramdocs(n),
+    "raguard":          lambda n: load_raguard(n_samples=n, balanced=False),
+    "raguard_balanced": lambda n: load_raguard(n_samples=n, balanced=True),
+}
+
+
+def run_on_sample(sample: dict, dataset: str) -> dict:
     query = sample["question"]
     doc_texts = [doc["text"] for doc in sample["documents"]]
     doc_meta = [{"type": doc["type"], "answer": doc["answer"]} for doc in sample["documents"]]
 
-    result = single_llm(query, doc_texts)
+    result = single_llm(query, doc_texts, dataset=dataset)
 
     predicted_answers = result["final_answer"] if result["final_answer"] else []
     metrics = compute_metrics(predicted_answers, sample["gold_answers"], sample["wrong_answers"])
@@ -40,11 +63,11 @@ def run_on_sample(sample: dict) -> dict:
     }
 
 
-def run_on_dataset(ds_sample) -> list[dict]:
+def run_on_dataset(ds_sample, output_path: str, dataset: str) -> list[dict]:
     results = []
     for i, sample in enumerate(ds_sample):
         print(f"\n[{i+1}/{len(ds_sample)}] Q: {sample['question']}")
-        out = run_on_sample(sample)
+        out = run_on_sample(sample, dataset)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -61,7 +84,6 @@ def run_on_dataset(ds_sample) -> list[dict]:
 
     print_results_table(results)
 
-    output_path = "results/single_llm_results.json"
     with open(output_path, "w", encoding="utf-8") as f:
         json.dump(results, f, ensure_ascii=False, indent=2)
     print(f"\n결과가 '{output_path}'에 저장되었습니다.")
@@ -69,16 +91,27 @@ def run_on_dataset(ds_sample) -> list[dict]:
     return results
 
 
+def parse_args():
+    p = argparse.ArgumentParser()
+    p.add_argument("--dataset", choices=list(DATASET_LOADERS), default="ramdocs")
+    p.add_argument("--n", type=int, default=None,
+                   help="평가 샘플 개수 (생략 시 데이터셋 전체)")
+    return p.parse_args()
+
+
 if __name__ == "__main__":
     import os
+    args = parse_args()
     os.makedirs("results", exist_ok=True)
 
-    tee = Tee(prefix="single_llm")
+    suffix = "full" if args.n is None else f"n{args.n}"
+    tee = Tee(prefix=f"single_llm_{args.dataset}_{suffix}")
     sys.stdout = tee
 
     try:
-        ds_sample = load_ramdocs(n_samples=100)
-        all_results = run_on_dataset(ds_sample)
+        ds_sample = DATASET_LOADERS[args.dataset](args.n)
+        output_path = f"results/single_llm_{args.dataset}_{suffix}_results.json"
+        all_results = run_on_dataset(ds_sample, output_path, args.dataset)
 
         print_usage_summary()
     finally:
