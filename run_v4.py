@@ -31,12 +31,13 @@ Async:
     python run_v4.py --n 20                           # ramdocs 처음 20개
     python run_v4.py --dataset raguard_balanced       # raguard_balanced 전체 230개
     python run_v4.py --dataset raguard_balanced --n 20
+    python run_v4.py --model llama-3.1-8b-instruct    # vLLM served model (OPENAI_BASE_URL 필요)
 
-출력 (suffix = "full" if --n 생략 else f"n{N}"):
+출력 (suffix = "full" if --n 생략 else f"n{N}", default 모델일 땐 slug 미포함):
   - 콘솔: 각 샘플별 예측 결과 및 메트릭 (EM, Precision, Recall, F1)
-  - 로그: logs/v4_<dataset>_<suffix>_YYYYMMDD_HHMM.log
-  - 결과: results/v4_<dataset>_<suffix>_results.json
-  예: results/v4_ramdocs_full_results.json, results/v4_raguard_balanced_n20_results.json
+  - 로그: logs/v4_<dataset>_<suffix>[_<slug>]_YYYYMMDD_HHMM.log
+  - 결과: results/v4_<dataset>_<suffix>[_<slug>]_results.json
+  예: results/v4_ramdocs_full_results.json, results/v4_raguard_balanced_n20_llama-3.1-8b-instruct_results.json
 
 파이프라인 코드: pipelines/v4.py
 프롬프트 정의:  prompts/v3.py (V3와 공유), prompts/madamrag.py (Round 2+)
@@ -50,15 +51,12 @@ import os
 import sys
 
 from common.logging import Tee
-from common.llm import print_usage_summary
+from common.llm import DEFAULT_MODEL, model_slug, print_usage_summary, set_default_model
 from common.metrics import compute_metrics, print_results_table
 from data.ramdocs.download import load_ramdocs
 from data.raguard.loader import load_raguard
 from pipelines.v4 import v4_method
 
-
-DATA_PATH = "data/ramdocs/full.json"
-OUTPUT_PATH = "results/v4_qwen_full_results.json" if os.environ.get("LLM_PROVIDER", "").lower() == "qwen" else "results/v4_full_results.json"
 
 def _load_ramdocs(n: int | None):
     """n=None 이면 full.json (전체 500개), 아니면 sample 사용."""
@@ -101,6 +99,23 @@ async def run_on_sample(sample: dict, dataset: str) -> dict:
     }
 
 
+def _error_placeholder(sample: dict, exc: Exception) -> dict:
+    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (context overflow 등 outlier 대응)"""
+    return {
+        "question": sample["question"],
+        "disambig_entity": sample["disambig_entity"],
+        "gold_answers": sample["gold_answers"],
+        "wrong_answers": sample["wrong_answers"],
+        "doc_meta": [{"type": d["type"], "answer": d["answer"]} for d in sample["documents"]],
+        "predicted": [],
+        "explanation": "",
+        "rounds_run": 0,
+        "round_history": [],
+        "error": f"{type(exc).__name__}: {exc}",
+        **compute_metrics([], sample["gold_answers"], sample["wrong_answers"]),
+    }
+
+
 async def run_on_dataset(ds_sample, existing_results: list, output_path: str, dataset: str) -> list[dict]:
     results = list(existing_results)
     start = len(results)
@@ -114,7 +129,11 @@ async def run_on_dataset(ds_sample, existing_results: list, output_path: str, da
     for i in range(start, total):
         sample = ds_sample[i]
         print(f"\n[{i+1}/{total}] Q: {sample['question']}")
-        out = await run_on_sample(sample, dataset)
+        try:
+            out = await run_on_sample(sample, dataset)
+        except Exception as e:
+            print(f"  !! Sample failed: {type(e).__name__}: {e}")
+            out = _error_placeholder(sample, e)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -148,6 +167,8 @@ def parse_args():
     p.add_argument("--dataset", choices=list(DATASET_LOADERS), default="ramdocs")
     p.add_argument("--n", type=int, default=None,
                    help="평가 샘플 개수 (생략 시 데이터셋 전체)")
+    p.add_argument("--model", default=DEFAULT_MODEL,
+                   help="LLM 식별자 (OpenAI 모델 ID 또는 vLLM served name). default 면 출력 파일 이름에 model slug 미포함")
     return p.parse_args()
 
 
@@ -155,15 +176,20 @@ async def main():
     args = parse_args()
     os.makedirs("results", exist_ok=True)
 
+    set_default_model(args.model)
+
     suffix = "full" if args.n is None else f"n{args.n}"
-    tee = Tee(prefix=f"v4_{args.dataset}_{suffix}")
+    tag = f"{args.dataset}_{suffix}" if args.model == DEFAULT_MODEL \
+        else f"{args.dataset}_{suffix}_{model_slug(args.model)}"
+
+    tee = Tee(prefix=f"v4_{tag}")
     sys.stdout = tee
 
     try:
         ds_sample = DATASET_LOADERS[args.dataset](args.n)
         print(f"{args.dataset} 데이터 로드: {len(ds_sample)}개")
 
-        output_path = f"results/v4_{args.dataset}_{suffix}_results.json"
+        output_path = f"results/v4_{tag}_results.json"
         if os.path.exists(output_path):
             with open(output_path, "r", encoding="utf-8") as f:
                 existing = json.load(f)

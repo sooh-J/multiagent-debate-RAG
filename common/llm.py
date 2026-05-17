@@ -2,18 +2,19 @@
 LLM 호출 유틸리티
 
 Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — call_llm()
-원본은 HuggingFace transformers pipeline 사용, 여기서는 OpenAI API로 대체.
+원본은 HuggingFace transformers pipeline 사용, 여기서는 OpenAI-compatible API로 대체.
 
-Provider 전환 (환경변수):
-  LLM_PROVIDER=openai (기본) → OpenAI API
-  LLM_PROVIDER=qwen          → 로컬 vLLM 서버 (OpenAI-compatible)
-    LLM_BASE_URL=http://localhost:8000/v1 (기본)
-    LLM_MODEL=Qwen/Qwen2.5-7B-Instruct (기본)
-    LLM_MODEL은 vLLM 서버에 떠있는 모델 ID와 정확히 일치해야 함.
-    다른 모델을 띄웠다면 LLM_MODEL 환경변수로 명시할 것.
+엔드포인트는 두 가지 모드를 지원한다:
+  1. OpenAI (default)         — OPENAI_API_KEY 만 설정
+  2. vLLM OpenAI-compatible   — OPENAI_BASE_URL 도 함께 설정 (예: http://localhost:8000/v1)
+                                 vLLM 서버에 직접 붙으려면 OPENAI_API_KEY 는 임의 dummy 값이면 됨.
 
-vLLM 실행 예:
-  vllm serve Qwen/Qwen2.5-7B-Instruct --port 8000 --max-model-len 8192
+backward compat:
+  - LLM_BASE_URL (PR #10 도입) 도 OPENAI_BASE_URL 의 alias 로 인식
+  - LLM_PROVIDER=qwen 일 때 default base_url/model 자동 설정
+
+Qwen3 모델은 chat_template_kwargs.enable_thinking=False 로 thinking 모드를 끔
+(gpt-4o-mini / LLAMA-Instruct 와 동급 비교 위해). 모델 이름에 'qwen3' 가 들어가면 자동 적용.
 """
 
 import os
@@ -24,28 +25,34 @@ from openai import OpenAI, AsyncOpenAI
 
 load_dotenv()
 
+# Provider 분기 (PR #10 호환). LLM_PROVIDER=qwen 이면 vLLM endpoint default 적용.
 LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").lower()
 
 if LLM_PROVIDER == "qwen":
     DEFAULT_MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen2.5-7B-Instruct")
-    _base_url = os.environ.get("LLM_BASE_URL", "http://localhost:8000/v1")
-    _api_key = os.environ.get("OPENAI_API_KEY", "EMPTY")
-    client = OpenAI(base_url=_base_url, api_key=_api_key)
-    async_client = AsyncOpenAI(base_url=_base_url, api_key=_api_key)
-    # Qwen3 thinking 모드 OFF (4o-mini 동급 비교 목적)
-    _EXTRA_BODY = {"chat_template_kwargs": {"enable_thinking": False}}
+    _BASE_URL = (
+        os.environ.get("OPENAI_BASE_URL")
+        or os.environ.get("LLM_BASE_URL")
+        or "http://localhost:8000/v1"
+    )
 else:
     DEFAULT_MODEL = os.environ.get("LLM_MODEL", "gpt-4o-mini")
-    client = OpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
-    async_client = AsyncOpenAI(api_key=os.environ.get("OPENAI_API_KEY", ""))
-    _EXTRA_BODY = {}
+    _BASE_URL = os.environ.get("OPENAI_BASE_URL") or os.environ.get("LLM_BASE_URL")
 
-# 가격 (USD per 1M tokens). 로컬 모델은 0.
+_API_KEY = os.environ.get("OPENAI_API_KEY", "EMPTY")  # vLLM 은 아무 값이나 OK
+
+client = OpenAI(api_key=_API_KEY, base_url=_BASE_URL) if _BASE_URL \
+    else OpenAI(api_key=_API_KEY)
+async_client = AsyncOpenAI(api_key=_API_KEY, base_url=_BASE_URL) if _BASE_URL \
+    else AsyncOpenAI(api_key=_API_KEY)
+
+# 가격 (USD per 1M tokens). 로컬(vLLM) 모델은 0으로 처리.
 PRICING = {
     "gpt-4o-mini": {"input": 0.15, "output": 0.60},
-    "gpt-4o": {"input": 2.50, "output": 10.00},
-    "Qwen/Qwen3-8B": {"input": 0.0, "output": 0.0},
+    "gpt-4o":      {"input": 2.50, "output": 10.00},
+    # 로컬 vLLM 모델 (cost 0)
     "Qwen/Qwen2.5-7B-Instruct": {"input": 0.0, "output": 0.0},
+    "Qwen/Qwen3-8B":            {"input": 0.0, "output": 0.0},
 }
 
 # 토큰 사용량 누적
@@ -54,14 +61,29 @@ _usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0}
 
 MAX_RETRIES = 3
 
-def call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
+
+def _resolve_model(model: str | None) -> str:
+    """None 이면 module-level DEFAULT_MODEL 을 동적으로 반환 (set_default_model 반영용)."""
+    return model if model is not None else DEFAULT_MODEL
+
+
+def _extra_body_for(model: str) -> dict:
+    """모델별 vLLM extra_body. Qwen3 의 thinking 모드는 동급 비교를 위해 끔."""
+    if "qwen3" in model.lower():
+        return {"chat_template_kwargs": {"enable_thinking": False}}
+    return {}
+
+
+def call_llm(prompt: str, model: str | None = None, temperature: float = 0.0) -> str:
+    m = _resolve_model(model)
+    extra = _extra_body_for(m)
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             response = client.chat.completions.create(
-                model=model,
+                model=m,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
-                extra_body=_EXTRA_BODY,
+                **({"extra_body": extra} if extra else {}),
             )
             if response.usage:
                 _usage["input_tokens"] += response.usage.prompt_tokens
@@ -76,18 +98,20 @@ def call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) 
             time.sleep(2 ** attempt)
 
 
-def call_llm_batch(prompts: list[str], model: str = DEFAULT_MODEL, temperature: float = 0.0) -> list[str]:
+def call_llm_batch(prompts: list[str], model: str | None = None, temperature: float = 0.0) -> list[str]:
     """여러 프롬프트를 동시에 호출"""
     with ThreadPoolExecutor(max_workers=len(prompts)) as executor:
         return list(executor.map(lambda p: call_llm(p, model, temperature), prompts))
 
 
-async def async_call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: float = 0.0) -> str:
+async def async_call_llm(prompt: str, model: str | None = None, temperature: float = 0.0) -> str:
+    m = _resolve_model(model)
+    extra = _extra_body_for(m)
     response = await async_client.chat.completions.create(
-        model=model,
+        model=m,
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature,
-        extra_body=_EXTRA_BODY,
+        **({"extra_body": extra} if extra else {}),
     )
     if response.usage:
         _usage["input_tokens"] += response.usage.prompt_tokens
@@ -97,9 +121,21 @@ async def async_call_llm(prompt: str, model: str = DEFAULT_MODEL, temperature: f
     return response.choices[0].message.content.strip()
 
 
-def get_usage_summary(model: str = DEFAULT_MODEL) -> dict:
-    """현재까지 누적된 토큰 사용량과 예상 비용 반환"""
-    prices = PRICING.get(model, {"input": 0.0, "output": 0.0})
+def set_default_model(model: str) -> None:
+    """전역 default model 갱신. run_*.py 진입점에서 한 번만 호출."""
+    global DEFAULT_MODEL
+    DEFAULT_MODEL = model
+
+
+def model_slug(model: str) -> str:
+    """파일명용 short slug. 'meta-llama/Llama-3.1-8B-Instruct' → 'llama-3.1-8b-instruct'"""
+    return model.split("/")[-1].lower()
+
+
+def get_usage_summary(model: str = None) -> dict:
+    """현재까지 누적된 토큰 사용량과 예상 비용 반환. 로컬(vLLM) 모델은 cost=0."""
+    m = model or DEFAULT_MODEL
+    prices = PRICING.get(m, {"input": 0.0, "output": 0.0})
     input_cost = _usage["input_tokens"] / 1_000_000 * prices["input"]
     output_cost = _usage["output_tokens"] / 1_000_000 * prices["output"]
     total_cost = input_cost + output_cost
@@ -115,12 +151,15 @@ def get_usage_summary(model: str = DEFAULT_MODEL) -> dict:
     }
 
 
-def print_usage_summary(model: str = DEFAULT_MODEL):
+def print_usage_summary(model: str = None):
     """토큰 사용량과 비용을 출력"""
-    s = get_usage_summary(model)
+    m = model or DEFAULT_MODEL
+    s = get_usage_summary(m)
     print(f"\n{'='*50}")
     print("API USAGE SUMMARY")
     print(f"{'='*50}")
+    print(f"  Model        : {m}")
+    print(f"  Endpoint     : {_BASE_URL or 'OpenAI'}")
     print(f"  Calls        : {s['calls']}")
     print(f"  Input tokens : {s['input_tokens']:,}")
     print(f"  Output tokens: {s['output_tokens']:,}")

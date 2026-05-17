@@ -20,7 +20,10 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 | V4       | gpt-4o-mini         | 29.20% | 0.6701 | 0.6783 | 0.6464 |
 | V4       | Qwen2.5-7B-Instruct | 20.20% | 0.6700 | 0.5117 | 0.5494 |
 
-결과 파일: `results/<method>_[qwen_]full_results.json` (Qwen 결과는 `_qwen` 접미사)
+결과 파일 패턴: `results/<method>_<dataset>_<suffix>[_<model-slug>]_results.json`
+- gpt-4o-mini (default) → slug 미포함 (예: `madamrag_ramdocs_full_results.json`)
+- 그 외 모델 → slug 포함 (예: `v4_ramdocs_full_llama-3.1-8b-instruct_results.json`)
+- 구버전 `_qwen` 접미사 파일은 PR #10 이전 형식 (호환을 위해 그대로 둠).
 
 ## Baseline: MadamRAG
 
@@ -115,30 +118,48 @@ python eval_llm_judge.py results/madamrag_results.json
 python eval_llm_judge.py results/single_llm_results.json
 ```
 
-### Qwen (로컬 vLLM)으로 실행
+### Open-source 모델 (vLLM)으로 실행
 
-OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 `LLM_PROVIDER=qwen` 환경변수로 동일한 실행 스크립트를 사용할 수 있다. Qwen2.5-7B-Instruct 기준 GPU 한 장(VRAM ~20GB)이면 충분.
+OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 동일한 실행 스크립트로 LLAMA / Qwen 등 어떤 instruct 모델도 평가 가능. **권장 인터페이스: `OPENAI_BASE_URL` + `--model` 인자** (모델 무관, 출력 파일에 slug 자동 부착).
 
-1. vLLM 서버 실행 (별도 터미널)
+1. vLLM 서버 (별도 터미널, GPU 1장당 1 instance)
    ```bash
-   vllm serve Qwen/Qwen2.5-7B-Instruct \
-       --port 8000 \
-       --max-model-len 8192 \
-       --gpu-memory-utilization 0.85
+   # LLAMA-3.1-8B-Instruct (예시, HF gating 통과 필요)
+   CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
+     --model meta-llama/Llama-3.1-8B-Instruct \
+     --served-model-name llama-3.1-8b-instruct \
+     --port 8000 \
+     --max-model-len 16384 \
+     --max-num-seqs 8 \
+     --gpu-memory-utilization 0.92
+
+   # 또는 로컬 path Qwen
+   CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server \
+     --model /data_seoul/models/Qwen2.5-7B-Instruct \
+     --served-model-name qwen-7b-instruct \
+     --port 8001 \
+     --max-model-len 16384 \
+     --max-num-seqs 8 --gpu-memory-utilization 0.92
    ```
 
-2. 환경변수 설정 (`.env` 또는 셸 export). `LLM_MODEL`은 vLLM에 띄운 모델 ID와 정확히 일치해야 한다.
+2. 환경 변수로 endpoint 지정 (클라이언트 셸):
    ```bash
-   LLM_PROVIDER=qwen
-   LLM_MODEL=Qwen/Qwen2.5-7B-Instruct
-   LLM_BASE_URL=http://localhost:8000/v1
+   export OPENAI_BASE_URL=http://localhost:8000/v1
+   export OPENAI_API_KEY=EMPTY      # vLLM 은 인증 안 함, 아무 문자열이나 OK
    ```
 
-3. 평소처럼 실행. 결과 파일명에 자동으로 `_qwen` 접미사가 붙어 GPT 결과와 구분된다.
+3. `--model` 인자로 served name 명시 (결과 파일에 자동으로 slug 붙음):
    ```bash
-   python run_madamrag.py     # → results/madamrag_qwen_full_results.json
-   python run_v4.py           # → results/v4_qwen_full_results.json
+   python run_single_llm.py --dataset raguard_balanced --model llama-3.1-8b-instruct
+   python run_madamrag.py   --dataset raguard_balanced --model llama-3.1-8b-instruct
+   python run_v4.py         --dataset raguard_balanced --model llama-3.1-8b-instruct
    ```
+
+> Qwen3 모델은 `common/llm.py`가 자동으로 `enable_thinking=False` 를 보내 thinking 모드를 끔 (다른 모델과 동급 비교 목적).
+>
+> **Backward compat (PR #10)**: `LLM_PROVIDER=qwen` 환경변수도 여전히 동작 (default base_url/model 자동 설정). 새 코드는 `OPENAI_BASE_URL` + `--model` 쪽 권장.
+>
+> 자세한 환경 setup / troubleshooting / 4-GPU 병렬 실행은 [Reproduction](#reproduction--새-모델로-평가-돌리기) 참조.
 
 중간에 끊겨도 결과 JSON이 있으면 이어서 재개된다 (50개마다 체크포인트 저장).
 
@@ -205,11 +226,188 @@ OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 `LLM_PROVIDER=qwe
 
 → **doc 없이 답한 게 doc 줘서 답한 것보다 4.4%p 높음**. Explanation에 "This statement is attributed to President Biden...", "Various analyses from the Tax Policy Center..." 같은 학습된 사실 인용 다수 → GPT-4o-mini가 RAGuard claim을 internal knowledge로 답함 (**PolitiFact contamination 의심**).
 
-→ 본 평가의 multi-agent < single_llm 격차는 task 부적합보다 **single_llm의 internal knowledge 누출**에 기인한 부분이 큼. 공정한 평가 위해 open-source 모델(LLAMA) 재평가가 필요 (별도 브랜치 `feature/llama-eval`).
+→ 본 평가의 multi-agent < single_llm 격차는 task 부적합보다 **single_llm의 internal knowledge 누출**에 기인한 부분이 큼. → LLAMA-8B, Qwen-7B 로 검증 (아래 [3-Model 비교](#3-model-비교-결과-raguard_balanced-230)).
 
 **추후 검증 방향**:
-- LLAMA 등 open-source 작은 모델에서 격차 재측정
-- V4 구조 보강 (noise filtering 단계 / confidence weighted voting 등)
+- ~~LLAMA 등 open-source 작은 모델에서 격차 재측정~~ ✅ 완료 — 같은 multi-agent < single_llm 패턴 재현 (아래 참조)
+- V4 구조 보강 (doc credibility-aware Pro/Con / confidence weighted voting / retrieval filter 등)
+
+### Open-source 모델 평가 (`feature/llama`)
+
+GPT-4o-mini의 internal knowledge 누출 가능성을 차단하고 동일 조건에서 multi-agent 효과를 재측정하기 위해, vLLM의 OpenAI-compatible 서버를 통해 LLAMA / Qwen 등 open-source 모델로도 동일 pipeline 실행이 가능하다.
+
+#### 3-Model 비교 결과 (raguard_balanced 230)
+
+3개 모델(GPT-4o-mini / LLAMA-3.1-8B-Instruct / Qwen2.5-7B-Instruct) × 3 method(single_llm / madamrag / v4)를 동일한 `prompts/raguard.py` 분기로 평가:
+
+| Model | Method | EM | Bal Acc | True acc | False acc | predT | predF | empty |
+|---|---|---:|---:|---:|---:|---:|---:|---:|
+| **GPT-4o-mini** | single_llm | **73.9%** | 73.9% | 58.3% | 89.6% | 79 | 151 | 0 |
+| | madamrag | 65.7% | 65.7% | 47.8% | 83.5% | 67 | 146 | 0 |
+| | v4 | 64.3% | 64.3% | 34.8% | 93.9% | 47 | 181 | 0 |
+| **LLAMA-3.1-8B** | single_llm | **67.8%** | 67.8% | 56.5% | 79.1% | 81 | 134 | 15 |
+| | madamrag | 57.0% | 57.0% | 62.6% | 51.3% | 128 | 101 | 1 |
+| | v4 | 58.7% | 58.7% | 60.9% | 56.5% | 119 | 110 | 1 |
+| **Qwen2.5-7B** | single_llm | 53.5% | 53.5% | 9.6% | 97.4% | 14 | 216 | 0 |
+| | madamrag | 53.9% | 53.9% | 10.4% | 97.4% | 14 | 213 | 0 |
+| | v4 | 54.3% | 54.3% | 10.4% | 98.3% | 14 | 214 | 0 |
+
+##### 주요 발견
+
+**1. Multi-agent < single_llm — 3-model 공통 패턴**
+- GPT-4o-mini, LLAMA-8B 둘 다 single_llm 대비 multi-agent가 **-8 ~ -11pp** 손해
+- 같은 방향 + 비슷한 크기 → 한 모델 contamination이 원인이 아님. **RAGuard binary fact-check task가 multi-agent debate의 design assumption (multi-answer ambiguity)에 fundamental하게 안 맞음**.
+
+**2. Failure mode가 모델별로 다름** (질적 차이)
+
+|  | single_llm baseline | multi-agent 효과 | 메커니즘 |
+|---|---|---|---|
+| GPT-4o-mini | False 약간 우세 (T 58 / F 90) | **False bias 증폭** (v4 T-acc 34.8%) | 기존 prior 확신 강화 |
+| LLAMA-8B | 비슷한 패턴 (T 57 / F 79) | **bias 뒤집힘** (T 60+ / F 50+) | predictions 흔들림 (noise) |
+
+→ Multi-agent debate가 모델의 prior를 amplify하거나 dilute하지, 정보를 더 정확하게 만들지 않음 (양쪽 모델에서 다른 메커니즘으로 같은 결론).
+
+**3. Qwen2.5-7B는 "default-False" 모델 — 비교 부적합**
+- True 예측 14/230 (6%) — 클래스 거의 무시
+- 3 method 다 BalAcc ~54%, 차이 < 0.8pp → method 비교 의미 없음
+- 강한 RLHF refusal bias로 인한 model collapse 추정. 분석에서 제외.
+
+**4. GPT-4o-mini의 False acc 우위 (+10.5pp vs LLAMA single_llm)는 contamination 의심**
+- True acc는 거의 동일 (58.3% vs 56.5%), False acc만 격차 큼 (89.6% vs 79.1%)
+- 이전 [no-doc ablation](#ablation-gpt-4o-mini-contamination-검증) (EM 78.3%) 과 일관 → PolitiFact 학습 가능성
+
+##### Doc composition × outcome 분석 (GPT-4o-mini, n=230)
+
+RAGuard sample의 doc 구성 (avg 6.5 doc/sample): correct 36.1%, noise 52.4%, misinfo 11.6%. (gold class) × (misinfo 유무) 4-cell:
+
+| 조건 | n | single_llm | madamrag | v4 |
+|---|---:|---:|---:|---:|
+| misinfo 있음, gold=True | 62 | 54.8% | 45.2% | **25.8%** |
+| **misinfo 있음, gold=False** | 25 | 60.0% | 52.0% | **76.0%** ← v4 압승 |
+| misinfo 없음, gold=True | 53 | 62.3% | 50.9% | 45.3% |
+| misinfo 없음, gold=False | 90 | 97.8% | 92.2% | 98.9% |
+
+**해석**: V4는 (gold=False + misinfo 있음) sub-condition에서 single_llm 대비 **+16pp 압승**. 이건 multi-agent debate의 design이 실제 적용되는 케이스 (거짓 주장 + 헷갈리는 doc). 반대로 (gold=True + misinfo)에선 Pro voice가 misinfo doc도 legitimate evidence처럼 다뤄서 **-29pp 폭망** — method의 진짜 약점은 doc credibility 평가 부족.
+
+##### 결론 및 paper narrative
+
+1. **Multi-agent debate doesn't fit binary fact-check** — 3-model 동일 결과로 강력한 negative finding
+2. **RAGuard는 method의 boundary case로 활용** — 어디서 안 통하는지 보여주는 negative 사례
+3. **V4의 design 정당성은 RAMDocs (multi-answer ambiguous QA)에서 검증** — 본 README 하단 V4 +2.2pp 결과 참고
+4. **Future work**: doc credibility-aware Pro/Con prompting, retrieval filter preprocessing (모든 method 동일 적용)
+
+---
+
+#### Reproduction — 새 모델로 평가 돌리기
+
+**환경 (`nlp` conda env 기준)**
+
+```bash
+conda activate nlp
+
+# torch + vllm + transformers stack (NVIDIA driver 535.x / CUDA 12.2 호환)
+pip install torch==2.5.1 --index-url https://download.pytorch.org/whl/cu121
+pip install vllm==0.7.3
+pip install "transformers==4.48.3" "tokenizers<0.22" "huggingface_hub==0.36.2"
+```
+
+> driver 535.x는 CUDA 12.x runtime forward-compatible. torch 2.11+cu130 같은 최신 wheel은 driver 업그레이드 필요 → cu121 stack으로 핀.
+> `huggingface_hub` orphan dist-info 남는 이슈 발생 시 `site-packages/huggingface_hub-*.dist-info` 중 옛 버전 디렉터리 수동 제거.
+
+**LLAMA 모델 — HF 인증 (Meta gating 필요)**
+
+```bash
+# https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct 에서 access request (보통 즉시 승인)
+# https://huggingface.co/settings/tokens 에서 Read 권한 토큰 발급
+huggingface-cli login   # 토큰 붙여넣기
+```
+
+**vLLM 서버 띄우기 — 4-GPU 병렬 평가용**
+
+GPU 1장당 vLLM 인스턴스 1개. 8B 모델은 fp16 ~16GB라 A5000 24GB 1장에 fit. 3개 method를 다른 포트에 매핑해서 동시 실행:
+
+```bash
+# 권장: tmux로 long-running 세션 보호
+tmux new -s vllm
+
+# 각 window에서 (Ctrl+B C로 새 window 추가, CUDA_VISIBLE_DEVICES와 --port만 다르게)
+# GPU 0 → port 8000 (single_llm 용)
+CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
+  --model meta-llama/Llama-3.1-8B-Instruct \
+  --served-model-name llama-3.1-8b-instruct \
+  --port 8000 \
+  --max-model-len 16384 \
+  --max-num-seqs 8 \
+  --gpu-memory-utilization 0.92
+
+# GPU 1 → port 8001 (madamrag 용)
+# GPU 2 → port 8002 (v4 용)
+# 같은 명령에서 CUDA_VISIBLE_DEVICES 와 --port 만 1/8001, 2/8002 로 바꿈
+```
+
+> `--max-model-len 16384` 권장: madamrag/v4 debate history 누적 시 worst case 16K 도달. `8192`로 띄우면 후반 샘플에서 BadRequest 400 발생.
+> `--max-num-seqs 8` 으로 KV cache OOM 방지 (A5000 24GB 기준).
+> 로컬 path도 지원: `--model /data_seoul/models/Qwen2.5-7B-Instruct` 처럼 절대 경로 가능.
+
+각 서버에서 `Uvicorn running on http://0.0.0.0:800X` 줄 뜨면 ready.
+
+**클라이언트 실행 — endpoint env var + `--model` 인자**
+
+```bash
+# 각 client 터미널에서
+conda activate nlp
+cd /path/to/multiagent-debate-RAG
+export OPENAI_BASE_URL=http://localhost:8000/v1   # vLLM 서버 주소 (포트 method별 다름)
+export OPENAI_API_KEY=EMPTY                       # vLLM 은 인증 안 함, dummy
+
+# 3 method 병렬 (각각 별도 터미널)
+OPENAI_BASE_URL=http://localhost:8000/v1 OPENAI_API_KEY=EMPTY \
+  python run_single_llm.py --dataset raguard_balanced --model llama-3.1-8b-instruct
+OPENAI_BASE_URL=http://localhost:8001/v1 OPENAI_API_KEY=EMPTY \
+  python run_madamrag.py   --dataset raguard_balanced --model llama-3.1-8b-instruct
+OPENAI_BASE_URL=http://localhost:8002/v1 OPENAI_API_KEY=EMPTY \
+  python run_v4.py         --dataset raguard_balanced --model llama-3.1-8b-instruct
+```
+
+> **env var 비어있으면 기존 OpenAI 동작 그대로 유지** — `common/llm.py`가 `OPENAI_BASE_URL` 존재 여부로 분기. gpt-4o-mini 평가는 영향 없음.
+> `--served-model-name` 과 client 의 `--model` 값을 **동일하게** 맞춰야 vLLM이 요청 받음.
+
+**예상 소요 시간** (raguard_balanced 230개, A5000 1장)
+- single_llm: ~15분
+- madamrag: ~1-2시간
+- v4: ~1.5-3시간
+
+**Resume / fault tolerance**
+- madamrag / v4: 50개마다 checkpoint 자동 저장 + 다시 같은 명령 돌리면 그 다음부터 resume (`run_*.py` 내장)
+- single_llm: 끝에 한 번만 저장 → 중간에 죽으면 처음부터 (다만 단일 호출이라 짧음)
+- 16384 토큰 초과한 outlier 샘플은 자동 catch (`predicted=[]`, `error="..."` 로 placeholder 기록) → 전체 run 안 죽음. 최종 결과 파일에 fail 샘플 명시.
+
+**출력 파일 패턴**
+
+```
+results/single_llm_raguard_balanced_full_results.json                          # gpt-4o-mini (default, slug 미포함)
+results/single_llm_raguard_balanced_full_llama-3.1-8b-instruct_results.json    # LLAMA
+results/single_llm_raguard_balanced_full_qwen-7b-instruct_results.json         # Qwen
+```
+
+**다른 모델로 확장**
+
+`--model` 인자만 바꾸면 됨. vLLM 서버 `--served-model-name` 도 동일하게 맞추기. 예시:
+
+| 모델 | served-model-name | client `--model` |
+|---|---|---|
+| LLAMA-3.1-8B-Instruct | `llama-3.1-8b-instruct` | `llama-3.1-8b-instruct` |
+| Qwen2.5-7B-Instruct | `qwen-7b-instruct` | `qwen-7b-instruct` |
+| Mistral-7B-Instruct-v0.3 | `mistral-7b-instruct-v0.3` | `mistral-7b-instruct-v0.3` |
+
+출력 파일에 자동으로 slug 붙음. 프롬프트는 변경하지 않음 (`prompts/raguard.py` 그대로) — 모델만 controlled 변수.
+
+**Troubleshooting**
+- `RuntimeError: NVIDIA driver too old (12020)` → torch wheel이 newer CUDA용. 위 cu121 stack 재설치
+- `libnccl.so.2: cannot open` → ghost CUDA lib 충돌. cu13 suffix 없는 `nvidia-*` 패키지 모두 제거 후 cu121 deps 재설치
+- `400 BadRequest, max context length 16384` → 일부 outlier 샘플이 16K 초과. error placeholder 자동 기록되니 무시 OK. 정확히 보고 싶으면 `--max-model-len 32768 --enforce-eager --max-num-seqs 4` 로 키움
+- `KeyError: 'n_gold_hit'` (구버전 checkpoint와 섞임) → `_error_placeholder()`가 `compute_metrics([], ...)` 호출하는지 확인. 옛 checkpoint 있으면 한 번 patch 필요
+- HF 401 / 403 → access 신청 안 됐거나 토큰 만료. `huggingface-cli login` 다시
 
 - 기존 평가는 `sample_100.json` (RAMDocs test split 500개 중 random 100개) 기준이었음
 - n=100, EM≈0.3 기준 95% 신뢰구간 ±9%p는 메서드 간 비교용으로 너무 noisy → 전체 500개로 측정 시 ±4%p 수준
