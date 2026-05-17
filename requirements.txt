@@ -1,3 +1,13 @@
+--extra-index-url https://download.pytorch.org/whl/cu121
+
 openai>=2.30.0
 datasets>=4.8.0
 python-dotenv>=1.0.0
+
+# vLLM stack — pinned to versions tested with NVIDIA driver 535.x (CUDA 12.2 host)
+# Qwen, LLAMA 등 vLLM 사용 시 필요. OpenAI gpt-4o-mini 만 쓸 거면 위 3줄만으로 충분.
+torch==2.5.1
+vllm==0.7.3
+transformers==4.48.3
+tokenizers<0.22
+huggingface_hub==0.36.2
