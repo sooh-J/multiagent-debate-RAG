@@ -390,18 +390,6 @@ results/single_llm_raguard_balanced_full_llama-3.1-8b-instruct_results.json    #
 results/single_llm_raguard_balanced_full_qwen-7b-instruct_results.json         # Qwen
 ```
 
-**다른 모델로 확장**
-
-`--model` 인자만 바꾸면 됨. vLLM 서버 `--served-model-name` 도 동일하게 맞추기. 예시:
-
-| 모델 | served-model-name | client `--model` |
-|---|---|---|
-| LLAMA-3.1-8B-Instruct | `llama-3.1-8b-instruct` | `llama-3.1-8b-instruct` |
-| Qwen2.5-7B-Instruct | `qwen-7b-instruct` | `qwen-7b-instruct` |
-| Mistral-7B-Instruct-v0.3 | `mistral-7b-instruct-v0.3` | `mistral-7b-instruct-v0.3` |
-
-출력 파일에 자동으로 slug 붙음. 프롬프트는 변경하지 않음 (`prompts/raguard.py` 그대로) — 모델만 controlled 변수.
-
 **Troubleshooting**
 - `RuntimeError: NVIDIA driver too old (12020)` → torch wheel이 newer CUDA용. 위 cu121 stack 재설치
 - `libnccl.so.2: cannot open` → ghost CUDA lib 충돌. cu13 suffix 없는 `nvidia-*` 패키지 모두 제거 후 cu121 deps 재설치
@@ -425,10 +413,6 @@ results/single_llm_raguard_balanced_full_qwen-7b-instruct_results.json         #
 | MadamRAG (baseline) | 27.00% | 0.6582 | 0.6433 | 0.6240 |
 | **V4 (proposed)** | **29.20%** | 0.6701 | 0.6783 | **0.6464** |
 | Δ (V4 − baseline) | +2.20%p | +0.0119 | +0.0350 | +0.0224 |
-
-- **미해결 / 후속 작업**
-  - V3 / proposed_method / single_llm 등 나머지 baseline도 동일 500개로 재평가 필요
-  - MadamRAG run 도중 OpenAI API socket-level hang 1회 발생 (sample 154에서 2시간 stall). 근본 해결 위해 `common/llm.py`의 OpenAI 클라이언트에 `timeout` 파라미터 추가 PR 필요
 
 ## 환경
 
