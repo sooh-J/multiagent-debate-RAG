@@ -33,9 +33,12 @@ def _load_ramdocs(n: int | None):
 
 
 DATASET_LOADERS = {
-    "ramdocs":          lambda n: _load_ramdocs(n),
-    "raguard":          lambda n: load_raguard(n_samples=n, balanced=False),
-    "raguard_balanced": lambda n: load_raguard(n_samples=n, balanced=True),
+    "ramdocs":             lambda n: _load_ramdocs(n),
+    "raguard":             lambda n: load_raguard(n_samples=n, balanced=False),
+    "raguard_balanced":    lambda n: load_raguard(n_samples=n, balanced=True),
+    # v2: 같은 데이터, 다른 prompt 분기 (prompts/raguard_v2.py — noise-aware + balanced few-shot)
+    "raguard_v2":          lambda n: load_raguard(n_samples=n, balanced=False),
+    "raguard_balanced_v2": lambda n: load_raguard(n_samples=n, balanced=True),
 }
 
 
