@@ -122,18 +122,18 @@ python eval_llm_judge.py results/single_llm_results.json
 
 OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 동일한 실행 스크립트로 LLAMA / Qwen 등 어떤 instruct 모델도 평가 가능. **권장 인터페이스: `OPENAI_BASE_URL` + `--model` 인자** (모델 무관, 출력 파일에 slug 자동 부착).
 
-1. vLLM 서버 (별도 터미널, GPU 1장당 1 instance)
+1. vLLM 서버 (별도 터미널, GPU 1장당 1 instance — 모델은 `/data_seoul/models/` 공용 캐시 사용, HF auth 불필요)
    ```bash
-   # LLAMA-3.1-8B-Instruct (예시, HF gating 통과 필요)
+   # LLAMA-3.1-8B-Instruct
    CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
-     --model meta-llama/Llama-3.1-8B-Instruct \
+     --model /data_seoul/models/Llama-3.1-8B-Instruct \
      --served-model-name llama-3.1-8b-instruct \
      --port 8000 \
      --max-model-len 16384 \
      --max-num-seqs 8 \
      --gpu-memory-utilization 0.92
 
-   # 또는 로컬 path Qwen
+   # Qwen2.5-7B-Instruct
    CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server \
      --model /data_seoul/models/Qwen2.5-7B-Instruct \
      --served-model-name qwen-7b-instruct \
@@ -314,13 +314,16 @@ pip install "transformers==4.48.3" "tokenizers<0.22" "huggingface_hub==0.36.2"
 > driver 535.x는 CUDA 12.x runtime forward-compatible. torch 2.11+cu130 같은 최신 wheel은 driver 업그레이드 필요 → cu121 stack으로 핀.
 > `huggingface_hub` orphan dist-info 남는 이슈 발생 시 `site-packages/huggingface_hub-*.dist-info` 중 옛 버전 디렉터리 수동 제거.
 
-**LLAMA 모델 — HF 인증 (Meta gating 필요)**
+**모델 path — `/data_seoul/models/` 공용 캐시 사용 (권장)**
 
-```bash
-# https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct 에서 access request (보통 즉시 승인)
-# https://huggingface.co/settings/tokens 에서 Read 권한 토큰 발급
-huggingface-cli login   # 토큰 붙여넣기
-```
+서버 공유 환경에서 같이 작업하는 사람들은 HF auth / 재다운 없이 아래 경로 그대로 쓰면 됨:
+
+| 모델 | path |
+|---|---|
+| LLAMA-3.1-8B-Instruct | `/data_seoul/models/Llama-3.1-8B-Instruct` |
+| Qwen2.5-7B-Instruct   | `/data_seoul/models/Qwen2.5-7B-Instruct`   |
+
+> HF Hub에서 새 모델을 받아야 하는 경우만 `huggingface-cli login` (Meta gating 모델은 https://huggingface.co/meta-llama/Llama-3.1-8B-Instruct 에서 access request 통과 후 토큰 발급).
 
 **vLLM 서버 띄우기 — 4-GPU 병렬 평가용**
 
@@ -333,7 +336,7 @@ tmux new -s vllm
 # 각 window에서 (Ctrl+B C로 새 window 추가, CUDA_VISIBLE_DEVICES와 --port만 다르게)
 # GPU 0 → port 8000 (single_llm 용)
 CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
-  --model meta-llama/Llama-3.1-8B-Instruct \
+  --model /data_seoul/models/Llama-3.1-8B-Instruct \
   --served-model-name llama-3.1-8b-instruct \
   --port 8000 \
   --max-model-len 16384 \
@@ -347,7 +350,7 @@ CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
 
 > `--max-model-len 16384` 권장: madamrag/v4 debate history 누적 시 worst case 16K 도달. `8192`로 띄우면 후반 샘플에서 BadRequest 400 발생.
 > `--max-num-seqs 8` 으로 KV cache OOM 방지 (A5000 24GB 기준).
-> 로컬 path도 지원: `--model /data_seoul/models/Qwen2.5-7B-Instruct` 처럼 절대 경로 가능.
+> HF Hub repo ID도 지원: `--model meta-llama/Llama-3.1-8B-Instruct` (이 경우 HF 토큰 필요).
 
 각 서버에서 `Uvicorn running on http://0.0.0.0:800X` 줄 뜨면 ready.
 
