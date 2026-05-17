@@ -66,6 +66,14 @@ from prompts.raguard import (
     mediator_prompt_raguard,
     agent_debate_prompt_raguard,
 )
+from prompts.raguard_v2 import (
+    aggregator_prompt_raguard as aggregator_prompt_raguard_v2,
+    aggregator_with_confidence_prompt_raguard as aggregator_with_confidence_prompt_raguard_v2,
+    pro_prompt_raguard as pro_prompt_raguard_v2,
+    con_prompt_raguard as con_prompt_raguard_v2,
+    mediator_prompt_raguard as mediator_prompt_raguard_v2,
+    agent_debate_prompt_raguard as agent_debate_prompt_raguard_v2,
+)
 from configs.v3 import MAX_ROUNDS
 
 
@@ -74,6 +82,15 @@ def _prompts_for(dataset: str):
     dataset 이름으로 사용할 프롬프트 함수 묶음 반환.
     Returns: (pro_fn, con_fn, mediator_fn, round1_agg_fn, agent_debate_fn, round2plus_agg_fn)
     """
+    if dataset.endswith("_v2"):
+        return (
+            pro_prompt_raguard_v2,
+            con_prompt_raguard_v2,
+            mediator_prompt_raguard_v2,
+            aggregator_with_confidence_prompt_raguard_v2,
+            agent_debate_prompt_raguard_v2,
+            aggregator_prompt_raguard_v2,
+        )
     if dataset.startswith("raguard"):
         return (
             pro_prompt_raguard,

@@ -8,9 +8,12 @@ from common.llm import call_llm
 from common.parsing import parse_answers, parse_explanation
 from prompts.single_llm import single_llm_prompt
 from prompts.raguard import single_llm_prompt_raguard
+from prompts.raguard_v2 import single_llm_prompt_raguard as single_llm_prompt_raguard_v2
 
 
 def _prompt_for(dataset: str):
+    if dataset.endswith("_v2"):
+        return single_llm_prompt_raguard_v2
     if dataset.startswith("raguard"):
         return single_llm_prompt_raguard
     return single_llm_prompt

@@ -17,11 +17,22 @@ from prompts.raguard import (
     agent_initial_prompt_raguard,
     agent_debate_prompt_raguard,
 )
+from prompts.raguard_v2 import (
+    aggregator_prompt_raguard as aggregator_prompt_raguard_v2,
+    agent_initial_prompt_raguard as agent_initial_prompt_raguard_v2,
+    agent_debate_prompt_raguard as agent_debate_prompt_raguard_v2,
+)
 from configs.madamrag import MAX_ROUNDS
 
 
 def _prompts_for(dataset: str):
     """dataset 이름으로 (initial, debate, aggregator) 프롬프트 함수 셋 선택."""
+    if dataset.endswith("_v2"):
+        return (
+            agent_initial_prompt_raguard_v2,
+            agent_debate_prompt_raguard_v2,
+            aggregator_prompt_raguard_v2,
+        )
     if dataset.startswith("raguard"):
         return (
             agent_initial_prompt_raguard,
