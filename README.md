@@ -12,6 +12,19 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 | **V3** | 찬/반/중재자 매 라운드 반복 | Pro → Con → Mediator + Aggregator | 최대 3 (수렴 시 조기 종료) |
 | **V4** | V3 (Round 1) + MadamRAG (Round 2+) | Round 1: Pro/Con/Mediator, Round 2+: MadamRAG Agent | 최대 3 (수렴 시 조기 종료) |
 
+## 결과 (RAMDocs full, 500 samples)
+
+| 방법론 | LLM | EM | Precision | Recall | F1 |
+|--------|-----|----|-----------|--------|-----|
+| MadamRAG | Qwen2.5-7B-Instruct | 18.20% | 0.6457 | 0.4683 | 0.5112 |
+| V4       | gpt-4o-mini         | 29.20% | 0.6701 | 0.6783 | 0.6464 |
+| V4       | Qwen2.5-7B-Instruct | 20.20% | 0.6700 | 0.5117 | 0.5494 |
+
+결과 파일 패턴: `results/<method>_<dataset>_<suffix>[_<model-slug>]_results.json`
+- gpt-4o-mini (default) → slug 미포함 (예: `madamrag_ramdocs_full_results.json`)
+- 그 외 모델 → slug 포함 (예: `v4_ramdocs_full_llama-3.1-8b-instruct_results.json`)
+- 구버전 `_qwen` 접미사 파일은 PR #10 이전 형식 (호환을 위해 그대로 둠).
+
 ## Baseline: MadamRAG
 
 [MADAM-RAG](https://arxiv.org/abs/2504.13079) (Multi-Agent Debate for Ambiguity and Misinformation in RAG)를 baseline으로 사용한다.
@@ -104,6 +117,51 @@ python run_madamrag.py --dataset raguard_balanced --n 20    # sample 평가
 python eval_llm_judge.py results/madamrag_results.json
 python eval_llm_judge.py results/single_llm_results.json
 ```
+
+### Open-source 모델 (vLLM)으로 실행
+
+OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 동일한 실행 스크립트로 LLAMA / Qwen 등 어떤 instruct 모델도 평가 가능. **권장 인터페이스: `OPENAI_BASE_URL` + `--model` 인자** (모델 무관, 출력 파일에 slug 자동 부착).
+
+1. vLLM 서버 (별도 터미널, GPU 1장당 1 instance)
+   ```bash
+   # LLAMA-3.1-8B-Instruct (예시, HF gating 통과 필요)
+   CUDA_VISIBLE_DEVICES=0 python -m vllm.entrypoints.openai.api_server \
+     --model meta-llama/Llama-3.1-8B-Instruct \
+     --served-model-name llama-3.1-8b-instruct \
+     --port 8000 \
+     --max-model-len 16384 \
+     --max-num-seqs 8 \
+     --gpu-memory-utilization 0.92
+
+   # 또는 로컬 path Qwen
+   CUDA_VISIBLE_DEVICES=1 python -m vllm.entrypoints.openai.api_server \
+     --model /data_seoul/models/Qwen2.5-7B-Instruct \
+     --served-model-name qwen-7b-instruct \
+     --port 8001 \
+     --max-model-len 16384 \
+     --max-num-seqs 8 --gpu-memory-utilization 0.92
+   ```
+
+2. 환경 변수로 endpoint 지정 (클라이언트 셸):
+   ```bash
+   export OPENAI_BASE_URL=http://localhost:8000/v1
+   export OPENAI_API_KEY=EMPTY      # vLLM 은 인증 안 함, 아무 문자열이나 OK
+   ```
+
+3. `--model` 인자로 served name 명시 (결과 파일에 자동으로 slug 붙음):
+   ```bash
+   python run_single_llm.py --dataset raguard_balanced --model llama-3.1-8b-instruct
+   python run_madamrag.py   --dataset raguard_balanced --model llama-3.1-8b-instruct
+   python run_v4.py         --dataset raguard_balanced --model llama-3.1-8b-instruct
+   ```
+
+> Qwen3 모델은 `common/llm.py`가 자동으로 `enable_thinking=False` 를 보내 thinking 모드를 끔 (다른 모델과 동급 비교 목적).
+>
+> **Backward compat (PR #10)**: `LLM_PROVIDER=qwen` 환경변수도 여전히 동작 (default base_url/model 자동 설정). 새 코드는 `OPENAI_BASE_URL` + `--model` 쪽 권장.
+>
+> 자세한 환경 setup / troubleshooting / 4-GPU 병렬 실행은 [Reproduction](#reproduction--새-모델로-평가-돌리기) 참조.
+
+중간에 끊겨도 결과 JSON이 있으면 이어서 재개된다 (50개마다 체크포인트 저장).
 
 ## 진행 상황
 
@@ -240,7 +298,7 @@ RAGuard sample의 doc 구성 (avg 6.5 doc/sample): correct 36.1%, noise 52.4%, m
 
 ---
 
-#### 협업자 가이드 — 새 모델로 동일 평가 돌리기
+#### Reproduction — 새 모델로 평가 돌리기
 
 **환경 (`nlp` conda env 기준)**
 

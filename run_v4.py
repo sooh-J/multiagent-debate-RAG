@@ -31,12 +31,13 @@ Async:
     python run_v4.py --n 20                           # ramdocs 처음 20개
     python run_v4.py --dataset raguard_balanced       # raguard_balanced 전체 230개
     python run_v4.py --dataset raguard_balanced --n 20
+    python run_v4.py --model llama-3.1-8b-instruct    # vLLM served model (OPENAI_BASE_URL 필요)
 
-출력 (suffix = "full" if --n 생략 else f"n{N}"):
+출력 (suffix = "full" if --n 생략 else f"n{N}", default 모델일 땐 slug 미포함):
   - 콘솔: 각 샘플별 예측 결과 및 메트릭 (EM, Precision, Recall, F1)
-  - 로그: logs/v4_<dataset>_<suffix>_YYYYMMDD_HHMM.log
-  - 결과: results/v4_<dataset>_<suffix>_results.json
-  예: results/v4_ramdocs_full_results.json, results/v4_raguard_balanced_n20_results.json
+  - 로그: logs/v4_<dataset>_<suffix>[_<slug>]_YYYYMMDD_HHMM.log
+  - 결과: results/v4_<dataset>_<suffix>[_<slug>]_results.json
+  예: results/v4_ramdocs_full_results.json, results/v4_raguard_balanced_n20_llama-3.1-8b-instruct_results.json
 
 파이프라인 코드: pipelines/v4.py
 프롬프트 정의:  prompts/v3.py (V3와 공유), prompts/madamrag.py (Round 2+)
@@ -99,7 +100,7 @@ async def run_on_sample(sample: dict, dataset: str) -> dict:
 
 
 def _error_placeholder(sample: dict, exc: Exception) -> dict:
-    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (LLAMA context overflow 대응)"""
+    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (context overflow 등 outlier 대응)"""
     return {
         "question": sample["question"],
         "disambig_entity": sample["disambig_entity"],

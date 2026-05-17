@@ -8,6 +8,13 @@ Ref: https://github.com/HanNight/RAMDocs/blob/main/run_madam_rag.py — call_llm
   1. OpenAI (default)         — OPENAI_API_KEY 만 설정
   2. vLLM OpenAI-compatible   — OPENAI_BASE_URL 도 함께 설정 (예: http://localhost:8000/v1)
                                  vLLM 서버에 직접 붙으려면 OPENAI_API_KEY 는 임의 dummy 값이면 됨.
+
+backward compat:
+  - LLM_BASE_URL (PR #10 도입) 도 OPENAI_BASE_URL 의 alias 로 인식
+  - LLM_PROVIDER=qwen 일 때 default base_url/model 자동 설정
+
+Qwen3 모델은 chat_template_kwargs.enable_thinking=False 로 thinking 모드를 끔
+(gpt-4o-mini / LLAMA-Instruct 와 동급 비교 위해). 모델 이름에 'qwen3' 가 들어가면 자동 적용.
 """
 
 import os
@@ -18,21 +25,35 @@ from openai import OpenAI, AsyncOpenAI
 
 load_dotenv()
 
-DEFAULT_MODEL = "gpt-4o-mini"
+# Provider 분기 (PR #10 호환). LLM_PROVIDER=qwen 이면 vLLM endpoint default 적용.
+LLM_PROVIDER = os.environ.get("LLM_PROVIDER", "openai").lower()
 
-# 가격 (USD per 1M tokens). 로컬(vLLM) 모델은 0으로 처리.
-PRICING = {
-    "gpt-4o-mini": {"input": 0.15, "output": 0.60},
-    "gpt-4o":      {"input": 2.50, "output": 10.00},
-}
+if LLM_PROVIDER == "qwen":
+    DEFAULT_MODEL = os.environ.get("LLM_MODEL", "Qwen/Qwen2.5-7B-Instruct")
+    _BASE_URL = (
+        os.environ.get("OPENAI_BASE_URL")
+        or os.environ.get("LLM_BASE_URL")
+        or "http://localhost:8000/v1"
+    )
+else:
+    DEFAULT_MODEL = os.environ.get("LLM_MODEL", "gpt-4o-mini")
+    _BASE_URL = os.environ.get("OPENAI_BASE_URL") or os.environ.get("LLM_BASE_URL")
 
-_BASE_URL = os.environ.get("OPENAI_BASE_URL")  # vLLM endpoint 면 e.g. http://localhost:8000/v1
 _API_KEY = os.environ.get("OPENAI_API_KEY", "EMPTY")  # vLLM 은 아무 값이나 OK
 
 client = OpenAI(api_key=_API_KEY, base_url=_BASE_URL) if _BASE_URL \
     else OpenAI(api_key=_API_KEY)
 async_client = AsyncOpenAI(api_key=_API_KEY, base_url=_BASE_URL) if _BASE_URL \
     else AsyncOpenAI(api_key=_API_KEY)
+
+# 가격 (USD per 1M tokens). 로컬(vLLM) 모델은 0으로 처리.
+PRICING = {
+    "gpt-4o-mini": {"input": 0.15, "output": 0.60},
+    "gpt-4o":      {"input": 2.50, "output": 10.00},
+    # 로컬 vLLM 모델 (cost 0)
+    "Qwen/Qwen2.5-7B-Instruct": {"input": 0.0, "output": 0.0},
+    "Qwen/Qwen3-8B":            {"input": 0.0, "output": 0.0},
+}
 
 # 토큰 사용량 누적
 _usage = {"input_tokens": 0, "output_tokens": 0, "calls": 0}
@@ -46,14 +67,23 @@ def _resolve_model(model: str | None) -> str:
     return model if model is not None else DEFAULT_MODEL
 
 
+def _extra_body_for(model: str) -> dict:
+    """모델별 vLLM extra_body. Qwen3 의 thinking 모드는 동급 비교를 위해 끔."""
+    if "qwen3" in model.lower():
+        return {"chat_template_kwargs": {"enable_thinking": False}}
+    return {}
+
+
 def call_llm(prompt: str, model: str | None = None, temperature: float = 0.0) -> str:
     m = _resolve_model(model)
+    extra = _extra_body_for(m)
     for attempt in range(1, MAX_RETRIES + 1):
         try:
             response = client.chat.completions.create(
                 model=m,
                 messages=[{"role": "user", "content": prompt}],
                 temperature=temperature,
+                **({"extra_body": extra} if extra else {}),
             )
             if response.usage:
                 _usage["input_tokens"] += response.usage.prompt_tokens
@@ -76,10 +106,12 @@ def call_llm_batch(prompts: list[str], model: str | None = None, temperature: fl
 
 async def async_call_llm(prompt: str, model: str | None = None, temperature: float = 0.0) -> str:
     m = _resolve_model(model)
+    extra = _extra_body_for(m)
     response = await async_client.chat.completions.create(
         model=m,
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature,
+        **({"extra_body": extra} if extra else {}),
     )
     if response.usage:
         _usage["input_tokens"] += response.usage.prompt_tokens

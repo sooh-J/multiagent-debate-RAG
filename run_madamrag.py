@@ -10,10 +10,12 @@ Usage:
     python run_madamrag.py --n 20                           # ramdocs 처음 20개
     python run_madamrag.py --dataset raguard_balanced       # raguard_balanced 전체
     python run_madamrag.py --dataset raguard_balanced --n 20
+    python run_madamrag.py --model llama-3.1-8b-instruct    # vLLM served model (OPENAI_BASE_URL 필요)
 
-출력 (suffix = "full" if --n 생략 else f"n{N}"):
-    results/madamrag_<dataset>_<suffix>_results.json
-    logs/madamrag_<dataset>_<suffix>_YYYYMMDD_HHMM.log
+출력 (suffix = "full" if --n 생략 else f"n{N}", default 모델일 땐 slug 미포함):
+    results/madamrag_<dataset>_<suffix>_results.json                          # gpt-4o-mini
+    results/madamrag_<dataset>_<suffix>_<model-slug>_results.json             # 그 외
+    logs/madamrag_<dataset>_<suffix>[_<slug>]_YYYYMMDD_HHMM.log
 """
 
 import argparse
@@ -71,7 +73,7 @@ def run_on_sample(sample: dict, dataset: str) -> dict:
 
 
 def _error_placeholder(sample: dict, exc: Exception) -> dict:
-    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (LLAMA context overflow 대응)"""
+    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (context overflow 등 outlier 대응)"""
     return {
         "question": sample["question"],
         "disambig_entity": sample["disambig_entity"],
