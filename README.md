@@ -12,6 +12,16 @@ RAG 환경에서 충돌하는 정보(ambiguity, misinformation)를 다루기 위
 | **V3** | 찬/반/중재자 매 라운드 반복 | Pro → Con → Mediator + Aggregator | 최대 3 (수렴 시 조기 종료) |
 | **V4** | V3 (Round 1) + MadamRAG (Round 2+) | Round 1: Pro/Con/Mediator, Round 2+: MadamRAG Agent | 최대 3 (수렴 시 조기 종료) |
 
+## 결과 (RAMDocs full, 500 samples)
+
+| 방법론 | LLM | EM | Precision | Recall | F1 |
+|--------|-----|----|-----------|--------|-----|
+| MadamRAG | Qwen2.5-7B-Instruct | 18.20% | 0.6457 | 0.4683 | 0.5112 |
+| V4       | gpt-4o-mini         | 29.20% | 0.6701 | 0.6783 | 0.6464 |
+| V4       | Qwen2.5-7B-Instruct | 20.20% | 0.6700 | 0.5117 | 0.5494 |
+
+결과 파일: `results/<method>_[qwen_]full_results.json` (Qwen 결과는 `_qwen` 접미사)
+
 ## Baseline: MadamRAG
 
 [MADAM-RAG](https://arxiv.org/abs/2504.13079) (Multi-Agent Debate for Ambiguity and Misinformation in RAG)를 baseline으로 사용한다.
@@ -104,6 +114,33 @@ python run_madamrag.py --dataset raguard_balanced --n 20    # sample 평가
 python eval_llm_judge.py results/madamrag_results.json
 python eval_llm_judge.py results/single_llm_results.json
 ```
+
+### Qwen (로컬 vLLM)으로 실행
+
+OpenAI-compatible API를 제공하는 vLLM 서버를 띄우면 `LLM_PROVIDER=qwen` 환경변수로 동일한 실행 스크립트를 사용할 수 있다. Qwen2.5-7B-Instruct 기준 GPU 한 장(VRAM ~20GB)이면 충분.
+
+1. vLLM 서버 실행 (별도 터미널)
+   ```bash
+   vllm serve Qwen/Qwen2.5-7B-Instruct \
+       --port 8000 \
+       --max-model-len 8192 \
+       --gpu-memory-utilization 0.85
+   ```
+
+2. 환경변수 설정 (`.env` 또는 셸 export). `LLM_MODEL`은 vLLM에 띄운 모델 ID와 정확히 일치해야 한다.
+   ```bash
+   LLM_PROVIDER=qwen
+   LLM_MODEL=Qwen/Qwen2.5-7B-Instruct
+   LLM_BASE_URL=http://localhost:8000/v1
+   ```
+
+3. 평소처럼 실행. 결과 파일명에 자동으로 `_qwen` 접미사가 붙어 GPT 결과와 구분된다.
+   ```bash
+   python run_madamrag.py     # → results/madamrag_qwen_full_results.json
+   python run_v4.py           # → results/v4_qwen_full_results.json
+   ```
+
+중간에 끊겨도 결과 JSON이 있으면 이어서 재개된다 (50개마다 체크포인트 저장).
 
 ## 진행 상황
 

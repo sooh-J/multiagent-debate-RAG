@@ -1,6 +1,19 @@
 """
-MadamRAG 실행 스크립트
+MadamRAG 실행 스크립트 (RAMDocs full 500 + resume + checkpoint)
 
+V4와 동급 비교를 위해 run_v4.py 구조를 미러링한다.
+  - RAMDocs full 500 (data/ramdocs/full.json)
+  - 50개마다 중간 저장 (resume 가능)
+  - LLM_PROVIDER=qwen 이면 결과 파일명에 _qwen 접미사
+
+실행 방법:
+    conda activate madam-rag
+    LLM_PROVIDER=qwen python run_madamrag.py        # Qwen2.5-7B
+    python run_madamrag.py                          # gpt-4o-mini (default)
+"""
+
+import os
+import sys
 기존 결과 파일이 있으면 그 다음 샘플부터 이어서 실행 (resume 내장).
 50개마다 중간 저장.
 
@@ -148,3 +161,7 @@ if __name__ == "__main__":
     finally:
         tee.close()
         print(f"로그 저장: {tee.filepath}")
+
+
+if __name__ == "__main__":
+    main()

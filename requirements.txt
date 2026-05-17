@@ -1,3 +1,6 @@
 openai>=2.30.0
 datasets>=4.8.0
 python-dotenv>=1.0.0
+
+# Qwen 사용 시 (LLM_PROVIDER=qwen)
+# vllm>=0.6.0

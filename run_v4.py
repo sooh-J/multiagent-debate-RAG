@@ -57,6 +57,9 @@ from data.raguard.loader import load_raguard
 from pipelines.v4 import v4_method
 
 
+DATA_PATH = "data/ramdocs/full.json"
+OUTPUT_PATH = "results/v4_qwen_full_results.json" if os.environ.get("LLM_PROVIDER", "").lower() == "qwen" else "results/v4_full_results.json"
+
 def _load_ramdocs(n: int | None):
     """n=None 이면 full.json (전체 500개), 아니면 sample 사용."""
     if n is None:
