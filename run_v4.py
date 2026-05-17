@@ -50,7 +50,7 @@ import os
 import sys
 
 from common.logging import Tee
-from common.llm import print_usage_summary
+from common.llm import DEFAULT_MODEL, model_slug, print_usage_summary, set_default_model
 from common.metrics import compute_metrics, print_results_table
 from data.ramdocs.download import load_ramdocs
 from data.raguard.loader import load_raguard
@@ -98,6 +98,23 @@ async def run_on_sample(sample: dict, dataset: str) -> dict:
     }
 
 
+def _error_placeholder(sample: dict, exc: Exception) -> dict:
+    """LLM 호출 실패 시 schema 유지하면서 EM=0으로 기록 (LLAMA context overflow 대응)"""
+    return {
+        "question": sample["question"],
+        "disambig_entity": sample["disambig_entity"],
+        "gold_answers": sample["gold_answers"],
+        "wrong_answers": sample["wrong_answers"],
+        "doc_meta": [{"type": d["type"], "answer": d["answer"]} for d in sample["documents"]],
+        "predicted": [],
+        "explanation": "",
+        "rounds_run": 0,
+        "round_history": [],
+        "error": f"{type(exc).__name__}: {exc}",
+        **compute_metrics([], sample["gold_answers"], sample["wrong_answers"]),
+    }
+
+
 async def run_on_dataset(ds_sample, existing_results: list, output_path: str, dataset: str) -> list[dict]:
     results = list(existing_results)
     start = len(results)
@@ -111,7 +128,11 @@ async def run_on_dataset(ds_sample, existing_results: list, output_path: str, da
     for i in range(start, total):
         sample = ds_sample[i]
         print(f"\n[{i+1}/{total}] Q: {sample['question']}")
-        out = await run_on_sample(sample, dataset)
+        try:
+            out = await run_on_sample(sample, dataset)
+        except Exception as e:
+            print(f"  !! Sample failed: {type(e).__name__}: {e}")
+            out = _error_placeholder(sample, e)
         print(f"  Gold:      {out['gold_answers']}")
         print(f"  Predicted: {out['predicted']}")
         print(f"  EM={out['em']}  P={out['precision']}  R={out['recall']}  F1={out['f1']}")
@@ -145,6 +166,8 @@ def parse_args():
     p.add_argument("--dataset", choices=list(DATASET_LOADERS), default="ramdocs")
     p.add_argument("--n", type=int, default=None,
                    help="평가 샘플 개수 (생략 시 데이터셋 전체)")
+    p.add_argument("--model", default=DEFAULT_MODEL,
+                   help="LLM 식별자 (OpenAI 모델 ID 또는 vLLM served name). default 면 출력 파일 이름에 model slug 미포함")
     return p.parse_args()
 
 
@@ -152,15 +175,20 @@ async def main():
     args = parse_args()
     os.makedirs("results", exist_ok=True)
 
+    set_default_model(args.model)
+
     suffix = "full" if args.n is None else f"n{args.n}"
-    tee = Tee(prefix=f"v4_{args.dataset}_{suffix}")
+    tag = f"{args.dataset}_{suffix}" if args.model == DEFAULT_MODEL \
+        else f"{args.dataset}_{suffix}_{model_slug(args.model)}"
+
+    tee = Tee(prefix=f"v4_{tag}")
     sys.stdout = tee
 
     try:
         ds_sample = DATASET_LOADERS[args.dataset](args.n)
         print(f"{args.dataset} 데이터 로드: {len(ds_sample)}개")
 
-        output_path = f"results/v4_{args.dataset}_{suffix}_results.json"
+        output_path = f"results/v4_{tag}_results.json"
         if os.path.exists(output_path):
             with open(output_path, "r", encoding="utf-8") as f:
                 existing = json.load(f)
