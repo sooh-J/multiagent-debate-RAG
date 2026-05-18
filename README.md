@@ -427,3 +427,7 @@ pip install -r requirements.txt
   ```
   OPENAI_API_KEY=sk-your-api-key
   ```
+
+## 진행 중인 ablation
+
+- **RAGuard v2 prompts** — noise-aware Pro/Con + balanced few-shot. 실행은 `--dataset raguard_balanced_v2` (다른 인자 동일). 동기/변경/후속 실험은 [`RAGUARD_V2.md`](RAGUARD_V2.md) 참고.
